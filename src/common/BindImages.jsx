@@ -1,3 +1,5 @@
+//? School Images for Rendering
+
 import ABC from "../assets/schoolImage/ABC.png"
 import adhyayanResidental from "../assets/schoolImage/adhyayanResidental.png"
 import champaranInternational from "../assets/schoolImage/champaranInternational.png"
@@ -10,17 +12,25 @@ import GRMpublic from "../assets/schoolImage/GRMpublic.png"
 import holyMission from "../assets/schoolImage/holyMission.png"
 
 
-const Images = {
-    ABC,
-    adhyayanResidental,
-    champaranInternational,
-    chelaMary,
-    dawnPublic,
-    delhiPublic,
-    geniusPublic,
-    GMpublic,
-    GRMpublic,
-    holyMission
-}
+//? Website Related Images 
 
-export default Images
+import backgroundImage from "../assets/websiteImage/backgroundImage.jpg"
+import friensysImage from "../assets/websiteImage/FriensysLogo.png"
+
+export const SchoolImages = {
+  ABC,
+  adhyayanResidental,
+  champaranInternational,
+  chelaMary,
+  dawnPublic,
+  delhiPublic,
+  geniusPublic,
+  GMpublic,
+  GRMpublic,
+  holyMission,
+};
+
+export const WebsiteImages = {
+  backgroundImage,
+  friensysImage,
+};

@@ -1,14 +1,22 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from '../Layout/Layout';
-import Home from '../components/Home/Home';
-import About from '../components/About/About';
-import Product from '../components/Product/Product';
-import Services from '../components/Services/Services';
-import Contact from '../components/Contact/Contact';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "../Layout/Layout";
+import Home from "../components/Home/Home";
+import About from "../components/About/About";
+import ProductLayout from "../components/Product/ProductLayout";
+import Services from "../components/Services/Services";
+import Contact from "../components/Contact/Contact";
+
+//Product Page component
+import SchoolManagement from "../components/Product/SchoolErp/SchoolManagement";
+import SchoolApp from "../components/Product/SchoolApp/SchoolApp";
+import Escalation from "../components/Product/EscalationManagement/EscalationManagement";
+import ODSAS from "../components/Product/ODSAS/ODSAS";
+import CustomerLoyalty from "../components/Product/CustomerLoyalty/CustomerLoyalty";
+import ProductLanding from "../components/Product/Product/Product"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -16,20 +24,46 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/about',
-        element: <About />,
-      },
-      {
-        path: '/product',
-        element: <Product />,
-      },
-      {
-        path: '/services',
+        path: "services",
         element: <Services />,
       },
       {
-        path: '/contact',
+        path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "product",
+        element: <ProductLayout />,
+        children: [
+          {
+            index: true,
+            element: <ProductLanding />,
+          },
+          {
+            path: "schoolErp",
+            element: <SchoolManagement />,
+          },
+          {
+            path: "schoolApp",
+            element: <SchoolApp />,
+          },
+          {
+            path: "escalation",
+            element: <Escalation />,
+          },
+          {
+            path: "ODSAS",
+            element: <ODSAS />,
+          },
+          {
+            path: "customerLoyalty",
+            element: <CustomerLoyalty />,
+          },
+        ],
       },
     ],
   },

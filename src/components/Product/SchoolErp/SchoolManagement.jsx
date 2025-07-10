@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SchoolManagment() {
+function SchoolManagement() {
   return (
     <div>
       <h1>Schhool Managment Page </h1>
@@ -8,4 +8,4 @@ function SchoolManagment() {
   )
 }
 
-export default SchoolManagment
+export default SchoolManagement
