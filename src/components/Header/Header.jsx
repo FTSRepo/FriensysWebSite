@@ -35,7 +35,7 @@ function Header() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-red-400 text-sm text-white shadow-sm">
+      <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-sm text-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
             <div className="flex items-center gap-2">
@@ -53,13 +53,13 @@ function Header() {
           </div>
 
           <div className="flex gap-4 text-lg text-white">
-            <a href="#" className="hover:text-[#ED6363] transition">
+            <a href="#" className="hover:text-yellow-400 transition">
               <FaYoutube />
             </a>
-            <a href="#" className="hover:text-[#ED6363] transition">
+            <a href="#" className="hover:text-yellow-400 transition">
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-[#ED6363] transition">
+            <a href="#" className="hover:text-yellow-400 transition">
               <FaLinkedinIn />
             </a>
           </div>
@@ -67,7 +67,7 @@ function Header() {
       </div>
 
       {/* Main Navbar */}
-      <header className="bg-blue-400 sticky top-0 z-50 shadow-md">
+      <header className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 sticky top-0 z-50 shadow-md">
         <nav className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center gap-4 text-xl font-bold text-[#003545]">
@@ -152,6 +152,14 @@ function Header() {
                       💡 Customer Loyalty
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      to="/product/marketplace"
+                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
+                    >
+                      💡 Marketplace
+                    </Link>
+                  </li>
                 </ul>
               )}
             </li>
@@ -162,8 +170,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="hover:text-yellow-300">
-                Contact
+              <Link to="/careers" className="hover:text-yellow-300">
+                Careers
               </Link>
             </li>
           </ul>

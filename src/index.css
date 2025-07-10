@@ -7,3 +7,9 @@
 @import 'swiper/css/autoplay';
 @import 'swiper/css/pagination';
     
+@layer utilities {
+  .clip-diagonal-reverse-top {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+  }
+}
+

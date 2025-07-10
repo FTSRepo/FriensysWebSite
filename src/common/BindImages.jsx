@@ -14,8 +14,9 @@ import holyMission from "../assets/schoolImage/holyMission.png"
 
 //? Website Related Images 
 
-import backgroundImage from "../assets/websiteImage/backgroundImage.jpg"
+import backgroundImage from "../assets/websiteImage/backgroundImage.png"
 import friensysImage from "../assets/websiteImage/FriensysLogo.png"
+import contactImage from "../assets/websiteImage/contactImage.avif"
 
 export const SchoolImages = {
   ABC,
@@ -33,4 +34,5 @@ export const SchoolImages = {
 export const WebsiteImages = {
   backgroundImage,
   friensysImage,
+  contactImage
 };

@@ -5,6 +5,7 @@ import About from "../components/About/About";
 import ProductLayout from "../components/Product/ProductLayout";
 import Services from "../components/Services/Services";
 import Contact from "../components/Contact/Contact";
+import Careers from "../components/Careers/Careers";
 
 //Product Page component
 import SchoolManagement from "../components/Product/SchoolErp/SchoolManagement";
@@ -13,6 +14,7 @@ import Escalation from "../components/Product/EscalationManagement/EscalationMan
 import ODSAS from "../components/Product/ODSAS/ODSAS";
 import CustomerLoyalty from "../components/Product/CustomerLoyalty/CustomerLoyalty";
 import ProductLanding from "../components/Product/Product/Product"
+import Marketplace from "../components/Product/Marketplace/Marketplace";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "careers",
+        element: <Careers />,
       },
       {
         path: "product",
@@ -62,6 +68,10 @@ const router = createBrowserRouter([
           {
             path: "customerLoyalty",
             element: <CustomerLoyalty />,
+          },
+          {
+            path: "marketplace",
+            element: <Marketplace />,
           },
         ],
       },

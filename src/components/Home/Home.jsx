@@ -73,18 +73,20 @@ function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-cyan-100 py-32 px-6 md:px-12 lg:px-20 text-gray-900 overflow-hidden">
+      <section className="relative py-32 px-6 md:px-12 lg:px-20 bg-slate-400 overflow-hidden">
         {/* Background Image */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 z-0">
           <img
-            src={WebsiteImages.backgroundImage} // this should be your uploaded image
+            src={WebsiteImages.backgroundImage}
             alt="ERP Background"
-            className="w-full h-full object-cover object-center opacity-15"
+            className="w-full h-full object-cover object-center"
           />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 text-white">
           {/* Text Content */}
           <div className="md:w-1/2 space-y-8 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
@@ -111,14 +113,6 @@ function Home() {
                 Contact Us
               </button>
             </div>
-          </div>
-
-          <div className="md:w-1/2 hidden md:block py-10">
-            <img
-              src={WebsiteImages.backgroundImage}
-              alt="ERP illustration"
-              className="w-full max-w-lg rounded-xl shadow-xl"
-            />
           </div>
         </div>
       </section>

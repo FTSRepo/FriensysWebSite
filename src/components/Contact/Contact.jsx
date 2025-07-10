@@ -1,95 +1,142 @@
 import React from "react";
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { WebsiteImages } from "../../common/BindImages";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
-    <section className="bg-gradient-to-br from-purple-50 via-white to-purple-100 py-20 px-4 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
-            Get In Touch
+    <div className="bg-white text-gray-800">
+      {/* Banner Section */}
+      <section className="relative w-full overflow-hidden h-[280px] md:h-[320px] lg:h-[380px] flex">
+        {/* Text Side */}
+        <div className="w-full md:w-[45%] flex flex-col justify-center px-6 md:px-16 z-10 bg-white">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+            Contact Us
           </h1>
-          <p className="text-gray-600 text-lg">
-            Have a question or want to work with us? Fill out the form or reach out directly.
-          </p>
+          <nav className="text-sm text-gray-500">
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>{" "}
+            &raquo; <span>Contact Us</span>
+          </nav>
         </div>
 
-        {/* Form & Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
-          {/* Contact Form */}
-          <form className="space-y-6 bg-white p-8 rounded-xl shadow-lg">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Service Interested In"
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows="5"
-              className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:outline-none"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-200 shadow-md"
-            >
-              Send Message
-            </button>
-          </form>
+        {/* Image Side with sharper diagonal cut */}
+        <div
+          className="hidden md:block w-[65%] h-full bg-cover bg-center relative"
+          style={{
+            clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            backgroundImage: `url(${WebsiteImages.contactImage})`,
+          }}
+        ></div>
+      </section>
 
-          {/* Contact Details */}
-          <div className="space-y-6 text-gray-700">
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-2xl text-purple-600" />
-              <span className="text-lg">+91 98765 43210</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaEnvelope className="text-2xl text-purple-600" />
-              <span className="text-lg">contact@yourcompany.com</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-2xl text-purple-600" />
-              <span className="text-lg">123, Tech Street, Bangalore, India</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <FaLinkedin className="text-2xl text-purple-600" />
-              <a
-                href="https://linkedin.com/company/yourcompany"
-                className="text-lg text-blue-700 hover:underline"
-              >
-                LinkedIn Profile
-              </a>
+      {/* Main Content */}
+      <section className="max-w-7xl mx-auto px-4 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        {/* Company Info */}
+        <div className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-green-600">
+            Unlock precision and{" "}
+            <span className="text-black">reliability with</span>
+          </h2>
+          <p className="text-lg text-gray-700">
+            Our cutting-edge testing systems are built for accuracy and
+            performance.
+          </p>
+          <p className="text-sm text-gray-500">
+            We usually respond within one working day.
+          </p>
+
+          <div className="mt-6 space-y-5 text-sm md:text-base">
+            <h3 className="text-lg font-bold">Friensys Info Labs Pvt. Ltd</h3>
+
+            <div className="flex items-start gap-3 text-gray-700">
+              <FaMapMarkerAlt className="mt-1 text-green-600" />
+              <span>
+                Plot No. 128
+                <br />
+                Greater Noida, Phase 1<br />
+                Samridhi Apartment, J-Block
+                <br />
+                Uttar Pradesh 121003
+              </span>
             </div>
 
-            {/* Embedded Map */}
-            <div className="mt-8">
-              <iframe
-                title="Office Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.287051153463!2d77.5946!3d12.9716!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjYiTiA3N8KwMzUnNDQuNiJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
-                className="w-full h-64 rounded-lg border shadow-md"
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
+            <div className="flex items-center gap-3 text-gray-700">
+              <FaPhoneAlt className="text-green-600" />
+              <span>+91 8709188968</span>
+            </div>
+
+            <div className="flex items-center gap-3 text-gray-700">
+              <FaEnvelope className="text-green-600" />
+              <span>friensys@demo.com</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+
+        {/* Contact Form */}
+        <div className="bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-gray-200">
+          <form className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label className="block font-medium mb-1">
+                  Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+              <div>
+                <label className="block font-medium mb-1">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label className="block font-medium mb-1">
+                  Phone <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+              <div>
+                <label className="block font-medium mb-1">
+                  Location <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block font-medium mb-1">Message</label>
+              <textarea
+                rows="4"
+                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-all"
+            >
+              Submit →
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
   );
 }
 
