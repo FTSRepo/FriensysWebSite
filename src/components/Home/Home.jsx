@@ -14,6 +14,12 @@ import {
   FaSchool,
   FaChartPie,
   FaAward,
+  FaMobileAlt,
+  FaExclamationCircle,
+  FaDatabase,
+  FaGift,
+  FaStore,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
 import "swiper/css";
 
@@ -65,52 +71,106 @@ const testimonials = [
   },
 ];
 
+const products = [
+  { name: "School ERP", icon: <FaSchool />, key: "school" },
+  { name: "Mobile App", icon: <FaMobileAlt />, key: "mobile" },
+  {
+    name: "Escalation System",
+    icon: <FaExclamationCircle />,
+    key: "escalation",
+  },
+  { name: "OD-SAS", icon: <FaDatabase />, key: "odsas" },
+  { name: "Customer Loyalty", icon: <FaGift />, key: "loyalty" },
+  { name: "Marketplace", icon: <FaStore />, key: "marketplace" },
+  { name: "CRM - Edu Mgmt", icon: <FaChalkboardTeacher />, key: "crm" },
+];
+
+const dashboardMockData = {
+  school: {
+    title: "School ERP Dashboard",
+    widgets: ["Attendance", "Fee Management", "Results", "Timetable"],
+    image: WebsiteImages.LoginPage,
+  },
+  mobile: {
+    title: "Mobile App Dashboard",
+    widgets: ["Downloads", "Feedback", "Ratings", "User Engagement"],
+    image: WebsiteImages.LoginPage,
+  },
+  escalation: {
+    title: "Escalation System Dashboard",
+    widgets: ["Open Tickets", "Resolved", "Priority Cases", "SLA Breach"],
+    image: WebsiteImages.LoginPage,
+  },
+  odsas: {
+    title: "OD-SAS Management Dashboard",
+    widgets: ["Requests", "Approvals", "Logs", "Summary"],
+    image: WebsiteImages.LoginPage,
+  },
+  loyalty: {
+    title: "Customer Loyalty Dashboard",
+    widgets: ["Top Customers", "Points Earned", "Redemptions", "Campaigns"],
+    image: WebsiteImages.LoginPage,
+  },
+  marketplace: {
+    title: "Marketplace Overview",
+    widgets: ["Products", "Sellers", "Orders", "Revenue"],
+    image: WebsiteImages.LoginPage,
+  },
+  crm: {
+    title: "CRM - Educational Management",
+    widgets: ["Leads", "Follow-ups", "Counseling", "Admissions"],
+    image: WebsiteImages.LoginPage,
+  },
+};
+
 function Home() {
   const [showAll, setShowAll] = useState(false);
+  const [activeKey, setActiveKey] = useState("school");
+  const activeData = dashboardMockData[activeKey];
 
   const visibleTestimonials = showAll ? testimonials : testimonials.slice(0, 3);
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 px-6 md:px-12 lg:px-20 bg-slate-400 overflow-hidden">
-        {/* Background Image */}
+      <section className="relative py-36 px-6 md:px-12 lg:px-20 bg-slate-900 text-white overflow-hidden">
+        {/* Background Image with overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={WebsiteImages.backgroundImage}
             alt="ERP Background"
             className="w-full h-full object-cover object-center"
           />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/20 mix-blend-multiply"></div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 text-white">
+        {/* Content Section */}
+        <div className="relative z-10 max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text Content */}
-          <div className="md:w-1/2 space-y-8 text-center md:text-left">
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-              Explore Our ERP
+          <div className="md:w-1/2 backdrop-blur-md bg-black/20 p-8 rounded-2xl shadow-lg space-y-6 animate-fade-in-down">
+            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight">
+              Explore <span className="text-teal-400">Our ERP</span>
             </h1>
-            <p className="text-lg md:text-xl leading-relaxed">
-              Friensys is a leading global information technology, consulting
+            <p className="text-lg md:text-xl leading-relaxed text-gray-200">
+              Friensys is a leading global information technology, consulting,
               and business process services company. We harness the power of
-              cognitive computing, hyper-automation, robotics, cloud, analytics
+              cognitive computing, hyper-automation, robotics, cloud, analytics,
               and emerging technologies to help our clients adapt to the digital
-              world and make them successful.
+              world and succeed.
             </p>
-            <p className="text-lg md:text-xl leading-relaxed">
-              A company recognized globally for its comprehensive portfolio of
-              services, strong commitment to sustainability and good corporate
-              citizenship. Together, we discover ideas and connect the dots to
-              build a better and a bold new future.
+            <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+              Globally recognized for its services and commitment to
+              sustainability and corporate responsibility, Friensys connects the
+              dots to build a bold, innovative future.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
-              <button className="bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3 rounded-lg shadow-md transition-all duration-200">
-                Explore Services →
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-full shadow transition duration-300">
+                🚀 Explore Services
               </button>
-              <button className="bg-white border border-gray-300 hover:bg-gray-100 text-gray-800 font-medium px-6 py-3 rounded-lg shadow-md transition-all duration-200">
-                Contact Us
+              <button className="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-full border border-gray-300 shadow transition duration-300">
+                ✉️ Contact Us
               </button>
             </div>
           </div>
@@ -384,6 +444,55 @@ function Home() {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+      </section>
+
+      {/* Our Products */}
+      <section className="bg-gray-50 min-h-screen p-6">
+        {/* Product Navigation */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {products.map((prod) => (
+            <button
+              key={prod.key}
+              onClick={() => setActiveKey(prod.key)}
+              className={`flex flex-col items-center text-sm font-medium px-4 py-2 rounded-md shadow-md transition-all duration-200 ${
+                activeKey === prod.key
+                  ? "bg-green-600 text-white"
+                  : "bg-white text-gray-700 hover:bg-gray-100"
+              }`}
+            >
+              <div className="text-xl mb-1">{prod.icon}</div>
+              {prod.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Dashboard Preview */}
+        <div className="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+          <h2 className="text-2xl font-bold mb-4 text-gray-800">
+            {activeData.title}
+          </h2>
+
+          {/* Image Section */}
+          <div className="mb-6">
+            <img
+              src={activeData.image}
+              alt={`${activeData.title} preview`}
+              className="w-full max-h-80 object-contain rounded-md shadow"
+            />
+          </div>
+
+          {/* Widget Cards */}
+          <div className="grid md:grid-cols-2 gap-4">
+            {activeData.widgets.map((widget, index) => (
+              <div
+                key={index}
+                className="bg-green-50 border border-green-200 p-4 rounded-md text-gray-800 text-center font-medium"
+              >
+                {widget}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -6,6 +6,8 @@ import ProductLayout from "../components/Product/ProductLayout";
 import Services from "../components/Services/Services";
 import Contact from "../components/Contact/Contact";
 import Careers from "../components/Careers/Careers";
+import PrivacyPolicy from "../Privacy/PrivacyPolicy/PrivacyPolicy";
+import CancellationPolicy from "../Privacy/CancellationPolicy/cancellationPolicy";
 
 //Product Page component
 import SchoolManagement from "../components/Product/SchoolErp/SchoolManagement";
@@ -15,6 +17,7 @@ import ODSAS from "../components/Product/ODSAS/ODSAS";
 import CustomerLoyalty from "../components/Product/CustomerLoyalty/CustomerLoyalty";
 import ProductLanding from "../components/Product/Product/Product"
 import Marketplace from "../components/Product/Marketplace/Marketplace";
+import CollegeManagement from "../components/Product/CollegeERP/CollegeManagement";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +43,14 @@ const router = createBrowserRouter([
       {
         path: "careers",
         element: <Careers />,
+      },
+      {
+        path: "privacyPolicy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "cancellationPolicy",
+        element: <CancellationPolicy />,
       },
       {
         path: "product",
@@ -72,6 +83,10 @@ const router = createBrowserRouter([
           {
             path: "marketplace",
             element: <Marketplace />,
+          },
+          {
+            path: "collegeErp",
+            element: <CollegeManagement />,
           },
         ],
       },

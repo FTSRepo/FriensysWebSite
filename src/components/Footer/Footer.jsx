@@ -66,6 +66,14 @@ const Footer = () => {
                   Escalation Management
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/product/collegeErp"
+                  className="hover:text-white transition"
+                >
+                  College Management Software
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -106,13 +114,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="hover:text-white transition">
+                <Link to="/privacyPolicy" className="hover:text-white transition">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="#" className="hover:text-white transition">
-                  Cookies
+                <Link to="/cancellationPolicy" className="hover:text-white transition">
+                  Cancellation Policy
                 </Link>
               </li>
               <li>

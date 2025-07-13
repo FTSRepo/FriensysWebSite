@@ -40,15 +40,15 @@ function Header() {
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
             <div className="flex items-center gap-2">
               <FaPhoneAlt />
-              <span>+91 8709188968</span>
+              <span>+91-9971673592</span>
             </div>
             <div className="flex items-center gap-2">
               <FaEnvelope />
-              <span>friensys@demo.com</span>
+              <span>info@friensys.com</span>
             </div>
             <div className="flex items-center gap-2">
               <MdLocationOn />
-              <span>Greater Noida, Uttar Pradesh</span>
+              <span>J-804, Sector -1  Techzone-IV, Greater Noida West, UP-201305,</span>
             </div>
           </div>
 
@@ -74,7 +74,7 @@ function Header() {
             <img
               src={WebsiteImages.friensysImage}
               alt="Friensys Info Labs Logo"
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-contain border-2 border-white shadow"
+              className="w-16 h-16 md:w-20 md:h-20 rounded-full object-contain border-2 border-white shadow bg-white"
             />
             <span className="text-lg md:text-2xl leading-tight font-bold">
               Friensys Info Labs
@@ -98,7 +98,7 @@ function Header() {
             <li className="relative flex items-center gap-1" ref={productRef}>
               <span
                 onClick={() => navigate("/product")}
-                className="hover:text-yellow-300 cursor-pointer"
+                className="hover:text-yellow-400 cursor-pointer transition-colors duration-200 font-medium"
               >
                 Product
               </span>
@@ -107,59 +107,42 @@ function Header() {
                   e.stopPropagation();
                   setProductOpen((prev) => !prev);
                 }}
-                className="text-xs cursor-pointer mt-1 hover:text-yellow-300"
+                className={`text-xs cursor-pointer mt-1 hover:text-yellow-400 transition-transform duration-200 ${
+                  productOpen ? "rotate-180" : ""
+                }`}
               />
 
               {productOpen && (
-                <ul className="absolute top-full left-0 mt-3 w-60 bg-white text-gray-800 rounded-xl shadow-2xl border border-gray-200 z-50">
-                  <li>
-                    <Link
-                      to="/product/schoolErp"
-                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
-                    >
-                      🎓 School ERP
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/product/schoolApp"
-                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
-                    >
-                      📱 School Mobile App
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/product/escalation"
-                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
-                    >
-                      📊 Escalation System
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/product/ODSAS"
-                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
-                    >
-                      🧠 OD-SAS
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/product/customerLoyalty"
-                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
-                    >
-                      💡 Customer Loyalty
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/product/marketplace"
-                      className="block px-5 py-3 hover:bg-gray-100 hover:text-blue-600 transition"
-                    >
-                      💡 Marketplace
-                    </Link>
-                  </li>
+                <ul className="absolute top-full left-0 mt-3 w-72 bg-white text-gray-900 rounded-xl shadow-lg border border-gray-200 z-50 overflow-hidden">
+                  {[
+                    { to: "/product/schoolErp", label: "School ERP" },
+                    { to: "/product/schoolApp", label: "School Mobile App" },
+                    { to: "/product/escalation", label: "Escalation System" },
+                    { to: "/product/ODSAS", label: "OD-SAS" },
+                    {
+                      to: "/product/customerLoyalty",
+                      label: "Customer Loyalty",
+                    },
+                    { to: "/product/marketplace", label: "Marketplace" },
+                    {
+                      to: "/product/collegeErp",
+                      label: "College Management System",
+                    },
+                  ].map((item) => (
+                    <li key={item.to}>
+                      <Link
+                        to={item.to}
+                        className="
+              block px-5 py-2 
+              hover:bg-gray-100 hover:text-green-600 
+              transition-colors duration-200 ease-in-out
+              text-sm
+            "
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               )}
             </li>

@@ -63,49 +63,63 @@ const services = [
 
 function Services() {
   return (
-    <section className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-3">What We Offer</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Explore our versatile suite of software development and IT staffing services tailored to your success.
+    <>
+      <section className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-20 px-4 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Our Team</h1>
+          <p className="text-lg md:text-xl">
+            Be part of something amazing. Grow your career with Friensys Info
+            Labs.
           </p>
         </div>
+      </section>
+      <section className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-gray-800 mb-3">
+              What We Offer
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Explore our versatile suite of software development and IT
+              staffing services tailored to your success.
+            </p>
+          </div>
 
-        {/* Service Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-md hover:shadow-xl transition duration-300 rounded-xl p-6"
-            >
-              {/* Icon with gradient background */}
+          {/* Service Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
               <div
-                className={`w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br ${service.gradient} mb-4`}
+                key={index}
+                className="bg-white shadow-md hover:shadow-xl transition duration-300 rounded-xl p-6"
               >
-                {service.icon}
+                {/* Icon with gradient background */}
+                <div
+                  className={`w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br ${service.gradient} mb-4`}
+                >
+                  {service.icon}
+                </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-3">{service.description}</p>
+
+                {/* Bullet Points */}
+                <ul className="list-disc pl-5 text-gray-500 text-sm space-y-1">
+                  {service.points.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-600 mb-3">{service.description}</p>
-
-              {/* Bullet Points */}
-              <ul className="list-disc pl-5 text-gray-500 text-sm space-y-1">
-                {service.points.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 

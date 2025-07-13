@@ -53,23 +53,21 @@ function Contact() {
             <div className="flex items-start gap-3 text-gray-700">
               <FaMapMarkerAlt className="mt-1 text-green-600" />
               <span>
-                Plot No. 128
+                J-804, Sector -1
                 <br />
-                Greater Noida, Phase 1<br />
-                Samridhi Apartment, J-Block
-                <br />
-                Uttar Pradesh 121003
+               Techzone-IV, Greater<br />
+                Noida West, UP-201305,
               </span>
             </div>
 
             <div className="flex items-center gap-3 text-gray-700">
               <FaPhoneAlt className="text-green-600" />
-              <span>+91 8709188968</span>
+              <span>+91-9971673592</span>
             </div>
 
             <div className="flex items-center gap-3 text-gray-700">
               <FaEnvelope className="text-green-600" />
-              <span>friensys@demo.com</span>
+              <span>info@friensys.com</span>
             </div>
           </div>
         </div>
