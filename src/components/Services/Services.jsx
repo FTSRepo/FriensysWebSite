@@ -1,126 +1,182 @@
 import React from "react";
 import {
+  FaCogs,
   FaMobileAlt,
-  FaLaptopCode,
-  FaServer,
-  FaUsersCog,
+  FaRocket,
+  FaCloud,
+  FaLock,
+  FaSyncAlt,
 } from "react-icons/fa";
+import { SchoolImages, WebsiteImages } from "../../common/BindImages";
+import FormPage from "../../common/FormPage";
 
 const services = [
   {
-    icon: <FaMobileAlt className="text-white text-4xl" />,
-    title: "Software Product Development",
+    icon: <FaRocket />,
+    title: "Educational Website ",
     description:
-      "Scalable SaaS platforms, web portals, and mobile apps with great UX and performance.",
-    points: [
-      "Custom SaaS Solutions",
-      "Mobile & Web Applications",
-      "Admin Panels & Dashboards",
-      "Product MVPs",
-    ],
-    gradient: "from-blue-500 to-purple-600",
+      "From MVP to full-scale product, we build market-ready software using agile methodologies.",
   },
   {
-    icon: <FaLaptopCode className="text-white text-4xl" />,
-    title: "Custom Software Development",
+    icon: <FaCloud />,
+    title: "Educational Erp",
     description:
-      "Tailor-made applications built to streamline operations and power business logic.",
-    points: [
-      "Healthcare & EdTech",
-      "Finance & CRM Systems",
-      "ERP Integrations",
-      "Custom APIs",
-    ],
-    gradient: "from-indigo-500 to-sky-600",
+      "Scalable, multi-tenant SaaS platforms built on secure and cloud-native technologies.",
   },
   {
-    icon: <FaServer className="text-white text-4xl" />,
-    title: "Software Services",
+    icon: <FaMobileAlt />,
+    title: "Mobile App Development",
     description:
-      "End-to-end maintenance, migration, integration, and scaling support for your stack.",
-    points: [
-      "System Integration",
-      "Cloud Migration",
-      "DevOps & Maintenance",
-      "API Services",
-    ],
-    gradient: "from-green-500 to-emerald-600",
+      "Custom iOS, Android, and cross-platform apps with seamless user experience.",
   },
   {
-    icon: <FaUsersCog className="text-white text-4xl" />,
-    title: "IT Staffing",
+    icon: <FaCogs />,
+    title: "Business Model Software",
     description:
-      "Hire remote or onsite professionals, individually or as a dedicated team.",
-    points: [
-      "Frontend & Backend Engineers",
-      "DevOps Experts",
-      "Flexible Hiring Models",
-      "Short-term & Long-term",
-    ],
-    gradient: "from-pink-500 to-rose-600",
+      "From CRMs to enterprise dashboards — we develop purpose-built solutions.",
+  },
+  {
+    icon: <FaLock />,
+    title: "Company Based Software ",
+    description:
+      "Security-first development — HIPAA, GDPR, ISO-ready practices built-in.",
+  },
+  {
+    icon: <FaSyncAlt />,
+    title: "Loyalty Software",
+    description:
+      "Post-launch support, monitoring, and feature enhancements included.",
   },
 ];
 
-function Services() {
+const industries = [
+  "Education Technology",
+  "Healthcare & Telemedicine",
+  "E-commerce & Marketplaces",
+  "HR Tech & Staffing",
+  "Fintech & Payments",
+  "SaaS Platforms",
+];
+
+const testimonials = [
+  {
+    name: "Rahul Verma",
+    role: "Co-Founder, LearnX",
+    text: "Friensys helped us scale from prototype to 20K+ users. Their speed and quality is world-class.",
+  },
+  {
+    name: "Samantha Iyer",
+    role: "CTO, MedVault",
+    text: "We needed HIPAA-compliant healthcare software — they delivered ahead of time and exceeded expectations.",
+  },
+];
+
+const ServicesPage = () => {
   return (
-    <>
-      <section className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-20 px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Our Team</h1>
-          <p className="text-lg md:text-xl">
-            Be part of something amazing. Grow your career with Friensys Info
-            Labs.
-          </p>
+    <div className="bg-white text-gray-800">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-50 to-white py-24 px-6 md:px-12 lg:px-24 text-center">
+        <h1 className="text-5xl font-bold mb-4 leading-tight">
+          Empowering Ideas, <span className="text-blue-600">Building Products</span>
+        </h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Friensys Info Labs turns concepts into reliable software products — fast, scalable, and secure.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-14">Our Core Services</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-100 rounded-2xl p-6 shadow hover:shadow-lg transition"
+            >
+              <div className="text-blue-600 text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-gray-600 text-sm">{service.description}</p>
+            </div>
+          ))}
         </div>
       </section>
-      <section className="bg-gray-50 py-16 px-4 md:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-extrabold text-gray-800 mb-3">
-              What We Offer
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Explore our versatile suite of software development and IT
-              staffing services tailored to your success.
+
+      {/* Visual Feature Section */}
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <img
+            src={WebsiteImages.EventSection}
+            alt="Tech team working"
+            className="rounded-xl shadow-xl"
+          />
+          <div>
+            <h2 className="text-3xl font-bold mb-4">Your Technology Partner</h2>
+            <p className="text-gray-600 mb-6">
+              We build long-term partnerships through a dedicated tech team, weekly deliveries, and full product ownership.
             </p>
-          </div>
-
-          {/* Service Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-md hover:shadow-xl transition duration-300 rounded-xl p-6"
-              >
-                {/* Icon with gradient background */}
-                <div
-                  className={`w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br ${service.gradient} mb-4`}
-                >
-                  {service.icon}
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-gray-600 mb-3">{service.description}</p>
-
-                {/* Bullet Points */}
-                <ul className="list-disc pl-5 text-gray-500 text-sm space-y-1">
-                  {service.points.map((point, idx) => (
-                    <li key={idx}>{point}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            <ul className="space-y-3 list-disc list-inside text-gray-700">
+              <li>Dedicated Project Manager</li>
+              <li>Agile Sprint Cycles</li>
+              <li>Transparent Documentation</li>
+              <li>Post-launch Support & Monitoring</li>
+            </ul>
           </div>
         </div>
       </section>
-    </>
-  );
-}
 
-export default Services;
+      {/* Industries Section */}
+      <section className="py-20 px-6 md:px-12 lg:px-24 bg-white">
+        <h2 className="text-3xl font-bold text-center mb-10">Industries We Serve</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          {industries.map((industry, i) => (
+            <div
+              key={i}
+              className="bg-blue-100 text-blue-800 px-5 py-2 rounded-full font-medium text-sm shadow"
+            >
+              {industry}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="bg-gradient-to-b from-white to-blue-50 py-20 px-6 md:px-12 lg:px-24">
+        <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className="bg-white border border-gray-100 p-6 rounded-xl shadow-md hover:shadow-lg transition"
+            >
+              <p className="text-gray-700 italic mb-4">“{t.text}”</p>
+              <p className="text-blue-700 font-semibold">{t.name}</p>
+              <p className="text-sm text-gray-500">{t.role}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Form Section */}
+      <section className="mt-28">
+        <FormPage />
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="bg-blue-600 text-white py-20 px-6 md:px-12 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Build Something Extraordinary?
+          </h2>
+          <p className="mb-6 text-lg">
+            Let’s talk about your vision and how Friensys Info Labs can make it a reality.
+          </p>
+          <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">
+            Book a Free Consultation
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ServicesPage;

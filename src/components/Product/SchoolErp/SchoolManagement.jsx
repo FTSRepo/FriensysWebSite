@@ -11,7 +11,7 @@ const accordionData = [
       "View real-time student and employee stats, monthly revenue and expenses, and attendance analytics—all from one place.",
   },
   {
-    title: "Add Student Module",
+    title: "Admissions Management",
     content:
       "Capture student admission information including personal details, birth info, class-section mapping, and more.",
   },
@@ -21,12 +21,12 @@ const accordionData = [
       "Easily create, manage, and publish school events or announcements. Includes toggles for visibility and roles.",
   },
   {
-    title: "Online Class Scheduling",
+    title: "Online Class/Video Conferencing",
     content:
       "Teachers can schedule online classes with links, timings, subjects, and more. Easy access for students.",
   },
   {
-    title: "Fee Collection Report",
+    title: "Payroll Management",
     content:
       "Track current month's fee collections, dues, and SMS credit usage to stay on top of school finances.",
   },
@@ -97,7 +97,6 @@ export default function SchoolERP() {
         </div>
 
         {/* Static Image Section */}
-        {/* Static Image Section */}
         <motion.div
           className="text-center relative z-10"
           initial={{ opacity: 0, y: 30 }}
@@ -112,17 +111,7 @@ export default function SchoolERP() {
           />
           <h3 className="text-2xl font-bold text-gray-800 mt-4">
             Login Page 
-          </h3>
-          
-          {/* Existing Dashboard Image */}
-          <img
-            src={WebsiteImages.SchoolERp}
-            alt="Admin Dashboard"
-            className="rounded-xl w-full object-cover shadow-2xl max-h-[600px] mt-8"
-          />
-          <h3 className="text-2xl font-bold text-gray-800 mt-4">
-            Admin Dashboard
-          </h3>         
+          </h3>  
         </motion.div>
       </div>
 

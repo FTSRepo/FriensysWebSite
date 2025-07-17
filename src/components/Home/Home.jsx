@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import logo from "../../assets/pic.jpg";
-// import Images from "../../common/BindImages";
 import { SchoolImages, WebsiteImages } from "../../common/BindImages";
 import {
   FaUsers,
@@ -26,51 +24,6 @@ import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-const testimonials = [
-  {
-    name: "MR. Mohammad Ujjainwala",
-    role: "Principal - Lorem ipsum dolor sit amet",
-    message:
-      "Friensys Info Labs has been a game-changer. Their software streamlined our operations, empowered staff, and enhanced communication with parents.",
-    img: SchoolImages.GMpublic,
-  },
-  {
-    name: "Mr. Dharmendra Savani",
-    role: "Chairman - Lorem ipsum dolor sit amet",
-    message:
-      "Their ERP tools and tech services have made managing day-to-day tasks effortless. Highly recommended for institutions looking to scale!",
-    img: SchoolImages.adhyayanResidental,
-  },
-  {
-    name: "Mrs. D Aparna",
-    role: "Principal - Lorem ipsum dolor sit amet",
-    message:
-      "The support and innovation we’ve experienced with Friensys are exceptional. Their products are reliable, intuitive, and customizable.",
-    img: SchoolImages.champaranInternational,
-  },
-  {
-    name: "Mrs. S Mishra",
-    role: "Vice Principal - Lorem ipsum dolor sit amet",
-    message:
-      "They truly understand institutional needs and provide tailored, scalable solutions. We’re glad to have partnered with them.",
-    img: SchoolImages.geniusPublic,
-  },
-  {
-    name: "Mr. K Verma",
-    role: "Director - Lorem ipsum dolor sit amet",
-    message:
-      "Support, training, and updates have been seamless. Their ERP is a must-have tool for modern schools.",
-    img: SchoolImages.chelaMary,
-  },
-  {
-    name: "Mrs. R Ahuja",
-    role: "HOD - Lorem ipsum dolor sit amet",
-    message:
-      "Efficient communication, strong features, and intuitive dashboards made a huge difference for our staff and students.",
-    img: SchoolImages.delhiPublic,
-  },
-];
-
 const products = [
   { name: "School ERP", icon: <FaSchool />, key: "school" },
   { name: "Mobile App", icon: <FaMobileAlt />, key: "mobile" },
@@ -88,134 +41,133 @@ const products = [
 const dashboardMockData = {
   school: {
     title: "School ERP Dashboard",
-    widgets: ["Attendance", "Fee Management", "Results", "Timetable"],
-    image: WebsiteImages.LoginPage,
+    image: WebsiteImages.SchoolERp,
   },
   mobile: {
     title: "Mobile App Dashboard",
-    widgets: ["Downloads", "Feedback", "Ratings", "User Engagement"],
-    image: WebsiteImages.LoginPage,
+    image: WebsiteImages.AdminDashboardApp,
   },
   escalation: {
     title: "Escalation System Dashboard",
-    widgets: ["Open Tickets", "Resolved", "Priority Cases", "SLA Breach"],
-    image: WebsiteImages.LoginPage,
+    image: WebsiteImages.EscalationDashboard,
   },
   odsas: {
     title: "OD-SAS Management Dashboard",
-    widgets: ["Requests", "Approvals", "Logs", "Summary"],
-    image: WebsiteImages.LoginPage,
+    image: WebsiteImages.ODSASDashboard,
   },
   loyalty: {
     title: "Customer Loyalty Dashboard",
-    widgets: ["Top Customers", "Points Earned", "Redemptions", "Campaigns"],
-    image: WebsiteImages.LoginPage,
+    image: WebsiteImages.LoyaltyDashboard,
   },
   marketplace: {
     title: "Marketplace Overview",
-    widgets: ["Products", "Sellers", "Orders", "Revenue"],
     image: WebsiteImages.LoginPage,
   },
   crm: {
     title: "CRM - Educational Management",
-    widgets: ["Leads", "Follow-ups", "Counseling", "Admissions"],
-    image: WebsiteImages.LoginPage,
+    image: WebsiteImages.EducationalCRM,
   },
 };
 
 function Home() {
-  const [showAll, setShowAll] = useState(false);
   const [activeKey, setActiveKey] = useState("school");
   const activeData = dashboardMockData[activeKey];
-
-  const visibleTestimonials = showAll ? testimonials : testimonials.slice(0, 3);
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-36 px-6 md:px-12 lg:px-20 bg-slate-900 text-white overflow-hidden">
-        {/* Background Image with overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={WebsiteImages.backgroundImage}
-            alt="ERP Background"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/20 mix-blend-multiply"></div>
-        </div>
+      <section className="relative overflow-hidden bg-gradient-to-tr from-white via-sky-50 to-emerald-100 py-28 px-6 md:px-12 lg:px-20 text-gray-900">
+        {/* Decorative Gradient Shapes */}
+        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-emerald-400 to-teal-300 rounded-full opacity-20 blur-[150px] z-0"></div>
+        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-blue-400 to-sky-300 rounded-full opacity-30 blur-[100px] z-0"></div>
 
-        {/* Content Section */}
-        <div className="relative z-10 max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        {/* Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
           {/* Text Content */}
-          <div className="md:w-1/2 backdrop-blur-md bg-black/20 p-8 rounded-2xl shadow-lg space-y-6 animate-fade-in-down">
-            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight">
-              Explore <span className="text-teal-400">Our ERP</span>
+          <div className="space-y-6">
+            <span className="inline-block px-4 py-1 rounded-full bg-white text-emerald-600 font-semibold shadow border border-emerald-200 w-fit text-sm">
+              🔧 Software, Services & Staffing
+            </span>
+
+            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+              Transform Your Business with{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-500">
+                Smart Tech Solutions
+              </span>
             </h1>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-200">
-              Friensys is a leading global information technology, consulting,
-              and business process services company. We harness the power of
-              cognitive computing, hyper-automation, robotics, cloud, analytics,
-              and emerging technologies to help our clients adapt to the digital
-              world and succeed.
-            </p>
-            <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-              Globally recognized for its services and commitment to
-              sustainability and corporate responsibility, Friensys connects the
-              dots to build a bold, innovative future.
+
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Friensys offers next-gen software products, tailored IT
+              development, tech consulting, and staffing solutions — empowering
+              your business to grow, automate, and innovate.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold px-6 py-3 rounded-full shadow transition duration-300">
-                🚀 Explore Services
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+                🚀 Explore Solutions
               </button>
-              <button className="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-full border border-gray-300 shadow transition duration-300">
-                ✉️ Contact Us
+              <button className="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-xl border border-gray-300 shadow transition">
+                ✉️ Get in Touch
               </button>
+            </div>
+          </div>
+
+          {/* Illustration */}
+          <div className="relative flex justify-center">
+            <div className="p-4 bg-white rounded-3xl shadow-2xl border border-gray-200 transform hover:scale-105 transition duration-500">
+              <img
+                src={WebsiteImages.DashboardImage}
+                alt="Dashboard"
+                className="rounded-xl w-full max-w-md"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="bg-[#2f4963] py-16 px-4 md:px-8 lg:px-16 text-white">
+      {/* Trusted Schools Section */}
+      <section className="bg-gradient-to-b from-white via-sky-50 to-emerald-100 py-16 px-4 md:px-10 lg:px-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Reusable Stat Box */}
-            {[
-              {
-                icon: <FaSchool className="text-3xl text-black" />,
-                value: "300+",
-                label: "Schools",
-              },
-              {
-                icon: <FaCubes className="text-3xl text-black" />,
-                value: "40+",
-                label: "Modules",
-              },
-              {
-                icon: <FaChartPie className="text-3xl text-black" />,
-                value: "2K+",
-                label: "Reports",
-              },
-              {
-                icon: <FaAward className="text-3xl text-black" />,
-                value: "8+",
-                label: "Year Expertise",
-              },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 bg-[#3d5a78] p-5 rounded-xl shadow-md"
+          <h2 className="text-center text-3xl md:text-4xl font-extrabold text-indigo-700 mb-10 tracking-tight">
+            Trusted by Leading Schools
+          </h2>
+
+          <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
+            Join a growing network of top schools that rely on our powerful
+            tools for seamless digital transformation.
+          </p>
+
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={2}
+            breakpoints={{
+              640: { slidesPerView: 3 },
+              768: { slidesPerView: 4 },
+              1024: { slidesPerView: 6 },
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            modules={[Autoplay]}
+          >
+            {Object.entries(SchoolImages).map(([key, imgSrc]) => (
+              <SwiperSlide
+                key={key}
+                className="flex justify-center items-center px-4"
               >
-                <div className="bg-white p-4 rounded shadow">{stat.icon}</div>
-                <div>
-                  <h3 className="text-2xl font-bold">{stat.value}</h3>
-                  <p className="text-sm">{stat.label}</p>
+                <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-300 transition duration-300 ease-in-out">
+                  <img
+                    src={imgSrc}
+                    alt={key}
+                    className="w-32 h-20 object-contain transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </section>
 
@@ -288,57 +240,50 @@ function Home() {
         </div>
       </section>
 
-      {/*Testimonial Sections */}
-      <section className="bg-gradient-to-br from-[#E5E1DA] to-[#F1F0E8] py-20 px-6 md:px-12 lg:px-20 text-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-xl text-gray-700 font-medium mb-2">
-            Our Client Says
-          </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-orange-600 mb-14">
-            Why Institutes Love{" "}
-            <span className="text-blue-900">Friensys Info Labs</span>
+      {/* Our Products */}
+      <section className="bg-gradient-to-br from-gray-100 to-white min-h-screen py-20 px-4 md:px-12">
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
+            Our <span className="text-green-600">Products</span>
           </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Explore our powerful solutions tailored to streamline and automate
+            your school operations.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {visibleTestimonials.map((item, index) => (
-              <div
-                key={index}
-                className="relative bg-white/80 backdrop-blur-lg p-6 rounded-2xl shadow-xl text-left transition hover:shadow-2xl"
-              >
-                {/* Quotation mark */}
-                <div className="absolute top-0 right-0 bg-orange-500 text-white p-2 rounded-bl-xl">
-                  <span className="text-2xl font-bold">”</span>
-                </div>
-
-                {/* Profile */}
-                <div className="flex items-center gap-4 mb-4">
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-14 h-14 rounded-full border-2 border-orange-500 shadow-sm"
-                  />
-                  <div>
-                    <p className="font-bold text-lg">{item.name}</p>
-                    <p className="text-sm text-gray-600 italic">{item.role}</p>
-                  </div>
-                </div>
-
-                {/* Message */}
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  {item.message}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Toggle Button */}
-          <div className="mt-14">
+        {/* Product Navigation */}
+        <div className="flex flex-wrap justify-center gap-5 mb-14">
+          {products.map((prod) => (
             <button
-              onClick={() => setShowAll(!showAll)}
-              className="bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-200"
+              key={prod.key}
+              onClick={() => setActiveKey(prod.key)}
+              className={`flex flex-col items-center text-sm font-medium px-6 py-3 rounded-xl border transition-all duration-300 shadow-sm hover:shadow-lg transform hover:scale-105 ${
+                activeKey === prod.key
+                  ? "bg-green-600 text-white border-green-700"
+                  : "bg-white text-gray-800 border-gray-200 hover:bg-gray-100"
+              }`}
             >
-              {showAll ? "Show Less" : "View All Testimonials"}
+              <div className="text-2xl mb-1">{prod.icon}</div>
+              <span className="tracking-wide">{prod.name}</span>
             </button>
+          ))}
+        </div>
+
+        {/* Dashboard Card */}
+        <div className="max-w-6xl mx-auto bg-white bg-opacity-70 backdrop-blur-md border border-gray-200 p-10 rounded-3xl shadow-2xl">
+          <h3 className="text-2xl font-semibold text-center text-gray-700 mb-6">
+            {activeData.title}
+          </h3>
+
+          {/* Image Section */}
+          <div className="flex justify-center animate-fadeIn">
+            <img
+              src={activeData.image}
+              alt={`${activeData.title} preview`}
+              className="w-full max-w-4xl max-h-[450px] object-contain rounded-lg shadow-md border border-gray-200"
+            />
           </div>
         </div>
       </section>
@@ -402,101 +347,57 @@ function Home() {
         </div>
       </section>
 
-      {/* Trusted Schools Section */}
-      <section className="bg-gradient-to-b from-white to-gray-100 py-16 px-4 md:px-10 lg:px-20">
+      {/* Stats Section */}
+      <section className="bg-gradient-to-br from-pink-50 to-white py-16 px-4 md:px-8 lg:px-16 text-gray-800">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-3xl md:text-4xl font-extrabold text-orange-600 mb-10 tracking-tight">
-            Trusted by Leading Schools
-          </h2>
-
-          <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
-            Join a growing network of top schools that rely on our powerful
-            tools for seamless digital transformation.
-          </p>
-
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={2}
-            breakpoints={{
-              640: { slidesPerView: 3 },
-              768: { slidesPerView: 4 },
-              1024: { slidesPerView: 6 },
-            }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            modules={[Autoplay]}
-          >
-            {Object.entries(SchoolImages).map(([key, imgSrc]) => (
-              <SwiperSlide
-                key={key}
-                className="flex justify-center items-center px-4"
-              >
-                <div className="bg-white hover:bg-orange-50 p-4 rounded-xl shadow-md hover:shadow-xl transition duration-300 ease-in-out">
-                  <img
-                    src={imgSrc}
-                    alt={key}
-                    className="w-32 h-20 object-contain transition-transform duration-300 ease-in-out hover:scale-105"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
-
-      {/* Our Products */}
-      <section className="bg-gray-50 min-h-screen p-6">
-        {/* Product Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {products.map((prod) => (
-            <button
-              key={prod.key}
-              onClick={() => setActiveKey(prod.key)}
-              className={`flex flex-col items-center text-sm font-medium px-4 py-2 rounded-md shadow-md transition-all duration-200 ${
-                activeKey === prod.key
-                  ? "bg-green-600 text-white"
-                  : "bg-white text-gray-700 hover:bg-gray-100"
-              }`}
-            >
-              <div className="text-xl mb-1">{prod.icon}</div>
-              {prod.name}
-            </button>
-          ))}
-        </div>
-
-        {/* Dashboard Preview */}
-        <div className="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-gray-800">
-            {activeData.title}
-          </h2>
-
-          {/* Image Section */}
-          <div className="mb-6">
-            <img
-              src={activeData.image}
-              alt={`${activeData.title} preview`}
-              className="w-full max-h-80 object-contain rounded-md shadow"
-            />
-          </div>
-
-          {/* Widget Cards */}
-          <div className="grid md:grid-cols-2 gap-4">
-            {activeData.widgets.map((widget, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Reusable Stat Box */}
+            {[
+              {
+                icon: <FaSchool className="text-3xl text-indigo-700" />,
+                value: "300+",
+                label: "Schools",
+                bg: "bg-indigo-100",
+              },
+              {
+                icon: <FaCubes className="text-3xl text-green-700" />,
+                value: "40+",
+                label: "Modules",
+                bg: "bg-green-100",
+              },
+              {
+                icon: <FaChartPie className="text-3xl text-yellow-700" />,
+                value: "2K+",
+                label: "Reports",
+                bg: "bg-yellow-100",
+              },
+              {
+                icon: <FaAward className="text-3xl text-pink-700" />,
+                value: "8+",
+                label: "Year Expertise",
+                bg: "bg-pink-100",
+              },
+            ].map((stat, index) => (
               <div
                 key={index}
-                className="bg-green-50 border border-green-200 p-4 rounded-md text-gray-800 text-center font-medium"
+                className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 bg-white p-6 rounded-xl shadow hover:shadow-md transition duration-300"
               >
-                {widget}
+                <div className={`${stat.bg} p-4 rounded-full shadow-inner`}>
+                  {stat.icon}
+                </div>
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900">
+                    {stat.value}
+                  </h3>
+                  <p className="text-sm text-gray-600">{stat.label}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Section */}
+      {/* Why Choose Section / Testimonial Sections */}
       <section className="bg-gradient-to-b from-[#f1f0e8] to-[#e5e1da] py-20 px-4 md:px-10 lg:px-20 text-gray-800">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-3">
@@ -594,9 +495,9 @@ function Home() {
         </div>
       </section>
 
-      {/*Enquiry Section */}
-      <section className="bg-gradient-to-r from-green-200 via-green-100 to-green-300 py-16 px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto bg-white/70 backdrop-blur-md rounded-3xl p-6 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-2xl border border-gray-200">
+      {/* Enquiry Section */}
+      <section className="bg-gradient-to-r from-blue-100 via-white to-blue-50 py-16 px-6 md:px-12 lg:px-20">
+        <div className="max-w-7xl mx-auto bg-white/80 backdrop-blur-xl rounded-3xl p-6 md:p-12 flex flex-col md:flex-row items-center gap-12 shadow-xl border border-gray-100">
           {/* Left Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
@@ -611,9 +512,9 @@ function Home() {
             <h4 className="text-sm text-gray-500 uppercase font-semibold tracking-wide">
               e-Brochure
             </h4>
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-800 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
               Everything You Need for
-              <span className="text-orange-500"> Smarter </span>
+              <span className="text-indigo-600"> Smarter </span>
               School Management
             </h2>
             <p className="text-gray-700 text-base md:text-lg">
@@ -627,24 +528,24 @@ function Home() {
               <input
                 type="text"
                 placeholder="Your Name *"
-                className="w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800"
+                className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
               />
               <input
                 type="tel"
                 placeholder="Phone Number *"
-                className="w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800"
+                className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
               />
               <input
                 type="email"
                 placeholder="Email ID"
-                className="w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800"
+                className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
               />
 
               <button
                 type="submit"
-                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 w-full md:w-auto shadow-md hover:shadow-lg"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 w-full md:w-auto shadow-md hover:shadow-lg"
               >
-                📥 Download Now
+                📥 Request Call Back
               </button>
             </form>
           </div>
