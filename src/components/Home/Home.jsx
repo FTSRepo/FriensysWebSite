@@ -20,6 +20,7 @@ import {
   FaChalkboardTeacher,
 } from "react-icons/fa";
 import "swiper/css";
+import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -104,12 +105,13 @@ function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
-                🚀 Explore Solutions
-              </button>
-              <button className="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-xl border border-gray-300 shadow transition">
+              <Link to="/services" className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
+                Explore Services
+              </Link>
+              <Link to="/contact" className="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-xl border border-gray-300 shadow transition">
+                
                 ✉️ Get in Touch
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -409,14 +411,13 @@ function Home() {
           </h2>
           <h3 className="text-2xl md:text-3xl font-bold mb-6">
             Why Should You{" "}
-            <span className="text-orange-600">Choose Friensys</span> School ERP?
+            <span className="text-orange-600">Choose Friensys</span>
           </h3>
 
           <p className="text-gray-700 max-w-3xl mx-auto mb-12 text-md md:text-lg leading-relaxed">
-            Friensys ERP is a centralized platform with all the necessary tools
-            for measuring, accessing, connecting, and coordinating learning
-            processes. It handles every aspect of school or college operations —
-            from daily tasks to seamless communication.
+            Friensys offers next-gen software products, tailored IT development,
+            tech consulting, and staffing solutions — empowering your business
+            to grow, automate, and innovate.
           </p>
 
           <Swiper
@@ -491,25 +492,22 @@ function Home() {
           <div className="w-full md:w-1/2 flex justify-center">
             <img
               src={WebsiteImages.friensysImage}
-              alt="e-Brochure"
+              alt="Friensys Image"
               className="w-full max-w-sm rounded-2xl object-cover shadow-lg"
             />
           </div>
 
           {/* Right Form */}
           <div className="w-full md:w-1/2 space-y-6">
-            <h4 className="text-sm text-gray-500 uppercase font-semibold tracking-wide">
-              e-Brochure
-            </h4>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-snug">
               Everything You Need for
               <span className="text-indigo-600"> Smarter </span>
-              School Management
+              Tech Solutions
             </h2>
             <p className="text-gray-700 text-base md:text-lg">
-              Discover our smart School Management Software. Get the full
-              brochure packed with features, benefits, and a better future for
-              your school.
+              Friensys offers next-gen software products, tailored IT
+              development, tech consulting, and staffing solutions — empowering
+              your business to grow, automate, and innovate.
             </p>
 
             {/* Form */}

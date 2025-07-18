@@ -8,6 +8,7 @@ import {
 import { motion } from "framer-motion";
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
+import { Link } from "react-router-dom";
 
 function EscalationManagement() {
   return (
@@ -32,9 +33,9 @@ function EscalationManagement() {
               auto-generates tickets by priority and assigns them to authorized
               representatives — simplifying resolution.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+            <Link to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
               Request Demo
-            </button>
+            </Link>
           </motion.div>
 
           {/* Image */}

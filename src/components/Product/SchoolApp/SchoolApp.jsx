@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -24,7 +25,7 @@ const features = [
   },
   {
     icon: <FaUserPlus size={24} />,
-    title: "Add Student Module",
+    title: "Admission Management",
     description:
       "Add new students with detailed info like personal details, DOB, and class mapping.",
   },
@@ -82,7 +83,7 @@ const floatingFeatures = [
 ];
 export default function SchoolApp() {
   return (
-    <div className="max-w-7xl mx-auto px-4 md:px-8 py-10">
+    <div >
       <section className="bg-white py-20 px-4 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
@@ -176,9 +177,9 @@ export default function SchoolApp() {
               communication system.
             </p>
 
-            <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">
+            <Link to="/" className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-xl shadow hover:bg-blue-700 transition">
               Explore Full Profile Flow
-            </button>
+            </Link>
 
             <motion.img
               src={WebsiteImages?.SchoolAppProfile}

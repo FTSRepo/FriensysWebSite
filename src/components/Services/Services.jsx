@@ -18,6 +18,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import { BsClipboard2Check } from "react-icons/bs";
 import {
@@ -200,12 +201,12 @@ const ServicesPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <a
-                href="#contact"
+              <Link
+                to="/"
                 className="inline-block bg-blue-600 text-white text-base font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition duration-300"
               >
                 Get Started
-              </a>
+              </Link>
             </motion.div>
           </div>
 

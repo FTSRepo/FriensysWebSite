@@ -9,6 +9,7 @@ import {
 import { WebsiteImages } from "../../../common/BindImages";
 import { motion } from "framer-motion";
 import FormPage from "../../../common/FormPage";
+import { Link } from "react-router-dom";
 
 const benefits = [
   {
@@ -62,13 +63,15 @@ function Marketplace() {
               procurement, development, and communication. Post quotations,
               place bids, and manage your product lifecycle in one place.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition"
-            >
-              Get Started
-            </motion.button>
+            <Link to="/">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition"
+              >
+                Get Started
+              </motion.button>
+            </Link>
           </motion.div>
 
           {/* Image Section with Animation */}

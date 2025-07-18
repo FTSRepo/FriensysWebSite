@@ -153,26 +153,45 @@ const Footer = () => {
             <hr className="border-gray-300 mb-4" />
 
             <p className="text-gray-600 mb-4 text-sm md:text-base leading-relaxed">
-              Friensys is a suite of ERP solutions designed for educational
-              institutions. We offer tools for attendance, academics, online
-              classes, exams, and more — all built to be easy-to-use and fully
-              integrated.
+              Friensys offers next-gen software products, tailored IT
+              development, tech consulting, and staffing solutions — empowering
+              your business to grow, automate, and innovate.
             </p>
 
             <div className="flex gap-4 mt-4 text-xl text-gray-600">
-              <a href="#" className="hover:text-blue-600 transition">
+              <a
+                href="https://www.facebook.com/friensysil"
+                target="_blank"
+                className="hover:text-blue-600 transition"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:text-sky-500 transition">
+              <a
+                href="https://x.com/friensysil"
+                target="_blank"
+                className="hover:text-sky-500 transition"
+              >
                 <FaTwitter />
               </a>
-              <a href="#" className="hover:text-blue-700 transition">
+              <a
+                href="https://www.linkedin.com/company/friensysil"
+                target="_blank"
+                className="hover:text-blue-700 transition"
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="#" className="hover:text-pink-500 transition">
+              <a
+                href="https://www.instagram.com/friensysil/"
+                target="_blank"
+                className="hover:text-pink-500 transition"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className="hover:text-red-500 transition">
+              <a
+                href="https://www.youtube.com/@friensysil"
+                target="_blank"
+                className="hover:text-red-500 transition"
+              >
                 <FaYoutube />
               </a>
             </div>

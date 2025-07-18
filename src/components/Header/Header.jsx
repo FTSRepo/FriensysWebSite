@@ -21,7 +21,6 @@ function Header() {
   const [isShrunk, setIsShrunk] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
 
-  const location = useLocation();
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -70,13 +69,13 @@ function Header() {
           </div>
 
           <div className="hidden md:flex gap-4 text-lg text-white">
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.youtube.com/@friensysil" target = "_blank" className="hover:text-yellow-400 transition">
               <FaYoutube />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.facebook.com/friensysil" target = "_blank" className="hover:text-yellow-400 transition">
               <FaFacebookF />
             </a>
-            <a href="#" className="hover:text-yellow-400 transition">
+            <a href="https://www.linkedin.com/company/friensysil" target = "_blank" className="hover:text-yellow-400 transition">
               <FaLinkedinIn />
             </a>
           </div>

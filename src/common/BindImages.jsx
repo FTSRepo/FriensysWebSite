@@ -8,8 +8,10 @@ import dawnPublic from "../assets/schoolImage/dawnPublic.png";
 import delhiPublic from "../assets/schoolImage/delhiPublic.png";
 import geniusPublic from "../assets/schoolImage/geniusPublic.png";
 import GMpublic from "../assets/schoolImage/GMpublic.png";
-import GRMpublic from "../assets/schoolImage/GRMpublic.png";
 import holyMission from "../assets/schoolImage/holyMission.png";
+import VKlogo from "../assets/schoolImage/VkLogo.jpg";
+import VKReta from "../assets/schoolImage/VKReta.jpg";
+import uniqueLogo from "../assets/schoolImage/uniqueLogo.png";
 
 //? Website Related Images
 
@@ -53,8 +55,10 @@ export const SchoolImages = {
   delhiPublic,
   geniusPublic,
   GMpublic,
-  GRMpublic,
   holyMission,
+  uniqueLogo,
+  VKReta,
+  VKlogo
 };
 
 export const WebsiteImages = {
