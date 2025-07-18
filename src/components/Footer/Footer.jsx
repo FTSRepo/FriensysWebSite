@@ -41,7 +41,7 @@ const Footer = () => {
                   to="/product/schoolApp"
                   className="hover:text-gray-900 transition"
                 >
-                  School Mobile App
+                  School App
                 </Link>
               </li>
               <li>

@@ -15,7 +15,6 @@ import SchoolApp from "../components/Product/SchoolApp/SchoolApp";
 import Escalation from "../components/Product/EscalationManagement/EscalationManagement";
 import ODSAS from "../components/Product/ODSAS/ODSAS";
 import CustomerLoyalty from "../components/Product/CustomerLoyalty/CustomerLoyalty";
-import ProductLanding from "../components/Product/Product/Product"
 import Marketplace from "../components/Product/Marketplace/Marketplace";
 import CollegeManagement from "../components/Product/CollegeERP/CollegeManagement";
 
@@ -56,10 +55,6 @@ const router = createBrowserRouter([
         path: "product",
         element: <ProductLayout />,
         children: [
-          {
-            index: true,
-            element: <ProductLanding />,
-          },
           {
             path: "schoolErp",
             element: <SchoolManagement />,

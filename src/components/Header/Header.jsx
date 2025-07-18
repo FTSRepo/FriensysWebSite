@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -17,8 +18,10 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const productRef = useRef(null);
-  const navigate = useNavigate();
   const [isShrunk, setIsShrunk] = useState(false);
+  const [mobileProductOpen, setMobileProductOpen] = useState(false);
+
+  const location = useLocation();
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -49,7 +52,7 @@ function Header() {
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-sm text-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between gap-3">
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-center sm:text-left">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-center sm:text-left">
             <div className="flex items-center gap-2">
               <FaPhoneAlt />
               <span>+91-9971673592</span>
@@ -58,7 +61,7 @@ function Header() {
               <FaEnvelope />
               <span>info@friensys.com</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2">
               <MdLocationOn />
               <span>
                 J-804, Sector -1 Techzone-IV, Greater Noida West, UP-201305,
@@ -66,7 +69,7 @@ function Header() {
             </div>
           </div>
 
-          <div className="flex gap-4 text-lg text-white">
+          <div className="hidden md:flex gap-4 text-lg text-white">
             <a href="#" className="hover:text-yellow-400 transition">
               <FaYoutube />
             </a>
@@ -116,36 +119,31 @@ function Header() {
             }`}
           >
             <li>
-              <Link to="/" className="hover:text-yellow-300">
+              <Link to="/" className="hover:text-blue-600">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-yellow-300">
+              <Link to="/about" className="hover:text-blue-600">
                 About
               </Link>
             </li>
 
             {/* Product Dropdown */}
             <li
-              className="relative flex items-center gap-1"
+              className="relative flex items-center gap-1 cursor-pointer select-none"
               ref={productRef}
               onMouseEnter={() => setProductOpen(true)}
               onMouseLeave={() => setProductOpen(false)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setProductOpen((prev) => !prev);
+              }}
             >
-              <span
-                onClick={() => navigate("/product")}
-                className="hover:text-yellow-400 cursor-pointer transition-colors duration-200 font-medium"
-              >
-                Product
-              </span>
+              <span className="hover:text-blue-600 transition">Product</span>
               <FaChevronDown
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setProductOpen((prev) => !prev);
-                }}
                 className={`text-xs cursor-pointer mt-1 transition-transform duration-300 ${
-                  productOpen ? "rotate-180 text-yellow-400" : ""
+                  productOpen ? "rotate-180 text-blue-600" : ""
                 }`}
               />
 
@@ -159,7 +157,7 @@ function Header() {
               >
                 {[
                   { to: "/product/schoolErp", label: "School ERP" },
-                  { to: "/product/schoolApp", label: "School Mobile App" },
+                  { to: "/product/schoolApp", label: "School App" },
                   { to: "/product/escalation", label: "Escalation System" },
                   { to: "/product/ODSAS", label: "OD-SAS" },
                   { to: "/product/customerLoyalty", label: "Customer Loyalty" },
@@ -182,12 +180,12 @@ function Header() {
             </li>
 
             <li>
-              <Link to="/services" className="hover:text-yellow-300">
+              <Link to="/services" className="hover:text-blue-600">
                 Services
               </Link>
             </li>
             <li>
-              <Link to="/careers" className="hover:text-yellow-300">
+              <Link to="/careers" className="hover:text-blue-600">
                 Careers
               </Link>
             </li>
@@ -220,23 +218,83 @@ function Header() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden px-6 pb-6 bg-[#B3C8CF] text-[#003545] text-base font-semibold space-y-3">
-            {[
-              { label: "Home", path: "/" },
-              { label: "About Us", path: "/about" },
-              { label: "School ERP", path: "/erp" },
-              { label: "School Mobile App", path: "/mobile-app" },
-              { label: "Our Strength", path: "/strength" },
-              { label: "Blog", path: "/blog" },
-            ].map(({ label, path }) => (
-              <Link
-                key={label}
-                to={path}
-                onClick={() => setMenuOpen(false)}
-                className="block hover:text-[#ED6363] transition"
+            <Link
+              to="/"
+              onClick={() => setMenuOpen(false)}
+              className="block hover:text-[#ED6363] transition"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+              className="block hover:text-[#ED6363] transition"
+            >
+              About Us
+            </Link>
+
+            {/* Product Dropdown in Mobile */}
+            <div className="block">
+              <button
+                onClick={() => setMobileProductOpen(!mobileProductOpen)}
+                className="w-full text-left hover:text-[#ED6363] transition flex items-center justify-between"
               >
-                {label}
-              </Link>
-            ))}
+                <span>Product</span>
+                <FaChevronDown
+                  className={`text-xs ml-2 transition-transform duration-200 ${
+                    mobileProductOpen ? "rotate-180 text-yellow-400" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Items */}
+              {mobileProductOpen && (
+                <div className="ml-4 mt-2 space-y-2">
+                  {[
+                    { to: "/product/schoolErp", label: "School ERP" },
+                    { to: "/product/schoolApp", label: "School App" },
+                    { to: "/product/escalation", label: "Escalation System" },
+                    { to: "/product/ODSAS", label: "OD-SAS" },
+                    {
+                      to: "/product/customerLoyalty",
+                      label: "Customer Loyalty",
+                    },
+                    { to: "/product/marketplace", label: "Marketplace" },
+                    {
+                      to: "/product/collegeErp",
+                      label: "College Management System",
+                    },
+                  ].map(({ to, label }) => (
+                    <Link
+                      key={to}
+                      to={to}
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setMobileProductOpen(false);
+                      }}
+                      className="block text-sm hover:text-green-700 transition"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/services"
+              onClick={() => setMenuOpen(false)}
+              className="block hover:text-[#ED6363] transition"
+            >
+              Services
+            </Link>
+            <Link
+              to="/careers"
+              onClick={() => setMenuOpen(false)}
+              className="block hover:text-[#ED6363] transition"
+            >
+              Careers
+            </Link>
 
             <Link
               to="/contact"

@@ -34,12 +34,15 @@ import SchoolAppProfile from "../assets/websiteImage/SchoolAppProfile.png";
 import OnlineClassStudent from "../assets/websiteImage/OnlineClassStudent.png";
 import NewsandEvent from "../assets/websiteImage/NewsAndEvent.png";
 import LoyaltyDashboard from "../assets/websiteImage/LoyaltyDashboard.png";
+import LoyaltyWebsite from "../assets/websiteImage/LoyaltyWebsite.jpg";
+import LoyaltyMobile from "../assets/websiteImage/LoyaltyMobile.jpg";
 import EscalationDashboard from "../assets/websiteImage/EscalationDashboard.png";
 import EducationalCRMServices from "../assets/websiteImage/educationalCRMServices.png";
 import EducationalCRMReception from "../assets/websiteImage/educationalCRMReception.png";
 import EducationalCRMAdmissionCordinator from "../assets/websiteImage/educationalCRMAdmissionCordinator.png";
 import EducationalCRMCounsellor from "../assets/websiteImage/educationalCRMCounsellor.png";
 import DashboardImage from "../assets/websiteImage/dashboardImage.png";
+import MarketplaceBusinessModel from "../assets/websiteImage/MarketplaceBusinessModel.png";
 
 export const SchoolImages = {
   ABC,
@@ -81,5 +84,8 @@ export const WebsiteImages = {
   EducationalCRMReception,
   EducationalCRMAdmissionCordinator,
   EducationalCRMCounsellor,
-  DashboardImage
+  DashboardImage,
+  LoyaltyWebsite,
+  LoyaltyMobile,
+  MarketplaceBusinessModel
 };

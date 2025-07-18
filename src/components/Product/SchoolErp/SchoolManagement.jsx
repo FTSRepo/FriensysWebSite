@@ -45,7 +45,7 @@ export default function SchoolERP() {
         {/* Accordion Section */}
         <div className="relative z-10">
           <h2 className="text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
-            <span>School ERP</span>{" "}
+            <span>School</span>{" "}
             <span className="text-blue-600">Management System</span>
           </h2>
 

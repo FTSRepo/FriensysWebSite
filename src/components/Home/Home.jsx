@@ -65,7 +65,7 @@ const dashboardMockData = {
   },
   crm: {
     title: "CRM - Educational Management",
-    image: WebsiteImages.EducationalCRM,
+    image: WebsiteImages.EducationalCRMAdmissionCordinator,
   },
 };
 
@@ -127,17 +127,21 @@ function Home() {
       </section>
 
       {/* Trusted Schools Section */}
-      <section className="bg-gradient-to-b from-white via-sky-50 to-emerald-100 py-16 px-4 md:px-10 lg:px-20">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-center text-3xl md:text-4xl font-extrabold text-indigo-700 mb-10 tracking-tight">
-            Trusted by Leading Schools
+      <section className="bg-gradient-to-b from-white via-sky-50 to-emerald-100 py-20 px-4 md:px-10 lg:px-24">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-700 tracking-tight mb-6">
+            Our Trusted <span className="text-indigo-600">Partners</span>
           </h2>
 
-          <p className="text-center text-gray-600 mb-12 text-lg max-w-3xl mx-auto">
-            Join a growing network of top schools that rely on our powerful
-            tools for seamless digital transformation.
+          {/* Description */}
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
+            We proudly collaborate with industry-leading organizations and
+            educational institutions to deliver seamless digital experiences
+            that drive success and growth.
           </p>
 
+          {/* Swiper Carousel */}
           <Swiper
             spaceBetween={30}
             slidesPerView={2}
@@ -158,11 +162,11 @@ function Home() {
                 key={key}
                 className="flex justify-center items-center px-4"
               >
-                <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl hover:ring-2 hover:ring-indigo-300 transition duration-300 ease-in-out">
+                <div className="bg-white p-5 rounded-2xl shadow-md hover:shadow-lg border border-gray-200 hover:border-indigo-300 transition duration-300 ease-in-out">
                   <img
                     src={imgSrc}
                     alt={key}
-                    className="w-32 h-20 object-contain transition-transform duration-300 ease-in-out hover:scale-105"
+                    className="w-28 h-20 object-contain hover:scale-105 transition-transform duration-300 ease-in-out"
                   />
                 </div>
               </SwiperSlide>
@@ -441,21 +445,6 @@ function Home() {
                 logo: SchoolImages.GMpublic,
                 title: "Bright Future Academy, Pune",
                 desc: "From manual records to full automation — Friensys has changed how BFA handles exams, attendance, and reporting...",
-              },
-              {
-                logo: SchoolImages.GMpublic,
-                title: "Modern School, Delhi",
-                desc: "Modern School relies on Friensys ERP for a seamless academic and administrative experience...",
-              },
-              {
-                logo: SchoolImages.GMpublic,
-                title: "Green Valley School, Jaipur",
-                desc: "Parent-teacher communication has never been this effective — thanks to the smart features of Friensys ERP...",
-              },
-              {
-                logo: SchoolImages.GMpublic,
-                title: "St. Xavier’s High School, Ranchi",
-                desc: "Smooth fee management and academic reports are now just a click away for Xavier’s School...",
               },
             ].map((item, index) => (
               <SwiperSlide key={index}>
