@@ -60,8 +60,17 @@ function Marketplace() {
             </h1>
             <p className="text-lg text-gray-700 mb-8">
               A centralized platform where buyers and suppliers connect for
-              procurement, development, and communication. Post quotations,
-              place bids, and manage your product lifecycle in one place.
+              procurement, development, and communication. Streamline your
+              entire sourcing and supply chain process—post detailed RFQs
+              (Request for Quotations), receive competitive bids from verified
+              suppliers, and finalize deals seamlessly. Collaborate in real-time
+              with your partners to manage product specifications, revisions,
+              and timelines. From initial inquiry to final delivery, manage your
+              product lifecycle efficiently with built-in tools for tracking,
+              documentation, and feedback. Whether you're launching a new
+              product or scaling operations, our platform provides the
+              infrastructure for transparent, efficient, and strategic
+              procurement.
             </p>
             <Link to="/">
               <motion.button
