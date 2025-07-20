@@ -83,17 +83,17 @@ const testimonials = [
   {
     text: "Friensys transformed our operations. Their solutions are reliable and their support is top-notch.",
     name: "Amit Verma",
-    role: "Operations Head, TechCorp",
+    role: "Operations Head",
   },
   {
     text: "Great communication and delivery on time. We've seen a 30% increase in efficiency!",
     name: "Neha Sharma",
-    role: "CTO, EduWorld",
+    role: "CTO",
   },
   {
     text: "Their expertise in ERP helped us simplify our workflows dramatically.",
     name: "Rahul Das",
-    role: "Project Manager, BuildTech",
+    role: "Project Manager",
   },
 ];
 
