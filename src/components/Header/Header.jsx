@@ -163,7 +163,7 @@ function Header() {
                   { to: "/product/marketplace", label: "Marketplace" },
                   {
                     to: "/product/collegeErp",
-                    label: "College Management System",
+                    label: "Education CRM",
                   },
                 ].map((item) => (
                   <Link

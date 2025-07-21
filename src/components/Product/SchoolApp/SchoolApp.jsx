@@ -542,7 +542,7 @@ export default function SchoolApp() {
         </div>
       </section>
 
-      <div className="mt-28">
+      <div>
         <FormPage />
       </div>
     </div>

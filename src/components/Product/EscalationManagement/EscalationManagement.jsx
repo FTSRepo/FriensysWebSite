@@ -33,7 +33,10 @@ function EscalationManagement() {
               auto-generates tickets by priority and assigns them to authorized
               representatives — simplifying resolution.
             </p>
-            <Link to="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
+            >
               Request Demo
             </Link>
           </motion.div>
@@ -46,16 +49,16 @@ function EscalationManagement() {
             viewport={{ once: true }}
           >
             <img
-              src={WebsiteImages.friensysImage}
+              src={WebsiteImages.EscalationDashboardImage}
               alt="Escalation system dashboard"
-              className="rounded-xl shadow-lg w-full h-auto object-cover"
+              className="rounded-xl shadow-lg w-full h-[400px] object-cover"
             />
           </motion.div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-white py-24 px-6 md:px-16 lg:px-24">
+      <section className="bg-gradient-to-br from-blue-100 to-white py-24 px-6 md:px-16 lg:px-24">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-extrabold text-gray-800 mb-12">
             Key <span className="text-blue-600">Benefits</span>

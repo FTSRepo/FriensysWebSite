@@ -16,6 +16,7 @@ import {
   FaClipboardList,
   FaLaptopCode,
   FaShieldAlt,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -30,45 +31,6 @@ import { GiSolarPower, GiTeacher } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
 import { SchoolImages, WebsiteImages } from "../../common/BindImages";
 import FormPage from "../../common/FormPage";
-
-const services = [
-  {
-    title: "Custom Software Development",
-    description:
-      "Build scalable web & mobile apps tailored to your business needs using modern stacks.",
-    icon: <FaLaptopCode />,
-  },
-  {
-    title: "ERP Solutions",
-    description:
-      "Streamline operations with centralized ERP for schools, retail, and manufacturing.",
-    icon: <FaCogs />,
-  },
-  {
-    title: "Cloud Deployment",
-    description:
-      "Leverage cloud-native tools with AWS, Azure, or GCP for performance and scalability.",
-    icon: <FaCloud />,
-  },
-  {
-    title: "Product Engineering",
-    description:
-      "Transform your MVP into a robust product with agile teams and product ownership.",
-    icon: <FaRocket />,
-  },
-  {
-    title: "Mobile App Development",
-    description:
-      "Cross-platform mobile apps that are fast, responsive, and beautifully designed.",
-    icon: <FaMobileAlt />,
-  },
-  {
-    title: "Cybersecurity",
-    description:
-      "Secure your applications and infrastructure with modern security practices and audits.",
-    icon: <FaShieldAlt />,
-  },
-];
 
 const industries = [
   "Education Technology",
@@ -163,6 +125,51 @@ const industriesServices = [
   },
 ];
 
+const service = [
+  {
+    title: "Software Development",
+    icon: <FaCode className="text-purple-600 text-5xl" />,
+    color: "border-purple-500",
+    description:
+      "From web and mobile apps to enterprise-grade ERP systems, we craft scalable software that empowers businesses to thrive in the digital age.",
+    points: [
+      "Custom web & mobile applications",
+      "ERP & business automation",
+      "Performance dashboards & analytics",
+      "SEO-optimized websites",
+      "Full lifecycle product development",
+    ],
+  },
+  {
+    title: "Cloud Solutions",
+    icon: <FaCloud className="text-teal-600 text-5xl" />,
+    color: "border-teal-500",
+    description:
+      "Empower your business with secure, scalable, and cost-efficient cloud infrastructure using AWS and Azure best practices.",
+    points: [
+      "Cloud migration & optimization (AWS, Azure)",
+      "Infrastructure as Code & DevOps",
+      "Scalable architecture design",
+      "Disaster recovery & monitoring",
+      "Cloud-native app development",
+    ],
+  },
+  {
+    title: "IT Consulting",
+    icon: <FaChalkboardTeacher className="text-blue-600 text-5xl" />,
+    color: "border-blue-500",
+    description:
+      "Strategic IT guidance for future-proofing your digital infrastructure, enhancing productivity, and reducing costs.",
+    points: [
+      "IT roadmap & strategy",
+      "Governance & compliance planning",
+      "Tech gap analysis & infrastructure planning",
+      "Vendor & tool recommendations",
+      "Agile transformation & change management",
+    ],
+  },
+];
+
 const ServicesPage = () => {
   return (
     <div className="bg-white text-gray-800">
@@ -218,9 +225,9 @@ const ServicesPage = () => {
             transition={{ duration: 0.7 }}
           >
             <img
-              src={WebsiteImages.friensysImage}
+              src={WebsiteImages.ServicePage}
               alt="3D Illustration"
-              className="w-full h-auto"
+              className="w-full  max-h-[400px] object-cover"
             />
           </motion.div>
         </div>
@@ -230,47 +237,37 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          {/* Heading */}
-          <motion.h2
-            className="text-4xl font-extrabold text-center text-gray-800 mb-16"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Our <span className="text-blue-600">Core Services</span>
-          </motion.h2>
+      <section className="bg-gradient-to-b from-white via-sky-50 to-emerald-100 py-24 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
+            Our Core Service Offerings
+          </h2>
+          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+            Explore how our specialized solutions in software development, cloud
+            transformation, and IT strategy can accelerate your business growth.
+          </p>
+        </div>
 
-          {/* Services Grid */}
-          <div className="space-y-10">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                className="flex flex-col md:flex-row items-start gap-6 p-6 bg-white/70 border border-gray-100 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {/* Icon Circle */}
-                <div className="min-w-[64px] h-[64px] rounded-full bg-blue-100 flex items-center justify-center text-blue-600 text-3xl shadow-inner">
-                  {service.icon}
-                </div>
-
-                {/* Text Content */}
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-1">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-3 gap-10">
+          {service.map((service, index) => (
+            <div
+              key={index}
+              className={`border-t-4 ${service.color} bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6`}
+            >
+              <div className="flex justify-center mb-6">{service.icon}</div>
+              <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-center mb-6">
+                {service.description}
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-left text-gray-700">
+                {service.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 

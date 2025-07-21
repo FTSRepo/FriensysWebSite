@@ -8,6 +8,7 @@ import Contact from "../components/Contact/Contact";
 import Careers from "../components/Careers/Careers";
 import PrivacyPolicy from "../Privacy/PrivacyPolicy/PrivacyPolicy";
 import CancellationPolicy from "../Privacy/CancellationPolicy/cancellationPolicy";
+import ComingSoon from "../common/UnderDevelopment/ComingSoon";
 
 //Product Page component
 import SchoolManagement from "../components/Product/SchoolErp/SchoolManagement";
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
             element: <CollegeManagement />,
           },
         ],
+      },
+      {
+        path: "underDevelopment", 
+        element: <ComingSoon />,
       },
     ],
   },

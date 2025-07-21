@@ -25,7 +25,7 @@ import AddStudent from "../assets/websiteImage/AddStudent.png";
 import OnlineClass from "../assets/websiteImage/OnlineClass.png";
 import EventSection from "../assets/websiteImage/EventSection.png";
 import CollectionReport from "../assets/websiteImage/CollectionReport.png";
-import LoginPage from "../assets/websiteImage/LoginPage.jpg";
+import SchoolErpLogin from "../assets/websiteImage/SchoolErpLogin.png";
 import AdminDashboardApp from "../assets/websiteImage/AdminDashboardApp.png";
 import FeePayment from "../assets/websiteImage/FeePayment.png";
 import HomeworkStudent from "../assets/websiteImage/HomeworkStudent.png";
@@ -36,8 +36,8 @@ import SchoolAppProfile from "../assets/websiteImage/SchoolAppProfile.png";
 import OnlineClassStudent from "../assets/websiteImage/OnlineClassStudent.png";
 import NewsandEvent from "../assets/websiteImage/NewsAndEvent.png";
 import LoyaltyDashboard from "../assets/websiteImage/LoyaltyDashboard.png";
-import LoyaltyWebsite from "../assets/websiteImage/LoyaltyWebsite.jpg";
-import LoyaltyMobile from "../assets/websiteImage/LoyaltyMobile.jpg";
+import LoyaltyWebsite from "../assets/websiteImage/LoyaltyWebsite.png";
+import LoyaltyMobile from "../assets/websiteImage/LoyaltyMobile.png";
 import EscalationDashboard from "../assets/websiteImage/EscalationDashboard.png";
 import EducationalCRMServices from "../assets/websiteImage/educationalCRMServices.png";
 import EducationalCRMReception from "../assets/websiteImage/educationalCRMReception.png";
@@ -45,6 +45,11 @@ import EducationalCRMAdmissionCordinator from "../assets/websiteImage/educationa
 import EducationalCRMCounsellor from "../assets/websiteImage/educationalCRMCounsellor.png";
 import DashboardImage from "../assets/websiteImage/dashboardImage.png";
 import MarketplaceBusinessModel from "../assets/websiteImage/MarketplaceBusinessModel.png";
+import EscalationDashboardImage from "../assets/websiteImage/EscalationDashboardImage.png";
+import MarketplaceDashboard from "../assets/websiteImage/MarketplaceDashboard.png";
+import ServicePage from "../assets/websiteImage/ServicePage.png";
+
+
 
 export const SchoolImages = {
   ABC,
@@ -72,7 +77,7 @@ export const WebsiteImages = {
   OnlineClass,
   EventSection,
   CollectionReport,
-  LoginPage,
+  SchoolErpLogin,
   AdminDashboardApp,
   FeePayment,
   HomeworkStudent,
@@ -91,5 +96,8 @@ export const WebsiteImages = {
   DashboardImage,
   LoyaltyWebsite,
   LoyaltyMobile,
-  MarketplaceBusinessModel
+  MarketplaceBusinessModel,
+  EscalationDashboardImage,
+  MarketplaceDashboard,
+  ServicePage
 };

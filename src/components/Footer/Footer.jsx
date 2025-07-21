@@ -33,7 +33,7 @@ const Footer = () => {
                   to="/product/schoolErp"
                   className="hover:text-gray-900 transition"
                 >
-                  School Management Software
+                  School ERP
                 </Link>
               </li>
               <li>
@@ -73,7 +73,7 @@ const Footer = () => {
                   to="/product/collegeErp"
                   className="hover:text-gray-900 transition"
                 >
-                  College Management Software
+                  Education CRM
                 </Link>
               </li>
             </ul>
@@ -101,7 +101,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-gray-900 transition">
+                <Link to="/underDevelopment" className="hover:text-gray-900 transition">
                   Blog
                 </Link>
               </li>
@@ -113,13 +113,13 @@ const Footer = () => {
             <h2 className="text-gray-900 font-semibold mb-4 text-xl">Legal</h2>
             <ul className="space-y-2">
               <li>
-                <Link to="#" className="hover:text-gray-900 transition">
+                <Link to="/underDevelopment" className="hover:text-gray-900 transition">
                   Terms of Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/privacyPolicy"
+                  to="/underDevelopment"
                   className="hover:text-gray-900 transition"
                 >
                   Privacy Policy
@@ -134,7 +134,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="#" className="hover:text-gray-900 transition">
+                <Link to="/underDevelopment" className="hover:text-gray-900 transition">
                   License
                 </Link>
               </li>

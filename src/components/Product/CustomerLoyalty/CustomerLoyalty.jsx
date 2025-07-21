@@ -247,7 +247,7 @@ export default function CustomerLoyalty() {
             <img
               src={WebsiteImages.LoyaltyMobile}
               alt="Loyalty Mobile App UI"
-              className="rounded-3xl w-full max-w-[400px] shadow-2xl border border-gray-200"
+              className="rounded-3xl w-full max-w-[500px] shadow-2xl border border-gray-200"
             />
           </motion.div>
         </div>

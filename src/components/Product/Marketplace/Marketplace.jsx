@@ -93,7 +93,7 @@ function Marketplace() {
           >
             <div className="relative w-full h-80 md:h-[420px] rounded-xl overflow-hidden shadow-xl border border-gray-200">
               <img
-                src={WebsiteImages.friensysImage}
+                src={WebsiteImages.MarketplaceDashboard}
                 alt="Marketplace Overview"
                 className="w-full h-full object-cover"
               />
