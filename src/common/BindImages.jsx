@@ -48,6 +48,7 @@ import MarketplaceBusinessModel from "../assets/websiteImage/MarketplaceBusiness
 import EscalationDashboardImage from "../assets/websiteImage/EscalationDashboardImage.png";
 import MarketplaceDashboard from "../assets/websiteImage/MarketplaceDashboard.png";
 import ServicePage from "../assets/websiteImage/ServicePage.png";
+import ConsultingPage from "../assets/websiteImage/ConsultingPage.png"
 
 
 
@@ -99,5 +100,6 @@ export const WebsiteImages = {
   MarketplaceBusinessModel,
   EscalationDashboardImage,
   MarketplaceDashboard,
-  ServicePage
+  ServicePage,
+  ConsultingPage
 };

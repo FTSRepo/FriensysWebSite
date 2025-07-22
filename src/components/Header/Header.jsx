@@ -10,25 +10,36 @@ import {
   FaBars,
   FaTimes,
   FaChevronDown,
+  FaArrowRight,
 } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { WebsiteImages } from "../../common/BindImages";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
-  const productRef = useRef(null);
   const [isShrunk, setIsShrunk] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
-
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const productRef = useRef(null);
+  const servicesRef = useRef(null);
 
   // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(event) {
+      // Close Product Dropdown
       if (productRef.current && !productRef.current.contains(event.target)) {
         setProductOpen(false);
       }
+
+      // Close Services Dropdown
+      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
     }
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -38,7 +49,7 @@ function Header() {
   // Handle scroll to shrink header
   useEffect(() => {
     const handleScroll = () => {
-      setIsShrunk(window.scrollY > 50); // Shrink when scrolled more than 50px
+      setIsShrunk(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -48,7 +59,7 @@ function Header() {
 
   return (
     <>
-      {/* Top Contact Bar */}
+      {/*===================Top Contact Bar================= */}
       <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-sm text-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between gap-3">
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-center sm:text-left">
@@ -69,20 +80,32 @@ function Header() {
           </div>
 
           <div className="hidden md:flex gap-4 text-lg text-white">
-            <a href="https://www.youtube.com/@friensysil" target = "_blank" className="hover:text-yellow-400 transition">
+            <a
+              href="https://www.youtube.com/@friensysil"
+              target="_blank"
+              className="hover:text-yellow-400 transition"
+            >
               <FaYoutube />
             </a>
-            <a href="https://www.facebook.com/friensysil" target = "_blank" className="hover:text-yellow-400 transition">
+            <a
+              href="https://www.facebook.com/friensysil"
+              target="_blank"
+              className="hover:text-yellow-400 transition"
+            >
               <FaFacebookF />
             </a>
-            <a href="https://www.linkedin.com/company/friensysil" target = "_blank" className="hover:text-yellow-400 transition">
+            <a
+              href="https://www.linkedin.com/company/friensysil"
+              target="_blank"
+              className="hover:text-yellow-400 transition"
+            >
               <FaLinkedinIn />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Navbar */}
+      {/*===========Main Navbar=========== */}
       <header
         className={`bg-gradient-to-r from-pink-200 via-purple-200 to-blue-200 sticky top-0 z-50 shadow-md transition-all duration-300 ${
           isShrunk ? "py-1" : "py-3"
@@ -111,24 +134,27 @@ function Header() {
             </span>
           </div>
 
-          {/* Desktop Nav */}
+          {/*=============Desktop Nav=========== */}
           <ul
             className={`hidden md:flex space-x-12 font-medium text-[#003545] relative ${
               isShrunk ? "text-sm space-x-8" : "space-x-20"
             }`}
           >
+            {/*===================Home Page===================== */}
             <li>
               <Link to="/" className="hover:text-blue-600">
                 Home
               </Link>
             </li>
+
+            {/*===================About Page===================== */}
             <li>
               <Link to="/about" className="hover:text-blue-600">
                 About
               </Link>
             </li>
 
-            {/* Product Dropdown */}
+            {/*===================Product Dropdown===================== */}
             <li
               className="relative flex items-center gap-1 cursor-pointer select-none"
               ref={productRef}
@@ -178,11 +204,85 @@ function Header() {
               </div>
             </li>
 
-            <li>
-              <Link to="/services" className="hover:text-blue-600">
-                Services
-              </Link>
+            {/*====================Service Page========================== */}
+            <li className="relative" ref={servicesRef}>
+              <div className="flex items-center gap-2">
+                {/* Main Link */}
+                <Link
+                  to="/services/services"
+                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                >
+                  Services
+                </Link>
+
+                {/* Arrow Button */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setDropdownOpen((prev) => !prev);
+                  }}
+                  className="text-gray-400 hover:text-blue-600 transition duration-200"
+                >
+                  <FaArrowRight className="text-xs" />
+                </button>
+              </div>
+
+              {/* Enhanced Services Dropdown */}
+              <AnimatePresence>
+                {isDropdownOpen && (
+                  <motion.div
+                    key="services-clean-dropdown"
+                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 8 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[460px] bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100 z-50 overflow-hidden"
+                  >
+                    <div className="grid grid-cols-1 divide-y divide-gray-100">
+                      {[
+                        {
+                          to: "/services/softwareDevelopment",
+                          label: "Software Development",
+                          desc: "Build scalable applications tailored to your business.",
+                        },
+                        {
+                          to: "/services/cloudSolutions",
+                          label: "Cloud Solutions",
+                          desc: "Manage infrastructure with AWS, Azure, or GCP.",
+                        },
+                        {
+                          to: "/services/itConsulting",
+                          label: "IT Consulting",
+                          desc: "Optimize your IT strategy with expert guidance.",
+                        },
+                        {
+                          to: "/services/softwareProduct",
+                          label: "Software Products",
+                          desc: "Explore our ready-made enterprise-grade products.",
+                        },
+                      ].map((item) => (
+                        <Link
+                          key={item.to}
+                          to={item.to}
+                          className="block px-6 py-4 hover:bg-blue-50 transition-colors duration-200"
+                          onClick={() => setDropdownOpen(false)}
+                        >
+                          <div className="text-sm font-semibold text-gray-800 hover:text-blue-700">
+                            {item.label}
+                          </div>
+                          <div className="text-xs text-gray-500 mt-1 leading-snug">
+                            {item.desc}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </li>
+
+            {/*===================Careers Page===================== */}
             <li>
               <Link to="/careers" className="hover:text-blue-600">
                 Careers
@@ -190,7 +290,7 @@ function Header() {
             </li>
           </ul>
 
-          {/* Contact Button */}
+          {/*==============Contact Button=============== */}
           <div className="hidden md:block">
             <Link
               to="/contact"
@@ -202,7 +302,7 @@ function Header() {
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/*===============Mobile Hamburger==============*/}
           <div
             className={`md:hidden text-[#003545] text-2xl ${
               isShrunk ? "text-xl" : ""
@@ -214,7 +314,7 @@ function Header() {
           </div>
         </nav>
 
-        {/* Mobile Menu */}
+        {/*=============Mobile Menu=================*/}
         {menuOpen && (
           <div className="md:hidden px-6 pb-6 bg-[#B3C8CF] text-[#003545] text-base font-semibold space-y-3">
             <Link
@@ -280,13 +380,57 @@ function Header() {
               )}
             </div>
 
-            <Link
-              to="/services"
-              onClick={() => setMenuOpen(false)}
-              className="block hover:text-[#ED6363] transition"
-            >
-              Services
-            </Link>
+            {/* Services Dropdown in Mobile */}
+            <div className="block">
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="w-full text-left hover:text-[#ED6363] transition flex items-center justify-between"
+              >
+                <span>Services</span>
+                <FaChevronDown
+                  className={`text-xs ml-2 transition-transform duration-200 ${
+                    mobileServicesOpen ? "rotate-180 text-yellow-400" : ""
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown Items */}
+              {mobileServicesOpen && (
+                <div className="ml-4 mt-2 space-y-2">
+                  {[
+                    {
+                      to: "/services/softwareDevelopment",
+                      label: "Software Development",
+                    },
+                    {
+                      to: "/services/cloudSolutions",
+                      label: "Cloud Solutions",
+                    },
+                    {
+                      to: "/services/itConsulting",
+                      label: "IT Consulting",
+                    },
+                    {
+                      to: "/services/softwareProduct",
+                      label: "Software Products",
+                    },
+                  ].map(({ to, label }) => (
+                    <Link
+                      key={to}
+                      to={to}
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setMobileServicesOpen(false);
+                      }}
+                      className="block text-sm hover:text-green-700 transition"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               to="/careers"
               onClick={() => setMenuOpen(false)}

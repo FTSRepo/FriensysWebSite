@@ -17,6 +17,8 @@ import {
   FaLaptopCode,
   FaShieldAlt,
   FaChalkboardTeacher,
+  FaCheckCircle,
+  FaQuoteLeft,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -29,8 +31,8 @@ import {
 } from "react-icons/md";
 import { GiSolarPower, GiTeacher } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
-import { SchoolImages, WebsiteImages } from "../../common/BindImages";
-import FormPage from "../../common/FormPage";
+import { SchoolImages, WebsiteImages } from "../../../common/BindImages";
+import FormPage from "../../../common/FormPage";
 
 const industries = [
   "Education Technology",
@@ -173,67 +175,67 @@ const service = [
 const ServicesPage = () => {
   return (
     <div className="bg-white text-gray-800">
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-white to-blue-100 py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-12">
-          {/* LEFT: Text */}
-          <div className="text-center lg:text-left">
-            <motion.h1
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Empowering Ideas,
-              <br />
-              <span className="text-blue-600 relative inline-block">
-                Building Products
-                <span className="block h-1 w-full bg-blue-300 mt-1 rounded-full opacity-50"></span>
-              </span>
-            </motion.h1>
-
-            <motion.p
-              className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              Friensys Info Labs turns concepts into reliable software products
-              — fast, scalable, and secure.
-            </motion.p>
-
-            <motion.div
-              className="mt-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Link
-                to="/"
-                className="inline-block bg-blue-600 text-white text-base font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-blue-700 transition duration-300"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* RIGHT: Illustration */}
+      <section className="relative overflow-hidden bg-gray-50 py-24 px-6 md:px-12 lg:px-20 text-gray-900">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
+          {/* LEFT TEXT SECTION */}
           <motion.div
-            className="w-full max-w-md mx-auto lg:mx-0"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center lg:text-left"
           >
-            <img
-              src={WebsiteImages.ServicePage}
-              alt="3D Illustration"
-              className="w-full  max-h-[400px] object-cover"
-            />
+            {/* Tag */}
+            <div className="inline-block bg-indigo-100 text-indigo-700 font-medium px-4 py-1 rounded-full text-sm mb-6 shadow-md">
+              Scalable Software Solutions
+            </div>
+
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-gray-900">
+              Transforming <span className="text-indigo-600">Visions</span>
+              <br />
+              Into{" "}
+              <span className="text-indigo-600 underline underline-offset-4 decoration-4 decoration-indigo-300">
+                Digital Products
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="mt-6 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              At <strong>Friensys Info Labs</strong>, we engineer world-class
+              digital platforms that scale as your vision grows. We specialize
+              in building secure, future-ready solutions with speed and
+              precision.
+            </p>
+            <p className="mt-4 text-base text-gray-600 max-w-xl mx-auto lg:mx-0">
+              Whether you're launching a startup or scaling enterprise
+              infrastructure, our team is your innovation partner—every step of
+              the way.
+            </p>
+          </motion.div>
+
+          {/* RIGHT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] p-4 sm:p-6">
+              <img
+                src={WebsiteImages.ServicePage}
+                alt="Digital Innovation"
+                className="rounded-2xl object-cover w-full max-h-[450px]"
+              />
+            </div>
+
+            {/* Glowing Gradient Blob */}
+            <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-indigo-200 opacity-30 blur-[120px] rounded-full z-[-1]" />
           </motion.div>
         </div>
-
-        {/* Optional Decorative Blob */}
-        <div className="absolute -bottom-20 -right-10 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
       </section>
 
       {/* Services Section */}
@@ -272,81 +274,123 @@ const ServicesPage = () => {
       </section>
 
       {/* Visual Feature Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-tr from-white via-blue-50 to-white">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
-          {/* LEFT Text Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
-            <h2 className="text-4xl font-extrabold text-gray-800 leading-snug">
-              Why Choose{" "}
-              <span className="text-blue-600">Us as Your Tech Partner</span>
+      <section className="relative bg-gradient-to-br from-indigo-50 via-white to-blue-50 py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-20">
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-1/2 space-y-8 text-center lg:text-left"
+          >
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-snug">
+              Your Ideal <span className="text-indigo-600">Tech Partner</span>
             </h2>
-            <p className="text-gray-600 text-lg">
-              We don’t just code — we collaborate. From ideation to post-launch,
-              our team provides consistent delivery and proactive support to
-              help your product grow.
+
+            <p className="text-gray-700 text-lg">
+              We go beyond development. From idea to scale, our team ensures
+              seamless delivery, agile execution, and ongoing growth support
+              tailored to your success.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
               {[
                 "Dedicated Project Manager",
                 "Agile Sprint Cycles",
                 "Transparent Documentation",
                 "Post-launch Support",
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 p-4 bg-white rounded-lg shadow hover:shadow-md transition"
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.03 }}
+                  className="flex items-center gap-4 bg-white rounded-xl shadow-lg px-5 py-4 transition-all"
                 >
-                  <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-lg font-bold">
-                    ✓
+                  <div className="text-indigo-600 text-xl">
+                    <FaCheckCircle />
                   </div>
-                  <span className="text-gray-800 font-medium text-sm">
-                    {item}
+                  <span className="text-gray-800 font-medium text-base">
+                    {feature}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* RIGHT Image */}
-          <div className="w-full lg:w-1/2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="w-full lg:w-1/2"
+          >
             <div className="relative">
               <img
                 src={WebsiteImages.DashboardImage}
                 alt="Tech Partnership"
                 className="rounded-3xl shadow-2xl border border-blue-100 w-full max-w-xl mx-auto"
               />
+
               {/* Optional badge/overlay */}
               <div className="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 text-xs rounded-full shadow">
                 24/7 Support
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
+
+        {/* Decorative Gradient Shape */}
+        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-200 rounded-full opacity-20 blur-[120px] pointer-events-none z-[-1]" />
       </section>
 
-      {/* Industries Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-tr from-white via-blue-50 to-white">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Industries <span className="text-blue-600">We Serve</span>
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10">
-            We provide tailored solutions for a wide range of industries with
-            the flexibility to scale and innovate.
-          </p>
+      {/* Industries Section */};
+      <section className="relative py-28 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden">
+        {/* Decorative Background Shape */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-200 rounded-full blur-[120px] opacity-20 pointer-events-none z-0" />
 
-          {/* Industry Tags */}
-          <div className="flex flex-wrap justify-center gap-4">
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          {/* Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6"
+          >
+            Empowering <span className="text-indigo-600">Industries</span>
+          </motion.h2>
+
+          {/* Subtext */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-gray-700 text-lg max-w-2xl mx-auto mb-10"
+          >
+            Our tailored software solutions accelerate digital transformation
+            across a wide range of industries with agility, scalability, and
+            innovation.
+          </motion.p>
+
+          {/* Industry Chips */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center gap-4"
+          >
             {industries.map((industry, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="flex items-center gap-2 px-5 py-2 bg-white border border-blue-100 text-blue-700 rounded-full shadow hover:bg-blue-50 hover:shadow-md transition text-sm font-medium"
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2 px-6 py-2 bg-white border border-indigo-100 text-indigo-700 rounded-full shadow-md hover:bg-indigo-50 transition text-sm font-medium"
               >
-                {/* Optional check or icon */}
+                {/* Custom icon */}
                 <svg
-                  className="w-4 h-4 text-blue-500"
+                  className="w-4 h-4 text-indigo-500"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
@@ -355,47 +399,67 @@ const ServicesPage = () => {
                   <path d="M5 13l4 4L19 7" />
                 </svg>
                 {industry}
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-gradient-to-tr from-blue-50 via-white to-blue-100">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Section Heading */}
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
-            What Our <span className="text-blue-600">Clients Say</span>
-          </h2>
-          <p className="text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
-            Real feedback from real partners. Discover what makes us their
-            preferred tech collaborator.
-          </p>
+      <section className="relative py-28 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden">
+        {/* Decorative Blobs */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-indigo-200 opacity-20 rounded-full blur-[120px] pointer-events-none z-0" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-300 opacity-20 rounded-full blur-[140px] pointer-events-none z-0" />
+
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          {/* Heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4"
+          >
+            Hear From Our <span className="text-indigo-600">Clients</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-gray-700 text-lg max-w-2xl mx-auto mb-14"
+          >
+            Unfiltered stories of success from partners who trust us with their
+            vision.
+          </motion.p>
 
           {/* Testimonials Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="relative bg-white p-6 pt-10 border border-blue-100 rounded-2xl shadow-md hover:shadow-lg transition-all"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1, duration: 0.6 }}
+                viewport={{ once: true }}
+                className="relative bg-white/80 backdrop-blur-md border border-indigo-100 rounded-3xl p-8 pt-12 shadow-xl hover:shadow-2xl transition-all"
               >
-                {/* Quote Icon */}
-                <div className="absolute top-4 left-4 text-blue-100 text-5xl select-none">
-                  “
+                {/* Decorative Quote Icon */}
+                <div className="absolute top-6 left-6 text-indigo-200 text-4xl">
+                  <FaQuoteLeft />
                 </div>
 
                 {/* Testimonial Text */}
-                <p className="text-gray-700 mb-6 relative z-10 leading-relaxed">
+                <p className="text-gray-800 text-base leading-relaxed mb-8 relative z-10">
                   {t.text}
                 </p>
 
-                {/* Name & Role */}
-                <div className="border-t pt-4 mt-4">
-                  <p className="text-blue-700 font-semibold">{t.name}</p>
+                {/* Author */}
+                <div className="border-t border-gray-200 pt-4 mt-4">
+                  <p className="text-indigo-700 font-semibold">{t.name}</p>
                   <p className="text-sm text-gray-500">{t.role}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -451,22 +515,6 @@ const ServicesPage = () => {
       <section>
         <FormPage />
       </section>
-
-      {/* Final CTA Section */}
-      {/* <section className="bg-blue-600 text-white py-20 px-6 md:px-12 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Build Something Extraordinary?
-          </h2>
-          <p className="mb-6 text-lg">
-            Let’s talk about your vision and how Friensys Info Labs can make it
-            a reality.
-          </p>
-          <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition">
-            Book a Free Consultation
-          </button>
-        </div>
-      </section> */}
     </div>
   );
 };

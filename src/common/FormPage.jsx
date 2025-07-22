@@ -1,15 +1,37 @@
-import React from "react";
-import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import React from 'react';
+import emailjs from 'emailjs-com';
+import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 
 const FormPage = () => {
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_ww3r4e9',     
+        'template_s8emooe',    
+        e.target,
+        'WgNc3zQpLBVKtUUQw' 
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Message sent!');
+          e.target.reset(); 
+        },
+        (error) => {
+          console.log(error.text);
+          alert('Failed to send message.');
+        }
+      );
+  };
+
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 md:px-12 lg:px-24 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 md:px-12 lg:px-24">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-        {/* Left Text Section */}
-        <div className="z-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-6">
-            Unlock precision and reliability with
-            <br />
+        <div>
+          <h2 className="text-4xl font-extrabold text-gray-800 mb-6">
+            Unlock precision and reliability with <br />
             <span className="text-green-600">cutting-edge testing systems</span>
           </h2>
           <p className="text-gray-600 text-lg">
@@ -17,46 +39,49 @@ const FormPage = () => {
           </p>
         </div>
 
-        {/* Right Form Card */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 z-10">
+        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
           <h3 className="text-2xl font-semibold text-gray-800 mb-2">Request a Quote</h3>
           <p className="text-gray-500 text-sm mb-6">
             Let’s talk about your testing requirements and how we can help.
           </p>
 
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSendEmail}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3 focus-within:ring-2 focus-within:ring-green-500">
+              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3">
                 <FaUser className="text-green-500" />
                 <input
                   type="text"
+                  name="name"
                   placeholder="Name *"
                   required
                   className="w-full outline-none bg-transparent"
                 />
               </div>
-              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3 focus-within:ring-2 focus-within:ring-green-500">
+              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3">
                 <FaEnvelope className="text-green-500" />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email *"
                   required
                   className="w-full outline-none bg-transparent"
                 />
               </div>
-              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3 focus-within:ring-2 focus-within:ring-green-500">
+              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3">
                 <FaPhone className="text-green-500" />
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Phone *"
                   required
                   className="w-full outline-none bg-transparent"
                 />
               </div>
-              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3 focus-within:ring-2 focus-within:ring-green-500">
+              <div className="flex items-center gap-3 border border-gray-300 rounded-md px-4 py-3">
                 <FaMapMarkerAlt className="text-green-500" />
                 <input
                   type="text"
+                  name="location"
                   placeholder="Location *"
                   required
                   className="w-full outline-none bg-transparent"
@@ -64,8 +89,9 @@ const FormPage = () => {
               </div>
             </div>
 
-            <div className="border border-gray-300 rounded-md px-4 py-3 focus-within:ring-2 focus-within:ring-green-500">
+            <div className="border border-gray-300 rounded-md px-4 py-3">
               <textarea
+                name="message"
                 placeholder="Your message"
                 rows={4}
                 className="w-full outline-none bg-transparent resize-none"
@@ -82,9 +108,6 @@ const FormPage = () => {
           </form>
         </div>
       </div>
-
-      {/* Background Pattern Overlay */}
-      <div className="absolute inset-0 bg-[url('/your-background-pattern.svg')] bg-no-repeat bg-center opacity-5 z-0" />
     </section>
   );
 };

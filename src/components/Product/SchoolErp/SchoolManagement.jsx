@@ -321,7 +321,35 @@ export default function SchoolERP() {
 
       {/* ======================= News & Events Section ======================= */}
       <section className="py-24 px-6 lg:px-24 bg-gradient-to-b from-white via-blue-50 to-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        {/* Top Heading and Description */}
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <motion.h3
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-snug"
+          >
+            Smarter{" "}
+            <span className="text-blue-600 underline underline-offset-4">
+              News & Events
+            </span>{" "}
+            Management
+          </motion.h3>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-6 text-gray-600 text-lg md:text-xl leading-relaxed"
+          >
+            Keep your school community informed and engaged with a centralized
+            hub for announcements, achievements, and upcoming activities — all
+            managed seamlessly.
+          </motion.p>
+        </div>
+
+        {/* Content Row: Image & Features */}
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -337,36 +365,29 @@ export default function SchoolERP() {
             </div>
           </motion.div>
 
-          {/* Right Text Content */}
-          <motion.div
+          {/* Right Features */}
+          <motion.ol
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center"
+            className="space-y-8 relative border-l-4 border-blue-200 pl-6"
           >
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-snug">
-              Smarter <span className="text-blue-600">News & Events</span>{" "}
-              Management
-            </h3>
+            {features.map((item, i) => (
+              <li key={i} className="relative">
+                {/* Number Badge */}
+                <div className="absolute -left-[30px] top-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg font-semibold text-sm">
+                  {i + 1}
+                </div>
 
-            <ol className="space-y-8 relative border-l-4 border-blue-200 pl-6">
-              {features.map((item, i) => (
-                <li key={i} className="relative">
-                  {/* Number Badge */}
-                  <div className="absolute -left-[30px] top-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg font-semibold text-sm">
-                    {i + 1}
-                  </div>
-
-                  <div className="flex gap-4 items-start">
-                    <div className="mt-1 text-blue-500">{item.icon}</div>
-                    <p className="text-gray-700 text-base leading-relaxed">
-                      {item.text}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </motion.div>
+                <div className="flex gap-4 items-start">
+                  <div className="mt-1 text-blue-500">{item.icon}</div>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </motion.ol>
         </div>
       </section>
 

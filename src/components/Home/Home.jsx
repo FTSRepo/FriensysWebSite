@@ -18,12 +18,17 @@ import {
   FaGift,
   FaStore,
   FaChalkboardTeacher,
+  FaCode,
+  FaCloud,
 } from "react-icons/fa";
 import "swiper/css";
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import emailjs from "emailjs-com";
+
+import { motion } from "framer-motion";
 
 const products = [
   { name: "School ERP", icon: <FaSchool />, key: "school" },
@@ -70,61 +75,165 @@ const dashboardMockData = {
   },
 };
 
+const service = [
+  {
+    title: "Software Development",
+    icon: <FaCode className="text-purple-600 text-5xl" />,
+    color: "border-purple-500",
+    description:
+      "From web and mobile apps to enterprise-grade ERP systems, we craft scalable software that empowers businesses to thrive in the digital age.",
+    points: [
+      "Custom web & mobile applications",
+      "ERP & business automation",
+      "Performance dashboards & analytics",
+      "SEO-optimized websites",
+      "Full lifecycle product development",
+    ],
+    link:"/services/softwareDevelopment",
+  },
+  {
+    title: "Cloud Solutions",
+    icon: <FaCloud className="text-teal-600 text-5xl" />,
+    color: "border-teal-500",
+    description:
+      "Empower your business with secure, scalable, and cost-efficient cloud infrastructure using AWS and Azure best practices.",
+    points: [
+      "Cloud migration & optimization (AWS, Azure)",
+      "Infrastructure as Code & DevOps",
+      "Scalable architecture design",
+      "Disaster recovery & monitoring",
+      "Cloud-native app development",
+    ],
+    link:"/services/cloudSolutions",
+  },
+  {
+    title: "IT Consulting",
+    icon: <FaChalkboardTeacher className="text-blue-600 text-5xl" />,
+    color: "border-blue-500",
+    description:
+      "Strategic IT guidance for future-proofing your digital infrastructure, enhancing productivity, and reducing costs.",
+    points: [
+      "IT roadmap & strategy",
+      "Governance & compliance planning",
+      "Tech gap analysis & infrastructure planning",
+      "Vendor & tool recommendations",
+      "Agile transformation & change management",
+    ],
+    link:"/services/itConsulting",
+  },
+  {
+    title: "Software Products",
+    icon: <FaCubes className="text-rose-600 text-5xl" />, // You can replace FaCubes with another fitting icon
+    color: "border-rose-500",
+    description:
+      "Scalable and secure software products crafted to deliver real-world impact for your business needs.",
+    points: [
+      "Product strategy & feature planning",
+      "Cross-platform product development",
+      "UI/UX design for product usability",
+      "Robust architecture & performance",
+      "Launch-ready MVP & go-to-market support",
+    ],
+    link:"/services/softwareProduct",
+    
+  },
+];
+
 function Home() {
   const [activeKey, setActiveKey] = useState("school");
   const activeData = dashboardMockData[activeKey];
 
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ww3r4e9",
+        "template_s8emooe",
+        e.target,
+        "WgNc3zQpLBVKtUUQw"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent!");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send message.");
+        }
+      );
+  };
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-tr from-white via-sky-50 to-emerald-100 py-28 px-6 md:px-12 lg:px-20 text-gray-900">
-        {/* Decorative Gradient Shapes */}
-        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-emerald-400 to-teal-300 rounded-full opacity-20 blur-[150px] z-0"></div>
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-to-bl from-blue-400 to-sky-300 rounded-full opacity-30 blur-[100px] z-0"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50 to-emerald-50 py-24 px-6 md:px-12 lg:px-20 text-gray-900">
+        {/* Background Blurs */}
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400 to-teal-300 rounded-full opacity-30 blur-[180px] z-0"></div>
+        <div className="absolute top-10 right-0 w-[400px] h-[400px] bg-gradient-to-bl from-blue-400 to-sky-300 rounded-full opacity-30 blur-[150px] z-0"></div>
 
         {/* Main Content */}
-        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16">
-          {/* Text Content */}
-          <div className="space-y-6">
-            <span className="inline-block px-4 py-1 rounded-full bg-white text-emerald-600 font-semibold shadow border border-emerald-200 w-fit text-sm">
-              🔧 Software, Services & Staffing
+        <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
+          {/* Left: Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <span className="inline-block px-5 py-1.5 rounded-full bg-white/80 backdrop-blur-md text-emerald-600 font-medium border border-emerald-200 shadow-sm text-sm w-fit">
+              🚀 Software, Services & Staffing
             </span>
 
-            <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              Transform Your Business with{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-500">
-                Smart Tech Solutions
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-gray-900">
+              Empower Your Vision with
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">
+                Intelligent Tech Solutions
               </span>
             </h1>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Friensys offers next-gen software products, tailored IT
-              development, tech consulting, and staffing solutions — empowering
-              your business to grow, automate, and innovate.
+            <p className="text-lg text-gray-700 leading-relaxed max-w-xl">
+              Friensys delivers cutting-edge products, custom software
+              engineering, IT consulting, and elite staffing — all designed to
+              elevate your business.
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Link to="/services" className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">
-                Explore Services
+              <Link
+                to="/services"
+                className="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition duration-300"
+              >
+                🌟 Explore Services
               </Link>
-              <Link to="/contact" className="bg-white hover:bg-gray-100 text-gray-900 font-semibold px-6 py-3 rounded-xl border border-gray-300 shadow transition">
-                
+              <Link
+                to="/contact"
+                className="bg-white/70 backdrop-blur-md hover:bg-white text-gray-800 font-semibold px-6 py-3 rounded-xl border border-gray-300 shadow transition duration-300"
+              >
                 ✉️ Get in Touch
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Illustration */}
-          <div className="relative flex justify-center">
-            <div className="p-4 bg-white rounded-3xl shadow-2xl border border-gray-200 transform hover:scale-105 transition duration-500">
+          {/* Right: Illustration */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="flex justify-center"
+          >
+            <div className="p-6 rounded-3xl bg-white/80 backdrop-blur-xl shadow-2xl border border-white/60 max-w-md w-full transform hover:scale-105 transition duration-500">
               <img
                 src={WebsiteImages.DashboardImage}
-                alt="Dashboard"
-                className="rounded-xl w-full max-w-md"
+                alt="Dashboard Preview"
+                className="rounded-xl w-full"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -177,72 +286,58 @@ function Home() {
         </div>
       </section>
 
-      {/*What do we do */}
-      <section className="bg-gradient-to-b from-gray-100 to-white py-20 px-4 md:px-12 lg:px-24">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">What We Do</h2>
-          <p className="text-gray-600 mb-14 max-w-2xl mx-auto text-base md:text-lg">
-            We help businesses grow through tailored software solutions, expert
-            development services, and dedicated IT talent.
+      {/* Services Section */}
+      <section className="bg-gradient-to-br from-white via-sky-50 to-emerald-100 py-24 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto mb-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
+            Our Service Offerings
+          </h2>
+          <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto">
+            Explore how our specialized solutions in software development, cloud
+            transformation, and IT strategy can accelerate your business growth.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {/* Card 1 */}
-            <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 mx-auto mb-5 shadow-md group-hover:scale-110 transition">
-                <FaLaptopCode className="text-purple-600 text-3xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Software Products
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Scalable and secure software products crafted to deliver
-                real-world impact for your business needs.
-              </p>
-            </div>
+        {/* Horizontal Cards Layout */}
+        <div className="max-w-6xl mx-auto space-y-8">
+          {service.map((service, index) => (
+            <div
+              key={index}
+              className="relative flex flex-col md:flex-row items-start md:items-center gap-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-6 border border-gray-200"
+            >
+              {/* Explore Button */}
+              <Link
+                to={service.link || "#"}
+                className="absolute top-4 right-4 text-sm text-blue-600 font-semibold hover:underline"
+              >
+                Explore →
+              </Link>
 
-            {/* Card 2 */}
-            <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mx-auto mb-5 shadow-md group-hover:scale-110 transition">
-                <FaCogs className="text-blue-600 text-3xl" />
+              {/* Icon */}
+              <div className="flex-shrink-0">
+                <div
+                  className={`w-16 h-16 rounded-full flex items-center justify-center bg-opacity-10 ${service.color}`}
+                >
+                  {service.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Custom Development
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Bespoke software solutions tailored to your unique business
-                goals, built with agility and precision.
-              </p>
-            </div>
 
-            {/* Card 3 */}
-            <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mx-auto mb-5 shadow-md group-hover:scale-110 transition">
-                <FaTools className="text-green-600 text-3xl" />
+              {/* Content */}
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  {service.description}
+                </p>
+                <ul className="list-disc list-inside text-gray-700 text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+                  {service.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Software Services
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Maintenance, integration, cloud migration, and more to ensure
-                your systems run efficiently and effectively.
-              </p>
             </div>
-
-            {/* Card 4 */}
-            <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-              <div className="w-16 h-16 flex items-center justify-center rounded-full bg-red-100 mx-auto mb-5 shadow-md group-hover:scale-110 transition">
-                <FaUsers className="text-red-600 text-3xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                IT Staffing
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Hire top-tier developers and tech talent to scale your team
-                quickly and flexibly – as per your needs.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -511,22 +606,40 @@ function Home() {
             </p>
 
             {/* Form */}
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSendEmail}>
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name *"
+                required
                 className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
               />
               <input
                 type="tel"
+                name="phone"
                 placeholder="Phone Number *"
+                required
                 className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
               />
               <input
                 type="email"
-                placeholder="Email ID"
+                name="email"
+                placeholder="Email ID *"
+                required
                 className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
               />
+              <input
+                type="text"
+                name="location"
+                placeholder="Location"
+                className="w-full px-5 py-3 rounded-full border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows={4}
+                className="w-full px-5 py-3 rounded-2xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 text-gray-800 resize-none"
+              ></textarea>
 
               <button
                 type="submit"
