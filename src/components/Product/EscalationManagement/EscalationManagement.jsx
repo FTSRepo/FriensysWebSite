@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 function EscalationManagement() {
   return (
@@ -148,6 +149,8 @@ function EscalationManagement() {
       <section>
         <FormPage />
       </section>
+
+      <WhatsAppButton/>
     </main>
   );
 }

@@ -15,6 +15,7 @@ import {
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const features = [
   {
@@ -343,61 +344,68 @@ export default function SchoolApp() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-gray-50 py-24 px-4 md:px-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <img
-              src={WebsiteImages.NewsandEvent}
-              alt="School News and Events"
-              className="rounded-2xl w-full object-cover shadow-xl border border-gray-200"
-            />
-          </motion.div>
+     <section className="relative bg-gradient-to-br from-[#f0f4ff] via-white to-[#eaf3ff] py-24 px-6 md:px-12 lg:px-24 text-gray-800">
+  {/* Background glow */}
+  <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-blue-300 opacity-20 rounded-full blur-[120px] z-0" />
+  <div className="absolute bottom-0 right-0 w-[200px] h-[200px] bg-indigo-200 opacity-20 rounded-full blur-[100px] z-0" />
 
-          {/* Right Side Content */}
+  <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    {/* Right Side Image */}
+    <motion.div
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+      className="order-2 lg:order-1"
+    >
+      <img
+        src={WebsiteImages.NewsandEvent}
+        alt="School News and Events"
+        className="w-full rounded-3xl shadow-2xl border border-white/60 object-cover"
+      />
+    </motion.div>
+
+    {/* Left Side Content */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="order-1 lg:order-2"
+    >
+      <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+        Stay Informed with Our
+        <span className="text-blue-600"> News & Events</span> Hub
+      </h2>
+
+      <p className="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
+        Manage school-wide communication from a central place — from daily
+        circulars to exciting event updates — personalized for every user role.
+      </p>
+
+      <div className="space-y-6">
+        {[
+          "Admins can create and publish real-time updates for school events, circulars, or announcements.",
+          "Teachers stay informed about internal notices, exam schedules, and academic programs.",
+          "Parents and students receive instant alerts about holidays, competitions, and cultural activities.",
+          "All news entries are neatly categorized, time-stamped, and shown in each user's dashboard.",
+        ].map((text, idx) => (
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            key={idx}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.1 * idx, duration: 0.4 }}
+            className="flex items-start gap-4"
           >
-            <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
-              Centralized <span className="text-blue-600">News & Events</span>{" "}
-              Portal
-            </h2>
-            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Keep your school community informed and engaged with a dedicated
-              platform to manage and broadcast all news, circulars, and upcoming
-              events—seamlessly integrated with every stakeholder’s dashboard.
-            </p>
-
-            <div className="space-y-5">
-              {[
-                "Admins can create and publish real-time updates for school events, circulars, or announcements.",
-                "Teachers stay informed about internal notices, exam schedules, and academic programs.",
-                "Parents and students receive instant alerts about holidays, competitions, and cultural activities.",
-                "All news entries are neatly categorized, time-stamped, and shown in each user's dashboard.",
-              ].map((text, idx) => (
-                <motion.div
-                  key={idx}
-                  className="flex items-start gap-4"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * idx, duration: 0.4 }}
-                >
-                  <div className="h-8 w-8 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full font-bold shadow">
-                    {idx + 1}
-                  </div>
-                  <p className="text-gray-700 text-sm">{text}</p>
-                </motion.div>
-              ))}
+            <div className="bg-gradient-to-tr from-blue-500 to-indigo-500 text-white w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold shadow-md">
+              {idx + 1}
             </div>
+            <p className="text-gray-700 text-sm md:text-base">{text}</p>
           </motion.div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </motion.div>
+  </div>
+</section>
+
 
       <section className="bg-white py-24 px-4 md:px-10">
         <div className="max-w-7xl mx-auto">
@@ -545,6 +553,8 @@ export default function SchoolApp() {
       <div>
         <FormPage />
       </div>
+
+      <WhatsAppButton/>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import {
   FaCloud,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const softwareServices = [
   {
@@ -138,6 +139,8 @@ const SoftwareDevelopment = () => {
           </a>
         </motion.div>
       </section>
+
+      <WhatsAppButton/>
     </div>
   );
 };

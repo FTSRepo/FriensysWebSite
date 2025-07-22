@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
 
 function Careers() {
   return (
@@ -93,6 +94,8 @@ function Careers() {
           Get In Touch
         </Link>
       </section>
+
+      <WhatsAppButton/>
     </div>
   );
 }

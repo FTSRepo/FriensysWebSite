@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaPlus, FaMinus, FaCheckCircle } from "react-icons/fa";
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const educationCRMModules = [
   {
@@ -292,6 +293,8 @@ export default function CollegeManagement() {
       <section className="mt-28">
         <FormPage />
       </section>
+
+      <WhatsAppButton/>
     </>
   );
 }

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const accordionData = [
   {
@@ -210,9 +211,12 @@ export default function ODSAS() {
           </motion.div>
         </div>
       </div>
+
       <div className="mt-28">
         <FormPage />
       </div>
+
+      <WhatsAppButton/>
     </div>
   );
 }

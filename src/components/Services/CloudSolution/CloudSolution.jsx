@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCloud, FaServer, FaNetworkWired, FaSyncAlt, FaLock, FaTools } from "react-icons/fa";
 import { motion } from "framer-motion";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const cloudFeatures = [
   {
@@ -124,6 +125,8 @@ const CloudSolutions = () => {
           </a>
         </motion.div>
       </section>
+
+      <WhatsAppButton/>
     </div>
   );
 };

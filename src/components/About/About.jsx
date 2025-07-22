@@ -10,6 +10,7 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 import FormPage from "../../common/FormPage";
+import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
 
 const timelineData = [
   {
@@ -52,6 +53,7 @@ const timelineData = [
 export default function About() {
   return (
     <section className="bg-gray-50 py-20 px-4 md:px-10">
+
       {/* ----------- Intro Section ----------- */}
       <section className="max-w-7xl mx-auto text-center mb-24">
         <motion.h2
@@ -302,6 +304,8 @@ export default function About() {
       <section className="mt-28">
         <FormPage />
       </section>
+
+      <WhatsAppButton/>
     </section>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const loyaltySteps = [
   {
@@ -257,6 +258,8 @@ export default function CustomerLoyalty() {
       <section>
         <FormPage />
       </section>
+
+      <WhatsAppButton/>
     </>
   );
 }

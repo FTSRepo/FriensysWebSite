@@ -33,6 +33,7 @@ import { GiSolarPower, GiTeacher } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi2";
 import { SchoolImages, WebsiteImages } from "../../../common/BindImages";
 import FormPage from "../../../common/FormPage";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const industries = [
   "Education Technology",
@@ -515,6 +516,8 @@ const ServicesPage = () => {
       <section>
         <FormPage />
       </section>
+
+      <WhatsAppButton/>
     </div>
   );
 };

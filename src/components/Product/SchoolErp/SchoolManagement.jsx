@@ -16,6 +16,7 @@ import {
   BsCalendarEvent,
   BsDisplay,
 } from "react-icons/bs";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const accordionData = [
   {
@@ -73,39 +74,51 @@ export default function SchoolERP() {
   return (
     <div className="bg-white">
       {/* ======================= ERP Intro & Accordion UI ======================= */}
-      <section className="py-20 px-6 lg:px-24 bg-gradient-to-bl from-blue-50 via-white to-blue-100">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
-          {/* Text & Accordion */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-              School<span className="text-blue-600"> Management System</span>
-            </h2>
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              A comprehensive education ERP platform to manage admissions,
-              academics, communication, fees, and classes in one unified system.
-            </p>
+      <section className="relative bg-blue-100 py-24 px-6 md:px-12 lg:px-24">
+        {/* Glow Background */}
+        <div className="absolute top-[-120px] left-[-100px] w-[400px] h-[400px] bg-blue-300 opacity-20 blur-[140px] rounded-full z-0"></div>
+        <div className="absolute bottom-[-100px] right-[-80px] w-[300px] h-[300px] bg-sky-300 opacity-20 blur-[120px] rounded-full z-0"></div>
 
-            <h3 className="text-2xl font-semibold text-blue-600 mb-4">
-              Core Modules
+        <div className="relative z-10 max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 text-center leading-tight">
+              Smart <span className="text-blue-600">School Management</span>{" "}
+              Platform
+            </h2>
+            <p className="text-gray-700 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12">
+              Streamline admissions, academics, communication, fees, and
+              classroom management — all from one beautifully designed ERP
+              dashboard.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-semibold text-blue-600 mb-6 text-center">
+              🚀 Core Modules
             </h3>
-            <div className="space-y-5">
+
+            <div className="space-y-6">
               {accordionData.map((item, index) => (
                 <div
                   key={index}
-                  className="border border-gray-200 rounded-xl bg-white shadow hover:shadow-md transition"
+                  className="bg-white/60 backdrop-blur-md border border-gray-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex justify-between items-center px-5 py-4 text-left"
+                    className="w-full flex justify-between items-center px-6 py-4 text-left"
                   >
-                    <span className="text-lg font-medium text-gray-800">
+                    <span className="text-lg font-semibold text-gray-800">
                       {item.title}
                     </span>
-                    <span className="text-blue-600">
+                    <span className="text-blue-600 text-xl">
                       {openIndex === index ? <FaMinus /> : <FaPlus />}
                     </span>
                   </button>
@@ -117,7 +130,7 @@ export default function SchoolERP() {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="overflow-hidden px-5 pb-5 text-gray-600 text-sm md:text-base"
+                        className="overflow-hidden px-6 pb-4 text-gray-700 text-sm md:text-base"
                       >
                         <p>{item.content}</p>
                       </motion.div>
@@ -125,35 +138,6 @@ export default function SchoolERP() {
                   </AnimatePresence>
                 </div>
               ))}
-            </div>
-          </motion.div>
-
-          {/* Static Image Module */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="w-full"
-          >
-            <div className="text-center">
-              {/* Image visible only on md and above */}
-              <div className="hidden md:block w-full max-w-5xl mx-auto h-[480px] lg:h-[540px] xl:h-[580px] 2xl:h-[620px]">
-                <img
-                  src={WebsiteImages.SchoolErpLogin}
-                  alt="School ERP Login"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-
-              {/* Text always visible */}
-              <div className=" hidden md:block mt-6">
-                <h4 className="text-xl font-semibold text-gray-800">
-                  Unified Login Experience
-                </h4>
-                <p className="text-sm text-gray-500 mt-2">
-                  Role-based access for teachers, admins, parents, and students.
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -320,7 +304,7 @@ export default function SchoolERP() {
       </section>
 
       {/* ======================= News & Events Section ======================= */}
-      <section className="py-24 px-6 lg:px-24 bg-gradient-to-b from-white via-blue-50 to-white">
+      <section className="py-24 px-6 lg:px-24 bg-gradient-to-b from-white via-blue-100 to-white">
         {/* Top Heading and Description */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.h3
@@ -464,6 +448,8 @@ export default function SchoolERP() {
       <div>
         <FormPage />
       </div>
+
+      <WhatsAppButton />
     </div>
   );
 }

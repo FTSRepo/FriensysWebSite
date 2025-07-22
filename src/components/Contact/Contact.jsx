@@ -2,6 +2,7 @@ import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { WebsiteImages } from "../../common/BindImages";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
 
 function Contact() {
   return (
@@ -55,7 +56,8 @@ function Contact() {
               <span>
                 J-804, Sector -1
                 <br />
-               Techzone-IV, Greater<br />
+                Techzone-IV, Greater
+                <br />
                 Noida West, UP-201305,
               </span>
             </div>
@@ -134,6 +136,8 @@ function Contact() {
           </form>
         </div>
       </section>
+
+      <WhatsAppButton />
     </div>
   );
 }

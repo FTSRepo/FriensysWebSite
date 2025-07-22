@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { WebsiteImages } from "../../../common/BindImages";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const consultingServices = [
   {
@@ -143,6 +144,8 @@ const ITConsulting = () => {
           </a>
         </motion.div>
       </section>
+
+      <WhatsAppButton/>
     </div>
   );
 };

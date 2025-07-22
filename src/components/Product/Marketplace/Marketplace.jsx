@@ -10,6 +10,7 @@ import { WebsiteImages } from "../../../common/BindImages";
 import { motion } from "framer-motion";
 import FormPage from "../../../common/FormPage";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const benefits = [
   {
@@ -238,6 +239,8 @@ function Marketplace() {
       <section>
         <FormPage />
       </section>
+
+      <WhatsAppButton/>
     </main>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCubes, FaLightbulb, FaLayerGroup, FaPalette, FaRocket, FaMobileAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 
 const productFeatures = [
   {
@@ -132,6 +133,8 @@ const SoftwareProducts = () => {
           </a>
         </motion.div>
       </section>
+
+      <WhatsAppButton/>
     </div>
   );
 };
