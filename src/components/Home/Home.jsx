@@ -29,6 +29,7 @@ import { Autoplay } from "swiper/modules";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
+import Swal from "sweetalert2";
 
 const products = [
   { name: "School ERP", icon: <FaSchool />, key: "school" },
@@ -147,20 +148,35 @@ function Home() {
 
     emailjs
       .sendForm(
-        "service_ww3r4e9",
-        "template_s8emooe",
+        "service_u807rke", //? Service Id
+        "template_oo2wo5f", //? Template Id
         e.target,
-        "WgNc3zQpLBVKtUUQw"
+        "nYysKLXX916tXkFee" //? Public Key
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Message sent!");
+
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Your message has been delivered successfully.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+          });
+
           e.target.reset();
         },
         (error) => {
           console.log(error.text);
-          alert("Failed to send message.");
+
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Please try again.",
+            confirmButtonColor: "#d33",
+            confirmButtonText: "Close",
+          });
         }
       );
   };
@@ -682,7 +698,7 @@ function Home() {
         </div>
       </section>
 
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </>
   );
 }

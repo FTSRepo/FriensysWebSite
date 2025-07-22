@@ -3,17 +3,51 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { WebsiteImages } from "../../common/BindImages";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
+import Swal from "sweetalert2";
+import emailjs from "emailjs-com";
 
 function Contact() {
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_u807rke", // Service ID
+        "template_oo2wo5f", // Template ID
+        e.target,
+        "nYysKLXX916tXkFee" // Public Key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Your message has been delivered successfully.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+          });
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Please try again.",
+            confirmButtonColor: "#d33",
+            confirmButtonText: "Close",
+          });
+        }
+      );
+  };
+
   return (
     <div className="bg-white text-gray-800">
       {/* Banner Section */}
       <section className="relative w-full overflow-hidden h-[280px] md:h-[320px] lg:h-[380px] flex">
-        {/* Text Side */}
         <div className="w-full md:w-[45%] flex flex-col justify-center px-6 md:px-16 z-10 bg-white">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">
-            Contact Us
-          </h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Contact Us</h1>
           <nav className="text-sm text-gray-500">
             <Link to="/" className="hover:underline">
               Home
@@ -22,7 +56,6 @@ function Contact() {
           </nav>
         </div>
 
-        {/* Image Side with sharper diagonal cut */}
         <div
           className="hidden md:block w-[65%] h-full bg-cover bg-center relative"
           style={{
@@ -37,16 +70,12 @@ function Contact() {
         {/* Company Info */}
         <div className="space-y-6">
           <h2 className="text-2xl md:text-3xl font-semibold text-green-600">
-            Unlock precision and{" "}
-            <span className="text-black">reliability with</span>
+            Unlock precision and <span className="text-black">reliability with</span>
           </h2>
           <p className="text-lg text-gray-700">
-            Our cutting-edge testing systems are built for accuracy and
-            performance.
+            Our cutting-edge testing systems are built for accuracy and performance.
           </p>
-          <p className="text-sm text-gray-500">
-            We usually respond within one working day.
-          </p>
+          <p className="text-sm text-gray-500">We usually respond within one working day.</p>
 
           <div className="mt-6 space-y-5 text-sm md:text-base">
             <h3 className="text-lg font-bold">Friensys Info Labs Pvt. Ltd</h3>
@@ -76,7 +105,7 @@ function Contact() {
 
         {/* Contact Form */}
         <div className="bg-white p-6 sm:p-8 rounded-xl shadow-xl border border-gray-200">
-          <form className="space-y-6">
+          <form onSubmit={handleSendEmail} className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block font-medium mb-1">
@@ -84,6 +113,8 @@ function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -93,6 +124,8 @@ function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -105,6 +138,8 @@ function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="phone"
+                  required
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -114,6 +149,8 @@ function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="location"
+                  required
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
@@ -122,7 +159,9 @@ function Contact() {
             <div>
               <label className="block font-medium mb-1">Message</label>
               <textarea
+                name="message"
                 rows="4"
+                required
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               ></textarea>
             </div>

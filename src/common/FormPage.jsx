@@ -1,6 +1,13 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
-import { FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import React from "react";
+import emailjs from "emailjs-com";
+import {
+  FaUser,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaPaperPlane,
+} from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const FormPage = () => {
   const handleSendEmail = (e) => {
@@ -8,20 +15,35 @@ const FormPage = () => {
 
     emailjs
       .sendForm(
-        'service_ww3r4e9',     
-        'template_s8emooe',    
+        "service_u807rke", //? Service Id
+        "template_oo2wo5f", //? Template Id
         e.target,
-        'WgNc3zQpLBVKtUUQw' 
+        "nYysKLXX916tXkFee" //? Public Key
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert('Message sent!');
-          e.target.reset(); 
+
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "Your message has been delivered successfully.",
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "OK",
+          });
+
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
-          alert('Failed to send message.');
+
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong! Please try again.",
+            confirmButtonColor: "#d33",
+            confirmButtonText: "Close",
+          });
         }
       );
   };
@@ -35,12 +57,15 @@ const FormPage = () => {
             <span className="text-green-600">cutting-edge testing systems</span>
           </h2>
           <p className="text-gray-600 text-lg">
-            Experience advanced, reliable solutions to boost your quality assurance like never before.
+            Experience advanced, reliable solutions to boost your quality
+            assurance like never before.
           </p>
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-2">Request a Quote</h3>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+            Request a Quote
+          </h3>
           <p className="text-gray-500 text-sm mb-6">
             Let’s talk about your testing requirements and how we can help.
           </p>

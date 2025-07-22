@@ -73,15 +73,6 @@ function Marketplace() {
               infrastructure for transparent, efficient, and strategic
               procurement.
             </p>
-            <Link to="/">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition"
-              >
-                Get Started
-              </motion.button>
-            </Link>
           </motion.div>
 
           {/* Image Section with Animation */}
