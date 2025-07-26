@@ -197,9 +197,13 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-block px-6 py-2 rounded-full text-sm font-medium tracking-wide bg-white/80 backdrop-blur-md border border-indigo-200 text-indigo-700 shadow-sm"
+            className="inline-block px-6 py-2 rounded-full text-sm font-semibold tracking-wide 
+             text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 
+             bg-white shadow-[4px_4px_10px_rgba(0,0,0,0.1),-4px_-4px_10px_rgba(255,255,255,0.7)] 
+             border border-gray-200 hover:shadow-[2px_2px_6px_rgba(0,0,0,0.15),-2px_-2px_6px_rgba(255,255,255,0.8)] 
+             transition-all duration-300 ease-in-out"
           >
-            🌟 Software, Services & Staffing
+            💎 Software, Services & Staffing
           </motion.span>
 
           {/* Headline */}
@@ -375,21 +379,44 @@ function Home() {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="relative z-10 flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
-          {products.map((prod) => (
-            <button
-              key={prod.key}
-              onClick={() => setActiveKey(prod.key)}
-              className={`flex flex-col items-center text-sm font-medium px-5 py-3 rounded-2xl transition-all duration-300 border shadow hover:shadow-md hover:scale-105 ${
-                activeKey === prod.key
-                  ? "bg-emerald-600 text-white border-emerald-700"
-                  : "bg-white text-gray-800 border-gray-200 hover:bg-gray-100"
-              }`}
-            >
-              <div className="text-xl md:text-2xl mb-1">{prod.icon}</div>
-              <span className="tracking-wide">{prod.name}</span>
-            </button>
-          ))}
+        <div className="relative z-10 mb-16">
+          {/* For mobile - horizontal scroll */}
+          <div className="flex md:hidden overflow-x-auto px-1 sm:px-2 w-full hide-scrollbar">
+            <div className="flex flex-nowrap gap-4 pr-4">
+              {products.map((prod) => (
+                <button
+                  key={prod.key}
+                  onClick={() => setActiveKey(prod.key)}
+                  className={`flex flex-col items-center text-sm font-medium px-5 py-3 rounded-2xl transition-all duration-300 border shadow hover:shadow-md hover:scale-105 whitespace-nowrap ${
+                    activeKey === prod.key
+                      ? "bg-emerald-600 text-white border-emerald-700"
+                      : "bg-white text-gray-800 border-gray-200 hover:bg-gray-100"
+                  }`}
+                >
+                  <div className="text-xl mb-1">{prod.icon}</div>
+                  <span className="tracking-wide">{prod.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* For md and up - wrapped layout */}
+          <div className="hidden md:flex flex-wrap justify-center gap-4 md:gap-6">
+            {products.map((prod) => (
+              <button
+                key={prod.key}
+                onClick={() => setActiveKey(prod.key)}
+                className={`flex flex-col items-center text-sm font-medium px-5 py-3 rounded-2xl transition-all duration-300 border shadow hover:shadow-md hover:scale-105 ${
+                  activeKey === prod.key
+                    ? "bg-emerald-600 text-white border-emerald-700"
+                    : "bg-white text-gray-800 border-gray-200 hover:bg-gray-100"
+                }`}
+              >
+                <div className="text-xl md:text-2xl mb-1">{prod.icon}</div>
+                <span className="tracking-wide">{prod.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Product Preview Card */}
@@ -553,18 +580,18 @@ function Home() {
             {[
               {
                 logo: SchoolImages.VKReta,
-                title: "L.P Savani Group Of Schools, Surat",
-                desc: "L P Savani Group of Schools has a proud tradition of being a supportive and caring community that delivers outstanding educational...",
+                title: "VK Fashion",
+                desc: "VK Fashion has transformed its operational workflows using Friensys, streamlining administrative processes and improving overall institutional efficiency through smart digital tools.",
               },
               {
                 logo: SchoolImages.VKlogo,
                 title: "National Public School, Bangalore",
-                desc: "NPS has implemented Friensys ERP to improve academic tracking and parent communication with amazing outcomes...",
+                desc: "VK Enterprise utilizes Friensys solutions to streamline operations, improve team collaboration, and enhance client communication — driving greater productivity and business efficiency.",
               },
               {
                 logo: SchoolImages.uniqueLogo,
                 title: "Unique Educational Institute",
-                desc: "Friensys has made school management effortless, improving exams, attendance, and reporting at Unique Educational Institute. We recommend Friensys for any institution looking for smooth automation and real results",
+                desc: "Friensys has made school management effortless, improving exams and reporting at Unique Educational Institute. We recommend Friensys for any institution looking for smooth automation and real results",
               },
             ].map((item, index) => (
               <SwiperSlide key={index}>
@@ -592,11 +619,6 @@ function Home() {
                   <p className="text-gray-700 text-sm mb-4 leading-relaxed">
                     {item.desc}
                   </p>
-
-                  {/* CTA */}
-                  <span className="text-orange-600 font-semibold text-sm hover:underline cursor-pointer text-left">
-                    Read Case Study →
-                  </span>
                 </div>
               </SwiperSlide>
             ))}

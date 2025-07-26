@@ -258,9 +258,11 @@ export default function SchoolERP() {
       {/* ======================= Online Class System Section ======================= */}
       <section className="pt-20 lg:pt-28 px-6 lg:px-24 bg-gradient-to-br from-green-50 via-white to-blue-50 pb-16 lg:pb-28">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-4">
-            School <span className="text-blue-600">Online Class System</span>
+          <h2 className="relative text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-8 tracking-tight">
+            Online Class Module
+            <span className="block w-20 h-1 mx-auto mt-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse"></span>
           </h2>
+
           <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
             Empower your institution with a smart online class system that
             enables effortless scheduling, secure links, and seamless

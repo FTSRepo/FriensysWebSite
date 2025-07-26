@@ -6,7 +6,6 @@ import champaranInternational from "../assets/schoolImage/champaranInternational
 import chelaMary from "../assets/schoolImage/chelaMary.png";
 import dawnPublic from "../assets/schoolImage/dawnPublic.png";
 import delhiPublic from "../assets/schoolImage/delhiPublic.png";
-import geniusPublic from "../assets/schoolImage/geniusPublic.png";
 import GMpublic from "../assets/schoolImage/GMpublic.png";
 import holyMission from "../assets/schoolImage/holyMission.png";
 import VKlogo from "../assets/schoolImage/VkLogo.jpg";
@@ -48,10 +47,8 @@ import MarketplaceBusinessModel from "../assets/websiteImage/MarketplaceBusiness
 import EscalationDashboardImage from "../assets/websiteImage/EscalationDashboardImage.png";
 import MarketplaceDashboard from "../assets/websiteImage/MarketplaceDashboard.png";
 import ServicePage from "../assets/websiteImage/ServicePage.png";
-import ConsultingPage from "../assets/websiteImage/ConsultingPage.png"
-import ProductSchoolErp from "../assets/websiteImage/ProductSchoolErp.png"
-
-
+import ConsultingPage from "../assets/websiteImage/ConsultingPage.png";
+import ProductSchoolErp from "../assets/websiteImage/ProductSchoolErp.png";
 
 export const SchoolImages = {
   ABC,
@@ -60,12 +57,11 @@ export const SchoolImages = {
   chelaMary,
   dawnPublic,
   delhiPublic,
-  geniusPublic,
   GMpublic,
   holyMission,
   uniqueLogo,
   VKReta,
-  VKlogo
+  VKlogo,
 };
 
 export const WebsiteImages = {
@@ -103,5 +99,5 @@ export const WebsiteImages = {
   MarketplaceDashboard,
   ServicePage,
   ConsultingPage,
-  ProductSchoolErp
+  ProductSchoolErp,
 };

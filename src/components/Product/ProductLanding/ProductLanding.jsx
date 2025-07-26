@@ -6,9 +6,9 @@ import WhatsAppButton from "../../../common/WhatsApp/WhatsAppButton";
 const products = [
   {
     name: "School ERP",
-    subtitle: "School App",
+    subtitle: "School ERP",
     description:
-      "All-in-one school management system for admin, teachers, and parents.",
+      "All-in-one school management system for admin, teachers, and parents. Manage student data, attendance, exams, reports, finances, and HR all in one platform. Designed to make school operations simple, automated, and efficient.",
     image: WebsiteImages.ProductSchoolErp,
     link: "/product/schoolErp",
   },
@@ -16,7 +16,7 @@ const products = [
     name: "School App",
     subtitle: "School App",
     description:
-      "Mobile-first app for seamless student-parent-teacher communication.",
+      "Mobile-first app for seamless student-parent-teacher communication.Designed for mobile-first environments, it facilitates instant communication between parents, teachers, and students, including notifications, assignments, and performance tracking.",
     image: WebsiteImages.ConsultingPage,
     link: "/product/schoolApp",
   },
@@ -24,14 +24,15 @@ const products = [
     name: "Escalation System",
     subtitle: "Escalation System",
     description:
-      "Automate issue tracking and resolution workflows for institutions.",
+      "Automate issue tracking and resolution workflows for institutions.Efficiently manage complaints, service requests, and internal issues with automated workflows, ensuring accountability and timely resolution.",
     image: WebsiteImages.EscalationDashboardImage,
     link: "/product/escalation",
   },
   {
     name: "OD-SAS",
     subtitle: "OD-SAS",
-    description: "Smart attendance and scheduling system powered by IoT.",
+    description:
+      "Smart attendance and scheduling system powered by IoT. A smart IoT-based system for managing staff attendance, real-time scheduling, and institutional access — ideal for modern campuses.",
     image: WebsiteImages.ODSASDashboard,
     link: "/product/ODSAS",
   },
@@ -39,7 +40,7 @@ const products = [
     name: "Customer Loyalty",
     subtitle: "Customer Loyalty",
     description:
-      "Boost retention with personalized reward programs and analytics.",
+      "Boost retention with personalized reward programs and analytics. Create customized loyalty campaigns, track engagement metrics, and reward repeat customers — ideal for coaching centers, retail, or educational services.",
     image: WebsiteImages.LoyaltyDashboard,
     link: "/product/customerLoyalty",
   },
@@ -47,7 +48,7 @@ const products = [
     name: "Marketplace",
     subtitle: "Marketplace",
     description:
-      "A unified digital marketplace for educational tools and services.",
+      "A unified digital marketplace for educational tools and services. Bring together educational vendors, content providers, and institutions into a unified ecosystem where services and tools can be discovered and acquired seamlessly.",
     image: WebsiteImages.MarketplaceDashboard,
     link: "/product/marketplace",
   },
@@ -55,7 +56,7 @@ const products = [
     name: "Education CRM",
     subtitle: "Education CRM",
     description:
-      "Advanced CRM tailored for college admissions and student lifecycle.",
+      "Advanced CRM tailored for college admissions and student lifecycle. Streamline admissions, manage leads, track follow-ups, and improve conversions. Perfect for higher education institutions and training institutes.",
     image: WebsiteImages.EducationalCRMAdmissionCordinator,
     link: "/product/collegeErp",
   },
@@ -64,7 +65,7 @@ const products = [
 function ProductLanding() {
   return (
     <div className="bg-white min-h-screen py-16 px-4">
-      <section className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto px-4 py-16">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 text-center mb-4">
           Our Product
@@ -75,39 +76,36 @@ function ProductLanding() {
           top-tier talent — empowering your digital transformation journey.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {products.map((prod, idx) => (
             <div
               key={idx}
               className="bg-white rounded-2xl shadow-xl flex flex-col border border-blue-100 ring-2 ring-green-400 hover:-translate-y-1 hover:shadow-2xl transition-transform duration-300"
             >
-              <div className="bg-white rounded-2xl shadow-xl flex flex-col border border-blue-100 ring-2 ring-green-400">
-                <div className="p-5 pb-0">
-                  <img
-                    src={prod.image}
-                    alt={prod.subtitle}
-                    className="h-48 w-full object-cover rounded-xl mb-4"
-                  />
+              {/* Image */}
+              <img
+                src={prod.image}
+                alt={prod.subtitle}
+                className="h-80 w-full object-contain rounded-t-2xl bg-white px-6 pt-6"
+              />
+
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
+                <div className="text-blue-600 font-bold mb-2 text-sm uppercase tracking-wide">
+                  {prod.subtitle}
                 </div>
-                <div className="flex-1 px-6 py-4 flex flex-col">
-                  <div className="flex-1 px-6 py-4 flex flex-col">
-                    <div className="text-blue-600 font-bold mb-1 text-sm">
-                      {prod.subtitle}
-                    </div>
-                    <div className="font-semibold text-lg mb-1">
-                      {prod.name}
-                    </div>
-                    <div className="text-gray-600 text-sm flex-1">
-                      {prod.description}
-                    </div>
-                    <a
-                      href={prod.link}
-                      className="mt-6 inline-block px-5 py-2 bg-green-500 text-white font-semibold rounded-xl shadow hover:bg-green-600 transition self-start"
-                    >
-                      Read More
-                    </a>
-                  </div>
-                </div>
+                <h3 className="font-semibold text-2xl mb-2 text-gray-800">
+                  {prod.name}
+                </h3>
+                <p className="text-gray-600 text-base flex-1 leading-relaxed">
+                  {prod.description}
+                </p>
+                <a
+                  href={prod.link}
+                  className="mt-6 inline-block px-5 py-2 bg-green-500 text-white font-semibold rounded-xl shadow hover:bg-green-600 transition self-start"
+                >
+                  Read More
+                </a>
               </div>
             </div>
           ))}
@@ -185,7 +183,7 @@ function ProductLanding() {
         </div>
       </section>
 
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </div>
   );
 }
