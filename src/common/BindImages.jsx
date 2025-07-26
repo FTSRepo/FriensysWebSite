@@ -49,6 +49,7 @@ import EscalationDashboardImage from "../assets/websiteImage/EscalationDashboard
 import MarketplaceDashboard from "../assets/websiteImage/MarketplaceDashboard.png";
 import ServicePage from "../assets/websiteImage/ServicePage.png";
 import ConsultingPage from "../assets/websiteImage/ConsultingPage.png"
+import ProductSchoolErp from "../assets/websiteImage/ProductSchoolErp.png"
 
 
 
@@ -101,5 +102,6 @@ export const WebsiteImages = {
   EscalationDashboardImage,
   MarketplaceDashboard,
   ServicePage,
-  ConsultingPage
+  ConsultingPage,
+  ProductSchoolErp
 };

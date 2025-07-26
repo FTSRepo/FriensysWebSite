@@ -32,7 +32,7 @@ const loyaltySteps = [
 export default function CustomerLoyalty() {
   return (
     <>
-      {/* Banner Section */}
+      {/*======================= Banner Section ==============================*/}
       <section className="bg-gradient-to-b from-blue-50 via-white to-blue-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -97,6 +97,7 @@ export default function CustomerLoyalty() {
         </div>
       </section>
 
+      {/*=======================Dashboard Loyalty ==============================*/}
       <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-4 md:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           {/* RIGHT IMAGE */}
@@ -175,6 +176,7 @@ export default function CustomerLoyalty() {
         </div>
       </section>
 
+      {/*======================= Mobile App Features ==============================*/}
       <section className="bg-gradient-to-br from-white to-blue-50 py-24 px-4 md:px-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT – Text & Features */}
@@ -254,12 +256,12 @@ export default function CustomerLoyalty() {
         </div>
       </section>
 
-        {/* Form */}
+      {/*==================== Form =====================*/}
       <section>
         <FormPage />
       </section>
 
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </>
   );
 }

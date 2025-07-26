@@ -53,7 +53,6 @@ const timelineData = [
 export default function About() {
   return (
     <section className="bg-gray-50 py-20 px-4 md:px-10">
-
       {/* ----------- Intro Section ----------- */}
       <section className="max-w-7xl mx-auto text-center mb-24">
         <motion.h2
@@ -305,7 +304,7 @@ export default function About() {
         <FormPage />
       </section>
 
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </section>
   );
 }

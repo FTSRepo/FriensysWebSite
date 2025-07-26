@@ -14,6 +14,7 @@ import {
 } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import { WebsiteImages } from "../../common/BindImages";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 function Header() {
@@ -25,6 +26,7 @@ function Header() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const productRef = useRef(null);
   const servicesRef = useRef(null);
+  const navigate = useNavigate();
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -155,53 +157,91 @@ function Header() {
             </li>
 
             {/*===================Product Dropdown===================== */}
-            <li
-              className="relative flex items-center gap-1 cursor-pointer select-none"
-              ref={productRef}
-              onMouseEnter={() => setProductOpen(true)}
-              onMouseLeave={() => setProductOpen(false)}
-              onClick={(e) => {
-                e.stopPropagation();
-                setProductOpen((prev) => !prev);
-              }}
-            >
-              <span className="hover:text-blue-600 transition">Product</span>
-              <FaChevronDown
-                className={`text-xs cursor-pointer mt-1 transition-transform duration-300 ${
-                  productOpen ? "rotate-180 text-blue-600" : ""
-                }`}
-              />
+            <li className="relative" ref={productRef}>
+              <div className="flex items-center gap-2 select-none">
+                {/* Clicking on "Product" navigates directly */}
+                <span
+                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
+                  onClick={() => navigate("/product")}
+                >
+                  Product
+                </span>
 
-              {/* Submenu Dropdown */}
-              <div
-                className={`absolute top-full left-0 mt-3 w-72 bg-white text-gray-900 rounded-xl shadow-lg border border-gray-200 z-50 overflow-hidden transform transition-all duration-300 origin-top ${
-                  productOpen
-                    ? "opacity-100 scale-100 visible"
-                    : "opacity-0 scale-95 invisible"
-                }`}
-              >
-                {[
-                  { to: "/product/schoolErp", label: "School ERP" },
-                  { to: "/product/schoolApp", label: "School App" },
-                  { to: "/product/escalation", label: "Escalation System" },
-                  { to: "/product/ODSAS", label: "OD-SAS" },
-                  { to: "/product/customerLoyalty", label: "Customer Loyalty" },
-                  { to: "/product/marketplace", label: "Marketplace" },
-                  {
-                    to: "/product/collegeErp",
-                    label: "Education CRM",
-                  },
-                ].map((item) => (
-                  <Link
-                    key={item.to}
-                    to={item.to}
-                    className="block px-5 py-2 hover:bg-gray-100 hover:text-green-600 transition-all duration-200 text-sm"
-                    onClick={() => setProductOpen(false)} // Close on item click
-                  >
-                    {item.label}
-                  </Link>
-                ))}
+                {/* Clicking on arrow toggles dropdown */}
+                <FaChevronDown
+                  onClick={() => setProductOpen((prev) => !prev)}
+                  className={`text-xs cursor-pointer transition-transform duration-300 ${
+                    productOpen ? "rotate-180 text-green-600" : ""
+                  }`}
+                />
               </div>
+
+              <AnimatePresence>
+                {productOpen && (
+                  <motion.div
+                    key="product-clean-dropdown"
+                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: 8 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[460px] bg-white text-gray-900 rounded-xl shadow-xl border border-gray-100 z-50 overflow-hidden"
+                  >
+                    <div className="grid grid-cols-1 divide-y divide-gray-100">
+                      {[
+                        {
+                          to: "/product/schoolErp",
+                          label: "School ERP",
+                          desc: "All-in-one school management system for admin, teachers, and parents.",
+                        },
+                        {
+                          to: "/product/schoolApp",
+                          label: "School App",
+                          desc: "Mobile-first app for seamless student-parent-teacher communication.",
+                        },
+                        {
+                          to: "/product/escalation",
+                          label: "Escalation System",
+                          desc: "Automate issue tracking and resolution workflows for institutions.",
+                        },
+                        {
+                          to: "/product/ODSAS",
+                          label: "OD-SAS",
+                          desc: "Smart attendance and scheduling system powered by IoT.",
+                        },
+                        {
+                          to: "/product/customerLoyalty",
+                          label: "Customer Loyalty",
+                          desc: "Boost retention with personalized reward programs and analytics.",
+                        },
+                        {
+                          to: "/product/marketplace",
+                          label: "Marketplace",
+                          desc: "A unified digital marketplace for educational tools and services.",
+                        },
+                        {
+                          to: "/product/collegeErp",
+                          label: "Education CRM",
+                          desc: "Advanced CRM tailored for college admissions and student lifecycle.",
+                        },
+                      ].map((item) => (
+                        <Link
+                          key={item.to}
+                          to={item.to}
+                          onClick={() => setProductOpen(false)}
+                          className="block px-6 py-4 transition-colors duration-200 group"
+                        >
+                          <div className="text-sm font-semibold text-gray-800 group-hover:text-green-600">
+                            {item.label}
+                          </div>
+                          <div className="text-xs text-gray-500 mt-1 leading-snug group-hover:text-green-500">
+                            {item.desc}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </li>
 
             {/*====================Service Page========================== */}
@@ -361,7 +401,7 @@ function Header() {
                     { to: "/product/marketplace", label: "Marketplace" },
                     {
                       to: "/product/collegeErp",
-                      label: "College Management System",
+                      label: "Educational CRM ",
                     },
                   ].map(({ to, label }) => (
                     <Link

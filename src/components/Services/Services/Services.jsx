@@ -19,6 +19,7 @@ import {
   FaChalkboardTeacher,
   FaCheckCircle,
   FaQuoteLeft,
+  FaCubes 
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -142,6 +143,7 @@ const service = [
       "SEO-optimized websites",
       "Full lifecycle product development",
     ],
+    link: "/services/softwareDevelopment",
   },
   {
     title: "Cloud Solutions",
@@ -156,6 +158,7 @@ const service = [
       "Disaster recovery & monitoring",
       "Cloud-native app development",
     ],
+    link: "/services/cloudSolutions",
   },
   {
     title: "IT Consulting",
@@ -170,13 +173,28 @@ const service = [
       "Vendor & tool recommendations",
       "Agile transformation & change management",
     ],
+    link: "/services/itConsulting",
+  },
+  {
+    title: "Software Products",
+    icon: <FaCubes className="text-rose-600 text-5xl" />, // You can replace FaCubes with another fitting icon
+    color: "border-rose-500",
+    description:
+      "Scalable and secure software products crafted to deliver real-world impact for your business needs.",
+    points: [
+      "Product strategy & feature planning",
+      "Cross-platform product development",
+      "UI/UX design for product usability",
+      "Robust architecture & performance",
+      "Launch-ready MVP & go-to-market support",
+    ],
+    link: "/services/softwareProduct",
   },
 ];
 
 const ServicesPage = () => {
   return (
     <div className="bg-white text-gray-800">
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gray-50 py-24 px-6 md:px-12 lg:px-20 text-gray-900">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
@@ -238,42 +256,60 @@ const ServicesPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Section */}
-      <section className="bg-gradient-to-b from-white via-sky-50 to-emerald-100 py-24 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
-            Our Core Service Offerings
+      <section className="bg-gradient-to-br from-white via-sky-50 to-emerald-100 py-24 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto mb-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
+            Our Service Offerings
           </h2>
-          <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto">
             Explore how our specialized solutions in software development, cloud
             transformation, and IT strategy can accelerate your business growth.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        {/* Horizontal Cards Layout */}
+        <div className="max-w-6xl mx-auto space-y-8">
           {service.map((service, index) => (
             <div
               key={index}
-              className={`border-t-4 ${service.color} bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6`}
+              className="relative flex flex-col md:flex-row items-start md:items-center gap-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-6 border border-gray-200"
             >
-              <div className="flex justify-center mb-6">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-center mb-6">
-                {service.description}
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-left text-gray-700">
-                {service.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
+              {/* Explore Button */}
+              <Link
+                to={service.link || "#"}
+                className="absolute top-4 right-4 text-sm text-blue-600 font-semibold hover:underline"
+              >
+                Explore →
+              </Link>
+
+              {/* Icon */}
+              <div className="flex-shrink-0">
+                <div
+                  className={`w-16 h-16 rounded-full flex items-center justify-center bg-opacity-10 ${service.color}`}
+                >
+                  {service.icon}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  {service.description}
+                </p>
+                <ul className="list-disc list-inside text-gray-700 text-sm grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+                  {service.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
       </section>
-
       {/* Visual Feature Section */}
       <section className="relative bg-gradient-to-br from-indigo-50 via-white to-blue-50 py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-20">
@@ -344,7 +380,6 @@ const ServicesPage = () => {
         {/* Decorative Gradient Shape */}
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-200 rounded-full opacity-20 blur-[120px] pointer-events-none z-[-1]" />
       </section>
-
       {/* Industries Section */};
       <section className="relative py-28 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden">
         {/* Decorative Background Shape */}
@@ -405,7 +440,6 @@ const ServicesPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="relative py-28 px-6 md:px-12 lg:px-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 overflow-hidden">
         {/* Decorative Blobs */}
@@ -465,7 +499,6 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4 md:px-10 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
@@ -511,13 +544,11 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Form Section */}
       <section>
         <FormPage />
       </section>
-
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </div>
   );
 };

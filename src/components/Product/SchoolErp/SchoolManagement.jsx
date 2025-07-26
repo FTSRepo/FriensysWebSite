@@ -6,6 +6,7 @@ import {
   FaUserPlus,
   FaCamera,
   FaRandom,
+  FaSchool,
   FaSyncAlt,
 } from "react-icons/fa";
 import { WebsiteImages } from "../../../common/BindImages";
@@ -73,8 +74,29 @@ export default function SchoolERP() {
 
   return (
     <div className="bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-green-50 via-white to-blue-50 py-24 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <FaSchool className="text-green-600 text-6xl mx-auto mb-4" />
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+              Smart School Management Platform
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Streamline admissions, academics, communication, fees, and
+              classroom management — all from one beautifully designed ERP
+              dashboard.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ======================= ERP Intro & Accordion UI ======================= */}
-      <section className="relative bg-blue-100 py-24 px-6 md:px-12 lg:px-24">
+      <section className="relative bg-gradient-to-br from-green-50 via-white to-blue-50 py-24 px-6 md:px-12 lg:px-24">
         {/* Glow Background */}
         <div className="absolute top-[-120px] left-[-100px] w-[400px] h-[400px] bg-blue-300 opacity-20 blur-[140px] rounded-full z-0"></div>
         <div className="absolute bottom-[-100px] right-[-80px] w-[300px] h-[300px] bg-sky-300 opacity-20 blur-[120px] rounded-full z-0"></div>
@@ -86,13 +108,12 @@ export default function SchoolERP() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 text-center leading-tight">
-              Smart <span className="text-blue-600">School Management</span>{" "}
-              Platform
+              Our <span className="text-blue-600">Core Modules</span>
             </h2>
             <p className="text-gray-700 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12">
-              Streamline admissions, academics, communication, fees, and
-              classroom management — all from one beautifully designed ERP
-              dashboard.
+              Discover powerful modules tailored for modern schools — from
+              student enrollment and academic tracking to fee automation,
+              parent-teacher communication, and beyond.
             </p>
           </motion.div>
 
@@ -102,7 +123,7 @@ export default function SchoolERP() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-semibold text-blue-600 mb-6 text-center">
-              🚀 Core Modules
+              🚀 Explore the Modules
             </h3>
 
             <div className="space-y-6">
@@ -144,7 +165,7 @@ export default function SchoolERP() {
       </section>
 
       {/* ======================= Student Admission Process ======================= */}
-      <section className="py-24 px-6 lg:px-24 bg-blue-100">
+      <section className="py-24 px-6 lg:px-24 bg-gradient-to-br from-green-50 via-white to-blue-50">
         {/* Heading & Description */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.div
@@ -235,7 +256,7 @@ export default function SchoolERP() {
       </section>
 
       {/* ======================= Online Class System Section ======================= */}
-      <section className="pt-20 lg:pt-28 px-6 lg:px-24 bg-blue-50 pb-16 lg:pb-28">
+      <section className="pt-20 lg:pt-28 px-6 lg:px-24 bg-gradient-to-br from-green-50 via-white to-blue-50 pb-16 lg:pb-28">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-4">
             School <span className="text-blue-600">Online Class System</span>
@@ -304,7 +325,7 @@ export default function SchoolERP() {
       </section>
 
       {/* ======================= News & Events Section ======================= */}
-      <section className="py-24 px-6 lg:px-24 bg-gradient-to-b from-white via-blue-100 to-white">
+      <section className="py-24 px-6 lg:px-24 bg-gradient-to-br from-green-50 via-white to-blue-50">
         {/* Top Heading and Description */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.h3

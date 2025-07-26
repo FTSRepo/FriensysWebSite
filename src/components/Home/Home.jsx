@@ -183,7 +183,7 @@ function Home() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/*========================== Hero Section ==============================*/}
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-indigo-50 to-emerald-50 py-32 px-6 md:px-12 lg:px-20 text-gray-900">
         {/* Soft Gradient Backgrounds */}
         <div className="absolute -top-48 -left-48 w-[700px] h-[700px] bg-gradient-to-br from-indigo-400 to-emerald-300 opacity-25 blur-[180px] rounded-full z-0"></div>
@@ -254,7 +254,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Trusted Schools Section */}
+      {/*========================== Trusted Schools Section =========================*/}
       <section className="bg-gradient-to-b from-white via-sky-50 to-emerald-100 py-20 px-4 md:px-10 lg:px-24">
         <div className="max-w-7xl mx-auto text-center">
           {/* Heading */}
@@ -303,7 +303,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/*======================= Services Section ============================*/}
       <section className="bg-gradient-to-br from-white via-sky-50 to-emerald-100 py-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
@@ -358,7 +358,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Our Products */}
+      {/*========================= Our Products =======================*/}
       <section className="relative bg-gradient-to-b from-white via-slate-50 to-emerald-50 py-28 px-6 md:px-12">
         {/* Decorative Background Glow */}
         <div className="absolute -top-44 -left-32 w-[600px] h-[600px] bg-gradient-to-br from-green-300 to-emerald-400 opacity-20 blur-[180px] rounded-full z-0"></div>
@@ -408,7 +408,7 @@ function Home() {
         </div>
       </section>
 
-      {/*Why Choose us */}
+      {/*======================== Why Choose us ============================*/}
       <section className="relative bg-gradient-to-b from-white via-slate-50 to-emerald-50 py-28 px-6 md:px-12 lg:px-24 text-gray-800">
         {/* Decorative Gradient Glow */}
         <div className="absolute -top-40 -left-32 w-[600px] h-[600px] bg-gradient-to-br from-indigo-300 to-emerald-400 opacity-20 blur-[180px] rounded-full z-0"></div>
@@ -468,7 +468,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/*============================== Stats Section ==========================*/}
       <section className="bg-gradient-to-br from-pink-50 to-white py-16 px-4 md:px-8 lg:px-16 text-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -518,7 +518,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Why Choose Section / Testimonial Sections */}
+      {/*========================== Why Choose Section / Testimonial Sections ============================*/}
       <section className="relative bg-gradient-to-br from-[#f9f8f6] via-[#f0eee9] to-white py-28 px-6 md:px-12 lg:px-24 text-gray-800 overflow-hidden">
         {/* Soft Background Glow */}
         <div className="absolute -top-48 -left-32 w-[600px] h-[600px] bg-gradient-to-br from-orange-300 to-pink-400 opacity-20 blur-[160px] rounded-full z-0"></div>
@@ -552,29 +552,19 @@ function Home() {
           >
             {[
               {
-                logo: SchoolImages.GMpublic,
+                logo: SchoolImages.VKReta,
                 title: "L.P Savani Group Of Schools, Surat",
                 desc: "L P Savani Group of Schools has a proud tradition of being a supportive and caring community that delivers outstanding educational...",
               },
               {
-                logo: SchoolImages.GMpublic,
+                logo: SchoolImages.VKlogo,
                 title: "National Public School, Bangalore",
                 desc: "NPS has implemented Friensys ERP to improve academic tracking and parent communication with amazing outcomes...",
               },
               {
-                logo: SchoolImages.GMpublic,
-                title: "Bright Future Academy, Pune",
-                desc: "From manual records to full automation — Friensys has changed how BFA handles exams, attendance, and reporting...",
-              },
-              {
-                logo: SchoolImages.GMpublic,
-                title: "St. Xavier’s High School, Mumbai",
-                desc: "St. Xavier’s modernized their administrative workflows with Friensys, seeing rapid improvements in results tracking.",
-              },
-              {
-                logo: SchoolImages.GMpublic,
-                title: "DPS Indore",
-                desc: "Digital transformation made simple — DPS integrated our modules for finance, academics, and more.",
+                logo: SchoolImages.uniqueLogo,
+                title: "Unique Educational Institute",
+                desc: "Friensys has made school management effortless, improving exams, attendance, and reporting at Unique Educational Institute. We recommend Friensys for any institution looking for smooth automation and real results",
               },
             ].map((item, index) => (
               <SwiperSlide key={index}>
@@ -614,7 +604,7 @@ function Home() {
         </div>
       </section>
 
-      {/* Enquiry Section */}
+      {/*================================ Enquiry Section ================================*/}
       <section className="relative bg-gradient-to-br from-indigo-50 via-white to-sky-100 py-28 px-6 md:px-12 lg:px-24">
         {/* Glow Backgrounds */}
         <div className="absolute -top-32 -left-20 w-[500px] h-[500px] bg-indigo-300 opacity-20 blur-[160px] rounded-full z-0"></div>

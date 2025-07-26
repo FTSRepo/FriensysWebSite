@@ -13,14 +13,14 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-rose-200 via-sky-100 to-indigo-200 text-gray-800 py-12 px-4 md:px-10">
       <div className="max-w-7xl mx-auto">
-        {/* Brand Name */}
+        {/*========================= Brand Name ======================*/}
         <div className="text-center mb-10">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
             Friensys Info Labs
           </h1>
         </div>
 
-        {/* Main Grid */}
+        {/*========================= Main Grid =========================*/}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:text-base text-gray-700">
           {/* Product Section */}
           <div>
@@ -101,7 +101,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/underDevelopment" className="hover:text-gray-900 transition">
+                <Link
+                  to="/underDevelopment"
+                  className="hover:text-gray-900 transition"
+                >
                   Blog
                 </Link>
               </li>
@@ -113,7 +116,10 @@ const Footer = () => {
             <h2 className="text-gray-900 font-semibold mb-4 text-xl">Legal</h2>
             <ul className="space-y-2">
               <li>
-                <Link to="/underDevelopment" className="hover:text-gray-900 transition">
+                <Link
+                  to="/underDevelopment"
+                  className="hover:text-gray-900 transition"
+                >
                   Terms of Services
                 </Link>
               </li>
@@ -134,7 +140,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/underDevelopment" className="hover:text-gray-900 transition">
+                <Link
+                  to="/underDevelopment"
+                  className="hover:text-gray-900 transition"
+                >
                   License
                 </Link>
               </li>
@@ -198,10 +207,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/*======================= Bottom Bar =======================*/}
         <div className="border-t border-gray-300 mt-10 pt-6 text-center text-gray-600 text-xs md:text-sm">
-          &copy; {new Date().getFullYear()} Friensys Info Labs. All rights
-          reserved.
+          &copy; {new Date().getFullYear()}{" "}
+          <a
+            href="https://friensys.com/" 
+            className="text-blue-600 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Friensys Info Labs
+          </a>
+          . All rights reserved.
         </div>
       </div>
     </footer>

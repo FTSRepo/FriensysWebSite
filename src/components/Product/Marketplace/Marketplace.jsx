@@ -231,7 +231,7 @@ function Marketplace() {
         <FormPage />
       </section>
 
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </main>
   );
 }

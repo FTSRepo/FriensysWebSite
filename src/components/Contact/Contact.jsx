@@ -44,7 +44,7 @@ function Contact() {
 
   return (
     <div className="bg-white text-gray-800">
-      {/* Banner Section */}
+      {/*------------------ Banner Section ----------------*/}
       <section className="relative w-full overflow-hidden h-[280px] md:h-[320px] lg:h-[380px] flex">
         <div className="w-full md:w-[45%] flex flex-col justify-center px-6 md:px-16 z-10 bg-white">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Contact Us</h1>
@@ -65,7 +65,7 @@ function Contact() {
         ></div>
       </section>
 
-      {/* Main Content */}
+      {/*-------------------- Main Content -------------------*/}
       <section className="max-w-7xl mx-auto px-4 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         {/* Company Info */}
         <div className="space-y-6">

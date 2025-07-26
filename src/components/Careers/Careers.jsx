@@ -5,7 +5,7 @@ import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
 function Careers() {
   return (
     <div className="bg-white text-gray-800">
-      {/* Hero Section */}
+      {/*----------------- Hero Section ------------------*/}
       <section className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-500 text-white py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Join Our Team</h1>
@@ -15,7 +15,7 @@ function Careers() {
         </div>
       </section>
 
-      {/* Open Positions */}
+      {/*------------------- Open Positions -----------------*/}
       <section className="max-w-7xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12 text-indigo-600">Current Openings</h2>
         <div className="grid gap-8 md:grid-cols-2">
@@ -62,7 +62,7 @@ function Careers() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/*---------------- Benefits Section ------------------*/}
       <section className="bg-gray-100 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-purple-700">Why Work With Us?</h2>
@@ -83,7 +83,7 @@ function Careers() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/*-------------------- Call to Action ------------------*/}
       <section className="bg-gradient-to-r from-green-500 via-emerald-600 to-teal-500 text-white text-center py-12">
         <h2 className="text-3xl font-semibold mb-2">We're always looking for talented people</h2>
         <p className="mb-6">Didn’t find a suitable role? Reach out anyway!</p>

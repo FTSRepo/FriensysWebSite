@@ -25,6 +25,7 @@ import CloudSolution from "../components/Services/CloudSolution/CloudSolution";
 import ItConsulting from "../components/Services/ItConsulting/ItConsulting";
 import SoftwareDevelopment from "../components/Services/SoftwareDevelopment/SoftwareDevelopment";
 import SoftwareProduct from "../components/Services/SoftwareProducts/SoftwareProduct";
+import ProductLanding from "../components/Product/ProductLanding/ProductLanding";
 
 const router = createBrowserRouter([
   {
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
         path: "product",
         element: <ProductLayout />,
         children: [
+          {
+            index: true, 
+            element: <ProductLanding />,
+          },
           {
             path: "schoolErp",
             element: <SchoolManagement />,
