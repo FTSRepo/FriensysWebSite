@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In index.css or App.css */
+@import 'swiper/css';
+@import 'swiper/css/autoplay';
+@import 'swiper/css/pagination';
+    
+@layer utilities {
+  .clip-diagonal-reverse-top {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 100%);
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
