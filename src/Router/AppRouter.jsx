@@ -26,6 +26,7 @@ import ItConsulting from "../components/Services/ItConsulting/ItConsulting";
 import SoftwareDevelopment from "../components/Services/SoftwareDevelopment/SoftwareDevelopment";
 import SoftwareProduct from "../components/Services/SoftwareProducts/SoftwareProduct";
 import ProductLanding from "../components/Product/ProductLanding/ProductLanding";
+import ApplyForm from "../components/Careers/form/ApplyForm";
 
 const router = createBrowserRouter([
   {
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
       {
         path: "underDevelopment",
         element: <ComingSoon />,
+      },
+      {
+        path: "apply",
+        element: <ApplyForm />,
       },
     ],
   },
