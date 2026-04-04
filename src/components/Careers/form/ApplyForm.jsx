@@ -60,28 +60,70 @@ export default function App() {
   const next = () => { if (validate()) { setAnim(a => a + 1); setStep(s => s + 1); } };
   const back = () => { setAnim(a => a + 1); setStep(s => s - 1); };
 
+  const toBase64 = (file) => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result.split(",")[1]);
+    reader.onerror = reject;
+  });
+
   const handleSubmit = async () => {
     setSending(true); setEmailErr("");
-    const params = {
-      from_name: form.fullName, from_email: form.email, phone: form.phone,
-      dob: form.dob, gender: form.gender, applying_for: form.applyingFor,
-      address: [form.address, form.city, form.state, form.pincode].filter(Boolean).join(", "),
-      degree: form.degree, institution: form.institution, graduation_year: form.graduationYear, percentage: form.percentage,
-      school_12: form.twelthSchool, year_12: form.twelthYear, pct_12: form.twelthPercentage,
-      school_10: form.tenthSchool, year_10: form.tenthYear, pct_10: form.tenthPercentage,
-      experience: form.experience, skills: form.skills,
-      company1: form.company1, role1: form.role1, duration1: form.duration1, desc1: form.desc1,
-      company2: form.company2, role2: form.role2, duration2: form.duration2, desc2: form.desc2,
-      linkedin: form.linkedIn, portfolio: form.portfolio,
-      resume_name: form.resumeName, cover_letter: form.coverLetter || "Not provided",
-    };
     try {
+      const CLOUD_NAME = "dc6lwce9v";
+      const UPLOAD_PRESET = "godedl0o";
+
+      const cloudData = new FormData();
+      cloudData.append("file", resumeFile);
+      cloudData.append("upload_preset", UPLOAD_PRESET);
+      cloudData.append("resource_type", "raw");
+      cloudData.append(
+        "public_id",
+        `resumes/${form.fullName.replace(/\s+/g, "_")}_${Date.now()}`  // ✅ fixed regex
+      );
+
+      const cloudRes = await fetch(
+        `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/raw/upload`,
+        { method: "POST", body: cloudData }
+      );
+      const cloudJson = await cloudRes.json();
+      console.log("Cloudinary response:", cloudJson); // check this
+
+      if (!cloudJson.secure_url) {
+        throw new Error("Resume upload failed: " + JSON.stringify(cloudJson.error));
+      }
+
+      // ✅ Use direct URL — opens PDF in browser when clicked
+      const resumeLink = cloudJson.secure_url;
+
+      const params = {
+        from_name: form.fullName, from_email: form.email, phone: form.phone,
+        dob: form.dob, gender: form.gender, applying_for: form.applyingFor,
+        address: [form.address, form.city, form.state, form.pincode].filter(Boolean).join(", "),
+        degree: form.degree, institution: form.institution,
+        graduation_year: form.graduationYear, percentage: form.percentage,
+        school_12: form.twelthSchool, year_12: form.twelthYear, pct_12: form.twelthPercentage,
+        school_10: form.tenthSchool, year_10: form.tenthYear, pct_10: form.tenthPercentage,
+        experience: form.experience, skills: form.skills,
+        company1: form.company1, role1: form.role1,
+        duration1: form.duration1, desc1: form.desc1,
+        company2: form.company2 || "N/A", role2: form.role2 || "N/A",
+        duration2: form.duration2 || "N/A", desc2: form.desc2 || "N/A",
+        linkedin: form.linkedIn || "Not provided",
+        portfolio: form.portfolio || "Not provided",
+        resume_name: form.resumeName,
+        resume_link: resumeLink,
+        cover_letter: form.coverLetter || "Not provided",
+      };
+
       await emailjs.send("service_ww3r4e9", "template_s8emooe", params, "YiFWBOxZLFWmPajed");
       setSub(true);
     } catch (err) {
-      console.error("EmailJS:", err);
-      setEmailErr("Submission failed. Please try again or contact us directly.");
-    } finally { setSending(false); }
+      console.error("Submit error:", err);
+      setEmailErr("Submission failed: " + err.message);
+    } finally {
+      setSending(false);
+    }
   };
 
   const inp = (err) =>
