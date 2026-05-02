@@ -116,7 +116,17 @@ export default function App() {
         cover_letter: form.coverLetter || "Not provided",
       };
 
+      // Email to recruiter
       await emailjs.send("service_ww3r4e9", "template_s8emooe", params, "YiFWBOxZLFWmPajed");
+
+      // Confirmation email to candidate
+      await emailjs.send("service_ww3r4e9", "template_oiebjy1", {
+        to_email: form.email,
+        candidate_name: form.fullName,
+        applying_for: form.applyingFor,
+        test_link: "https://forms.gle/vXdVth26W3SCGpPp6",
+      }, "YiFWBOxZLFWmPajed");
+
       setSub(true);
     } catch (err) {
       console.error("Submit error:", err);
