@@ -1,45 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { WebsiteImages } from "../../common/BindImages";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
 import Swal from "sweetalert2";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
-  const handleSendEmail = (e) => {
-    e.preventDefault();
+  const [sending, setSending] = useState(false);
 
-    emailjs
-      .sendForm(
-        "service_u807rke", // Service ID
-        "template_oo2wo5f", // Template ID
-        e.target,
-        "nYysKLXX916tXkFee" // Public Key
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          Swal.fire({
-            icon: "success",
-            title: "Message Sent!",
-            text: "Your message has been delivered successfully.",
-            confirmButtonColor: "#3085d6",
-            confirmButtonText: "OK",
-          });
-          e.target.reset();
-        },
-        (error) => {
-          console.log(error.text);
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong! Please try again.",
-            confirmButtonColor: "#d33",
-            confirmButtonText: "Close",
-          });
-        }
+  const handleSendEmail = async (e) => {
+    e.preventDefault();
+    setSending(true);
+
+    const f = e.target;
+    const params = {
+      from_name: f.name.value,
+      from_email: f.email.value,
+      phone: f.phone.value,
+      location: f.location.value,
+      message: f.message.value,
+    };
+
+    try {
+      await emailjs.send(
+        "service_w2g3hac",
+        "template_oo2wo5f",
+        params,
+        "nYysKLXX916tXkFee"
       );
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Your message has been delivered successfully.",
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "OK",
+      });
+      f.reset();
+    } catch (error) {
+      console.error("Contact email error:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong! Please try again.",
+        confirmButtonColor: "#d33",
+        confirmButtonText: "Close",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -168,9 +177,20 @@ function Contact() {
 
             <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition-all"
+              disabled={sending}
+              className="w-full bg-green-600 hover:bg-green-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-lg transition-all flex items-center justify-center gap-2"
             >
-              Submit →
+              {sending ? (
+                <>
+                  <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Submit →"
+              )}
             </button>
           </form>
         </div>
