@@ -117,15 +117,15 @@ export default function App() {
       };
 
       // Email to recruiter
-      await emailjs.send("service_ww3r4e9", "template_s8emooe", params, "YiFWBOxZLFWmPajed");
+      await emailjs.send("service_w2g3hac", "template_oo2wo5f", params, "nYysKLXX916tXkFee");
 
       // Confirmation email to candidate
-      await emailjs.send("service_ww3r4e9", "template_oiebjy1", {
+      await emailjs.send("service_w2g3hac", "template_h4otbjb", {
         to_email: form.email,
         candidate_name: form.fullName,
         applying_for: form.applyingFor,
-        test_link: "https://forms.gle/vXdVth26W3SCGpPp6",
-      }, "YiFWBOxZLFWmPajed");
+        test_link: "https://forms.gle/RcKuwrshnaAQqK1j9",
+      }, "nYysKLXX916tXkFee");
 
       setSub(true);
     } catch (err) {

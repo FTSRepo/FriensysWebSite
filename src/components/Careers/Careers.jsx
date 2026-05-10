@@ -5,7 +5,7 @@ import WhatsAppButton from "../../common/WhatsApp/WhatsAppButton";
 const jobs = [
   {
     title: "ASP.NET Developer",
-    location: "Remote / Hybrid",
+    location: "Remote",
     type: "Full Time",
     tag: "Backend",
     tagColor: "#4f46e5",
@@ -15,7 +15,7 @@ const jobs = [
   },
   {
     title: "Full Stack Developer",
-    location: "Bangalore, India",
+    location: "Remote",
     type: "Full Time",
     tag: "Full Stack",
     tagColor: "#0891b2",
@@ -35,7 +35,7 @@ const jobs = [
   },
   {
     title: "Backend Developer",
-    location: "Delhi NCR",
+    location: "Remote",
     type: "Full Time",
     tag: "Backend",
     tagColor: "#4f46e5",
@@ -55,7 +55,7 @@ const jobs = [
   },
   {
     title: "AWS Cloud Engineer",
-    location: "Remote / Hybrid",
+    location: "Remote",
     type: "Full Time",
     tag: "Cloud",
     tagColor: "#d97706",
@@ -343,7 +343,7 @@ function Careers() {
           Send us your resume anyway. We're always open to exceptional talent.
         </p>
         <Link
-          to="/apply"
+          to="/contact"
           className="bg-white text-indigo-700 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-lg"
         >
           Get In Touch →
