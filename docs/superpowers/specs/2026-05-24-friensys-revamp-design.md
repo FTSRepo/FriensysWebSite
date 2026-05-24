@@ -73,10 +73,10 @@ Run old site: `npm run dev` from root. Run new site: `cd friensys-next && pnpm d
 |---|---|---|
 | Framework | Next.js 15 (App Router, RSC, Server Actions) | SSG by default; ISR for blog. |
 | Language | TypeScript (strict) | Current site is JS; new build is TS. |
-| Styling | Tailwind v4 + CSS variables | Tokens in `styles/tokens.css`, mirrored in `tailwind.config.ts`. |
+| Styling | **Tailwind v4** + CSS variables | Tokens in `styles/tokens.css`, mirrored in `tailwind.config.ts`. Locked per user 2026-05-24. |
 | UI primitives | shadcn/ui | Copy-paste components, fully owned. Themed via CSS vars. |
 | Motion | Framer Motion | Carry over — already known + good for dark-futuristic motion. |
-| MDX | `@next/mdx` + `velite` (or `contentlayer`) | Type-safe MDX with frontmatter validation. |
+| MDX | `@next/mdx` + **Velite** | Type-safe MDX with zod-validated frontmatter. Actively maintained. |
 | SEO | `next-sitemap`, custom `next/og` route, manual JSON-LD via `<JsonLd>` component | No `next-seo` (App Router has native `generateMetadata`). |
 | Forms | EmailJS (carry over) | Public keys via env; domain allowlist set in EmailJS dashboard. |
 | Icons | Lucide React | Replaces `react-icons` (lighter, tree-shakeable). |
@@ -529,8 +529,7 @@ friensys-next/
 | Cutover risk (legacy → new) | Phase 1 doesn't cut over. Side-by-side. Zero risk to live site during build. |
 | Lighthouse 95+ aspiration | Achievable via SSG + RSC + critical CSS + `next/image`. Document waivers if a page can't hit. |
 | Phase 1 scope creep | Hard "out of scope" list. Additions = explicit decision logged; default = push to P2. |
-| `velite`/`contentlayer` ecosystem risk | If `contentlayer` (legacy) chosen, fallback to `velite` (actively maintained). Decision deferred to implementation. |
-| Tailwind v4 still maturing | Acceptable risk — if blockers appear during impl, drop to Tailwind v3.4 (no API changes that affect this design). |
+| Tailwind v4 still maturing | Acceptable risk per user decision (locked v4). If blockers appear during impl, fallback to Tailwind v3.4 (no design-level changes). |
 
 ### Success criteria (post-launch)
 
@@ -547,8 +546,8 @@ friensys-next/
 - **Domain**: stays `friensys.com`, cutover deferred per user.
 - **Light mode**: built but toggle defaults to dark.
 - **Founder bios + 3-5 case studies + final testimonials**: user provides before launch.
-- **Velite vs Contentlayer for MDX**: deferred to writing-plans phase.
-- **Tailwind v4 vs v3.4**: starting with v4; fallback to v3.4 if blockers.
+- **MDX tooling**: **Velite** (locked by user 2026-05-24).
+- **Tailwind**: **v4** (locked by user 2026-05-24); fallback to v3.4 only if implementation blockers.
 
 ## 7. Companions
 
