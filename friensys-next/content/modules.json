@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "Admissions & Records",
+      "modules": ["Online Admission Form", "Admission Number Generator", "Document Upload", "Student Information System", "Multi-Academic-Year"]
+    },
+    {
+      "name": "Fees & Accounts",
+      "modules": ["Fee Structure Designer", "Bill Generation", "Payment Gateway", "Daily Collection Report", "Receipts + GST", "Deletion Audit"]
+    },
+    {
+      "name": "Attendance & Comms",
+      "modules": ["Student Attendance", "Staff Attendance", "Bulk SMS", "WhatsApp (roadmap)", "Push Notifications", "Notice Board"]
+    },
+    {
+      "name": "Academics",
+      "modules": ["Timetable", "Subject Allocation", "Marks Entry", "Exam Scheduling", "Report Card (CBSE/ICSE/State)", "Online Class", "Homework"]
+    },
+    {
+      "name": "Operations",
+      "modules": ["Transport + GPS", "Library", "Hostel", "HR + Payroll", "Vendor Management", "Inventory"]
+    },
+    {
+      "name": "Engagement",
+      "modules": ["Parent App", "News & Events", "Photo Gallery", "Loyalty", "Marketplace"]
+    },
+    {
+      "name": "Insights",
+      "modules": ["Principal Dashboard", "Daily Reports", "MIS", "Custom Report Builder", "Audit Logs"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "quote": "Friensys made our fee collection completely paperless. Daily collection reports now take 30 seconds instead of 3 hours.",
+      "author": "Principal, Delhi Public School",
+      "city": "Delhi",
+      "schoolLogo": "/logos/delhi-public.png",
+      "rating": 5
+    },
+    {
+      "quote": "The parent app is so smooth our parents stopped calling the office for routine queries. That alone paid for the system.",
+      "author": "Director, Genius Public School",
+      "city": "Lucknow",
+      "schoolLogo": "/logos/genius-public.png",
+      "rating": 5
+    },
+    {
+      "quote": "We evaluated five vendors. Friensys was the only one with a modular approach — we paid for what we needed, added more later.",
+      "author": "Trustee, Adhyayan Residential",
+      "city": "Bhopal",
+      "schoolLogo": "/logos/adhyayan-residential.png",
+      "rating": 5
+    }
+  ]
+}

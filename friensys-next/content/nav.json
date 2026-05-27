@@ -1,0 +1,55 @@
+{
+  "header": [
+    {
+      "label": "Product",
+      "items": [
+        { "label": "School ERP", "href": "/school-erp", "description": "Flagship product — admissions to graduation" },
+        { "label": "College ERP", "href": "/products/college-erp", "description": "Higher-ed academics + hostel + alumni" },
+        { "label": "School App", "href": "/products/school-app", "description": "White-label parent + student mobile app" },
+        { "label": "OD-SAS", "href": "/products/odsas", "description": "Faculty substitution + leave" },
+        { "label": "Escalation", "href": "/products/escalation", "description": "Parent complaint routing + SLA" },
+        { "label": "Customer Loyalty", "href": "/products/customer-loyalty", "description": "Referrals + alumni perks" },
+        { "label": "Marketplace", "href": "/products/marketplace", "description": "School-branded storefront" },
+        { "label": "Education CRM", "href": "/products/education-crm", "description": "Admission lead nurture" }
+      ]
+    },
+    { "label": "AI", "href": "/ai" },
+    { "label": "Pricing", "href": "/pricing" },
+    { "label": "Customers", "href": "/customers" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "Product": [
+      { "label": "School ERP", "href": "/school-erp" },
+      { "label": "College ERP", "href": "/products/college-erp" },
+      { "label": "School App", "href": "/products/school-app" },
+      { "label": "AI Roadmap", "href": "/ai" }
+    ],
+    "Solutions": [
+      { "label": "CBSE Schools", "href": "/school-erp#cbse" },
+      { "label": "ICSE Schools", "href": "/school-erp#icse" },
+      { "label": "State Board", "href": "/school-erp#state" },
+      { "label": "Multi-branch", "href": "/school-erp#multi-branch" }
+    ],
+    "Company": [
+      { "label": "About", "href": "/about" },
+      { "label": "Customers", "href": "/customers" },
+      { "label": "Careers", "href": "/careers" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "Resources": [
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Security", "href": "/security" },
+      { "label": "DPDPA Compliance", "href": "/legal/dpdpa-compliance" },
+      { "label": "Pricing", "href": "/pricing" }
+    ],
+    "Legal": [
+      { "label": "Privacy Policy", "href": "/legal/privacy-policy" },
+      { "label": "Terms of Service", "href": "/legal/terms-of-service" },
+      { "label": "Cancellation Policy", "href": "/legal/cancellation-policy" },
+      { "label": "Refund Policy", "href": "/legal/refund-policy" },
+      { "label": "License", "href": "/legal/license" }
+    ]
+  }
+}

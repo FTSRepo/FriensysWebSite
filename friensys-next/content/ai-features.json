@@ -1,0 +1,39 @@
+{
+  "live": [],
+  "roadmap": [
+    {
+      "title": "AI Report Card Comments",
+      "summary": "Generate teacher-style remarks per student using grade history + attendance. Editable, never auto-published.",
+      "quarter": "Q3 2026",
+      "icon": "FileText"
+    },
+    {
+      "title": "AI Fee Reminder Writer",
+      "summary": "Drafts fee-reminder messages in your school's tone — Hindi or English — based on the parent's history.",
+      "quarter": "Q3 2026",
+      "icon": "Wallet"
+    },
+    {
+      "title": "WhatsApp Parent-Comms Summarizer",
+      "summary": "Long parent chat threads summarized into a one-paragraph briefing for the principal each morning.",
+      "quarter": "Q4 2026",
+      "icon": "MessageSquare"
+    },
+    {
+      "title": "Dropout Risk Scoring",
+      "summary": "Flags students at risk based on attendance + fee delay + grade drop. Counsellor can intervene early.",
+      "quarter": "Q4 2026",
+      "icon": "TrendingDown"
+    },
+    {
+      "title": "AI Admission Funnel Triage",
+      "summary": "Auto-classifies inbound admission inquiries by intent + fit + urgency. Counsellor opens the hottest leads first.",
+      "quarter": "Q1 2027",
+      "icon": "Filter"
+    }
+  ],
+  "manifesto": {
+    "headline": "Admin-AI. Built for the people who run schools.",
+    "body": "We don't believe AI replaces a teacher. We believe AI removes the busywork that keeps a principal away from teachers. Every Friensys AI feature is admin-facing, optional, and always editable before it leaves the school."
+  }
+}

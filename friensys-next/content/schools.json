@@ -1,0 +1,31 @@
+{
+  "schools": [
+    { "name": "Delhi Public School", "city": "Delhi", "board": "CBSE", "logo": "/logos/delhi-public.png" },
+    { "name": "Genius Public", "city": "Lucknow", "board": "CBSE", "logo": "/logos/genius-public.png" },
+    { "name": "GM Public", "city": "Patna", "board": "CBSE", "logo": "/logos/gm-public.png" },
+    { "name": "GRM Public", "city": "Bareilly", "board": "CBSE", "logo": "/logos/grm-public.png" },
+    { "name": "MKD Public", "city": "Noida", "board": "CBSE", "logo": "/logos/mkd-public.png" },
+    { "name": "Residential GP", "city": "Greater Noida", "board": "CBSE", "logo": "/logos/residential-gp.png" },
+    { "name": "Richmond Hill", "city": "Bangalore", "board": "ICSE", "logo": "/logos/richmond-hill.png" },
+    { "name": "St George", "city": "Hyderabad", "board": "ICSE", "logo": "/logos/st-george.png" },
+    { "name": "S Memorial", "city": "Patna", "board": "CBSE", "logo": "/logos/s-memorial.png" },
+    { "name": "St Francis", "city": "Bangalore", "board": "ICSE", "logo": "/logos/st-francis.png" },
+    { "name": "ABC School", "city": "Indore", "board": "CBSE", "logo": "/logos/abc.png" },
+    { "name": "Adhyayan Residential", "city": "Bhopal", "board": "CBSE", "logo": "/logos/adhyayan-residential.png" },
+    { "name": "Champaran International", "city": "Motihari", "board": "CBSE", "logo": "/logos/champaran-international.png" },
+    { "name": "Chela Mary", "city": "Kolkata", "board": "ICSE", "logo": "/logos/chela-mary.png" },
+    { "name": "Dawn Public", "city": "Patna", "board": "CBSE", "logo": "/logos/dawn-public.png" },
+    { "name": "Holy Mission", "city": "Patna", "board": "CBSE", "logo": "/logos/holy-mission.png" },
+    { "name": "Holy Mission High", "city": "Patna", "board": "CBSE", "logo": "/logos/holy-mission-high.png" },
+    { "name": "Laxmi Narayan", "city": "Varanasi", "board": "CBSE", "logo": "/logos/laxmi-narayan.png" },
+    { "name": "Muskan Academy", "city": "Lucknow", "board": "CBSE", "logo": "/logos/muskan-academy.png" },
+    { "name": "Naya Savera", "city": "Patna", "board": "State", "logo": "/logos/naya-savera.png" },
+    { "name": "Sanskar Bharti", "city": "Indore", "board": "CBSE", "logo": "/logos/sanskar-bharti.png" },
+    { "name": "St Mary", "city": "Pune", "board": "ICSE", "logo": "/logos/st-mary.png" },
+    { "name": "Study Park", "city": "Bareilly", "board": "CBSE", "logo": "/logos/study-park.png" },
+    { "name": "Unique", "city": "Bangalore", "board": "CBSE", "logo": "/logos/unique.png" },
+    { "name": "Vivekanand International", "city": "Lucknow", "board": "CBSE", "logo": "/logos/vivekanand-international.png" },
+    { "name": "Vivraj", "city": "Patna", "board": "CBSE", "logo": "/logos/vivraj.png" },
+    { "name": "VK Reta", "city": "Patna", "board": "CBSE", "logo": "/logos/vk-reta.jpg" }
+  ]
+}

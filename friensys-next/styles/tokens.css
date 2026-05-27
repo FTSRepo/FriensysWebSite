@@ -1,0 +1,78 @@
+/* Friensys design tokens — dark default, light optional toggle */
+
+:root,
+:root[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-base: #0A0B0F;
+  --bg-elevated: #11131A;
+  --bg-overlay: #1A1D27;
+
+  /* Borders */
+  --border-subtle: #1F2230;
+  --border-strong: #2A2F40;
+
+  /* Text */
+  --text-primary: #F4F6FB;
+  --text-secondary: #A0A6B8;
+  --text-muted: #6B7185;
+
+  /* Accents */
+  --accent-primary: #7C5CFF;
+  --accent-glow: #9B7BFF;
+  --accent-cyan: #4DD4FF;
+  --accent-lime: #B8FF5C;
+  --accent-amber: #FFB84D;
+
+  /* Status */
+  --danger: #FF5C7A;
+  --success: #4ADE80;
+
+  /* Spacing rhythm (8pt base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Typography scale */
+  --font-display: "Geist", "Inter Tight", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+:root[data-theme="light"] {
+  --bg-base: #FFFFFF;
+  --bg-elevated: #F7F8FB;
+  --bg-overlay: #EEF0F6;
+  --border-subtle: #E5E7ED;
+  --border-strong: #D1D5DD;
+  --text-primary: #0A0B0F;
+  --text-secondary: #4A5160;
+  --text-muted: #7A8090;
+  --accent-primary: #6B47FF;
+  --accent-glow: #8B6BFF;
+  --accent-cyan: #2BB8E6;
+  --accent-lime: #6BCC1F;
+  --accent-amber: #E69838;
+  --danger: #E63950;
+  --success: #1FAA5C;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

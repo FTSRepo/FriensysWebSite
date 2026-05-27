@@ -1,0 +1,43 @@
+{
+  "studies": [
+    {
+      "slug": "delhi-public-fee-automation",
+      "school": "Delhi Public School",
+      "city": "Delhi",
+      "title": "From 3 hours to 30 seconds: how DPS automated daily fee reconciliation",
+      "summary": "Daily collection reports across 1,400 students used to take 3 hours of clerical work. After Friensys, the principal sees them at her desk by 9:30 AM, end of day.",
+      "stats": [
+        { "label": "Time saved per day", "value": "2h 30m" },
+        { "label": "Fee defaults resolved", "value": "32%" },
+        { "label": "Manual entries", "value": "0" }
+      ],
+      "logo": "/logos/delhi-public.png"
+    },
+    {
+      "slug": "genius-parent-app-adoption",
+      "school": "Genius Public School",
+      "city": "Lucknow",
+      "title": "1,800 parents, one app: how Genius Public cut office calls by 70%",
+      "summary": "Parents had been calling the front desk for every attendance and fee query. After rolling out the Friensys School App, daily call volume fell from ~120 to ~35.",
+      "stats": [
+        { "label": "Active parent users", "value": "1,800+" },
+        { "label": "Office calls/day", "value": "120 → 35" },
+        { "label": "Parent NPS", "value": "+48" }
+      ],
+      "logo": "/logos/genius-public.png"
+    },
+    {
+      "slug": "adhyayan-modular-rollout",
+      "school": "Adhyayan Residential",
+      "city": "Bhopal",
+      "title": "Why a CBSE residential school evaluated 5 vendors and chose modular",
+      "summary": "Adhyayan needed hostel + transport on day one but didn't want a full ERP rewrite. With Friensys's modular pricing, they bought what they needed and added later.",
+      "stats": [
+        { "label": "Modules at launch", "value": "6" },
+        { "label": "Modules today", "value": "18" },
+        { "label": "Implementation time", "value": "11 days" }
+      ],
+      "logo": "/logos/adhyayan-residential.png"
+    }
+  ]
+}

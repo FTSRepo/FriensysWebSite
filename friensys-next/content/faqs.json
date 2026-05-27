@@ -1,0 +1,48 @@
+{
+  "home": [
+    {
+      "q": "What is Friensys?",
+      "a": "Friensys is a school ERP platform used by 300+ K-12 schools across India. It covers admissions, fees, attendance, exams, report cards, parent communications, transport, library, and HR — under one branded mobile app per school."
+    },
+    {
+      "q": "Where is my school's data hosted?",
+      "a": "All Friensys customer data is hosted on AWS infrastructure in the Mumbai (ap-south-1) region — within India. Encryption at rest (AES-256) and in transit (TLS 1.2+) are enabled by default."
+    },
+    {
+      "q": "Is Friensys DPDPA compliant?",
+      "a": "Friensys is aligned with India's Digital Personal Data Protection Act, 2023. We publish a DPDPA compliance statement and offer a Data Processing Agreement on request."
+    },
+    {
+      "q": "How is Friensys different from Kaksha or Parentsalarm?",
+      "a": "Friensys is operations-first — fees, attendance, report cards, parent comms. We focus on admin-AI (AI for principals + accountants) rather than student-facing AI tutoring. We've been live with 300+ schools for 8 years."
+    }
+  ],
+  "pricing": [
+    {
+      "q": "Why don't you publish pricing?",
+      "a": "School ERP pricing depends on student count, modules selected, and onboarding requirements. We share a tailored quote within 48 hours of a discovery call — no haggling, no surprises."
+    },
+    {
+      "q": "Is there a free trial?",
+      "a": "We run a full guided pilot for qualifying schools, with sample data, for two weeks. Book a demo to request a pilot."
+    },
+    {
+      "q": "Can I buy specific modules only?",
+      "a": "Yes. Friensys is modular. Most schools start with Admissions, Fees, Attendance, and the Parent App, and add Transport, Library, Hostel, and HR over time."
+    }
+  ],
+  "security": [
+    {
+      "q": "Where is data hosted?",
+      "a": "AWS Mumbai region (ap-south-1)."
+    },
+    {
+      "q": "How often is data backed up?",
+      "a": "Automated daily backups with 30-day retention. Point-in-time recovery available on Enterprise plans."
+    },
+    {
+      "q": "Is there an audit log?",
+      "a": "Yes. Every user action that modifies records (fee deletion, marks edit, admission edit) is logged with timestamp, user, and reason."
+    }
+  ]
+}

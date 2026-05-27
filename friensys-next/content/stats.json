@@ -1,0 +1,7 @@
+{
+  "schools": { "value": 300, "label": "Schools running Friensys", "format": "plus" },
+  "modules": { "value": 40, "label": "ERP modules", "format": "plus" },
+  "years": { "value": 8, "label": "Years in production", "format": "plus" },
+  "reports": { "value": 2000, "label": "Daily reports generated", "format": "plus" },
+  "states": { "value": 12, "label": "States covered", "format": "plus" }
+}

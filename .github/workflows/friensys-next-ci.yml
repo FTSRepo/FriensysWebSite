@@ -1,0 +1,56 @@
+name: Friensys Next CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "friensys-next/**"
+      - ".github/workflows/friensys-next-ci.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "friensys-next/**"
+
+defaults:
+  run:
+    working-directory: friensys-next
+
+jobs:
+  ci:
+    name: Typecheck · Lint · Test · Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: friensys-next/pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: TypeScript typecheck
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Unit tests
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
+        env:
+          NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+          NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+          NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID: ${{ secrets.EMAILJS_CONTACT_TEMPLATE_ID }}
+          NEXT_PUBLIC_EMAILJS_DEMO_TEMPLATE_ID: ${{ secrets.EMAILJS_DEMO_TEMPLATE_ID }}
+          NEXT_PUBLIC_EMAILJS_APPLY_TEMPLATE_ID: ${{ secrets.EMAILJS_APPLY_TEMPLATE_ID }}
+          NEXT_PUBLIC_GA_ID: ""
+          NEXT_PUBLIC_SITE_URL: "https://friensys.com"

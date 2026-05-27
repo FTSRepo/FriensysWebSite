@@ -1,0 +1,79 @@
+---
+title: "AI Tools for School Administrators: What's Useful Today vs. What's Hype"
+description: "A grounded look at which AI applications genuinely help school administrators right now, and which are still waiting for the technology to catch up."
+date: "2025-04-08"
+author: "Friensys Team"
+tags: ["ai", "school-management", "technology"]
+published: true
+---
+
+Every edtech vendor now claims to have AI. Most of them are right — in the technical sense. But "having AI" and "AI that saves a principal's time" are very different things.
+
+Here's a grounded assessment of AI applications in school administration: what works today, what's promising but immature, and what's pure marketing.
+
+## What actually works today
+
+### AI-assisted report card comments
+
+This is the most immediately useful application of AI in school administration. Teachers spend 20–40 minutes per student writing report card comments that are often templated anyway. AI can generate a first draft from grade and attendance data, which teachers review and personalise.
+
+**The key constraint**: the AI must be positioned as a drafting assistant, not an autonomous publisher. Comments that go to parents without teacher review are a liability risk. Systems that enforce the review step are trustworthy; systems that auto-publish are not.
+
+### Attendance anomaly detection
+
+Detecting that a student who has attended 95% of school days for three years has been absent for 8 of the last 10 days is a straightforward pattern matching problem. AI is overkill — but it works, and it works consistently.
+
+The value is in the notification, not the detection. The system flags the anomaly to the class teacher and section head before the parent calls.
+
+### Fee default prediction
+
+Identifying which families are likely to default on the next billing cycle based on payment history and seasonality is a solved problem with basic ML. A logistic regression model trained on 3–5 years of payment data can predict defaults with 70–80% accuracy.
+
+The prediction is not magic. What makes it valuable is that it shifts the school from reactive (chasing defaults after they happen) to proactive (intervening before the due date).
+
+## What's promising but not ready
+
+### Natural language query interfaces
+
+"Ask your ERP in plain Hindi" is a compelling demo. In practice, school ERPs have complex relational data structures that general-purpose language models don't understand well enough to query reliably. A question like "How many students from Section A-Grade 8 paid fees last month but have not paid this month?" requires precise SQL — and LLMs make subtle mistakes.
+
+This will be genuinely useful in 2–3 years. Today's implementations are demo-stage.
+
+### Timetable optimisation
+
+Automated timetable generation is a hard combinatorial problem. AI approaches exist and work better than manual allocation for large schools. But the practical constraint is that schools have preferences, exceptions, and legacy constraints that are hard to encode — and principals don't trust output they can't interrogate.
+
+Useful as a starting point; not as a final output.
+
+### Admissions prediction
+
+Predicting which inquiry leads will convert to enrolment using AI is interesting but requires data volume most schools don't have. You need thousands of historical inquiries with outcome data before the model has enough signal. Small and mid-size schools don't have this.
+
+## What's pure marketing
+
+### "AI-powered" chatbots for parent communication
+
+Most of these are FAQ bots with keyword matching. They're useful for answering common questions (school hours, fee due dates) but generate high error rates when parents ask anything non-standard. The risk is that a parent gets wrong information about a fee amount or a school policy.
+
+### Facial recognition attendance
+
+Works technically; creates significant DPDPA compliance exposure. Biometric data of minors requires explicit consent under India's data protection framework. Several school chains that deployed this have quietly rolled it back.
+
+### "Personalised learning paths" for students
+
+This is curriculum territory, not school administration territory. And the evidence that AI-driven personalisation improves learning outcomes at scale is thinner than the marketing suggests.
+
+## The right question to ask AI vendors
+
+Not "Do you have AI?" — but:
+
+1. What specific problem does this AI feature solve?
+2. What training data does the model use?
+3. What happens when the model is wrong — how does a teacher or admin catch the error?
+4. Is the output reviewed by a human before it affects a student or parent?
+
+AI that answers these questions clearly is trustworthy. AI that deflects them with "powered by GPT-4" is not.
+
+---
+
+Friensys is building AI into the admin layer — starting with fee prediction and attendance anomalies. [See our AI roadmap](/ai) for what we're building and when.
