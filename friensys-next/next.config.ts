@@ -1,30 +1,11 @@
 import type { NextConfig } from "next";
 
-const isDev = process.env.NODE_ENV === "development";
-
-class VeliteWebpackPlugin {
-  static started = false;
-  constructor(private readonly options: { dev?: boolean } = {}) {}
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  apply(compiler: any) {
-    compiler.hooks.beforeCompile.tapPromise("VeliteWebpackPlugin", async () => {
-      if (VeliteWebpackPlugin.started) return;
-      VeliteWebpackPlugin.started = true;
-      const { build } = await import("velite");
-      await build({ watch: this.options.dev, clean: !this.options.dev });
-    });
-  }
-}
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  turbopack: {},
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 480, 640, 768, 1024, 1280, 1536, 1920],
-  },
-  webpack: (config) => {
-    config.plugins.push(new VeliteWebpackPlugin({ dev: isDev }));
-    return config;
   },
   redirects: async () => [
     { source: "/product/schoolErp", destination: "/school-erp", permanent: true },
