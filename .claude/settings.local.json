@@ -16,7 +16,32 @@
       "Skill(browse)",
       "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse js *)",
       "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse screenshot *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse goto *)",
+      "Bash(echo \"=== console errors ===\")",
+      "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse console *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:getdesign.md)",
+      "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse viewport *)",
+      "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse load-html *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); ['MapPin','Zap','ShieldCheck','IndianRupee','LifeBuoy'].forEach\\(n => console.log\\(n, !!l[n]\\)\\)\")",
+      "Bash(git -C \"D:\\\\Github-sacredabhishek\\\\FriensysWebSite\" add friensys-next/components/sections/home/TrustStrip.tsx)",
+      "Bash(git -C \"D:\\\\Github-sacredabhishek\\\\FriensysWebSite\" commit -m \"feat\\(v2\\): trust strip on paper\")",
+      "Bash(git -C \"D:\\\\Github-sacredabhishek\\\\FriensysWebSite\" add friensys-next/components/sections/home/WhyFriensys.tsx)",
+      "Bash(git -C \"D:\\\\Github-sacredabhishek\\\\FriensysWebSite\" commit -m \"feat\\(v2\\): editorial why-friensys\")",
+      "Bash(/c/Users/vivif/.claude/skills/gstack/browse/dist/browse network *)",
+      "Bash(echo \"img 4xx:\")",
+      "Bash(Remove-Item -Path \"components/ui/GradientMesh.tsx\" -Force)",
+      "Bash(Remove-Item -Path \"components/ui/GlowSurface.tsx\" -Force)",
+      "Bash(Write-Output \"Deleted both files\")",
+      "Bash(echo '/__TRACKED_VAR__ -> __TRACKED_VAR__')",
+      "Bash(echo 'shot __TRACKED_VAR__')",
+      "Bash(echo \"=== contact ERRORS \\(real\\) ===\")",
+      "Bash(echo \"=== fresh home errors ===\")",
+      "Bash(echo \"=== fresh contact errors ===\")"
     ]
   }
 }
