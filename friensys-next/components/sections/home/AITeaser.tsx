@@ -3,45 +3,56 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BentoCard } from "@/components/ui/BentoCard";
-import { Badge } from "@/components/ui/Badge";
-import { AuroraButton } from "@/components/ui/AuroraButton";
+import { DynIcon } from "@/components/ui/DynIcon";
 import { fadeUp, stagger } from "@/lib/motion";
 
-const liveFeatures = [
+interface CapabilityItem {
+  title: string;
+  desc?: string;
+  icon: string;
+  tag: "live" | "roadmap";
+}
+
+const capabilities: CapabilityItem[] = [
   {
     title: "Attendance anomaly alerts",
     desc: "Flags students with sudden drop-off before it becomes chronic absenteeism.",
-    badge: "live" as const,
+    icon: "AlertTriangle",
+    tag: "live",
   },
   {
     title: "Fee default prediction",
     desc: "Scores each family's payment risk 30 days before the due date.",
-    badge: "live" as const,
+    icon: "Wallet",
+    tag: "live",
   },
   {
     title: "Auto progress narratives",
     desc: "Generates personalised report card comments from grade data — reviewed by teachers before publish.",
-    badge: "live" as const,
+    icon: "Sparkles",
+    tag: "live",
   },
-];
-
-const roadmapFeatures = [
-  { title: "Parent sentiment analysis", badge: "roadmap" as const },
-  { title: "Exam paper generation", badge: "roadmap" as const },
+  {
+    title: "Parent sentiment analysis",
+    icon: "Users",
+    tag: "roadmap",
+  },
+  {
+    title: "Exam paper generation",
+    icon: "GraduationCap",
+    tag: "roadmap",
+  },
 ];
 
 export function AITeaser() {
   return (
-    <section className="relative overflow-hidden py-24 bg-bg-base">
-      <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 via-transparent to-accent-cyan/5" />
-
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-bg-elevated">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-14">
         <SectionHeading
           label="AI Suite"
-          title="Intelligence that acts, not just reports"
-          subtitle="Friensys AI surfaces the right insight at the right moment — so your staff can focus on students, not spreadsheets."
-          align="center"
+          title="Intelligence for the admin layer"
+          subtitle="Friensys AI surfaces the right insight at the right moment — so your staff focus on students, not spreadsheets."
+          align="left"
         />
 
         <motion.div
@@ -49,24 +60,37 @@ export function AITeaser() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3"
+          className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
-          {liveFeatures.map((f) => (
-            <motion.div key={f.title} variants={fadeUp}>
-              <BentoCard className="h-full p-6" glow>
-                <Badge variant={f.badge}>Live now</Badge>
-                <h3 className="mt-4 font-semibold text-text-primary">{f.title}</h3>
-                <p className="mt-2 text-sm text-text-secondary leading-relaxed">{f.desc}</p>
-              </BentoCard>
-            </motion.div>
-          ))}
-
-          {roadmapFeatures.map((f) => (
-            <motion.div key={f.title} variants={fadeUp} className="sm:col-span-1">
-              <BentoCard className="h-full p-6 opacity-70">
-                <Badge variant={f.badge}>Roadmap</Badge>
-                <h3 className="mt-4 font-semibold text-text-secondary">{f.title}</h3>
-              </BentoCard>
+          {capabilities.map((item) => (
+            <motion.div key={item.title} variants={fadeUp}>
+              <div className="rounded-[14px] border border-border-subtle bg-bg-overlay p-6 h-full">
+                <div className="flex items-start justify-between gap-3">
+                  <DynIcon
+                    name={item.icon}
+                    className="h-5 w-5 text-accent-primary shrink-0 mt-0.5"
+                    strokeWidth={1.5}
+                  />
+                  <span
+                    className={[
+                      "font-mono text-[10px] uppercase tracking-[0.06em] shrink-0",
+                      item.tag === "live"
+                        ? "text-accent-primary"
+                        : "text-text-muted",
+                    ].join(" ")}
+                  >
+                    {item.tag === "live" ? "Live now" : "Roadmap"}
+                  </span>
+                </div>
+                <h3 className="mt-4 font-display text-lg font-semibold text-text-primary leading-snug">
+                  {item.title}
+                </h3>
+                {item.desc && (
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                    {item.desc}
+                  </p>
+                )}
+              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -76,11 +100,14 @@ export function AITeaser() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-10 text-center"
+          className="mt-10"
         >
-          <AuroraButton href="/ai" variant="outline" size="md">
-            Explore the AI manifesto →
-          </AuroraButton>
+          <Link
+            href="/ai"
+            className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:gap-3 transition-all"
+          >
+            Explore the AI suite →
+          </Link>
         </motion.div>
       </div>
     </section>
