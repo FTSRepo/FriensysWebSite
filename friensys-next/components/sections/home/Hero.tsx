@@ -1,76 +1,102 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { GradientMesh } from "@/components/ui/GradientMesh";
 import { AuroraButton } from "@/components/ui/AuroraButton";
-import { TerminalStat } from "@/components/ui/TerminalStat";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { ProductFrame } from "@/components/ui/ProductFrame";
 import { fadeUp, stagger } from "@/lib/motion";
 
 const heroStats = [
   { value: "500+", label: "schools live" },
   { value: "2M+", label: "students managed" },
-  { value: "99.9%", label: "uptime SLA" },
+  { value: "8 yrs", label: "running in India" },
 ];
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-28 sm:py-36 lg:py-44">
-      <GradientMesh className="absolute inset-0 h-full w-full" intensity={0.06} />
-
-      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          animate="show"
-          className="flex flex-col items-center text-center"
-        >
-          <motion.div variants={fadeUp} className="mb-4">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border-subtle bg-bg-elevated px-4 py-1.5 text-xs font-medium text-text-secondary tracking-wide uppercase">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent-lime animate-pulse" />
-              India&apos;s fastest-growing school ERP
-            </span>
-          </motion.div>
-
-          <motion.h1
-            variants={fadeUp}
-            className="mt-4 max-w-4xl text-5xl font-bold tracking-tight text-text-primary sm:text-6xl lg:text-7xl"
-          >
-            Run your school{" "}
-            <span className="bg-gradient-to-r from-accent-primary via-accent-cyan to-accent-lime bg-clip-text text-transparent">
-              end to end
-            </span>
-            , not just the fees
-          </motion.h1>
-
-          <motion.p
-            variants={fadeUp}
-            className="mt-6 max-w-2xl text-lg text-text-secondary leading-relaxed"
-          >
-            Friensys School ERP unifies admissions, academics, fees, payroll,
-            and AI-powered insights on one platform — purpose-built for Indian K‑12 schools.
-          </motion.p>
-
+    <section className="relative overflow-hidden py-20 md:py-28">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-14">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1.15fr]">
+          {/* LEFT COLUMN */}
           <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center"
+            variants={stagger}
+            initial="hidden"
+            animate="show"
+            className="flex flex-col"
           >
-            <AuroraButton href="/contact" variant="primary" size="lg">
-              Book a free demo
-            </AuroraButton>
-            <AuroraButton href="/products" variant="outline" size="lg">
-              Explore modules
-            </AuroraButton>
+            {/* Eyebrow */}
+            <motion.div variants={fadeUp}>
+              <Eyebrow>School ERP · trusted by 500+ schools</Eyebrow>
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1
+              variants={fadeUp}
+              className="mt-6 font-display text-[clamp(40px,5.2vw,64px)] font-semibold leading-[1.02] tracking-[-0.02em] text-text-primary"
+            >
+              Run the whole school.{" "}
+              <span className="italic text-accent-primary">
+                Not just the fees.
+              </span>
+            </motion.h1>
+
+            {/* Lead paragraph */}
+            <motion.p
+              variants={fadeUp}
+              className="mt-6 max-w-[480px] text-lg leading-relaxed text-text-secondary"
+            >
+              Admissions, fees, attendance, exams, payroll and parent
+              communication — one platform built for Indian K–12 schools, not
+              bolted on.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-9 flex flex-wrap items-center gap-4"
+            >
+              <AuroraButton href="/contact" variant="primary" size="lg">
+                Book a free demo
+              </AuroraButton>
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-2 text-[15px] font-medium text-text-primary hover:text-accent-primary"
+              >
+                See how it works →
+              </Link>
+            </motion.div>
+
+            {/* Stat row */}
+            <motion.div
+              variants={fadeUp}
+              className="mt-12 flex gap-0 border-t border-border-subtle pt-6"
+            >
+              {heroStats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="pr-9 mr-9 border-r border-border-subtle last:border-0 last:mr-0 last:pr-0"
+                >
+                  <p className="font-display text-3xl font-semibold text-text-primary">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.06em] text-text-muted">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
 
-          <motion.div
-            variants={fadeUp}
-            className="mt-16 flex flex-wrap justify-center gap-6 sm:gap-10"
-          >
-            {heroStats.map((s) => (
-              <TerminalStat key={s.label} value={s.value} label={s.label} />
-            ))}
+          {/* RIGHT COLUMN */}
+          <motion.div variants={fadeUp} initial="hidden" animate="show">
+            <ProductFrame
+              src="/screenshots/school-erp-dashboard.png"
+              alt="Friensys School ERP dashboard"
+              aspect="aspect-[16/11]"
+            />
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
