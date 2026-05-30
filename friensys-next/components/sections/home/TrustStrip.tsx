@@ -14,7 +14,7 @@ export function TrustStrip() {
         <div
           className="flex shrink-0 items-center gap-12 group-hover:[animation-play-state:paused]"
           style={{
-            animation: "marquee 80s linear infinite",
+            animation: "marquee 500s linear infinite",
             width: "max-content",
           }}
         >

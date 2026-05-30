@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import Script from "next/script";
-import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Analytics } from "@/components/layout/Analytics";
 import { site } from "@/lib/site";
 import { GA_ID } from "@/lib/analytics";
@@ -45,14 +44,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" suppressHydrationWarning>
+    <html lang="en-IN" data-theme="dark" suppressHydrationWarning>
       <body
         className={`${geist.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
-        <ThemeProvider>
-          {children}
-          <Analytics />
-        </ThemeProvider>
+        {children}
+        <Analytics />
         {GA_ID && (
           <>
             <Script
