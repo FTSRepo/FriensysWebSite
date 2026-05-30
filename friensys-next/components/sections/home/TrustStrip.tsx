@@ -10,11 +10,11 @@ export function TrustStrip() {
       <p className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-text-muted">
         Trusted by 500+ schools across India
       </p>
-      <div className="relative flex">
+      <div className="group relative flex">
         <div
-          className="flex shrink-0 gap-12 items-center"
+          className="flex shrink-0 items-center gap-12 group-hover:[animation-play-state:paused]"
           style={{
-            animation: "scroll 40s linear infinite",
+            animation: "marquee 80s linear infinite",
             width: "max-content",
           }}
         >
