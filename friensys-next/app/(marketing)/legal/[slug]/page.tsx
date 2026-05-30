@@ -51,11 +51,11 @@ export default async function LegalPage({ params }: Props) {
             <p className="mb-2 text-xs font-medium uppercase tracking-wider text-text-muted">
               Legal
             </p>
-            <h1 className="mb-3 text-3xl font-bold text-text-primary md:text-4xl">{doc.title}</h1>
+            <h1 className="mb-3 font-display text-3xl font-semibold text-text-primary md:text-4xl">{doc.title}</h1>
             <p className="text-sm text-text-muted">Last updated: {updatedDate}</p>
           </header>
 
-          <div className="prose prose-invert prose-sm sm:prose-base max-w-none prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-accent-primary prose-strong:text-text-primary prose-li:text-text-secondary prose-code:text-accent-cyan prose-blockquote:border-accent-primary prose-blockquote:text-text-secondary prose-table:text-text-secondary prose-th:text-text-primary">
+          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-display prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-accent-primary prose-strong:text-text-primary prose-li:text-text-secondary prose-code:text-text-primary prose-blockquote:border-accent-primary prose-blockquote:text-text-secondary prose-table:text-text-secondary prose-th:text-text-primary">
             <MDXRemote source={doc.content} />
           </div>
         </div>

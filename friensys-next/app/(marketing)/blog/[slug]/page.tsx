@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </span>
               ))}
             </div>
-            <h1 className="mb-4 text-3xl font-bold leading-tight text-text-primary md:text-4xl">
+            <h1 className="mb-4 font-display text-3xl font-semibold leading-tight text-text-primary md:text-4xl">
               {post.title}
             </h1>
             <p className="mb-6 text-lg text-text-secondary">{post.description}</p>
@@ -81,7 +81,7 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </header>
 
-          <div className="prose prose-invert prose-sm sm:prose-base max-w-none prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-accent-primary prose-strong:text-text-primary prose-li:text-text-secondary prose-code:text-accent-cyan prose-blockquote:border-accent-primary prose-blockquote:text-text-secondary">
+          <div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-display prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-accent-primary prose-strong:text-text-primary prose-li:text-text-secondary prose-code:text-text-primary prose-blockquote:border-accent-primary prose-blockquote:text-text-secondary">
             <MDXRemote source={post.content} />
           </div>
 

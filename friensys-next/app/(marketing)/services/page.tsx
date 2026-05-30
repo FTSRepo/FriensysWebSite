@@ -110,7 +110,7 @@ export default function ServicesPage() {
 
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
+          <h1 className="mb-4 font-display text-4xl font-semibold text-text-primary md:text-5xl">
             We don&apos;t just sell software
           </h1>
           <p className="text-lg text-text-secondary">

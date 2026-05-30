@@ -27,7 +27,7 @@ export default function LegalIndexPage() {
   return (
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-        <h1 className="mb-2 text-3xl font-bold text-text-primary">Legal</h1>
+        <h1 className="mb-2 font-display text-3xl font-semibold text-text-primary">Legal</h1>
         <p className="mb-10 text-text-secondary">
           Policies, terms, and compliance documents for Friensys customers and visitors.
         </p>

@@ -21,10 +21,10 @@ export default function ContactPage() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
             <div>
-              <span className="inline-flex rounded-full border border-accent-primary/20 bg-accent-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-glow mb-4">
+              <span className="inline-flex rounded-full border border-accent-primary/20 bg-accent-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-primary mb-4">
                 Contact
               </span>
-              <h1 className="text-4xl font-bold text-text-primary sm:text-5xl leading-tight">
+              <h1 className="font-display text-4xl font-semibold text-text-primary sm:text-5xl leading-tight">
                 Talk to Friensys.
               </h1>
               <p className="mt-4 text-lg text-text-secondary">

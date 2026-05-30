@@ -90,7 +90,7 @@ export default function SecurityPage() {
 
       <section className="bg-bg-elevated py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-2xl font-bold text-text-primary text-center">Security FAQ</h2>
+          <h2 className="mb-8 font-display text-2xl font-semibold text-text-primary text-center">Security FAQ</h2>
           <dl className="space-y-6">
             {faqs.map(({ q, a }) => (
               <div key={q}>

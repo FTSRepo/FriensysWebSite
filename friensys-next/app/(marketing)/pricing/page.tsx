@@ -20,7 +20,7 @@ export default function PricingPage() {
       <PricingTiers />
       <section className="py-16 bg-bg-elevated">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
+          <h2 className="font-display text-2xl font-semibold text-text-primary mb-8 text-center">
             Frequently asked questions
           </h2>
           <dl className="space-y-6">

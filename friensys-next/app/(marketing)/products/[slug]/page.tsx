@@ -56,7 +56,7 @@ export default async function ProductPage({ params }: Props) {
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-[var(--radius-md)] border border-border-subtle bg-bg-elevated text-accent-primary">
                 <DynIcon name={product.icon} className="h-7 w-7" />
               </div>
-              <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
+              <h1 className="mb-4 font-display text-4xl font-semibold text-text-primary md:text-5xl">
                 {product.name}
               </h1>
               <p className="mb-2 text-lg font-medium text-accent-primary">{product.tagline}</p>
@@ -84,14 +84,14 @@ export default async function ProductPage({ params }: Props) {
 
       <section className="bg-bg-elevated py-20">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-10 text-center text-3xl font-bold text-text-primary">Key capabilities</h2>
+          <h2 className="mb-10 text-center font-display text-3xl font-semibold text-text-primary">Key capabilities</h2>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {product.features.map((feature) => (
               <li
                 key={feature}
                 className="flex items-start gap-3 rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay p-4"
               >
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent-lime" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent-primary" />
                 <span className="text-sm text-text-secondary">{feature}</span>
               </li>
             ))}
@@ -101,7 +101,7 @@ export default async function ProductPage({ params }: Props) {
 
       <section className="py-20">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-text-primary mb-4">
+          <h2 className="font-display text-3xl font-semibold text-text-primary mb-4">
             See {product.name} in action
           </h2>
           <p className="text-text-secondary mb-8">

@@ -54,7 +54,7 @@ export default function CareersPage() {
 
       <section className="py-20 md:py-28 text-center">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
+          <h1 className="mb-4 font-display text-4xl font-semibold text-text-primary md:text-5xl">
             Work on problems that matter to schools
           </h1>
           <p className="text-lg text-text-secondary">
@@ -66,7 +66,7 @@ export default function CareersPage() {
 
       <section className="bg-bg-elevated py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-2xl font-bold text-text-primary">Open roles</h2>
+          <h2 className="mb-8 font-display text-2xl font-semibold text-text-primary">Open roles</h2>
           <div className="space-y-4">
             {openRoles.map(({ icon: Icon, title, type, description }) => (
               <div
@@ -103,7 +103,7 @@ export default function CareersPage() {
       <section id="apply" className="py-20">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
-            <h2 className="text-3xl font-bold text-text-primary">Apply now</h2>
+            <h2 className="font-display text-3xl font-semibold text-text-primary">Apply now</h2>
             <p className="mt-2 text-text-secondary">
               We read every application. Honest cover notes beat polished templates.
             </p>

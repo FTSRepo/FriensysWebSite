@@ -52,7 +52,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-start">
             <div>
-              <h2 className="text-2xl font-bold text-text-primary mb-4">Our story</h2>
+              <h2 className="font-display text-2xl font-semibold text-text-primary mb-4">Our story</h2>
               <p className="text-text-secondary leading-relaxed">
                 Friensys started with a simple frustration: Indian school administrators were spending 3+ hours every day on tasks that a well-designed system could automate in minutes. Fee reconciliation, attendance registers, report card printing — work that kept the principal away from teaching and parents.
               </p>
@@ -65,7 +65,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-text-primary mb-6">Founders</h2>
+              <h2 className="font-display text-2xl font-semibold text-text-primary mb-6">Founders</h2>
               <BentoCard className="p-8 text-center">
                 <p className="text-text-muted text-sm">
                   Founder bios, photos, and LinkedIn URLs will be added here before launch.
@@ -102,14 +102,14 @@ export default function AboutPage() {
       <section className="bg-bg-elevated py-24">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold text-text-primary">DigitechNomads partnership</h2>
+            <h2 className="font-display text-2xl font-semibold text-text-primary">DigitechNomads partnership</h2>
             <p className="mt-4 text-text-secondary">
               Friensys operates in partnership with{" "}
               <a
                 href={site.partners.digitechnomads}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent-primary hover:text-accent-glow transition-colors"
+                className="text-accent-primary hover:text-accent-primary/80 transition-colors"
               >
                 DigitechNomads
               </a>{" "}

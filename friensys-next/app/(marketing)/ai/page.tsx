@@ -100,11 +100,9 @@ export default function AIPage() {
             <Brain className="h-4 w-4" />
             Roadmap preview
           </div>
-          <h1 className="mb-6 text-4xl font-bold text-text-primary md:text-6xl">
+          <h1 className="mb-6 font-display text-4xl font-semibold text-text-primary md:text-6xl">
             AI that works for{" "}
-            <span className="bg-gradient-to-r from-accent-primary to-accent-cyan bg-clip-text text-transparent">
-              school administrators
-            </span>
+            <em className="text-accent-primary not-italic">school administrators</em>
           </h1>
           <p className="mx-auto mb-8 max-w-2xl text-lg text-text-secondary">
             Not student-facing AI. Not chatbots. Operational intelligence built into the admin
@@ -121,7 +119,7 @@ export default function AIPage() {
           <p className="mb-3 text-center text-xs font-semibold uppercase tracking-widest text-accent-primary">
             Roadmap
           </p>
-          <h2 className="mb-12 text-center text-3xl font-bold text-text-primary">
+          <h2 className="mb-12 text-center font-display text-3xl font-semibold text-text-primary">
             Eight capabilities in development
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -146,7 +144,7 @@ export default function AIPage() {
 
       <section className="py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="mb-8 text-center text-3xl font-bold text-text-primary">Questions</h2>
+          <h2 className="mb-8 text-center font-display text-3xl font-semibold text-text-primary">Questions</h2>
           <dl className="space-y-6">
             {faqs.map(({ q, a }) => (
               <div key={q}>

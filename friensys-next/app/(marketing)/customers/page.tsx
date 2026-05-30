@@ -31,7 +31,7 @@ export default function CustomersPage() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-primary">
             Trusted by schools across India
           </p>
-          <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
+          <h1 className="mb-4 font-display text-4xl font-semibold text-text-primary md:text-5xl">
             Schools that run on Friensys
           </h1>
           <p className="text-lg text-text-secondary">
@@ -66,7 +66,7 @@ export default function CustomersPage() {
       {caseStudies.length > 0 && (
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="mb-12 text-center text-3xl font-bold text-text-primary">
+            <h2 className="mb-12 text-center font-display text-3xl font-semibold text-text-primary">
               Results our customers share
             </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

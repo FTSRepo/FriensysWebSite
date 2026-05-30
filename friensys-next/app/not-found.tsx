@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="font-mono text-xs uppercase tracking-widest text-text-muted">
         404
       </p>
-      <h1 className="text-4xl font-bold text-text-primary">Page not found</h1>
+      <h1 className="font-display text-4xl font-semibold text-text-primary">Page not found</h1>
       <p className="max-w-md text-text-secondary">
         The page you&apos;re looking for doesn&apos;t exist. It may have moved — check
         the navigation or go back home.
