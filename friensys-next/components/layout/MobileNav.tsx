@@ -26,12 +26,12 @@ export function MobileNav({ open, onClose, nav }: MobileNavProps) {
   return (
     <>
       <div
-        className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
+        className="fixed inset-0 z-50 bg-[#1B1714]/40 backdrop-blur-[2px]"
         onClick={onClose}
         aria-hidden="true"
       />
       <nav
-        className="fixed inset-y-0 right-0 z-50 flex w-[min(320px,100vw)] flex-col bg-bg-elevated border-l border-border-subtle"
+        className="fixed inset-y-0 right-0 z-50 flex w-[min(320px,100vw)] flex-col bg-bg-base border-l border-border-subtle"
         aria-label="Mobile navigation"
       >
         <div className="flex items-center justify-between px-4 py-3 border-b border-border-subtle">
@@ -49,7 +49,7 @@ export function MobileNav({ open, onClose, nav }: MobileNavProps) {
           {nav.header.map((item) =>
             "items" in item && item.items ? (
               <div key={item.label}>
-                <p className="px-3 pt-3 pb-1 text-xs font-semibold uppercase tracking-widest text-text-muted">
+                <p className="px-3 pt-3 pb-1 font-mono text-xs uppercase tracking-[0.12em] text-text-muted">
                   {item.label}
                 </p>
                 {item.items.map((sub) => (

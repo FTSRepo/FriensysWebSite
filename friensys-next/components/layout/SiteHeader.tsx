@@ -27,7 +27,7 @@ export function SiteHeader() {
               height={28}
               priority
             />
-            <span className="font-semibold text-text-primary tracking-tight">
+            <span className="font-display text-xl font-semibold text-text-primary tracking-tight">
               Friensys
             </span>
           </Link>
@@ -44,7 +44,7 @@ export function SiteHeader() {
                 >
                   <button
                     className={cn(
-                      "flex items-center gap-1 px-3 py-2 text-sm rounded-md transition-colors",
+                      "flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors",
                       megaOpen
                         ? "text-text-primary"
                         : "text-text-secondary hover:text-text-primary"
@@ -69,7 +69,7 @@ export function SiteHeader() {
                 <Link
                   key={item.label}
                   href={(item as { href: string }).href}
-                  className="px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors rounded-md"
+                  className="px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-md"
                 >
                   {item.label}
                 </Link>

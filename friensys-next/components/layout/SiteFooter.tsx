@@ -22,7 +22,7 @@ export function SiteFooter() {
                 width={28}
                 height={28}
               />
-              <span className="font-semibold text-text-primary">Friensys</span>
+              <span className="font-display text-xl font-semibold text-text-primary">Friensys</span>
             </Link>
             <p className="text-sm text-text-muted leading-relaxed mb-4">
               {site.tagline}
@@ -47,7 +47,7 @@ export function SiteFooter() {
               ][]
             ).map(([section, items]) => (
               <div key={section}>
-                <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">
+                <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.12em] text-text-muted">
                   {section}
                 </h3>
                 <ul className="space-y-2">
@@ -67,7 +67,7 @@ export function SiteFooter() {
 
             {/* Connect column */}
             <div>
-              <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-text-muted">
+              <h3 className="mb-3 font-mono text-xs uppercase tracking-[0.12em] text-text-muted">
                 Connect
               </h3>
               <ul className="space-y-2 text-sm">
