@@ -29,20 +29,14 @@ export function AuroraButton({
   ...rest
 }: AuroraButtonProps) {
   const classes = cn(
-    "relative inline-flex items-center justify-center font-medium rounded-[var(--radius-md)]",
-    "transition-all duration-200 focus-visible:outline-2 focus-visible:outline-accent-primary focus-visible:outline-offset-4",
+    "inline-flex items-center justify-center gap-2 rounded-[11px] font-medium",
+    "transition-all duration-200 hover:-translate-y-px",
+    "focus-visible:outline-2 focus-visible:outline-accent-primary focus-visible:outline-offset-4",
     "disabled:pointer-events-none disabled:opacity-50",
-    variant === "primary" && [
-      "bg-accent-primary text-white",
-      "hover:bg-accent-glow hover:shadow-[0_0_28px_-4px_hsl(252_100%_70%_/_0.55)]",
-    ],
-    variant === "outline" && [
-      "border border-border-strong bg-transparent text-text-primary",
-      "hover:border-accent-primary hover:text-accent-primary hover:shadow-[0_0_18px_-4px_hsl(252_100%_70%_/_0.3)]",
-    ],
-    size === "sm" && "px-3 py-1.5 text-sm",
-    size === "md" && "px-5 py-2.5 text-base",
-    size === "lg" && "px-7 py-3.5 text-lg",
+    variant === "primary" && "bg-accent-primary text-white hover:bg-[#083F39]",
+    variant === "outline" && "border border-border-subtle bg-transparent text-text-primary hover:border-text-muted",
+    (size === "sm" || size === "md") && "text-sm px-[18px] py-2.5",
+    size === "lg" && "text-[15px] px-6 py-3.5",
     className
   );
 

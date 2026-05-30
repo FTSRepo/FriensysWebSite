@@ -12,9 +12,9 @@ export function BentoCard({ children, className, as: Tag = "div", glow = false }
   return (
     <Tag
       className={cn(
-        "relative overflow-hidden rounded-[var(--radius-xl)] border border-border-subtle bg-bg-elevated p-6",
-        "transition-all duration-300",
-        glow && ["hover:border-accent-primary/30", "hover:shadow-[0_0_60px_-20px_hsl(252_100%_70%_/_0.25)]"],
+        "relative overflow-hidden rounded-[14px] border border-border-subtle bg-bg-overlay p-6",
+        "shadow-[0_1px_2px_rgba(27,23,20,0.05),0_4px_12px_-6px_rgba(27,23,20,0.08)]",
+        "transition hover:-translate-y-0.5 hover:border-border-strong",
         className
       )}
     >
