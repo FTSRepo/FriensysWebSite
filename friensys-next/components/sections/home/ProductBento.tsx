@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BentoCard } from "@/components/ui/BentoCard";
+import { ProductFrame } from "@/components/ui/ProductFrame";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Badge } from "@/components/ui/Badge";
 import { fadeUp, stagger } from "@/lib/motion";
 
@@ -13,45 +13,49 @@ const featured = [
     slug: "school-erp",
     name: "School ERP",
     tagline: "The complete school management system",
+    description:
+      "Admissions, timetables, attendance, exams, and HR — managed from one dashboard built for Indian K–12 schools.",
     screenshot: "/screenshots/school-erp-dashboard.png",
     badge: null,
-    large: true,
   },
   {
     slug: "ai-suite",
     name: "AI Suite",
     tagline: "Predictive insights for smarter decisions",
+    description:
+      "Surface dropout risks, fee default patterns, and academic trends before they become problems.",
     screenshot: "/screenshots/ai-suite-dashboard.png",
     badge: "new" as const,
-    large: false,
   },
   {
     slug: "fees-management",
     name: "Fees & Finance",
     tagline: "Automate collections, eliminate defaults",
+    description:
+      "Online fee payments, automated reminders, concession tracking, and audit-ready ledgers in one place.",
     screenshot: "/screenshots/fees-management-dashboard.png",
     badge: null,
-    large: false,
   },
   {
     slug: "school-app",
     name: "School App",
     tagline: "Your school in every parent's pocket",
+    description:
+      "Push notices, homework, attendance, and fee receipts directly to parents — no WhatsApp groups needed.",
     screenshot: "/screenshots/school-app.png",
     badge: "live" as const,
-    large: false,
   },
 ];
 
 export function ProductBento() {
   return (
-    <section className="py-24 bg-bg-elevated">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-bg-base">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-14">
         <SectionHeading
           label="Our Products"
-          title="Every tool your school needs, beautifully connected"
-          subtitle="Mix and match modules. They all share one database, one login, one support line."
-          align="center"
+          title="Every tool your school needs, on one platform"
+          subtitle="Mix and match modules. They share one database, one login, one support line."
+          align="left"
         />
 
         <motion.div
@@ -59,41 +63,59 @@ export function ProductBento() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-16 flex flex-col gap-20"
         >
-          {featured.map((p) => (
-            <motion.div
-              key={p.slug}
-              variants={fadeUp}
-              className={p.large ? "sm:col-span-2 lg:col-span-2" : "col-span-1"}
-            >
-              <Link href={`/products/${p.slug}`}>
-                <BentoCard className="group h-full overflow-hidden p-0" glow>
-                  <div className="relative h-48 w-full overflow-hidden sm:h-56">
-                    <Image
-                      src={p.screenshot}
-                      alt={`${p.name} screenshot`}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-overlay/80 to-transparent" />
-                    {p.badge && (
-                      <div className="absolute right-3 top-3">
-                        <Badge variant={p.badge}>{p.badge === "new" ? "New" : "Live"}</Badge>
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-semibold text-text-primary">{p.name}</h3>
-                    <p className="mt-1 text-sm text-text-secondary">{p.tagline}</p>
-                  </div>
-                </BentoCard>
-              </Link>
-            </motion.div>
-          ))}
+          {featured.map((p, i) => {
+            const isEven = i % 2 === 0;
+            return (
+              <motion.div
+                key={p.slug}
+                variants={fadeUp}
+                className="grid items-center gap-10 lg:grid-cols-2"
+              >
+                {/* Image cell — left on even, right on odd (via order) */}
+                <div className={isEven ? "" : "lg:order-2"}>
+                  <ProductFrame
+                    src={p.screenshot}
+                    alt={`${p.name} dashboard`}
+                  />
+                </div>
+
+                {/* Text cell — right on even, left on odd */}
+                <div className={isEven ? "" : "lg:order-1"}>
+                  <Eyebrow>
+                    {`0${i + 1} — ${p.name}`}
+                  </Eyebrow>
+
+                  <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-text-primary md:text-3xl">
+                    {p.tagline}
+                  </h3>
+
+                  <p className="mt-3 leading-relaxed text-text-secondary">
+                    {p.description}
+                  </p>
+
+                  {p.badge && (
+                    <div className="mt-4">
+                      <Badge variant={p.badge}>
+                        {p.badge === "new" ? "New" : "Live"}
+                      </Badge>
+                    </div>
+                  )}
+
+                  <Link
+                    href={`/products/${p.slug}`}
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-accent-primary transition-all hover:gap-3"
+                  >
+                    Explore {p.name} →
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-16 border-t border-border-subtle pt-8">
           <Link
             href="/products"
             className="text-sm font-medium text-accent-primary hover:underline"
