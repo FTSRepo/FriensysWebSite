@@ -1,8 +1,7 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { AuroraButton } from "@/components/ui/AuroraButton";
-import { GradientMesh } from "@/components/ui/GradientMesh";
 import { fadeUp, stagger } from "@/lib/motion";
 
 interface CTASectionProps {
@@ -23,40 +22,56 @@ export function CTASection({
   secondaryHref = "/pricing",
 }: CTASectionProps) {
   return (
-    <section className="relative overflow-hidden py-24 bg-bg-elevated">
-      <GradientMesh className="absolute inset-0 h-full w-full" intensity={0.04} />
-
-      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
-        >
-          <motion.h2
-            variants={fadeUp}
-            className="text-3xl font-bold text-text-primary sm:text-4xl lg:text-5xl"
-          >
-            {title}
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="mt-4 text-lg text-text-secondary leading-relaxed"
-          >
-            {subtitle}
-          </motion.p>
+    <section className="py-24">
+      <div className="mx-auto max-w-[1100px] px-6">
+        <div className="relative overflow-hidden rounded-[24px] bg-accent-primary px-8 py-16 md:px-16 text-center">
           <motion.div
-            variants={fadeUp}
-            className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
           >
-            <AuroraButton href={primaryHref} variant="primary" size="lg">
-              {primaryLabel}
-            </AuroraButton>
-            <AuroraButton href={secondaryHref} variant="outline" size="lg">
-              {secondaryLabel}
-            </AuroraButton>
+            {/* Marigold accent rule */}
+            <motion.div variants={fadeUp} className="flex justify-center mb-6">
+              <span className="block h-px w-10 bg-accent-amber" />
+            </motion.div>
+
+            <motion.h2
+              variants={fadeUp}
+              className="font-display text-3xl md:text-4xl font-semibold text-white"
+            >
+              {title}
+            </motion.h2>
+
+            <motion.p
+              variants={fadeUp}
+              className="mt-4 text-white/80 max-w-xl mx-auto leading-relaxed"
+            >
+              {subtitle}
+            </motion.p>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-8 flex flex-wrap items-center justify-center gap-4"
+            >
+              {/* Primary: white button — visible on teal background */}
+              <Link
+                href={primaryHref}
+                className="inline-flex items-center justify-center gap-2 rounded-[11px] bg-white px-6 py-3.5 text-[15px] font-semibold text-accent-primary hover:bg-white/90 transition-all duration-200 hover:-translate-y-px"
+              >
+                {primaryLabel}
+              </Link>
+
+              {/* Secondary: outline-on-teal */}
+              <Link
+                href={secondaryHref}
+                className="inline-flex items-center justify-center gap-2 rounded-[11px] border border-white/30 px-6 py-3.5 text-[15px] font-medium text-white hover:bg-white/10 transition-all duration-200 hover:-translate-y-px"
+              >
+                {secondaryLabel}
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
