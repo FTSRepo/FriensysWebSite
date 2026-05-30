@@ -1,31 +1,31 @@
-/* Friensys design tokens — dark default, light optional toggle */
+/* Friensys design tokens — light warm default */
 
 :root,
-:root[data-theme="dark"] {
+:root[data-theme="light"] {
   /* Backgrounds */
-  --bg-base: #0A0B0F;
-  --bg-elevated: #11131A;
-  --bg-overlay: #1A1D27;
+  --bg-base: #FBF8F2;        /* paper */
+  --bg-elevated: #F3EDE1;    /* paper-2 */
+  --bg-overlay: #FFFFFF;     /* surface */
 
   /* Borders */
-  --border-subtle: #1F2230;
-  --border-strong: #2A2F40;
+  --border-subtle: #E5DCCB;  /* line */
+  --border-strong: #D8CCB6;
 
   /* Text */
-  --text-primary: #F4F6FB;
-  --text-secondary: #A0A6B8;
-  --text-muted: #6B7185;
+  --text-primary: #1B1714;   /* ink */
+  --text-secondary: #5C534A; /* ink-2 */
+  --text-muted: #8A8074;     /* ink-3 */
 
   /* Accents */
-  --accent-primary: #7C5CFF;
-  --accent-glow: #9B7BFF;
-  --accent-cyan: #4DD4FF;
-  --accent-lime: #B8FF5C;
-  --accent-amber: #FFB84D;
+  --accent-primary: #0C5B52; /* teal */
+  --accent-glow: #0E6B61;
+  --accent-cyan: #0C5B52;    /* alias teal, kill cyan */
+  --accent-lime: #3F8F5B;
+  --accent-amber: #E89A33;   /* marigold */
 
   /* Status */
-  --danger: #FF5C7A;
-  --success: #4ADE80;
+  --danger: #C0492F;
+  --success: #3F8F5B;
 
   /* Spacing rhythm (8pt base) */
   --space-1: 0.25rem;
@@ -45,27 +45,9 @@
   --radius-xl: 1.5rem;
 
   /* Typography scale */
-  --font-display: "Geist", "Inter Tight", system-ui, sans-serif;
+  --font-display: "Fraunces", "Inter Tight", Georgia, serif;
   --font-body: "Inter", system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, monospace;
-}
-
-:root[data-theme="light"] {
-  --bg-base: #FFFFFF;
-  --bg-elevated: #F7F8FB;
-  --bg-overlay: #EEF0F6;
-  --border-subtle: #E5E7ED;
-  --border-strong: #D1D5DD;
-  --text-primary: #0A0B0F;
-  --text-secondary: #4A5160;
-  --text-muted: #7A8090;
-  --accent-primary: #6B47FF;
-  --accent-glow: #8B6BFF;
-  --accent-cyan: #2BB8E6;
-  --accent-lime: #6BCC1F;
-  --accent-amber: #E69838;
-  --danger: #E63950;
-  --success: #1FAA5C;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Fraunces } from "next/font/google";
 import Script from "next/script";
 import { Analytics } from "@/components/layout/Analytics";
 import { site } from "@/lib/site";
@@ -20,6 +20,12 @@ const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
   display: "swap",
+});
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
@@ -44,9 +50,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" data-theme="dark" suppressHydrationWarning>
+    <html lang="en-IN" data-theme="light" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} ${inter.variable} antialiased`}
+        className={`${geist.variable} ${geistMono.variable} ${inter.variable} ${fraunces.variable} antialiased`}
       >
         {children}
         <Analytics />
