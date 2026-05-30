@@ -2,6 +2,7 @@ import {
   GraduationCap, School, Smartphone, AlertTriangle,
   CalendarClock, Gift, Store, Users, CheckCircle,
   Sparkles, Wallet,
+  MapPin, Zap, ShieldCheck, IndianRupee, LifeBuoy,
   LucideProps,
 } from "lucide-react";
 import type { ComponentType } from "react";
@@ -18,6 +19,11 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   CheckCircle,
   Sparkles,
   Wallet,
+  MapPin,
+  Zap,
+  ShieldCheck,
+  IndianRupee,
+  LifeBuoy,
 };
 
 interface DynIconProps extends LucideProps {

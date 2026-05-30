@@ -3,41 +3,42 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BentoCard } from "@/components/ui/BentoCard";
+import { DynIcon } from "@/components/ui/DynIcon";
 import { fadeUp, stagger } from "@/lib/motion";
 
 const reasons = [
   {
-    icon: "🇮🇳",
+    icon: "MapPin",
     title: "Built for Indian schools",
     body: "CBSE, ICSE, state boards. DPDPA-compliant data residency in India. GST-ready fee receipts. Aadhaar-linked student IDs.",
     span: "col-span-2",
   },
   {
-    icon: "🤖",
+    icon: "Sparkles",
     title: "AI-first, not AI-washed",
     body: "Attendance anomaly alerts, fee default prediction, and auto-generated progress narratives — live today, not on a roadmap.",
     span: "col-span-1",
   },
   {
-    icon: "⚡",
+    icon: "Zap",
     title: "Same-day onboarding",
     body: "Import your existing student data via CSV or Google Sheets. Go live in hours, not months.",
     span: "col-span-1",
   },
   {
-    icon: "🔒",
+    icon: "ShieldCheck",
     title: "Enterprise security",
     body: "ISO 27001-aligned controls, end-to-end encryption, granular RBAC, and a 99.9% uptime SLA backed by AWS.",
     span: "col-span-2",
   },
   {
-    icon: "💸",
+    icon: "IndianRupee",
     title: "Transparent pricing",
     body: "Per-student annual billing. No hidden modules, no per-seat surprises. Switch plans as you grow.",
     span: "col-span-1",
   },
   {
-    icon: "🤝",
+    icon: "LifeBuoy",
     title: "Dedicated success manager",
     body: "Every school gets a named CSM for onboarding, training, and ongoing support — not a ticket queue.",
     span: "col-span-1",
@@ -65,7 +66,9 @@ export function WhyFriensys() {
           {reasons.map((r) => (
             <motion.div key={r.title} variants={fadeUp} className={r.span}>
               <BentoCard className="h-full p-6">
-                <span className="text-3xl">{r.icon}</span>
+                <div className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] border border-border-subtle bg-bg-elevated">
+                  <DynIcon name={r.icon} className="h-6 w-6 text-accent-primary" />
+                </div>
                 <h3 className="mt-4 text-base font-semibold text-text-primary">{r.title}</h3>
                 <p className="mt-2 text-sm text-text-secondary leading-relaxed">{r.body}</p>
               </BentoCard>
