@@ -13,17 +13,17 @@ const stats = [
 
 export function StatsCounter() {
   return (
-    <section className="py-20 bg-bg-elevated border-y border-border-subtle">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-bg-base border-y border-border-subtle">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-14">
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="grid grid-cols-2 gap-8 sm:grid-cols-4"
+          className="grid grid-cols-2 divide-x divide-border-subtle md:grid-cols-4"
         >
           {stats.map((s) => (
-            <motion.div key={s.label} variants={fadeUp}>
+            <motion.div key={s.label} variants={fadeUp} className="py-6 px-8">
               <LiveCounter value={s.value} suffix={s.suffix} label={s.label} />
             </motion.div>
           ))}

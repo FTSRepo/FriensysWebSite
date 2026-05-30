@@ -30,11 +30,13 @@ export function LiveCounter({ value, suffix = "+", label, className }: LiveCount
   }, [inView, value]);
 
   return (
-    <div ref={ref} className={cn("flex flex-col gap-1", className)}>
-      <span className="tabular-nums text-4xl font-bold text-text-primary sm:text-5xl">
-        {count}<span className="text-accent-primary">{suffix}</span>
+    <div ref={ref} className={cn("flex flex-col items-center gap-1.5", className)}>
+      <span className="font-display tabular-nums text-4xl font-semibold text-text-primary md:text-5xl">
+        {count.toLocaleString()}<span className="text-accent-primary">{suffix}</span>
       </span>
-      <span className="text-sm text-text-secondary">{label}</span>
+      <span className="font-mono text-[11px] uppercase tracking-[0.06em] text-text-muted">
+        {label}
+      </span>
     </div>
   );
 }

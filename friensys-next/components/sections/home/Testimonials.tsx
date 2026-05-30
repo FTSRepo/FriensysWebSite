@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BentoCard } from "@/components/ui/BentoCard";
 import { fadeUp, stagger } from "@/lib/motion";
 import { getTestimonials } from "@/lib/content";
 
@@ -28,12 +27,12 @@ export function Testimonials() {
   const testimonials = getTestimonials();
 
   return (
-    <section className="py-24 bg-bg-base">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-bg-elevated">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-14">
         <SectionHeading
           label="Testimonials"
           title="Principals who made the switch"
-          align="center"
+          align="left"
         />
 
         <motion.div
@@ -41,29 +40,31 @@ export function Testimonials() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3"
+          className="mt-12 grid gap-6 sm:grid-cols-3"
         >
           {testimonials.map((t) => (
             <motion.div key={t.author} variants={fadeUp}>
-              <BentoCard className="h-full p-6">
+              <div className="flex h-full flex-col rounded-[14px] border border-border-subtle bg-bg-overlay p-7">
                 <StarRating rating={t.rating} />
-                <blockquote className="mt-4 text-sm text-text-secondary leading-relaxed">
+
+                <blockquote className="mt-5 font-display text-lg italic leading-snug text-text-primary">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                    <Image
+
+                <div className="mt-auto pt-6 flex items-center gap-3">
+                  <Image
                     src={t.schoolLogo}
                     alt={t.author}
-                    width={32}
-                    height={32}
-                    className="h-8 w-8 rounded-full bg-white/90 object-contain p-0.5"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 rounded-full border border-border-subtle bg-bg-base object-contain p-1"
                   />
                   <div>
                     <p className="text-sm font-medium text-text-primary">{t.author}</p>
-                    <p className="text-xs text-text-muted">{t.city}</p>
+                    <p className="font-mono text-[11px] text-text-muted">{t.city}</p>
                   </div>
                 </div>
-              </BentoCard>
+              </div>
             </motion.div>
           ))}
         </motion.div>
