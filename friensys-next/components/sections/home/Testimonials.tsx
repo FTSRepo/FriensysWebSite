@@ -52,11 +52,11 @@ export function Testimonials() {
                 </blockquote>
                 <div className="mt-6 flex items-center gap-3">
                     <Image
-                    src={`/logos/${t.schoolLogo}`}
+                    src={t.schoolLogo}
                     alt={t.author}
                     width={32}
                     height={32}
-                    className="h-8 w-8 rounded-full object-contain grayscale"
+                    className="h-8 w-8 rounded-full bg-white/90 object-contain p-0.5"
                   />
                   <div>
                     <p className="text-sm font-medium text-text-primary">{t.author}</p>

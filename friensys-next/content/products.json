@@ -11,6 +11,26 @@
       "primaryCta": { "label": "Book a demo", "href": "/contact?intent=school-erp" }
     },
     {
+      "slug": "ai-suite",
+      "name": "AI Suite",
+      "tagline": "Predictive insights for smarter decisions.",
+      "summary": "AI that acts, not just reports — attendance anomaly alerts, fee-default prediction, and auto-generated progress narratives. Live today, reviewed by your staff before anything ships.",
+      "hero": "/screenshots/ai-suite-dashboard.png",
+      "icon": "Sparkles",
+      "features": ["Attendance anomaly alerts", "Fee default prediction", "Auto progress narratives", "Parent sentiment analysis", "Exam paper generation", "Staffing signals"],
+      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=ai-suite" }
+    },
+    {
+      "slug": "fees-management",
+      "name": "Fees & Finance",
+      "tagline": "Automate collections, eliminate defaults.",
+      "summary": "Online fee collection over UPI, cards, and net banking with auto-reminders, GST-ready receipts, and AI default prediction. Daily collection reports ready before you sit down.",
+      "hero": "/screenshots/fees-management-dashboard.png",
+      "icon": "Wallet",
+      "features": ["UPI / card / net-banking", "Automated reminders", "Default prediction", "GST-ready receipts", "Collection reports", "Flexible payment plans"],
+      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=fees-management" }
+    },
+    {
       "slug": "college-erp",
       "name": "College ERP",
       "tagline": "Built for higher-ed complexity.",
