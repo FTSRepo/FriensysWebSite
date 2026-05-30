@@ -19,7 +19,7 @@ const schema = z.object({
 type FormValues = z.infer<typeof schema>;
 
 const inputClass =
-  "w-full rounded-[var(--radius-sm)] border border-border-subtle bg-bg-elevated px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none";
+  "w-full rounded-[var(--radius-sm)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary";
 
 export function CareersApplyForm({ defaultPosition = "" }: { defaultPosition?: string }) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -59,12 +59,12 @@ export function CareersApplyForm({ defaultPosition = "" }: { defaultPosition?: s
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="mb-1 block text-sm font-medium text-text-primary">Full name</label>
+          <label className="mb-1 block text-sm font-medium text-text-secondary">Full name</label>
           <input {...register("name")} className={inputClass} placeholder="Your name" />
           {errors.name && <p className="mt-1 text-xs text-danger">{errors.name.message}</p>}
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-text-primary">Email</label>
+          <label className="mb-1 block text-sm font-medium text-text-secondary">Email</label>
           <input
             {...register("email")}
             type="email"
@@ -74,7 +74,7 @@ export function CareersApplyForm({ defaultPosition = "" }: { defaultPosition?: s
           {errors.email && <p className="mt-1 text-xs text-danger">{errors.email.message}</p>}
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-text-primary">Phone</label>
+          <label className="mb-1 block text-sm font-medium text-text-secondary">Phone</label>
           <input
             {...register("phone")}
             type="tel"
@@ -84,7 +84,7 @@ export function CareersApplyForm({ defaultPosition = "" }: { defaultPosition?: s
           {errors.phone && <p className="mt-1 text-xs text-danger">{errors.phone.message}</p>}
         </div>
         <div>
-          <label className="mb-1 block text-sm font-medium text-text-primary">
+          <label className="mb-1 block text-sm font-medium text-text-secondary">
             Position applying for
           </label>
           <input
@@ -98,7 +98,7 @@ export function CareersApplyForm({ defaultPosition = "" }: { defaultPosition?: s
         </div>
       </div>
       <div>
-        <label className="mb-1 block text-sm font-medium text-text-primary">
+        <label className="mb-1 block text-sm font-medium text-text-secondary">
           LinkedIn profile <span className="text-text-muted">(optional)</span>
         </label>
         <input
@@ -112,7 +112,7 @@ export function CareersApplyForm({ defaultPosition = "" }: { defaultPosition?: s
         )}
       </div>
       <div>
-        <label className="mb-1 block text-sm font-medium text-text-primary">Why Friensys?</label>
+        <label className="mb-1 block text-sm font-medium text-text-secondary">Why Friensys?</label>
         <textarea
           {...register("message")}
           rows={4}

@@ -26,9 +26,9 @@ export function ModuleAccordion() {
               value={group.name}
               className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated px-4"
             >
-              <AccordionTrigger className="text-left font-semibold text-text-primary hover:no-underline">
+              <AccordionTrigger className="text-left font-display font-semibold text-text-primary hover:no-underline">
                 {group.name}
-                <span className="ml-2 text-xs font-normal text-text-muted">
+                <span className="ml-2 font-sans text-xs font-normal text-text-muted">
                   {group.modules.length} modules
                 </span>
               </AccordionTrigger>

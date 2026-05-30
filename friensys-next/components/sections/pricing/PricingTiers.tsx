@@ -1,7 +1,6 @@
 import { AuroraButton } from "@/components/ui/AuroraButton";
-import { BentoCard } from "@/components/ui/BentoCard";
-import { Badge } from "@/components/ui/Badge";
-import { CheckCircle2 } from "lucide-react";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { DynIcon } from "@/components/ui/DynIcon";
 
 const tiers = [
   {
@@ -45,14 +44,13 @@ export function PricingTiers() {
   return (
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <span className="inline-flex rounded-full border border-accent-primary/20 bg-accent-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-glow mb-4">
-            Pricing
-          </span>
-          <h1 className="text-4xl font-bold text-text-primary sm:text-5xl">
-            Two ways to start. One platform.
+        <div className="mx-auto max-w-2xl text-center mb-16 flex flex-col items-center gap-3">
+          <Eyebrow>Pricing</Eyebrow>
+          <h1 className="font-display text-4xl font-semibold tracking-tight text-text-primary sm:text-5xl">
+            Two ways to start.{" "}
+            <em className="not-italic text-accent-primary">One platform.</em>
           </h1>
-          <p className="mt-4 text-lg text-text-secondary">
+          <p className="mt-2 text-lg text-text-secondary">
             Pricing depends on student count, modules, and onboarding requirements.
             We share a tailored quote within 48 hours of a call — no haggling, no surprises.
           </p>
@@ -60,24 +58,34 @@ export function PricingTiers() {
 
         <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
           {tiers.map((tier) => (
-            <BentoCard
+            <div
               key={tier.name}
-              glow
-              className={`flex flex-col justify-between p-8 ${tier.highlight ? "border-accent-primary/30" : ""}`}
+              className={`flex flex-col justify-between rounded-[14px] border bg-bg-overlay p-8 shadow-[0_1px_2px_rgba(27,23,20,.05),0_4px_12px_-6px_rgba(27,23,20,.08)] ${
+                tier.highlight
+                  ? "border-accent-primary"
+                  : "border-border-subtle"
+              }`}
             >
               <div>
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h2 className="text-xl font-bold text-text-primary">{tier.name}</h2>
+                    <h2 className="font-display text-xl font-semibold text-text-primary">
+                      {tier.name}
+                    </h2>
                     <p className="mt-1 text-sm text-text-muted">{tier.tagline}</p>
                   </div>
-                  {tier.highlight && <Badge variant="new">Popular</Badge>}
+                  {tier.highlight && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-border-subtle bg-bg-elevated px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-text-secondary">
+                      <span className="h-1.5 w-1.5 rounded-full bg-accent-amber" />
+                      Popular
+                    </span>
+                  )}
                 </div>
                 <p className="text-sm text-text-secondary mb-6">{tier.description}</p>
                 <ul className="space-y-2.5">
                   {tier.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-lime" />
+                      <DynIcon name="CheckCircle" className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-primary" />
                       <span className="text-sm text-text-secondary">{f}</span>
                     </li>
                   ))}
@@ -90,13 +98,13 @@ export function PricingTiers() {
               >
                 {tier.cta}
               </AuroraButton>
-            </BentoCard>
+            </div>
           ))}
         </div>
 
         <p className="mt-8 text-center text-sm text-text-muted">
           Need a customised module set?{" "}
-          <a href="/contact" className="text-accent-primary hover:text-accent-glow transition-colors">
+          <a href="/contact" className="text-accent-primary transition-colors hover:text-[#083F39]">
             Talk to us
           </a>{" "}
           — Friensys is fully modular.

@@ -6,12 +6,12 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group block rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-6 transition-colors hover:border-border-strong"
+      className="group block rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-6 shadow-[0_1px_2px_rgba(27,23,20,.05),0_4px_12px_-6px_rgba(27,23,20,.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-border-strong hover:shadow-[0_4px_16px_-6px_rgba(27,23,20,.14)]"
     >
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[var(--radius-sm)] bg-bg-overlay text-accent-primary">
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[var(--radius-sm)] border border-border-subtle bg-bg-overlay text-accent-primary">
         <DynIcon name={product.icon} className="h-6 w-6" />
       </div>
-      <h3 className="mb-1 font-semibold text-text-primary transition-colors group-hover:text-accent-primary">
+      <h3 className="mb-1 font-display font-semibold text-text-primary transition-colors group-hover:text-accent-primary">
         {product.name}
       </h3>
       <p className="text-sm leading-relaxed text-text-secondary">{product.tagline}</p>

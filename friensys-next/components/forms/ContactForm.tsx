@@ -56,8 +56,8 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
 
   if (status === "success") {
     return (
-      <div className="rounded-[var(--radius-lg)] border border-accent-lime/20 bg-accent-lime/5 p-6 text-center">
-        <p className="font-semibold text-accent-lime">Message sent!</p>
+      <div className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-6 text-center">
+        <p className="font-semibold text-text-primary">Message sent!</p>
         <p className="mt-2 text-sm text-text-secondary">
           We&apos;ll get back to you within 24 hours on business days.
         </p>
@@ -69,13 +69,13 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-1.5">
+          <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-1.5">
             Your name *
           </label>
           <input
             id="name"
             {...register("name")}
-            className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
+            className="w-full rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary"
             placeholder="Rakesh Kumar"
           />
           {errors.name && (
@@ -85,14 +85,14 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
           )}
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-1.5">
             Work email *
           </label>
           <input
             id="email"
             type="email"
             {...register("email")}
-            className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
+            className="w-full rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary"
             placeholder="principal@yourschool.in"
           />
           {errors.email && (
@@ -105,13 +105,13 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="school" className="block text-sm font-medium text-text-primary mb-1.5">
+          <label htmlFor="school" className="block text-sm font-medium text-text-secondary mb-1.5">
             School name *
           </label>
           <input
             id="school"
             {...register("schoolName")}
-            className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
+            className="w-full rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary"
             placeholder="Delhi Public School"
           />
           {errors.schoolName && (
@@ -121,27 +121,27 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
           )}
         </div>
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-text-primary mb-1.5">
+          <label htmlFor="phone" className="block text-sm font-medium text-text-secondary mb-1.5">
             Phone
           </label>
           <input
             id="phone"
             type="tel"
             {...register("phone")}
-            className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
+            className="w-full rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary"
             placeholder="+91 99716 73592"
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="intent" className="block text-sm font-medium text-text-primary mb-1.5">
+        <label htmlFor="intent" className="block text-sm font-medium text-text-secondary mb-1.5">
           How can we help?
         </label>
         <select
           id="intent"
           {...register("intent")}
-          className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary focus:border-accent-primary focus:outline-none"
+          className="w-full rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary"
         >
           <option value="demo">Book a product demo</option>
           <option value="pricing">Get a pricing quote</option>
@@ -152,14 +152,14 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-1.5">
+        <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-1.5">
           Message *
         </label>
         <textarea
           id="message"
           {...register("message")}
           rows={4}
-          className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none resize-none"
+          className="w-full rounded-[var(--radius-md)] border border-border-subtle bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus-visible:border-accent-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent-primary resize-none"
           placeholder="Tell us about your school — board, student count, what you need most."
         />
         {errors.message && (
