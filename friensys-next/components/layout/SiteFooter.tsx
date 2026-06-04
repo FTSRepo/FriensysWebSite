@@ -21,6 +21,7 @@ export function SiteFooter() {
                 alt="Friensys"
                 width={28}
                 height={28}
+                style={{ width: 28, height: 28 }}
               />
               <span className="font-semibold text-text-primary">Friensys</span>
             </Link>

@@ -54,8 +54,9 @@ export default function CustomersPage() {
                   src={school.logo}
                   alt={school.name}
                   width={80}
-                  height={40}
-                  className="h-8 w-auto object-contain opacity-70 transition-opacity hover:opacity-100"
+                  height={32}
+                  style={{ width: "auto", height: "auto" }}
+                  className="max-h-8 max-w-full object-contain opacity-70 transition-opacity hover:opacity-100"
                 />
               </div>
             ))}
@@ -80,8 +81,9 @@ export default function CustomersPage() {
                       src={cs.logo}
                       alt={cs.school}
                       width={48}
-                      height={48}
-                      className="h-10 w-auto object-contain"
+                      height={40}
+                      style={{ width: "auto", height: "auto" }}
+                      className="max-h-10 max-w-full object-contain"
                     />
                     <div>
                       <p className="font-semibold text-text-primary">{cs.school}</p>

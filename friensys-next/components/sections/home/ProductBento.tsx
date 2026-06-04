@@ -74,6 +74,7 @@ export function ProductBento() {
                       src={p.screenshot}
                       alt={`${p.name} screenshot`}
                       fill
+                      sizes={p.large ? "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 66vw" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"}
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-bg-overlay/80 to-transparent" />

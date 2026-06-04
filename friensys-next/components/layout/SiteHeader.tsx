@@ -25,6 +25,7 @@ export function SiteHeader() {
               alt="Friensys"
               width={28}
               height={28}
+              style={{ width: 28, height: 28 }}
               priority
             />
             <span className="font-semibold text-text-primary tracking-tight">

@@ -28,7 +28,8 @@ export function TrustStrip() {
                 alt={school.name}
                 width={112}
                 height={40}
-                className="h-10 w-auto object-contain"
+                style={{ width: "auto", height: "auto" }}
+                className="max-h-full max-w-full object-contain"
               />
             </div>
           ))}
