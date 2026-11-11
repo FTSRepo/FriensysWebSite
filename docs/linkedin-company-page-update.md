@@ -87,7 +87,7 @@ This is the website address (confirmed correct on 11 Nov).
 - **Published:** School Management Software (= School ERP).
 - **In LinkedIn review** (publish each once approved: Admin > Products > Manage > Publish): Educational CRM, Friensys College ERP, Friensys School App, Friensys Customer Loyalty, Friensys Escalation Management.
 - **Not added:** Marketplace, OD-SAS (no matching LinkedIn software category).
-- New products picked up the current company logo automatically; the two older listings still have the old logo (`docs/linkedin/friensys-logo-square.png` is ready to upload there).
+- **Logo (11 Nov):** new Friensys logo (`docs/brand/friensys-linkedin-logo-300.png`) uploaded to the company page and all six product listings.
 
 Add each as a LinkedIn Product, linking to its page on the website:
 
@@ -104,10 +104,10 @@ Add each as a LinkedIn Product, linking to its page on the website:
 
 ## People
 
-- Vikram Kumar and Nidhi Priya should set **Friensys Info Labs Pvt. Ltd.** as their current company (Co-founder & CTO; Co-founder, Administration & HR) so they show under People. Only Rajnish Kumar shows today.
-- **Done 11 Nov:** the former "Friensys Info Labs" personal profile is now Nidhi Priya's own profile (https://www.linkedin.com/in/nidhi-priya-97b7892a4/): headline, About, and job title "Co-founder, Administration & HR" updated (network notification off). Page admins: Nidhi Priya and Vikram Kumar, both Super admin.
+- Vikram Kumar and Nidhi Priya should set **Friensys Info Labs Pvt. Ltd.** as their current company (Co-founder & CTO; Co-founder, Digital Marketing & Operations) so they show under People. Only Rajnish Kumar shows today.
+- **Done 11 Nov:** the former "Friensys Info Labs" personal profile is now Nidhi Priya's own profile (https://www.linkedin.com/in/nidhi-priya-97b7892a4/): headline, About, and job title "Co-founder, Digital Marketing & Operations" updated (network notification off; role highlights added; About now says 100+ institutions). Page admins: Nidhi Priya and Vikram Kumar, both Super admin.
 - Post only from the company page; founders reshare from their own profiles.
-- Still to check on Nidhi's role: start date shows Jan 2021 and skills are digital-marketing ones; adjust if not accurate.
+- Nidhi's role starts Jan 2021; her digital-marketing skills match her role and stay.
 
 ## First posts after the update
 
