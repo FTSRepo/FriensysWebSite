@@ -21,15 +21,15 @@ export function SiteHeader() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
             <Image
-              src="/brand/friensys-logo.png"
+              src="/brand/friensys-mark.svg"
               alt="Friensys"
               width={28}
               height={28}
               style={{ width: 28, height: 28 }}
               priority
             />
-            <span className="font-semibold text-text-primary tracking-tight">
-              Friensys
+            <span className="text-lg font-bold text-text-primary tracking-tight">
+              friensys
             </span>
           </Link>
 

@@ -17,13 +17,13 @@ export function SiteFooter() {
           <div className="flex-shrink-0 max-w-xs">
             <Link href="/" className="flex items-center gap-2.5 mb-3">
               <Image
-                src="/brand/friensys-logo.png"
+                src="/brand/friensys-mark.svg"
                 alt="Friensys"
                 width={28}
                 height={28}
                 style={{ width: 28, height: 28 }}
               />
-              <span className="font-semibold text-text-primary">Friensys</span>
+              <span className="text-lg font-bold text-text-primary tracking-tight">friensys</span>
             </Link>
             <p className="text-sm text-text-muted leading-relaxed mb-4">
               {site.tagline}

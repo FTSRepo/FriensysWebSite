@@ -54,10 +54,10 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold text-text-primary mb-4">Our story</h2>
               <p className="text-text-secondary leading-relaxed">
-                Friensys was co-founded by Vikram Kumar, our CTO — a software architect with 20+ years of enterprise delivery, including web applications for Microsoft India and Redington (Dubai) — and Nidhi Priya, who leads administration and HR. Together they set out to bring that standard of engineering to institutions and growing businesses.
+                Friensys was co-founded by Vikram Kumar, our CTO — a software architect with 20+ years of enterprise delivery, including web applications for Microsoft India and Redington (Dubai) — and Nidhi Priya, who leads digital marketing and operations. Together they set out to bring that standard of engineering to institutions and growing businesses.
               </p>
               <p className="mt-4 text-text-secondary leading-relaxed">
-                We started with schools: the first version of our ERP ran a single school in Greater Noida. Today our products run admissions, fees and operations for 100+ institutions across 12 states — alongside loyalty, helpdesk, procurement and test-monitoring platforms for retail and manufacturing businesses.
+                We started with schools: the first version of our ERP ran a single school in Greater Noida. Today our products run admissions, fees and operations for 100+ institutions across multiple states — alongside loyalty, helpdesk, procurement and test-monitoring platforms for retail and manufacturing businesses.
               </p>
               <p className="mt-4 text-text-secondary leading-relaxed">
                 Running our own products in production is what makes us a safer partner for yours. Today we build custom software, MVPs and AI solutions — agents, document AI, knowledge assistants and predictive analytics — and we modernise and support the systems businesses already rely on. Our founders lead agentic and generative AI work personally, with AI engineers in-house to build and run it.

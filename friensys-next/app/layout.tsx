@@ -32,10 +32,6 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
-  icons: {
-    icon: "/brand/favicon.ico",
-    apple: "/brand/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({
