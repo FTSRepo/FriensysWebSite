@@ -92,7 +92,7 @@
         "Management had no single, up-to-date view of academic performance"
       ],
       "solution": [
-        "Configured the Friensys ERP for the institute's course and examination structure",
+        "Deployed Friensys College ERP (Institute Management System), configured for the institute's course and examination structure",
         "Digital marks entry, automatic result processing and report generation",
         "Role-based access for administrators, faculty and management",
         "Implementation, data migration, staff training and ongoing support"
@@ -113,7 +113,7 @@
         "retail",
         "finance-logistics-manufacturing"
       ],
-      "location": "India",
+      "location": "Kanpur, Uttar Pradesh",
       "logo": "/logos/vk-logo.jpg",
       "title": "A customer loyalty programme for a textile manufacturer and retailer",
       "summary": "VK Enterprises manufactures and retails textiles. Friensys built and runs the loyalty programme that rewards its customers and gives the business a direct line to them.",

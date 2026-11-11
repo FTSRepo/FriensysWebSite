@@ -128,8 +128,8 @@ This document records, item by item, what the strategy PDF recommends, what was 
 
 ## Open questions for you
 
-- **Q1.** Which product did Unique Educational Institute use? The case study links it to **College ERP** (it runs UG/PG courses, and its testimonial mentions exams and reporting). Correct it if it was School ERP or something else.
+- ~~Q1~~ Resolved 11 Nov: Unique Educational Institute uses College ERP (Institute Management System).
 - **Q2.** Founder photos and LinkedIn URLs: add `photo` and `linkedin` to each entry in `content/team.json`. Initials show until then.
 - **Q3.** The legacy site (`src/`) still lists "Unlimited PTO" and other careers perks, and the placeholder testimonials the PDF flags. It stays live until the new site replaces it, so fix or retire it.
 - **Q4.** Update the LinkedIn page and the PDF to +91 96433 14016.
-- **Q5.** VK Enterprises' city, if you'd like it shown (it currently says "India").
+- ~~Q5~~ Resolved 11 Nov: VK Enterprises is in Kanpur, Uttar Pradesh.
