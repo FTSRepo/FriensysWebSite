@@ -4,16 +4,18 @@
       "name": "Vikram Kumar",
       "role": "Co-founder & CTO",
       "years": "20+ years",
-      "bio": "Vikram leads technology at Friensys. Over 20+ years in software he has delivered enterprise systems, including web applications for Microsoft India and Redington (Dubai). Today he architects agentic and generative AI solutions — multi-agent systems, LLM integration, document intelligence and RAG — and guides companies from first AI use case to production.",
+      "bio": "Vikram leads technology at Friensys. A fractional CTO and AI systems & SaaS architect with 20+ years in tech, he helps founders turn AI prototypes into production multi-tenant platforms and builds production AI agents and LLM pipelines. His enterprise work includes web applications for Microsoft India and Redington (Dubai).",
       "skills": [
-        "Agentic AI architecture",
-        "Generative AI & LLMs",
-        "AI/ML",
-        "Software architecture",
+        "Agentic AI & AI agents",
+        "LLM pipelines",
+        "AI systems & SaaS architecture",
+        "Multi-tenant platforms",
+        "Fractional CTO",
         "Python / FastAPI",
         ".NET",
         "AWS / Azure"
-      ]
+      ],
+      "linkedin": "https://www.linkedin.com/in/vikram-kumar-ai-ml/"
     },
     {
       "name": "Nidhi Priya",
