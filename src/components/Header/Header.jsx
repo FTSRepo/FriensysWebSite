@@ -67,7 +67,7 @@ function Header() {
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 text-center sm:text-left">
             <div className="flex items-center gap-2">
               <FaPhoneAlt />
-              <span>+91-9971673592</span>
+              <span>+91-9643314016</span>
             </div>
             <div className="flex items-center gap-2">
               <FaEnvelope />

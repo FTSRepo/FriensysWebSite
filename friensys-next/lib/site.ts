@@ -14,7 +14,7 @@ export const site = {
     country: "IN",
   },
   contact: {
-    phone: "+91 99716 73592",
+    phone: "+91 96433 14016",
     email: "info@friensys.com",
     salesEmail: "sales@friensys.com",
     hours: "Mon-Fri, 9:30 AM – 6:30 PM IST",

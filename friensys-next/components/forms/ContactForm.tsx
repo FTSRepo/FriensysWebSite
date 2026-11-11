@@ -129,7 +129,7 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
             type="tel"
             {...register("phone")}
             className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
-            placeholder="+91 99716 73592"
+            placeholder="+91 96433 14016"
           />
         </div>
       </div>

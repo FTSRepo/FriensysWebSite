@@ -102,7 +102,7 @@ function Contact() {
 
             <div className="flex items-center gap-3 text-gray-700">
               <FaPhoneAlt className="text-green-600" />
-              <span>+91-9971673592</span>
+              <span>+91-9643314016</span>
             </div>
 
             <div className="flex items-center gap-3 text-gray-700">
