@@ -37,7 +37,7 @@ const featured = [
     slug: "marketplace",
     name: "Procurement Marketplace",
     tagline: "Sourcing of bought-out parts for manufacturers",
-    screenshot: "/screenshots/marketplace.png",
+    screenshot: "/screenshots/marketplace.jpg",
     badge: null,
     large: false,
   },

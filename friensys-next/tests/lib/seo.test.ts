@@ -29,17 +29,10 @@ describe("buildMetadata", () => {
     expect(meta.robots).toMatchObject({ index: true, follow: true });
   });
 
-  it("derives og image from path slug with title+description params", () => {
+  it("uses the static default og image", () => {
     const meta = buildMetadata({ title: "T", path: "/about" });
     const ogImages = (meta.openGraph as { images?: { url: string }[] })?.images;
-    expect(ogImages?.[0]?.url).toContain("/api/og/about");
-    expect(ogImages?.[0]?.url).toContain("title=");
-  });
-
-  it("uses home slug for root path", () => {
-    const meta = buildMetadata({ title: "T", path: "/" });
-    const ogImages = (meta.openGraph as { images?: { url: string }[] })?.images;
-    expect(ogImages?.[0]?.url).toContain("/api/og/home");
+    expect(ogImages?.[0]?.url).toBe("/og-default.png");
   });
 
   it("sets article type in openGraph", () => {

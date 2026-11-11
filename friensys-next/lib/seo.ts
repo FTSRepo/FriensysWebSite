@@ -20,10 +20,7 @@ export function buildMetadata({
 }: BuildMetadataOptions): Metadata {
   const url = `${site.url}${path}`;
   const desc = description ?? site.description;
-  const ogSlug = path === "/" ? "home" : path.slice(1).replace(/\//g, "-");
-  const ogUrl =
-    ogImage ??
-    `/api/og/${ogSlug}?title=${encodeURIComponent(title)}&description=${encodeURIComponent(desc)}`;
+  const ogUrl = ogImage ?? "/og-default.png";
 
   return {
     title,

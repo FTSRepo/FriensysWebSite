@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { getProducts, getServices, getIndustries, getFeaturedCases } from "@/lib/content";
 import { posts } from "@/.velite";
 
+export const dynamic = "force-static";
+
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://friensys.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {

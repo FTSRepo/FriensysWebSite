@@ -23,7 +23,7 @@ export default function SchoolErpPage() {
         name="Friensys School ERP"
         description="End-to-end school management software — admissions, fees, attendance, exams, report cards, parent comms. 40+ modules, 100+ schools live."
         url="/school-erp"
-        image="/screenshots/school-erp.png"
+        image="/screenshots/school-erp.jpg"
       />
       <FAQSchema faqs={faqs} />
       <ErpHero />

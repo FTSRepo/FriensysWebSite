@@ -5,7 +5,7 @@
       "name": "School ERP",
       "tagline": "School operations on autopilot.",
       "summary": "End-to-end school management — admissions, fees, attendance, exams, report cards, parent communication. 40+ modules, 100+ schools live.",
-      "hero": "/screenshots/school-erp.png",
+      "hero": "/screenshots/school-erp.jpg",
       "icon": "GraduationCap",
       "features": [
         "Admissions",
@@ -87,7 +87,7 @@
       "name": "School App",
       "tagline": "Your school, in every parent's pocket.",
       "summary": "Branded white-label mobile app for parents and students. Notices, fee payments, attendance, homework, report cards — under your school's name.",
-      "hero": "/screenshots/school-app.png",
+      "hero": "/screenshots/school-app.jpg",
       "icon": "Smartphone",
       "features": [
         "White-label branding",
@@ -165,7 +165,7 @@
       "name": "Marketplace",
       "tagline": "Procurement of bought-out parts, simplified.",
       "summary": "A procurement marketplace that helps manufacturers source bought-out parts, compare supplier quotes and manage purchase workflows in one place.",
-      "hero": "/screenshots/marketplace.png",
+      "hero": "/screenshots/marketplace.jpg",
       "icon": "Factory",
       "features": [
         "Supplier catalogue",
