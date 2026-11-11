@@ -19,7 +19,7 @@ What we do:
 → Modernisation, cloud migration & support
 → Technology consulting & CTO-as-a-service
 
-Why trust us with it? We have been building and running software in production since 2017. Our own School ERP is used by 300+ institutions every day, with AI attendance and AI grade-card generation already live.
+Why trust us with it? We have been building and running software in production since 2017. Our own School ERP is used by 100+ institutions every day, with AI attendance and AI grade-card generation already live.
 
 How we work: one business problem, one fixed-scope pilot, measured against a real number. We scale only what works. A human approves anything that touches customers or money.
 

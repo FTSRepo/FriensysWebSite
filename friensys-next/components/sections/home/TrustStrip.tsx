@@ -8,7 +8,7 @@ export function TrustStrip() {
   return (
     <section className="border-y border-border-subtle bg-bg-elevated py-10 overflow-hidden">
       <p className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-text-muted">
-        300+ institutions run Friensys software
+        100+ institutions run Friensys software
       </p>
       <div className="group relative flex">
         <div

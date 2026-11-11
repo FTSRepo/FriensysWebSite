@@ -11,7 +11,7 @@ import { FAQSchema } from "@/components/seo/FAQSchema";
 export const metadata: Metadata = buildMetadata({
   title: "School ERP — Admissions to Graduation",
   description:
-    "Friensys School ERP: 40+ modules, 300+ schools. Fees, attendance, report cards, parent app, transport, HR. CBSE, ICSE, State Board. DPDPA-aligned.",
+    "Friensys School ERP: 40+ modules, 100+ schools. Fees, attendance, report cards, parent app, transport, HR. CBSE, ICSE, State Board. DPDPA-aligned.",
   path: "/school-erp",
 });
 
@@ -21,7 +21,7 @@ export default function SchoolErpPage() {
     <>
       <ProductSchema
         name="Friensys School ERP"
-        description="End-to-end school management software — admissions, fees, attendance, exams, report cards, parent comms. 40+ modules, 300+ schools live."
+        description="End-to-end school management software — admissions, fees, attendance, exams, report cards, parent comms. 40+ modules, 100+ schools live."
         url="/school-erp"
         image="/screenshots/school-erp.png"
       />

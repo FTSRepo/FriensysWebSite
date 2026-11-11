@@ -9,7 +9,7 @@ import { buildBreadcrumbSchema, buildOrganizationSchema } from "@/lib/schema";
 export const metadata = buildMetadata({
   title: "Case Studies & Clients",
   description:
-    "Case studies and clients of Friensys Info Labs: 300+ institutions run our software, plus retail and manufacturing businesses on our loyalty, procurement and test-monitoring platforms.",
+    "Case studies and clients of Friensys Info Labs: 100+ institutions run our software, plus retail and manufacturing businesses on our loyalty, procurement and test-monitoring platforms.",
   path: "/case-studies",
 });
 
@@ -37,7 +37,7 @@ export default function CaseStudiesPage() {
             Work that runs in production
           </h1>
           <p className="text-lg text-text-secondary">
-            300+ institutions run Friensys software every day — from 200-student schools to
+            100+ institutions run Friensys software every day — from 200-student schools to
             3,000-student campuses — alongside the retail and manufacturing businesses on our other platforms.
           </p>
         </div>

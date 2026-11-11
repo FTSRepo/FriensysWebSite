@@ -15,12 +15,12 @@ export function ErpHero() {
               <span className="text-accent-primary">cash flow.</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-              40+ modules. 300+ schools live. CBSE, ICSE, and State Board.
+              40+ modules. 100+ schools live. CBSE, ICSE, and State Board.
               From admission to graduation — fees, attendance, report cards,
               parent communication, transport, library, and HR under one roof.
             </p>
             <div className="mt-4 flex flex-wrap gap-4">
-              <TerminalStat value="> 300" label="schools" />
+              <TerminalStat value="> 100" label="schools" />
               <TerminalStat value="> 40" label="modules" />
               <TerminalStat value="> 8 years" label="in production" />
             </div>

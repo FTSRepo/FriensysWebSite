@@ -2,7 +2,7 @@ export const site = {
   name: "Friensys",
   tagline: "AI that works inside your business.",
   description:
-    "Friensys Info Labs is an AI-first software and consulting partner. We build AI agents, custom software and MVPs, modernise existing systems and run our own products used by 300+ institutions — led by engineers with 20+ years of enterprise technology experience.",
+    "Friensys Info Labs is an AI-first software and consulting partner. We build AI agents, custom software and MVPs, modernise existing systems and run our own products used by 100+ institutions — led by engineers with 20+ years of enterprise technology experience.",
   url: "https://friensys.com",
   ogImage: "/og/default.png",
   legalName: "Friensys Info Labs",

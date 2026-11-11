@@ -12,7 +12,7 @@ const featured = [
   {
     slug: "school-erp",
     name: "School ERP",
-    tagline: "Admissions, fees, exams and parent communication for 300+ institutions",
+    tagline: "Admissions, fees, exams and parent communication for 100+ institutions",
     screenshot: "/screenshots/school-erp-dashboard.png",
     badge: "live" as const,
     large: true,

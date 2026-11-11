@@ -152,8 +152,8 @@
       ],
       "location": "India, since 2017",
       "logo": "/brand/friensys-logo.png",
-      "title": "Building and running a K-12 ERP for 300+ institutions since 2017",
-      "summary": "School ERP is our own product. We designed it, built it and have run it in production since 2017 — today it handles admissions, fees, exams, attendance and parent communication for 300+ institutions across 12 states, with AI already working inside it.",
+      "title": "Building and running a K-12 ERP for 100+ institutions since 2017",
+      "summary": "School ERP is our own product. We designed it, built it and have run it in production since 2017 — today it handles admissions, fees, exams, attendance and parent communication for 100+ institutions across 12 states, with AI already working inside it.",
       "services": [
         "Product engineering",
         "AI & ML",
@@ -177,7 +177,7 @@
       ],
       "outcomes": [
         "In continuous production since 2017",
-        "Used by 300+ institutions across 12 states",
+        "Used by 100+ institutions across 12 states",
         "AI features running for real users — the same engineering we bring to client projects"
       ],
       "stats": [
@@ -187,7 +187,7 @@
         },
         {
           "label": "Institutions",
-          "value": "300+"
+          "value": "100+"
         },
         {
           "label": "ERP modules",

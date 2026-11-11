@@ -44,7 +44,7 @@ WHAT WE DO
 • Technology consulting — AI Opportunity Audits, CTO-as-a-service and architecture reviews.
 
 OUR OWN PRODUCTS
-School ERP (used by 300+ institutions), Education CRM, School App, College ERP, Customer Loyalty, Escalation System, Procurement Marketplace and OD-SAS device test monitoring.
+School ERP (used by 100+ institutions), Education CRM, School App, College ERP, Customer Loyalty, Escalation System, Procurement Marketplace and OD-SAS device test monitoring.
 
 INDUSTRIES
 Education · Retail & e-commerce · Healthcare · Finance, logistics & manufacturing
@@ -114,7 +114,7 @@ Add each as a LinkedIn Product, linking to its page on the website:
 1. **Pinned introduction:** draft ready in `docs/linkedin/post-01-introduction.md` (not posted). Links to https://friensys.com/services/agentic-ai.
 2. **Case study:** VK Enterprises loyalty programme → https://friensys.com/case-studies/vk-enterprises-loyalty
 3. **Case study:** Unique Educational Institute → https://friensys.com/case-studies/unique-educational-institute
-4. **Product proof:** School ERP since 2017, 300+ institutions, AI attendance and grade-card generation live → https://friensys.com/case-studies/friensys-school-erp
+4. **Product proof:** School ERP since 2017, 100+ institutions, AI attendance and grade-card generation live → https://friensys.com/case-studies/friensys-school-erp
 
 ## Decisions (11 Nov)
 

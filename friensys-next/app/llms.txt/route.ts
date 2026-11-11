@@ -9,7 +9,7 @@ export function GET() {
 
   const body = `# Friensys
 
-> AI-first software and consulting partner for startups, SMEs and mid-size businesses: AI & ML solutions, custom software and MVPs, modernisation and support, technology consulting — plus our own products used by 300+ institutions.
+> AI-first software and consulting partner for startups, SMEs and mid-size businesses: AI & ML solutions, custom software and MVPs, modernisation and support, technology consulting — plus our own products used by 100+ institutions.
 
 ## Company
 
@@ -17,7 +17,7 @@ export function GET() {
 - Company incorporated: 2022
 - HQ: J-804, Sector-1, Techzone-IV, Greater Noida West, Uttar Pradesh 201305, India
 - Leadership: 20+ years of enterprise technology experience
-- Products used by: 300+ institutions
+- Products used by: 100+ institutions
 - Tech: Cloud-hosted, mobile-first, accessible on any device
 
 ## Services

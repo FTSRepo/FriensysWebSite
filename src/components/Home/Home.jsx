@@ -503,7 +503,7 @@ function Home() {
             {[
               {
                 icon: <FaSchool className="text-3xl text-indigo-700" />,
-                value: "300+",
+                value: "100+",
                 label: "Schools",
                 bg: "bg-indigo-100",
               },

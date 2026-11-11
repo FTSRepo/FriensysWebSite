@@ -31,7 +31,7 @@ export function SiteFooter() {
             <p className="text-xs text-text-muted leading-relaxed mb-5">
               Friensys Info Labs is an AI-first software and consulting
               partner — custom software, AI solutions, modernisation and our
-              own products used by 300+ institutions. Building in Greater Noida since 2017.
+              own products used by 100+ institutions. Building in Greater Noida since 2017.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="dpdpa">DPDPA aligned</Badge>
