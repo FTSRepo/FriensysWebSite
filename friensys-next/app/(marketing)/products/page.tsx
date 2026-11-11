@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Products — Friensys School Management Suite",
+  title: "Products — Ready-to-Deploy Platforms",
   description:
-    "Explore Friensys School ERP modules: fees, attendance, timetable, library, and more — all in one integrated platform.",
+    "Friensys products: School ERP, Education CRM, School App, College ERP, Customer Loyalty, Escalation System, Procurement Marketplace and OD-SAS. Start with proven software, then add AI where it pays off.",
   path: "/products",
 });
 
@@ -28,11 +28,11 @@ export default function ProductsPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
-              Everything school management needs
+              Our products
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-text-secondary">
-              Eight purpose-built modules that work together — or independently. Pick exactly what
-              your school needs today.
+              Ready-to-deploy platforms used by real institutions and businesses. Start with proven
+              software, then extend it with custom features and AI.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function ProductsPage() {
 
       <CTASection
         title="Not sure where to start?"
-        subtitle="Tell us about your school and we'll recommend the right modules for your needs."
+        subtitle="Tell us about your organisation and we'll recommend the right product — or build what's missing."
         primaryLabel="Talk to our team"
         primaryHref="/contact?intent=demo"
         secondaryLabel="View pricing"

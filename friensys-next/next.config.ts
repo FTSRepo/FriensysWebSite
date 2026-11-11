@@ -39,11 +39,12 @@ const nextConfig: NextConfig = {
     { source: "/cancellationPolicy", destination: "/legal/cancellation-policy", permanent: true },
     { source: "/underDevelopment", destination: "/", permanent: true },
     { source: "/services/services", destination: "/services", permanent: true },
-    { source: "/services/cloudSolutions", destination: "/services", permanent: false },
-    { source: "/services/itConsulting", destination: "/services", permanent: false },
-    { source: "/services/softwareDevelopment", destination: "/services", permanent: false },
-    { source: "/services/softwareProduct", destination: "/services", permanent: false },
+    { source: "/services/cloudSolutions", destination: "/services/modernisation-support", permanent: true },
+    { source: "/services/itConsulting", destination: "/services/consulting", permanent: true },
+    { source: "/services/softwareDevelopment", destination: "/services/custom-software", permanent: true },
+    { source: "/services/softwareProduct", destination: "/products", permanent: true },
     { source: "/apply", destination: "/careers", permanent: true },
+    { source: "/customers", destination: "/case-studies", permanent: true },
   ],
 };
 

@@ -1,4 +1,4 @@
-import { getProducts, getModules } from "@/lib/content";
+import { getProducts, getModules, getServices, getIndustries } from "@/lib/content";
 import { posts } from "@/.velite";
 
 export const dynamic = "force-static";
@@ -6,6 +6,8 @@ export const dynamic = "force-static";
 export function GET() {
   const products = getProducts();
   const moduleGroups = getModules();
+  const services = getServices();
+  const industries = getIndustries();
   const blogPosts = [...posts]
     .filter((p) => p.published)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -14,9 +16,17 @@ export function GET() {
 
 ## About Friensys
 
-Friensys is a cloud-based School ERP (Enterprise Resource Planning) platform designed for Indian K-12 schools. It provides an integrated suite of modules for managing all aspects of school administration: fee collection, attendance tracking, academic records, timetable scheduling, library management, and parent communication.
+Friensys Info Labs is an AI-first software and consulting partner based in Greater Noida, India. We build AI agents, document AI, knowledge assistants and predictive analytics; develop custom software and MVPs; modernise and support existing systems; and provide technology consulting. Clients are startups, SMEs and mid-size businesses.
 
-Founded in 2017, Friensys serves 300+ schools ranging from 200 to 3,000+ students. The platform is DPDPA-compliant and supports access from desktop, tablet, and mobile devices.
+Founded in 2017 and led by engineers with 20+ years of enterprise technology experience. Our own products are used by 300+ institutions, ranging from 200 to 3,000+ students.
+
+## Services
+
+${services.map((s) => `### ${s.name}\nURL: https://friensys.com/services/${s.slug}\n${s.short}\nDeliverables: ${s.deliverables.map((d) => d.title).join(", ")}\n`).join("\n")}
+
+## Industries
+
+${industries.map((i) => `- [${i.name}](https://friensys.com/industries/${i.slug}): ${i.short}`).join("\n")}
 
 ## Products
 
@@ -51,7 +61,8 @@ Summary: ${p.description}
 ## Contact & Demo
 
 Email: info@friensys.com
-Demo request: https://friensys.com/contact?intent=demo
+Free consultation: https://friensys.com/contact?intent=consultation
+Phone: +91 96433 14016
 Security docs: https://friensys.com/security
 `;
 

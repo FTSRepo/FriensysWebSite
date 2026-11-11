@@ -6,13 +6,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema, buildOrganizationSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Our Customers — Schools That Trust Friensys",
+  title: "Case Studies & Clients",
   description:
-    "Over 25 schools across India manage fees, attendance, and academics on Friensys. See who we work with.",
-  path: "/customers",
+    "Case studies and clients of Friensys Info Labs: 300+ institutions run our software, plus retail and manufacturing businesses on our loyalty, procurement and test-monitoring platforms.",
+  path: "/case-studies",
 });
 
-export default function CustomersPage() {
+export default function CaseStudiesPage() {
   const schools = getSchools();
   const caseStudies = getCaseStudies();
 
@@ -21,7 +21,7 @@ export default function CustomersPage() {
       <JsonLd
         data={buildBreadcrumbSchema([
           { name: "Home", url: "/" },
-          { name: "Customers", url: "/customers" },
+          { name: "Case studies", url: "/case-studies" },
         ])}
       />
       <JsonLd data={buildOrganizationSchema()} />
@@ -29,14 +29,14 @@ export default function CustomersPage() {
       <section className="py-20 md:py-28 text-center">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-accent-primary">
-            Trusted by schools across India
+            Case studies
           </p>
           <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
-            Schools that run on Friensys
+            Work that runs in production
           </h1>
           <p className="text-lg text-text-secondary">
-            From 200-student neighbourhood schools to 3,000-student campuses — all managing their
-            operations on one platform.
+            300+ institutions run Friensys software every day — from 200-student schools to
+            3,000-student campuses — alongside the retail and manufacturing businesses on our other platforms.
           </p>
         </div>
       </section>
@@ -115,12 +115,8 @@ export default function CustomersPage() {
       )}
 
       <CTASection
-        title="Join 500+ schools running on Friensys"
-        subtitle="Get a personalised demo tailored to your school size and requirements."
-        primaryLabel="Request a demo"
-        primaryHref="/contact?intent=demo"
-        secondaryLabel="See our products"
-        secondaryHref="/products"
+        title="Want results like these?"
+        subtitle="Tell us the problem. We'll tell you honestly whether software or AI can move the number."
       />
     </>
   );

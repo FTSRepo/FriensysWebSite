@@ -1,20 +1,31 @@
-import { getProducts } from "@/lib/content";
+import { getProducts, getServices, getIndustries } from "@/lib/content";
 
 export const dynamic = "force-static";
 
 export function GET() {
   const products = getProducts();
+  const services = getServices();
+  const industries = getIndustries();
 
   const body = `# Friensys
 
-> Cloud-based school management ERP for Indian schools. Modules for fees, attendance, academics, timetable, library, and parent communication. DPDPA-aligned. AI-ready.
+> AI-first software and consulting partner for startups, SMEs and mid-size businesses: AI & ML solutions, custom software and MVPs, modernisation and support, technology consulting — plus our own products used by 300+ institutions.
 
 ## Company
 
 - Founded: 2017
-- HQ: Greater Noida, Uttar Pradesh, India
-- Customers: 300+ schools
+- HQ: J-804, Sector-1, Techzone-IV, Greater Noida West, Uttar Pradesh 201305, India
+- Leadership: 20+ years of enterprise technology experience
+- Products used by: 300+ institutions
 - Tech: Cloud-hosted, mobile-first, accessible on any device
+
+## Services
+
+${services.map((s) => `- [${s.name}](https://friensys.com/services/${s.slug}): ${s.short}`).join("\n")}
+
+## Industries
+
+${industries.map((i) => `- [${i.name}](https://friensys.com/industries/${i.slug}): ${i.short}`).join("\n")}
 
 ## Products
 
@@ -24,7 +35,8 @@ ${products.map((p) => `- [${p.name}](https://friensys.com/products/${p.slug}): $
 
 - [Home](https://friensys.com/)
 - [School ERP](https://friensys.com/school-erp)
-- [Pricing](https://friensys.com/pricing)
+- [Case studies](https://friensys.com/case-studies)
+- [Our AI approach](https://friensys.com/ai)
 - [About](https://friensys.com/about)
 - [Contact](https://friensys.com/contact)
 - [Security](https://friensys.com/security)
@@ -34,7 +46,8 @@ ${products.map((p) => `- [${p.name}](https://friensys.com/products/${p.slug}): $
 ## Contact
 
 - Email: info@friensys.com
-- Demo: https://friensys.com/contact?intent=demo
+- Phone: +91 96433 14016
+- Free consultation: https://friensys.com/contact?intent=consultation
 `;
 
   return new Response(body, {

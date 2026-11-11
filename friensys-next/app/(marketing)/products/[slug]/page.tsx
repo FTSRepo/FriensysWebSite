@@ -11,6 +11,9 @@ import { CheckCircle2 } from "lucide-react";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/* /pricing covers the school suite only. */
+const SCHOOL_PRODUCTS = new Set(["school-erp", "ai-suite", "fees-management", "college-erp", "school-app", "education-crm"]);
+
 export function generateStaticParams() {
   return getProducts().map((p) => ({ slug: p.slug }));
 }
@@ -65,9 +68,15 @@ export default async function ProductPage({ params }: Props) {
                 <AuroraButton href={product.primaryCta.href}>
                   {product.primaryCta.label}
                 </AuroraButton>
-                <AuroraButton href="/pricing" variant="outline">
-                  View pricing
-                </AuroraButton>
+                {SCHOOL_PRODUCTS.has(product.slug) ? (
+                  <AuroraButton href="/pricing" variant="outline">
+                    View pricing
+                  </AuroraButton>
+                ) : (
+                  <AuroraButton href="/services/custom-software" variant="outline">
+                    Need it customised?
+                  </AuroraButton>
+                )}
               </div>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated">
@@ -105,7 +114,7 @@ export default async function ProductPage({ params }: Props) {
             See {product.name} in action
           </h2>
           <p className="text-text-secondary mb-8">
-            Book a personalised demo — our team responds within 24 hours.
+            Talk to our team — we respond within 24 hours on business days.
           </p>
           <AuroraButton href={product.primaryCta.href} size="lg">
             {product.primaryCta.label}

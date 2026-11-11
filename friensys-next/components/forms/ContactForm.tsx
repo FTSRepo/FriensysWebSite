@@ -13,7 +13,7 @@ const schema = z.object({
   email: z.string().email("Enter a valid email address"),
   phone: z.string().optional(),
   schoolName: z.string().min(2, "School name is required"),
-  intent: z.enum(["demo", "pricing", "support", "partnership", "other"]),
+  intent: z.enum(["consultation", "ai", "software", "modernisation", "demo", "pricing", "support", "partnership", "other"]),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -143,6 +143,10 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
           {...register("intent")}
           className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary focus:border-accent-primary focus:outline-none"
         >
+          <option value="consultation">Free consultation</option>
+          <option value="ai">AI &amp; ML project</option>
+          <option value="software">Custom software / MVP</option>
+          <option value="modernisation">Modernisation, support or dedicated team</option>
           <option value="demo">Book a product demo</option>
           <option value="pricing">Get a pricing quote</option>
           <option value="support">Technical support</option>

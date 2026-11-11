@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BentoCard } from "@/components/ui/BentoCard";
 import { AuroraButton } from "@/components/ui/AuroraButton";
 import { CTASection } from "@/components/sections/shared/CTASection";
+import { Leadership } from "@/components/sections/home/Leadership";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildLocalBusinessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Friensys — Built for Indian Schools Since 2017",
+  title: "About Friensys Info Labs — AI-First Software Partner Since 2017",
   description:
-    "Friensys Info Labs was founded in Greater Noida in 2017. We build school ERP software used by 300+ schools across India. DPDPA-aligned, operated in partnership with DigitechNomads.",
+    "Friensys Info Labs is a founder-led software and AI company from Greater Noida. Since 2017 we have built custom software and our own products used by 300+ institutions — led by engineers with 20+ years of enterprise experience.",
   path: "/about",
 });
 
@@ -22,9 +22,9 @@ const timeline = [
   { year: "2020", event: "Online class module released during COVID-19 school closures." },
   { year: "2021", event: "DigitechNomads partnership formalized for enterprise channel sales." },
   { year: "2022", event: "Transport GPS integration + Fee Gateway (online payments) launched." },
-  { year: "2023", event: "200 schools. OD-SAS faculty substitution + Customer Loyalty module released." },
+  { year: "2023", event: "200 schools. OD-SAS device test monitoring and Customer Loyalty platform released." },
   { year: "2024", event: "300+ schools. Education CRM + admin-AI roadmap announced." },
-  { year: "2025", event: "DPDPA compliance posture hardened. Marketplace product launched." },
+  { year: "2025", event: "DPDPA compliance posture hardened. Procurement marketplace for manufacturers launched." },
 ];
 
 export default function AboutPage() {
@@ -37,12 +37,12 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
               label="About"
-              title="Built for Indian schools. From Greater Noida, since 2017."
-              subtitle="We're Friensys Info Labs — the team behind the school ERP that 300+ schools across India use every single day."
+              title="Software and AI that businesses depend on. From Greater Noida, since 2017."
+              subtitle="We're Friensys Info Labs — a founder-led team that builds custom software and AI for startups, SMEs and mid-size businesses, and runs its own products used by 300+ institutions."
             />
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <AuroraButton href="/contact">Talk to us</AuroraButton>
-              <AuroraButton href="/customers" variant="outline">See our schools</AuroraButton>
+              <AuroraButton href="/contact?intent=consultation">Book a free consultation</AuroraButton>
+              <AuroraButton href="/case-studies" variant="outline">See our work</AuroraButton>
             </div>
           </div>
         </div>
@@ -54,33 +54,35 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold text-text-primary mb-4">Our story</h2>
               <p className="text-text-secondary leading-relaxed">
-                Friensys started with a simple frustration: Indian school administrators were spending 3+ hours every day on tasks that a well-designed system could automate in minutes. Fee reconciliation, attendance registers, report card printing — work that kept the principal away from teaching and parents.
+                Friensys was founded by a software architect with 20+ years of enterprise delivery — including web applications for Microsoft India and Redington (Dubai) — to bring that standard of engineering to institutions and growing businesses.
               </p>
               <p className="mt-4 text-text-secondary leading-relaxed">
-                We built the first version for a single school in Greater Noida. By the end of year one, we had 10. By year four, we had 200. Today, 300+ schools across 12 states trust Friensys to run their daily operations.
+                We started with schools: the first version of our ERP ran a single school in Greater Noida. Today our products run admissions, fees and operations for 300+ institutions across 12 states — alongside loyalty, helpdesk, procurement and test-monitoring platforms for retail and manufacturing businesses.
               </p>
               <p className="mt-4 text-text-secondary leading-relaxed">
-                We are not a venture-backed startup optimizing for growth metrics. We are a product company with paying customers, a profitable business, and a product roadmap driven by what school principals actually ask us for.
+                Running our own products in production is what makes us a safer partner for yours. Today we build custom software, MVPs and AI solutions — agents, document AI, knowledge assistants and predictive analytics — and we modernise and support the systems businesses already rely on.
               </p>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold text-text-primary mb-6">Founders</h2>
-              <BentoCard className="p-8 text-center">
-                <p className="text-text-muted text-sm">
-                  Founder bios, photos, and LinkedIn URLs will be added here before launch.
-                  <br />
-                  <span className="text-xs opacity-60">(User to provide: name, photo, LinkedIn, 2-sentence bio)</span>
-                </p>
-              </BentoCard>
+              <h2 className="text-2xl font-bold text-text-primary mb-4">What we do</h2>
+              <ul className="space-y-3 text-text-secondary">
+                <li><strong className="text-text-primary">AI & ML solutions</strong> — agents, document AI, RAG assistants, predictive analytics.</li>
+                <li><strong className="text-text-primary">Custom software & MVPs</strong> — web, mobile and SaaS products built from scratch.</li>
+                <li><strong className="text-text-primary">Modernisation & support</strong> — legacy upgrades, cloud, AMC and dedicated teams.</li>
+                <li><strong className="text-text-primary">Technology consulting</strong> — CTO-as-a-service and AI opportunity audits.</li>
+                <li><strong className="text-text-primary">Our own products</strong> — School ERP, Education CRM, Loyalty, Escalation, Procurement Marketplace, OD-SAS.</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
+      <Leadership title="Meet the founder" />
+
       <section className="py-24">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-          <SectionHeading label="8-year arc" title="From one school to 300+." className="mb-16" />
+          <SectionHeading label="8-year arc" title="From one school to 300+ institutions." className="mb-16" />
           <div className="mx-auto max-w-2xl">
             <ol className="relative border-l border-border-subtle space-y-8">
               {timeline.map(({ year, event }) => (
@@ -121,12 +123,8 @@ export default function AboutPage() {
       </section>
 
       <CTASection
-        title="Have a question about Friensys?"
-        subtitle="Reach out — we respond within 24 hours on business days."
-        primaryLabel="Contact us"
-        primaryHref="/contact"
-        secondaryLabel="See open roles"
-        secondaryHref="/careers"
+        title="Let's talk about what you're building"
+        subtitle="We respond within 24 hours on business days."
       />
     </>
   );
