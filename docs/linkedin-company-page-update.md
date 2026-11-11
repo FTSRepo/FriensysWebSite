@@ -98,7 +98,11 @@ Add each as a LinkedIn Product, linking to its page on the website:
 ## People
 
 - Vikram Kumar and Nidhi Priya should set **Friensys Info Labs Pvt. Ltd.** as their current company (Co-founder & CTO; Co-founder, Administration & HR) so they show under People. Only Rajnish Kumar shows today.
-- The separate **personal** profile named "Friensys Info Labs" (`/in/friensys-info-labs-97b7892a4`) competes with this page. LinkedIn treats person-profiles used as companies as a policy breach. Move its connections to the company page and close it.
+- The **personal** profile named "Friensys Info Labs" (`/in/friensys-info-labs-97b7892a4`) is the **only Super admin** of the company page (checked 11 Nov). LinkedIn pages can only be run from a personal account, which is probably why it was made. **Do not close it first** or the company page is left with no admin.
+  1. Add Vikram Kumar (and optionally Nidhi Priya) as **Super admin** of the company page: Admin view, Settings, Manage admins, Add admin.
+  2. Vikram signs in with his own account and confirms he can edit the page.
+  3. Then either close the "Friensys Info Labs" personal profile, or rename it to the real person who uses it. LinkedIn's terms require personal profiles to belong to a real person.
+  4. Post only from the company page from now on.
 
 ## First posts after the update
 
