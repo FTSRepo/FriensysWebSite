@@ -83,6 +83,8 @@ This is the website address (confirmed correct on 11 Nov).
 
 ### Products tab
 
+**Status 11 Nov:** "School Management Software" (= School ERP) updated and **published**. "Educational CRM" updated and **submitted for LinkedIn review** (review times are long). Both now link to the website. The other six are not on LinkedIn yet.
+
 Add each as a LinkedIn Product, linking to its page on the website:
 
 | Product | Link |
@@ -105,7 +107,7 @@ Add each as a LinkedIn Product, linking to its page on the website:
 
 ## First posts after the update
 
-1. **Pinned introduction:** use Post 1 from the strategy PDF, but lead with agentic AI. Link to https://friensys.com/services/agentic-ai.
+1. **Pinned introduction:** draft ready in `docs/linkedin/post-01-introduction.md` (not posted). Links to https://friensys.com/services/agentic-ai.
 2. **Case study:** VK Enterprises loyalty programme → https://friensys.com/case-studies/vk-enterprises-loyalty
 3. **Case study:** Unique Educational Institute → https://friensys.com/case-studies/unique-educational-institute
 4. **Product proof:** School ERP since 2017, 300+ institutions, AI attendance and grade-card generation live → https://friensys.com/case-studies/friensys-school-erp
