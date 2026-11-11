@@ -1,101 +1,26 @@
 import { buildMetadata } from "@/lib/seo";
+import { ServicesGrid } from "@/components/sections/home/ServicesGrid";
+import { HowWeWork } from "@/components/sections/home/HowWeWork";
 import { CTASection } from "@/components/sections/shared/CTASection";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
-import { Rocket, GraduationCap, Wrench, ArrowRightLeft, Puzzle, LifeBuoy } from "lucide-react";
 
 export const metadata = buildMetadata({
-  title: "Services — Friensys Implementation & Support",
+  title: "Services — AI, Custom Software, Modernisation & Consulting",
   description:
-    "Friensys implementation, training, migration, customisation, and annual maintenance services for schools. White-glove support from day one.",
+    "AI & ML solutions, custom software and MVPs, modernisation and support, and technology consulting for startups, SMEs and mid-size businesses.",
   path: "/services",
 });
 
-const services = [
-  {
-    icon: Rocket,
-    title: "Implementation",
-    tagline: "Go live in 4–8 weeks",
-    description:
-      "A dedicated implementation engineer owns your entire onboarding — data migration, configuration, parallel-run management, and go-live support. We don't hand you a manual and step back.",
-    deliverables: [
-      "Master data migration from your current system",
-      "Fee structure and module configuration",
-      "Staff training for admin, accounts, and reception",
-      "Parallel-run validation for one billing cycle",
-      "Go-live support for 48 hours post-cutover",
-    ],
-  },
-  {
-    icon: GraduationCap,
-    title: "Training",
-    tagline: "On-site or remote",
-    description:
-      "Role-based training sessions for every type of user: principal dashboards, admin workflows, fee collection, exam management, and parent portal.",
-    deliverables: [
-      "Principal and management dashboard orientation",
-      "Admin staff workflow training (3–4 hours)",
-      "Fee collection and reconciliation hands-on",
-      "Exam and report card setup walkthrough",
-      "Recorded sessions for staff onboarded later",
-    ],
-  },
-  {
-    icon: ArrowRightLeft,
-    title: "Migration",
-    tagline: "From any legacy system",
-    description:
-      "We handle data migration from Excel, Tally, or any previous ERP. You export — we transform, clean, validate, and import. You don't touch the migration scripts.",
-    deliverables: [
-      "Student master and academic history",
-      "Fee ledger and outstanding balance migration",
-      "Staff records and payroll history",
-      "Exam results and report card archive",
-      "Data validation report before go-live",
-    ],
-  },
-  {
-    icon: Wrench,
-    title: "Annual Maintenance (AMC)",
-    tagline: "Covered every year",
-    description:
-      "All updates, patches, and core feature additions are included in AMC. Your school stays on the latest version without additional charges.",
-    deliverables: [
-      "All platform updates and security patches",
-      "New feature releases (core modules)",
-      "Priority support ticket queue",
-      "Annual health check and performance review",
-      "Backup and disaster recovery verification",
-    ],
-  },
-  {
-    icon: Puzzle,
-    title: "Customisation",
-    tagline: "For schools with specific workflows",
-    description:
-      "Need a custom report, an unusual fee structure, or a non-standard workflow? We scope and build customisations that integrate cleanly with the core platform.",
-    deliverables: [
-      "Requirements scoping session",
-      "Custom report builder (up to 5 reports/year)",
-      "Non-standard fee head configuration",
-      "Integration with third-party systems (on request)",
-      "Custom parent communication templates",
-    ],
-  },
-  {
-    icon: LifeBuoy,
-    title: "Ongoing Support",
-    tagline: "Phone + ticket + WhatsApp",
-    description:
-      "Dedicated support during school hours (8am–6pm IST) via ticket, WhatsApp, and phone. Emergency response within 4 hours for critical issues.",
-    deliverables: [
-      "Ticket response within 4 business hours",
-      "WhatsApp group for daily operations queries",
-      "Phone support for billing cycle and exam days",
-      "Monthly check-in with your account manager",
-      "Root cause analysis for any data issues",
-    ],
-  },
+/* Services for customers of our own products (previously the whole of /services). */
+const productServices = [
+  { title: "Implementation", body: "A dedicated engineer owns onboarding: configuration, parallel run and go-live in 4–8 weeks." },
+  { title: "Data migration", body: "From Excel, Tally or any previous system — we transform, validate and import." },
+  { title: "Training", body: "Role-based training on-site or remote, with recordings for staff who join later." },
+  { title: "Customisation", body: "Custom reports, workflows and integrations that fit cleanly with the core platform." },
+  { title: "AMC", body: "Updates, security patches, backups and an annual health check, every year." },
+  { title: "Ongoing support", body: "Ticket, WhatsApp and phone support, with a 4-hour response for critical issues." },
 ];
 
 export default function ServicesPage() {
@@ -108,54 +33,41 @@ export default function ServicesPage() {
         ])}
       />
 
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
-            We don&apos;t just sell software
+      <section className="py-20 sm:py-24">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-text-primary sm:text-5xl">
+            Build, modernise and add AI — with one accountable partner
           </h1>
-          <p className="text-lg text-text-secondary">
-            Every Friensys school gets an implementation engineer, a migration team, and ongoing
-            support — not a knowledge base and a ticket queue.
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
+            From a startup&apos;s first MVP to the systems a mid-size business runs on, our team
+            designs, builds and supports software end to end — led by engineers with 20+ years of
+            enterprise delivery.
           </p>
         </div>
       </section>
 
-      <section className="bg-bg-elevated py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, tagline, description, deliverables }) => (
-              <div
-                key={title}
-                className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-overlay p-8"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-[var(--radius-sm)] bg-bg-base text-accent-primary">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="mb-1 font-semibold text-text-primary">{title}</h3>
-                <p className="mb-3 text-xs font-medium text-accent-primary">{tagline}</p>
-                <p className="mb-6 text-sm leading-relaxed text-text-secondary">{description}</p>
-                <ul className="space-y-2">
-                  {deliverables.map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-xs text-text-muted">
-                      <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent-primary" />
-                      {d}
-                    </li>
-                  ))}
-                </ul>
+      <ServicesGrid />
+      <HowWeWork id="engagements" />
+
+      <section className="border-t border-border-subtle bg-bg-elevated py-20">
+        <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            label="For product customers"
+            title="Implementation and support for Friensys products"
+            align="left"
+          />
+          <dl className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+            {productServices.map((s) => (
+              <div key={s.title}>
+                <dt className="font-semibold text-text-primary">{s.title}</dt>
+                <dd className="mt-1 text-sm leading-relaxed text-text-secondary">{s.body}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
-      <CTASection
-        title="Ready to get started?"
-        subtitle="Tell us about your school and we'll scope out the right implementation plan."
-        primaryLabel="Talk to our team"
-        primaryHref="/contact?intent=services"
-        secondaryLabel="View pricing"
-        secondaryHref="/pricing"
-      />
+      <CTASection />
     </>
   );
 }
