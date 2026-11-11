@@ -86,19 +86,9 @@ export default function CaseStudiesPage() {
                   key={cs.slug}
                   className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-8"
                 >
-                  <div className="mb-6 flex items-center gap-4">
-                    <Image
-                      src={cs.logo}
-                      alt={cs.school}
-                      width={48}
-                      height={40}
-                      style={{ width: "auto", height: "auto" }}
-                      className="max-h-10 max-w-full object-contain"
-                    />
-                    <div>
-                      <p className="font-semibold text-text-primary">{cs.school}</p>
-                      <p className="text-xs text-text-muted">{cs.city}</p>
-                    </div>
+                  <div className="mb-6">
+                    <p className="font-semibold text-text-primary">{cs.school}</p>
+                    <p className="text-xs text-text-muted">{cs.city}</p>
                   </div>
 
                   <h3 className="mb-4 text-sm font-medium text-text-primary leading-snug">
