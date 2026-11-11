@@ -1,0 +1,119 @@
+{
+  "industries": [
+    {
+      "slug": "education",
+      "name": "Education",
+      "short": "School ERP, admissions CRM, parent apps and AI for administrators.",
+      "icon": "GraduationCap",
+      "proof": "300+ institutions run Friensys software every day.",
+      "hero": {
+        "title": "Software and AI for schools, colleges and coaching institutes",
+        "promise": "Our own School ERP, Education CRM and parent app already run admissions, fees, attendance and exams for 300+ institutions. We build on that foundation — and add AI where it saves staff real hours."
+      },
+      "problems": [
+        "Enquiries from JustDial, Sulekha, Shiksha, CollegeDunia and walk-ins that nobody follows up in time",
+        "Fee collection and reconciliation that eats the accounts team's day",
+        "Parent questions that flood the front office",
+        "Student data that must be handled under India's DPDP Act"
+      ],
+      "deliverables": [
+        { "title": "School & College ERP", "body": "Admissions, fees, exams, attendance, homework and parent communication in one platform." },
+        { "title": "Admissions CRM", "body": "Lead capture from every source, counsellor workflows and source-to-admission analytics." },
+        { "title": "Parent & student app", "body": "White-label mobile app for fee reminders, attendance alerts and exam updates." },
+        { "title": "AI for admin teams", "body": "Lead scoring, parent query assistant, fee-default early warning and report-card remarks." }
+      ],
+      "tech": ["Next.js", "React Native", "Python / FastAPI", "PostgreSQL", "AWS"],
+      "relatedProducts": ["school-erp", "education-crm", "school-app", "college-erp"],
+      "faqs": [
+        { "q": "Do you work with institutions that already have an ERP?", "a": "Yes. We can migrate you to Friensys, or integrate AI and new modules with the system you already use." },
+        { "q": "How do you handle student data?", "a": "Student data is personal data under the DPDP Act. We design consent flows and data processing agreements before any AI touches it." }
+      ]
+    },
+    {
+      "slug": "retail",
+      "name": "Retail & E-commerce",
+      "short": "Loyalty, storefronts, inventory and demand insight for retailers, distributors and D2C brands.",
+      "icon": "ShoppingBag",
+      "proof": "Our Customer Loyalty platform runs points, tiers, coupons and campaigns for retail businesses.",
+      "hero": {
+        "title": "Keep customers coming back — and stock what they'll buy",
+        "promise": "Loyalty, storefront and operations software for retailers, trading and distribution businesses, with analytics that tell you which customers to win back and what to reorder."
+      },
+      "problems": [
+        "Customers buy once and don't return",
+        "Discounts given to everyone, not the customers who need a nudge",
+        "Stock-outs on fast movers and dead stock on slow ones",
+        "Sales data spread across POS, marketplace and spreadsheets"
+      ],
+      "deliverables": [
+        { "title": "Loyalty & rewards", "body": "Points, tiers, coupons, referral and campaign management with analytics." },
+        { "title": "Storefront & marketplace", "body": "Branded web and mobile storefronts connected to your inventory." },
+        { "title": "Demand & churn analytics", "body": "Forecasts from your own order history and early warning on customers likely to leave." },
+        { "title": "Custom retail operations", "body": "Order, inventory, distributor and field-sales apps built around your process." }
+      ],
+      "tech": ["Next.js", "React Native", "Node.js", "PostgreSQL", "Redis", "AWS"],
+      "relatedProducts": ["customer-loyalty", "marketplace"],
+      "faqs": [
+        { "q": "Can the loyalty platform work with our existing POS?", "a": "Usually yes, through an integration we scope during the first call." },
+        { "q": "Do we need a lot of data for forecasting?", "a": "Twelve months of order history is a good start. The AI Opportunity Audit tells you whether your data is ready." }
+      ]
+    },
+    {
+      "slug": "healthcare",
+      "name": "Healthcare",
+      "short": "Clinic and hospital software, patient apps and AI assistants that respect patient privacy.",
+      "icon": "HeartPulse",
+      "hero": {
+        "title": "Software that gives clinicians time back",
+        "promise": "Custom applications for clinics, diagnostic centres, hospitals and health-tech startups — appointments, records, patient communication and AI document handling — designed for sensitive data from the start."
+      },
+      "problems": [
+        "Front-desk staff overwhelmed by calls and appointment changes",
+        "Reports, prescriptions and forms that are re-typed by hand",
+        "Patients who don't come back for follow-ups",
+        "Health data that must be stored and shared carefully"
+      ],
+      "deliverables": [
+        { "title": "Appointment & patient apps", "body": "Booking, reminders and follow-up journeys on web, mobile and WhatsApp." },
+        { "title": "Clinic & practice management", "body": "Records, billing and workflows built around how your clinicians actually work." },
+        { "title": "Document AI", "body": "Extract data from referral letters, lab reports and forms, with human review before anything is saved." },
+        { "title": "Patient query assistant", "body": "An assistant that answers routine questions and routes everything clinical to a person." }
+      ],
+      "tech": ["Next.js", "React Native", "Python / FastAPI", "PostgreSQL", "Azure", "AWS"],
+      "relatedProducts": ["escalation"],
+      "faqs": [
+        { "q": "Will the AI give medical advice?", "a": "No. Assistants we build answer administrative questions only and hand anything clinical to your staff." },
+        { "q": "Where is patient data stored?", "a": "In cloud regions you choose, encrypted, with role-based access and audit logs." }
+      ]
+    },
+    {
+      "slug": "finance-logistics-manufacturing",
+      "name": "Finance, Logistics & Manufacturing",
+      "short": "Procurement, document AI, test-data monitoring and operations software for industrial and financial businesses.",
+      "icon": "Factory",
+      "proof": "We built a procurement marketplace for bought-out parts and OD-SAS, a test-monitoring system for devices under controlled environmental conditions.",
+      "hero": {
+        "title": "Less paperwork. Earlier warnings. Better-timed buying.",
+        "promise": "Where AI actually helps an industrial or financial SME isn't robots — it's paperwork and data. We automate POs, invoices and quotes, watch test and operations data for problems, and forecast what you'll need."
+      },
+      "problems": [
+        "Purchase orders and supplier invoices matched by hand",
+        "Supplier quotes compared in spreadsheets built from scratch each time",
+        "Quality problems found after a batch has already failed",
+        "Parts bought too early, or too late"
+      ],
+      "deliverables": [
+        { "title": "Procurement platform", "body": "Sourcing of bought-out parts, supplier quotes and purchase workflows in one place." },
+        { "title": "PO, invoice & quote AI", "body": "Read POs, quotations and invoices and flag mismatches in price, quantity or terms before payment." },
+        { "title": "Test & quality monitoring", "body": "Capture device and test-run data, and spot unusual patterns early so engineers investigate before a batch fails." },
+        { "title": "Demand & inventory forecasting", "body": "Forecasts from your own order history so you buy parts when you need them." }
+      ],
+      "tech": ["Python / FastAPI", ".NET", "SQL Server", "PostgreSQL", "IoT data pipelines", "Azure", "AWS"],
+      "relatedProducts": ["marketplace", "odsas"],
+      "faqs": [
+        { "q": "We use Tally / an existing ERP. Can you work with it?", "a": "Yes. Document AI and forecasting sit beside your current system and exchange data with it." },
+        { "q": "Can you connect to our test equipment?", "a": "OD-SAS already captures device behaviour under controlled environmental test conditions; we scope integrations for other equipment case by case." }
+      ]
+    }
+  ]
+}

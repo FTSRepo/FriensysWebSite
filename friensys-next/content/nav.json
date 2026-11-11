@@ -1,55 +1,74 @@
 {
   "header": [
     {
-      "label": "Product",
+      "label": "Services",
       "items": [
-        { "label": "School ERP", "href": "/school-erp", "description": "Flagship product — admissions to graduation" },
-        { "label": "College ERP", "href": "/products/college-erp", "description": "Higher-ed academics + hostel + alumni" },
-        { "label": "School App", "href": "/products/school-app", "description": "White-label parent + student mobile app" },
-        { "label": "OD-SAS", "href": "/products/odsas", "description": "Faculty substitution + leave" },
-        { "label": "Escalation", "href": "/products/escalation", "description": "Parent complaint routing + SLA" },
-        { "label": "Customer Loyalty", "href": "/products/customer-loyalty", "description": "Referrals + alumni perks" },
-        { "label": "Marketplace", "href": "/products/marketplace", "description": "School-branded storefront" },
-        { "label": "Education CRM", "href": "/products/education-crm", "description": "Admission lead nurture" }
+        { "label": "AI & ML Solutions", "href": "/services/ai-solutions", "description": "AI agents, document AI, RAG, predictive analytics" },
+        { "label": "Custom Software & MVP", "href": "/services/custom-software", "description": "Web, mobile and SaaS products built from scratch" },
+        { "label": "Modernisation & Support", "href": "/services/modernisation-support", "description": "Legacy upgrades, cloud, AMC and dedicated teams" },
+        { "label": "Technology Consulting", "href": "/services/consulting", "description": "CTO-as-a-service, AI audits, architecture reviews" },
+        { "label": "How we engage", "href": "/services#engagements", "description": "Audits, pilots, projects and dedicated teams" },
+        { "label": "Our AI approach", "href": "/ai", "description": "Responsible AI principles and product AI roadmap" }
       ]
     },
-    { "label": "AI", "href": "/ai" },
-    { "label": "Pricing", "href": "/pricing" },
-    { "label": "Customers", "href": "/customers" },
-    { "label": "Blog", "href": "/blog" },
-    { "label": "Contact", "href": "/contact" }
+    {
+      "label": "Industries",
+      "items": [
+        { "label": "Education", "href": "/industries/education", "description": "Schools, colleges and coaching institutes" },
+        { "label": "Retail & E-commerce", "href": "/industries/retail", "description": "Retailers, distributors and D2C brands" },
+        { "label": "Healthcare", "href": "/industries/healthcare", "description": "Clinics, hospitals and health-tech" },
+        { "label": "Finance, Logistics & Manufacturing", "href": "/industries/finance-logistics-manufacturing", "description": "Procurement, document AI, test data" }
+      ]
+    },
+    {
+      "label": "Products",
+      "items": [
+        { "label": "School ERP", "href": "/school-erp", "description": "Admissions to graduation for K-12" },
+        { "label": "Education CRM", "href": "/products/education-crm", "description": "Admission lead capture and follow-up" },
+        { "label": "School App", "href": "/products/school-app", "description": "Parent, student and teacher mobile app" },
+        { "label": "College ERP", "href": "/products/college-erp", "description": "Higher-ed academics, hostel and alumni" },
+        { "label": "Customer Loyalty", "href": "/products/customer-loyalty", "description": "Points, tiers, coupons and campaigns" },
+        { "label": "Escalation System", "href": "/products/escalation", "description": "Ticket routing with SLA tracking" },
+        { "label": "Marketplace", "href": "/products/marketplace", "description": "Procurement of bought-out parts" },
+        { "label": "OD-SAS", "href": "/products/odsas", "description": "Device test monitoring" }
+      ]
+    },
+    { "label": "Case studies", "href": "/case-studies" },
+    { "label": "About", "href": "/about" }
   ],
   "footer": {
-    "Product": [
-      { "label": "School ERP", "href": "/school-erp" },
-      { "label": "College ERP", "href": "/products/college-erp" },
-      { "label": "School App", "href": "/products/school-app" },
-      { "label": "AI Roadmap", "href": "/ai" }
+    "Services": [
+      { "label": "AI & ML Solutions", "href": "/services/ai-solutions" },
+      { "label": "Custom Software & MVP", "href": "/services/custom-software" },
+      { "label": "Modernisation & Support", "href": "/services/modernisation-support" },
+      { "label": "Technology Consulting", "href": "/services/consulting" },
+      { "label": "Our AI approach", "href": "/ai" }
     ],
-    "Solutions": [
-      { "label": "CBSE Schools", "href": "/school-erp#cbse" },
-      { "label": "ICSE Schools", "href": "/school-erp#icse" },
-      { "label": "State Board", "href": "/school-erp#state" },
-      { "label": "Multi-branch", "href": "/school-erp#multi-branch" }
+    "Industries": [
+      { "label": "Education", "href": "/industries/education" },
+      { "label": "Retail & E-commerce", "href": "/industries/retail" },
+      { "label": "Healthcare", "href": "/industries/healthcare" },
+      { "label": "Finance, Logistics & Mfg", "href": "/industries/finance-logistics-manufacturing" }
+    ],
+    "Products": [
+      { "label": "School ERP", "href": "/school-erp" },
+      { "label": "Education CRM", "href": "/products/education-crm" },
+      { "label": "Customer Loyalty", "href": "/products/customer-loyalty" },
+      { "label": "All products", "href": "/products" }
     ],
     "Company": [
       { "label": "About", "href": "/about" },
-      { "label": "Customers", "href": "/customers" },
+      { "label": "Case studies", "href": "/case-studies" },
       { "label": "Careers", "href": "/careers" },
-      { "label": "Contact", "href": "/contact" }
-    ],
-    "Resources": [
       { "label": "Blog", "href": "/blog" },
-      { "label": "Security", "href": "/security" },
-      { "label": "DPDPA Compliance", "href": "/legal/dpdpa-compliance" },
-      { "label": "Pricing", "href": "/pricing" }
+      { "label": "Contact", "href": "/contact" }
     ],
     "Legal": [
       { "label": "Privacy Policy", "href": "/legal/privacy-policy" },
       { "label": "Terms of Service", "href": "/legal/terms-of-service" },
-      { "label": "Cancellation Policy", "href": "/legal/cancellation-policy" },
-      { "label": "Refund Policy", "href": "/legal/refund-policy" },
-      { "label": "License", "href": "/legal/license" }
+      { "label": "Security", "href": "/security" },
+      { "label": "DPDPA Compliance", "href": "/legal/dpdpa-compliance" },
+      { "label": "Refund Policy", "href": "/legal/refund-policy" }
     ]
   }
 }

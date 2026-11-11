@@ -1,0 +1,10 @@
+{
+  "engagements": [
+    { "name": "AI Opportunity Audit", "buyer": "Any SME or institution", "deliverable": "1–2 sessions and a written report: top 3 AI use cases, expected impact, cost and data needed.", "icon": "Search" },
+    { "name": "AI Pilot (4–6 weeks)", "buyer": "New or existing clients", "deliverable": "One AI feature live on your data, with a before/after KPI.", "icon": "FlaskConical" },
+    { "name": "Fixed-scope project", "buyer": "Startups and SMEs", "deliverable": "An MVP or system built to an agreed scope, timeline and price.", "icon": "Rocket" },
+    { "name": "Dedicated team", "buyer": "Growing and mid-size businesses", "deliverable": "Vetted AI, full-stack and cloud engineers working as part of your team.", "icon": "Users" },
+    { "name": "CTO-as-a-service", "buyer": "Founders and leadership teams", "deliverable": "Part-time senior technology leadership for roadmap, architecture and vendors.", "icon": "Compass" },
+    { "name": "AMC & AI add-ons", "buyer": "Customers of our products", "deliverable": "Annual maintenance, support and monthly AI features inside the products you already use.", "icon": "Repeat" }
+  ]
+}

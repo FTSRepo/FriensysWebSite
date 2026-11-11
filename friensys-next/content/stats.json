@@ -1,7 +1,8 @@
 {
-  "schools": { "value": 300, "label": "Schools running Friensys", "format": "plus" },
+  "leadership": { "value": 20, "label": "Years of leadership experience", "format": "plus" },
+  "years": { "value": 8, "label": "Years shipping in production", "format": "plus" },
+  "schools": { "value": 300, "label": "Institutions run our software", "format": "plus" },
+  "states": { "value": 12, "label": "States across India", "format": "plus" },
   "modules": { "value": 40, "label": "ERP modules", "format": "plus" },
-  "years": { "value": 8, "label": "Years in production", "format": "plus" },
-  "reports": { "value": 2000, "label": "Daily reports generated", "format": "plus" },
-  "states": { "value": 12, "label": "States covered", "format": "plus" }
+  "reports": { "value": 2000, "label": "Daily reports generated", "format": "plus" }
 }

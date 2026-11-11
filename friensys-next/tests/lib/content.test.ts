@@ -107,3 +107,72 @@ describe("getModules", () => {
     expect(Array.isArray(groups[0].modules)).toBe(true);
   });
 });
+
+import {
+  getServices,
+  getService,
+  getIndustries,
+  getIndustry,
+  getTeam,
+  getEngagements,
+} from "@/lib/content";
+import { readFileSync } from "node:fs";
+
+describe("repositioning content", () => {
+  it("has the four service lines", () => {
+    expect(getServices().map((s) => s.slug)).toEqual([
+      "ai-solutions",
+      "custom-software",
+      "modernisation-support",
+      "consulting",
+    ]);
+  });
+
+  it("has the four industries", () => {
+    expect(getIndustries().map((i) => i.slug)).toEqual([
+      "education",
+      "retail",
+      "healthcare",
+      "finance-logistics-manufacturing",
+    ]);
+  });
+
+  it("finds service and industry by slug, undefined otherwise", () => {
+    expect(getService("consulting")?.name).toBeTruthy();
+    expect(getIndustry("education")?.name).toBeTruthy();
+    expect(getService("__no__")).toBeUndefined();
+    expect(getIndustry("__no__")).toBeUndefined();
+  });
+
+  it("every relatedProducts slug resolves to a real product", () => {
+    for (const page of [...getServices(), ...getIndustries()]) {
+      for (const slug of page.relatedProducts) {
+        expect(getProduct(slug), `${page.slug} -> ${slug}`).toBeDefined();
+      }
+    }
+  });
+
+  it("detail pages carry the fields the template renders", () => {
+    for (const page of [...getServices(), ...getIndustries()]) {
+      expect(page.problems.length).toBeGreaterThanOrEqual(3);
+      expect(page.deliverables.length).toBeGreaterThanOrEqual(3);
+      expect(page.faqs.length).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  it("has a founder and engagement models", () => {
+    expect(getTeam().length).toBeGreaterThanOrEqual(1);
+    expect(getEngagements().map((e) => e.name)).toContain("AI Opportunity Audit");
+  });
+
+  it("OD-SAS and Marketplace describe the real manufacturing products", () => {
+    expect(getProduct("odsas")?.summary.toLowerCase()).toContain("test");
+    expect(getProduct("marketplace")?.summary.toLowerCase()).toContain("procurement");
+  });
+
+  it("never claims 500+ schools in content", () => {
+    for (const f of ["stats", "products", "faqs", "case-studies"]) {
+      expect(readFileSync(`content/${f}.json`, "utf8")).not.toContain("500+");
+    }
+  });
+});

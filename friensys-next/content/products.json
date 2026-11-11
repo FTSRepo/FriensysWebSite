@@ -7,8 +7,20 @@
       "summary": "End-to-end school management — admissions, fees, attendance, exams, report cards, parent communication. 40+ modules, 300+ schools live.",
       "hero": "/screenshots/school-erp.png",
       "icon": "GraduationCap",
-      "features": ["Admissions", "Fees & Accounts", "Attendance", "Exams + Report Cards", "Parent App", "Transport", "Library", "HR + Payroll"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=school-erp" }
+      "features": [
+        "Admissions",
+        "Fees & Accounts",
+        "Attendance",
+        "Exams + Report Cards",
+        "Parent App",
+        "Transport",
+        "Library",
+        "HR + Payroll"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=school-erp"
+      }
     },
     {
       "slug": "ai-suite",
@@ -17,8 +29,18 @@
       "summary": "AI that acts, not just reports — attendance anomaly alerts, fee-default prediction, and auto-generated progress narratives. Live today, reviewed by your staff before anything ships.",
       "hero": "/screenshots/ai-suite-dashboard.png",
       "icon": "Sparkles",
-      "features": ["Attendance anomaly alerts", "Fee default prediction", "Auto progress narratives", "Parent sentiment analysis", "Exam paper generation", "Staffing signals"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=ai-suite" }
+      "features": [
+        "Attendance anomaly alerts",
+        "Fee default prediction",
+        "Auto progress narratives",
+        "Parent sentiment analysis",
+        "Exam paper generation",
+        "Staffing signals"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=ai-suite"
+      }
     },
     {
       "slug": "fees-management",
@@ -27,8 +49,18 @@
       "summary": "Online fee collection over UPI, cards, and net banking with auto-reminders, GST-ready receipts, and AI default prediction. Daily collection reports ready before you sit down.",
       "hero": "/screenshots/fees-management-dashboard.png",
       "icon": "Wallet",
-      "features": ["UPI / card / net-banking", "Automated reminders", "Default prediction", "GST-ready receipts", "Collection reports", "Flexible payment plans"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=fees-management" }
+      "features": [
+        "UPI / card / net-banking",
+        "Automated reminders",
+        "Default prediction",
+        "GST-ready receipts",
+        "Collection reports",
+        "Flexible payment plans"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=fees-management"
+      }
     },
     {
       "slug": "college-erp",
@@ -37,8 +69,18 @@
       "summary": "Department-level academic planning, credit-based grading, hostel + transport, alumni — designed for colleges and institutions.",
       "hero": "/screenshots/college-erp.png",
       "icon": "School",
-      "features": ["Academic Departments", "Credit-Based Grading", "Hostel Management", "Alumni Network", "Library + Labs", "Examination Cells"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=college-erp" }
+      "features": [
+        "Academic Departments",
+        "Credit-Based Grading",
+        "Hostel Management",
+        "Alumni Network",
+        "Library + Labs",
+        "Examination Cells"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=college-erp"
+      }
     },
     {
       "slug": "school-app",
@@ -47,8 +89,18 @@
       "summary": "Branded white-label mobile app for parents and students. Notices, fee payments, attendance, homework, report cards — under your school's name.",
       "hero": "/screenshots/school-app.png",
       "icon": "Smartphone",
-      "features": ["White-label branding", "Push notifications", "Fee payments", "Attendance + homework", "News & events", "Report card delivery"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=school-app" }
+      "features": [
+        "White-label branding",
+        "Push notifications",
+        "Fee payments",
+        "Attendance + homework",
+        "News & events",
+        "Report card delivery"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=school-app"
+      }
     },
     {
       "slug": "escalation",
@@ -57,18 +109,37 @@
       "summary": "Route, track, and resolve parent + staff escalations with SLA timers, ownership, and audit trail. Built for schools that take service seriously.",
       "hero": "/screenshots/escalation.png",
       "icon": "AlertTriangle",
-      "features": ["SLA timers", "Ownership routing", "Audit trail", "Parent feedback loop", "Dashboards", "Resolution reports"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=escalation" }
+      "features": [
+        "SLA timers",
+        "Ownership routing",
+        "Audit trail",
+        "Parent feedback loop",
+        "Dashboards",
+        "Resolution reports"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=escalation"
+      }
     },
     {
       "slug": "odsas",
       "name": "OD-SAS",
-      "tagline": "On-demand sub-allocation for staff.",
-      "summary": "Faculty substitution + leave + period swap, automated. Reduces the principal's time on substitution by 80%.",
+      "tagline": "Device test monitoring under controlled conditions.",
+      "summary": "OD-SAS monitors device and system behaviour during environmental testing — temperature tracking and xenon-arc sunlight simulation — so engineering teams get reliable, repeatable test data.",
       "hero": "/screenshots/odsas.png",
-      "icon": "CalendarClock",
-      "features": ["Substitution engine", "Leave management", "Period-swap automation", "Workload balancing", "Audit logs"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=odsas" }
+      "icon": "Gauge",
+      "features": [
+        "Temperature tracking",
+        "Xenon-arc sunlight simulation",
+        "Controlled environment replication",
+        "Test-run logging",
+        "Device behaviour reports"
+      ],
+      "primaryCta": {
+        "label": "Talk to us",
+        "href": "/contact?intent=odsas"
+      }
     },
     {
       "slug": "customer-loyalty",
@@ -77,18 +148,36 @@
       "summary": "A loyalty engine for schools — referral tracking, sibling discounts, alumni perks. Improves enrollment + retention.",
       "hero": "/screenshots/customer-loyalty.png",
       "icon": "Gift",
-      "features": ["Referral tracking", "Sibling discounts", "Alumni perks", "Wallet + points", "Campaign tools"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=customer-loyalty" }
+      "features": [
+        "Referral tracking",
+        "Sibling discounts",
+        "Alumni perks",
+        "Wallet + points",
+        "Campaign tools"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=customer-loyalty"
+      }
     },
     {
       "slug": "marketplace",
       "name": "Marketplace",
-      "tagline": "Books, uniforms, transport — one storefront.",
-      "summary": "A school-branded marketplace for textbooks, uniforms, stationery, and transport top-ups. Parents pay you, you keep the margin.",
+      "tagline": "Procurement of bought-out parts, simplified.",
+      "summary": "A procurement marketplace that helps manufacturers source bought-out parts, compare supplier quotes and manage purchase workflows in one place.",
       "hero": "/screenshots/marketplace.png",
-      "icon": "Store",
-      "features": ["Storefront", "Inventory", "Order management", "Vendor onboarding", "Settlement reports"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=marketplace" }
+      "icon": "Factory",
+      "features": [
+        "Supplier catalogue",
+        "Quote requests & comparison",
+        "Purchase order workflow",
+        "Vendor onboarding",
+        "Procurement reports"
+      ],
+      "primaryCta": {
+        "label": "Talk to us",
+        "href": "/contact?intent=marketplace"
+      }
     },
     {
       "slug": "education-crm",
@@ -97,8 +186,17 @@
       "summary": "Lead capture from website + walk-in + ads, nurture sequences, counsellor assignment, conversion analytics — built for school admissions teams.",
       "hero": "/screenshots/education-crm.png",
       "icon": "Users",
-      "features": ["Lead capture", "Counsellor routing", "Email + SMS nurture", "Pipeline analytics", "Source attribution"],
-      "primaryCta": { "label": "Book a demo", "href": "/contact?intent=education-crm" }
+      "features": [
+        "Lead capture",
+        "Counsellor routing",
+        "Email + SMS nurture",
+        "Pipeline analytics",
+        "Source attribution"
+      ],
+      "primaryCta": {
+        "label": "Book a demo",
+        "href": "/contact?intent=education-crm"
+      }
     }
   ]
 }

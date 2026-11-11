@@ -1,16 +1,16 @@
 export const site = {
   name: "Friensys",
-  tagline: "Operations-first. AI where it matters. DPDPA-aligned.",
+  tagline: "AI that works inside your business.",
   description:
-    "The AI-ready school ERP trusted by 300+ schools across India. Admissions to graduation: fees, attendance, report cards, parent comms — with admin-AI built in.",
+    "Friensys Info Labs is an AI-first software and consulting partner. We build AI agents, custom software and MVPs, modernise existing systems and run our own products used by 300+ institutions — led by engineers with 20+ years of enterprise technology experience.",
   url: "https://friensys.com",
   ogImage: "/og/default.png",
   legalName: "Friensys Info Labs",
   address: {
-    street: "Greater Noida West",
-    locality: "Greater Noida",
+    street: "J-804, Sector-1, Techzone-IV",
+    locality: "Greater Noida West",
     region: "Uttar Pradesh",
-    postal: "201306",
+    postal: "201305",
     country: "IN",
   },
   contact: {
@@ -20,7 +20,7 @@ export const site = {
     hours: "Mon-Fri, 9:30 AM – 6:30 PM IST",
   },
   social: {
-    linkedin: "https://www.linkedin.com/company/friensys",
+    linkedin: "https://www.linkedin.com/company/friensysil",
     twitter: "https://x.com/friensys",
     github: "",
     instagram: "",

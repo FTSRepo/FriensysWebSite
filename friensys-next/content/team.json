@@ -1,0 +1,11 @@
+{
+  "team": [
+    {
+      "name": "Vikram",
+      "role": "Founder & Software Architect",
+      "years": "20+ years",
+      "bio": "Over 20 years in software, Vikram has delivered enterprise systems including web applications for Microsoft India and Redington (Dubai). He leads product strategy and architecture for Friensys platforms and designs our AI solutions — LLM agents, document intelligence, RAG assistants and predictive analytics.",
+      "skills": ["LLM integration (OpenAI, Claude, Llama)", "Python / FastAPI", ".NET", "React", "PostgreSQL", "AWS / Azure"]
+    }
+  ]
+}

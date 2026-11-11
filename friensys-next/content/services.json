@@ -1,0 +1,127 @@
+{
+  "services": [
+    {
+      "slug": "ai-solutions",
+      "name": "AI & ML Solutions",
+      "short": "AI agents, document AI, RAG assistants and predictive analytics that work inside the software you already run.",
+      "icon": "Brain",
+      "hero": {
+        "title": "AI that works inside your business",
+        "promise": "We turn the data you already have — enquiries, invoices, purchase orders, test reports, customer history — into faster decisions and less manual work. One business problem, one fixed-scope pilot, measured against a real KPI."
+      },
+      "problems": [
+        "Your team answers the same customer, parent or supplier questions all day",
+        "Invoices, POs and application forms are still typed in by hand",
+        "Leads, dues and churn are spotted too late to act on",
+        "Reports exist, but nobody can ask them a simple question"
+      ],
+      "deliverables": [
+        { "title": "AI agents & assistants", "body": "Assistants on WhatsApp, web and internal tools that answer queries and hand over to a person when needed." },
+        { "title": "Generative AI & LLM integration", "body": "OpenAI, Anthropic Claude and Llama integrated into your existing software, with guardrails and cost tracking." },
+        { "title": "Document intelligence", "body": "Extract and validate data from invoices, forms, POs and applications; flag mismatches before money moves." },
+        { "title": "Knowledge assistants (RAG)", "body": "Ask questions of your own documents, policies and manuals, with answers that cite their source." },
+        { "title": "Predictive analytics", "body": "Lead scoring, demand forecasting, churn and dues prediction built on your own history." },
+        { "title": "Natural-language dashboards", "body": "Smart dashboards your managers can question in plain English." }
+      ],
+      "tech": ["OpenAI", "Anthropic Claude", "Llama", "LangChain", "RAG", "Vector search", "scikit-learn", "PyTorch", "Python / FastAPI"],
+      "relatedProducts": ["ai-suite", "education-crm", "escalation"],
+      "faqs": [
+        { "q": "How do we start with AI without a big budget?", "a": "With an AI Opportunity Audit: one or two sessions and a written report naming your top three use cases, expected impact, cost and the data each one needs. If one is worth doing, we run a fixed-scope 4–6 week pilot measured against a business KPI." },
+        { "q": "Is our data safe?", "a": "Your data stays yours. We use test or consented data for demos, keep a human in the loop for anything customer-facing or money-related, and log AI outputs for audit. For student and personal data we design to India's DPDP Act." },
+        { "q": "Will the AI make mistakes?", "a": "Any AI can. That is why money, admissions and customer-facing replies go through human review, and why every pilot is measured before it is scaled." }
+      ]
+    },
+    {
+      "slug": "custom-software",
+      "name": "Custom Software & MVP",
+      "short": "Web, mobile and SaaS products built from scratch — from first MVP to a platform that scales.",
+      "icon": "Code2",
+      "hero": {
+        "title": "From idea to launch-ready product",
+        "promise": "For founders and growing businesses that need software built properly the first time. A senior team designs, builds and ships your MVP, then scales it as your users grow — with AI built in where it pays off."
+      },
+      "problems": [
+        "You have an idea and a deadline, but no engineering team yet",
+        "Off-the-shelf tools don't fit how your business actually works",
+        "A previous vendor delivered something that can't scale",
+        "You need AI features in your product, not a slide about them"
+      ],
+      "deliverables": [
+        { "title": "MVP in weeks", "body": "Scoped to the smallest product that proves your idea, built to production standards so you don't rebuild later." },
+        { "title": "Web & mobile apps", "body": "React and Next.js web apps, React Native mobile apps, one codebase where it makes sense." },
+        { "title": "SaaS platforms", "body": "Multi-tenant architecture, billing, roles and admin consoles for subscription products." },
+        { "title": "Custom ERP & CRM", "body": "Operations software shaped around your workflow — the same engineering behind our own ERP and CRM products." },
+        { "title": "AI-ready from day one", "body": "LLM features, search and analytics designed into the data model, not bolted on." },
+        { "title": "Product team on demand", "body": "Designers, full-stack and AI engineers who stay with your product after launch." }
+      ],
+      "tech": ["React", "Next.js", "React Native", "Node.js", "Python / FastAPI", ".NET", "PostgreSQL", "MongoDB", "AWS", "Azure"],
+      "relatedProducts": ["school-erp", "school-app", "customer-loyalty"],
+      "faqs": [
+        { "q": "How long does an MVP take?", "a": "Most MVPs we scope land between 6 and 12 weeks. We agree the scope in writing before we start, so the timeline is a commitment, not a guess." },
+        { "q": "Who owns the code?", "a": "You do. Source code, infrastructure accounts and documentation are handed over to you." },
+        { "q": "Can you keep working with us after launch?", "a": "Yes. Most clients move to a dedicated team or a support retainer once the product is live." }
+      ]
+    },
+    {
+      "slug": "modernisation-support",
+      "name": "Modernisation & Support",
+      "short": "Take over, upgrade and run existing systems: legacy migration, cloud, AMC and dedicated engineering teams.",
+      "icon": "RefreshCw",
+      "hero": {
+        "title": "Modernise what already works",
+        "promise": "For established businesses whose software runs the company but is getting old, slow or expensive. We take over safely, migrate to the cloud, keep it running and add new capability — including AI — without stopping operations."
+      },
+      "problems": [
+        "Critical software that only one person understands",
+        "Legacy systems that are slow, insecure or expensive to host",
+        "A vendor who no longer responds",
+        "No in-house team to maintain and improve what you have"
+      ],
+      "deliverables": [
+        { "title": "Code & architecture takeover", "body": "Audit, documentation and a stabilisation plan before we change anything." },
+        { "title": "Legacy modernisation", "body": "Incremental migration to modern stacks, with both systems running in parallel until the cut-over is proven." },
+        { "title": "Cloud migration", "body": "Move to AWS or Azure with Docker, Terraform and CI/CD — and a hosting bill you can predict." },
+        { "title": "AMC & ongoing support", "body": "Annual maintenance contracts with response times, patches, backups and monitoring." },
+        { "title": "Dedicated teams & staffing", "body": "Vetted AI, full-stack and cloud engineers who join your team for months, not days." },
+        { "title": "Product implementation", "body": "Implementation, data migration, training and support for customers of our own products." }
+      ],
+      "tech": [".NET", "Node.js", "Python", "SQL Server", "PostgreSQL", "Redis", "AWS", "Azure", "Docker", "Terraform", "CI/CD"],
+      "relatedProducts": ["school-erp", "escalation"],
+      "faqs": [
+        { "q": "Can you take over software another vendor built?", "a": "Yes. We start with a paid audit of the code, hosting and data, then propose a stabilisation plan. Nothing is rewritten until we understand it." },
+        { "q": "Will our operations stop during migration?", "a": "No. We migrate incrementally and run old and new systems in parallel until the new one is proven." },
+        { "q": "Do you provide engineers on contract?", "a": "Yes — AI, full-stack and cloud engineers, individually or as a managed team." }
+      ]
+    },
+    {
+      "slug": "consulting",
+      "name": "Technology Consulting",
+      "short": "CTO-as-a-service, architecture reviews, AI readiness and digital transformation roadmaps.",
+      "icon": "Compass",
+      "hero": {
+        "title": "Senior technology judgement, when you need it",
+        "promise": "Leadership with 20+ years of enterprise delivery, available without hiring a full-time CTO. We help you decide what to build, buy, fix or automate — and in what order."
+      },
+      "problems": [
+        "Big technology decisions with nobody senior to check them",
+        "AI is on the board's agenda, but no one knows where to start",
+        "Vendors are quoting very different prices for the same thing",
+        "Your platform needs to scale, but you're not sure what will break first"
+      ],
+      "deliverables": [
+        { "title": "AI Opportunity Audit", "body": "One or two sessions and a written report: your top three AI use cases, expected impact, cost and the data each needs." },
+        { "title": "CTO-as-a-service", "body": "A part-time technology leader for roadmap, hiring, vendor management and architecture decisions." },
+        { "title": "Architecture & code review", "body": "An independent review of security, scalability and cost, with a prioritised fix list." },
+        { "title": "Digital transformation roadmap", "body": "Which processes to digitise, automate or retire — sequenced by business value." },
+        { "title": "Cloud & AI consulting", "body": "AWS and Azure architecture, LLM model choice and cost-per-transaction planning." },
+        { "title": "Vendor & RFP support", "body": "Requirement writing and independent evaluation of vendor proposals." }
+      ],
+      "tech": ["AWS", "Azure", "OpenAI", "Anthropic Claude", "Llama", "PostgreSQL", "Kubernetes", "Terraform"],
+      "relatedProducts": ["ai-suite"],
+      "faqs": [
+        { "q": "What does the AI Opportunity Audit cost?", "a": "Contact us for current pricing. The output is a written report you keep, whether or not you work with us afterwards." },
+        { "q": "Do you only recommend your own products?", "a": "No. Where an off-the-shelf tool fits better, we say so." }
+      ]
+    }
+  ]
+}
