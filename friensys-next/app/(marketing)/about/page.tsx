@@ -9,19 +9,19 @@ import { buildLocalBusinessSchema } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Friensys Info Labs — AI-First Software Partner Since 2017",
+  title: "About Friensys Info Labs — Building Software Since 2017",
   description:
-    "Friensys Info Labs is a founder-led software and AI company from Greater Noida. Since 2017 we have built custom software and our own products used by 300+ institutions — led by engineers with 20+ years of enterprise experience.",
+    "Friensys Info Labs is a founder-led software and AI company from Greater Noida. We have been building and deploying products since 2017 (incorporated in 2022) — custom software and our own products used by 300+ institutions — led by engineers with 20+ years of enterprise experience.",
   path: "/about",
 });
 
 const timeline = [
-  { year: "2017", event: "Founded in Greater Noida. First school ERP deployment." },
+  { year: "2017", event: "Product development begins in Greater Noida. First School ERP deployment." },
   { year: "2018", event: "Parent app launched — first school to give parents a branded mobile experience." },
   { year: "2019", event: "100 schools milestone. CBSE + ICSE report card automation shipped." },
   { year: "2020", event: "Online class module released during COVID-19 school closures." },
   { year: "2021", event: "DigitechNomads partnership formalized for enterprise channel sales." },
-  { year: "2022", event: "Transport GPS integration + Fee Gateway (online payments) launched." },
+  { year: "2022", event: "Company incorporated as Friensys Info Labs. Transport GPS integration + Fee Gateway (online payments) launched." },
   { year: "2023", event: "200 schools. OD-SAS device test monitoring and Customer Loyalty platform released." },
   { year: "2024", event: "300+ schools. Education CRM + admin-AI roadmap announced." },
   { year: "2025", event: "DPDPA compliance posture hardened. Procurement marketplace for manufacturers launched." },
@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
               label="About"
-              title="Software and AI that businesses depend on. From Greater Noida, since 2017."
+              title="Software and AI that businesses depend on. Building in Greater Noida since 2017."
               subtitle="We're Friensys Info Labs — a founder-led team that builds custom software and AI for startups, SMEs and mid-size businesses, and runs its own products used by 300+ institutions."
             />
             <div className="mt-8 flex flex-wrap justify-center gap-4">

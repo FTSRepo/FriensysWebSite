@@ -10,10 +10,10 @@ Reviewed: 11 Nov 2026, as a member would see it. Nothing was changed on LinkedIn
 | Tagline | "Passionate coders, ultimate results" | "AI that works inside your business" | Replace (text below) |
 | Cover banner | "The Future of Education & Technology is HERE!" | AI-first partner for all industries | Replace — reads as school-only |
 | Overview | "Best software development & digital marketing agency… web design, digital marketing…" | Agentic AI, AI & ML, custom software, modernisation, consulting, own products | Replace (text below). Drop "digital marketing" — the website does not offer it. Drop "Best" — unverifiable. |
-| Founded | **2022** | **"since 2017"** (About page, footer, schema) | ⚠ **Decide** — see "Decisions needed" |
-| Company name | Friensys Info Labs **Pvt. Ltd.** | Friensys Info Labs | Website should use the legal name too — see "Decisions needed" |
+| Founded | 2022 | "Building since 2017, incorporated in 2022" | ✓ Keep 2022 (registration year). Mention 2017 in the Overview. |
+| Company name | Friensys Info Labs Pvt. Ltd. | Friensys Info Labs | ✓ Keep both as they are (decided 11 Nov) |
 | Headquarters | "Greater Noida, **Utter** Pradesh" | Uttar Pradesh | Fix spelling |
-| Address | J804 Samaridhi Grand Avenue, Greater Noida West 201305 | J-804, Sector-1, Techzone-IV, Greater Noida West 201305 | Use one form on both (suggested below) |
+| Address | J804 Samaridhi Grand Avenue, Greater Noida West 201305 | J-804, Sector-1, Techzone-IV, Greater Noida West 201305 | Change LinkedIn to the website address (below) |
 | Phone | 9643314016 | +91 96433 14016 | ✓ Already correct; add +91 |
 | Website | www.friensys.com | https://friensys.com | ✓ Fine |
 | Specialties | none listed | — | Add (list below) |
@@ -34,7 +34,7 @@ Agentic AI & custom software for startups, SMEs & mid-size businesses | AI that 
 ### Overview (1,551 / 2,000 characters)
 
 ```
-Friensys Info Labs is an AI-first software and consulting partner. We design, build and run AI-powered software for startups, SMEs and growing mid-size businesses — led by founders with 20+ years of enterprise technology experience.
+Friensys Info Labs is an AI-first software and consulting partner. We design, build and run AI-powered software for startups, SMEs and growing mid-size businesses — led by founders with 20+ years of enterprise technology experience. We have been building and deploying products since 2017.
 
 WHAT WE DO
 • Agentic AI architecture & development — AI agents that plan, use your tools and systems, check their work and hand over to a person when they should. Multi-agent systems, MCP tool integration, RAG, guardrails, evaluations and cost control.
@@ -69,10 +69,10 @@ Agentic AI, AI Agents, Generative AI, LLM Integration, Machine Learning, RAG, Do
 ### Headquarters / location
 
 ```
-J-804, Samridhi Grand Avenue, Sector-1, Techzone-IV, Greater Noida West, Uttar Pradesh 201305, India
+J-804, Sector-1, Techzone-IV, Greater Noida West, Uttar Pradesh 201305, India
 ```
 
-(If you prefer this combined form, I'll update the website address to match.)
+This is the website address (confirmed correct on 11 Nov).
 
 ### Cover banner (1128 × 191 px)
 
@@ -107,8 +107,8 @@ Add each as a LinkedIn Product, linking to its page on the website:
 3. **Case study:** Unique Educational Institute → https://friensys.com/case-studies/unique-educational-institute
 4. **Product proof:** School ERP since 2017, 300+ institutions, AI attendance and grade-card generation live → https://friensys.com/case-studies/friensys-school-erp
 
-## Decisions needed
+## Decisions (11 Nov)
 
-1. **Founded year.** LinkedIn says 2022; the website says "since 2017" in several places. If the Pvt. Ltd. was incorporated in 2022 but the work (School ERP) started in 2017, keep LinkedIn at 2022 and I'll change the website wording to "building software since 2017, incorporated as Friensys Info Labs Pvt. Ltd. in 2022". Otherwise change LinkedIn to 2017.
-2. **Legal name.** Should the website footer, About page and schema use "Friensys Info Labs Pvt. Ltd."?
-3. **Address form.** Use the combined address above on both?
+1. **Founded year:** the company was registered in 2022; product development and deployment began in 2017. LinkedIn keeps 2022. The website now says "building since 2017, incorporated in 2022", and its schema.org founding date is 2022.
+2. **Name:** the website uses "Friensys Info Labs". LinkedIn keeps the registered name "Friensys Info Labs Pvt. Ltd.".
+3. **Address:** the website address is correct; copy it to LinkedIn.

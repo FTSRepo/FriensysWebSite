@@ -18,7 +18,7 @@ export function GET() {
 
 Friensys Info Labs is an AI-first software and consulting partner based in Greater Noida, India. We build AI agents, document AI, knowledge assistants and predictive analytics; develop custom software and MVPs; modernise and support existing systems; and provide technology consulting. Clients are startups, SMEs and mid-size businesses.
 
-Founded in 2017 and led by engineers with 20+ years of enterprise technology experience. Our own products are used by 300+ institutions, ranging from 200 to 3,000+ students.
+Building and deploying products since 2017, incorporated in 2022, and led by founders with 20+ years of enterprise technology experience. Our own products are used by 300+ institutions, ranging from 200 to 3,000+ students.
 
 ## Services
 

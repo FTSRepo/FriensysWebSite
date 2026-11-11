@@ -23,7 +23,7 @@ export function buildOrganizationSchema() {
       addressCountry: site.address.country,
     },
     sameAs: [site.social.linkedin].filter(Boolean),
-    foundingDate: "2017",
+    foundingDate: "2022",
     founder: teamJson.team.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role })),
     areaServed: "IN",
   };

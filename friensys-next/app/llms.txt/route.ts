@@ -13,7 +13,8 @@ export function GET() {
 
 ## Company
 
-- Founded: 2017
+- Building products since: 2017
+- Company incorporated: 2022
 - HQ: J-804, Sector-1, Techzone-IV, Greater Noida West, Uttar Pradesh 201305, India
 - Leadership: 20+ years of enterprise technology experience
 - Products used by: 300+ institutions
