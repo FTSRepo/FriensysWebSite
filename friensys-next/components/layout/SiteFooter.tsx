@@ -29,8 +29,9 @@ export function SiteFooter() {
               {site.tagline}
             </p>
             <p className="text-xs text-text-muted leading-relaxed mb-5">
-              Friensys is a school ERP platform serving 300+ schools across
-              India, built by Friensys Info Labs, Greater Noida, since 2017.
+              Friensys Info Labs is an AI-first software and consulting
+              partner — custom software, AI solutions, modernisation and our
+              own products used by 300+ institutions. Greater Noida, since 2017.
             </p>
             <div className="flex flex-wrap gap-2">
               <Badge variant="dpdpa">DPDPA aligned</Badge>
@@ -101,7 +102,8 @@ export function SiteFooter() {
                   </a>
                 </li>
                 <li className="text-xs text-text-muted leading-snug">
-                  {site.address.locality}, {site.address.region}
+                  {site.address.street}, {site.address.locality},{" "}
+                  {site.address.region} {site.address.postal}
                 </li>
               </ul>
             </div>

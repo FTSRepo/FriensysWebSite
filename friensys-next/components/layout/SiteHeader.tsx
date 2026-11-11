@@ -10,12 +10,12 @@ import { MegaMenu } from "./MegaMenu";
 import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
-  const [megaOpen, setMegaOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const nav = getNav();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-bg-base/80 backdrop-blur-md border-b border-border-subtle">
+    <header className="sticky top-0 z-50 w-full bg-bg-base/90 backdrop-blur-md border-b border-border-subtle">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-8">
           {/* Logo */}
@@ -40,13 +40,19 @@ export function SiteHeader() {
                 <div
                   key={item.label}
                   className="relative"
-                  onMouseEnter={() => setMegaOpen(true)}
-                  onMouseLeave={() => setMegaOpen(false)}
+                  onMouseEnter={() => setOpenMenu(item.label)}
+                  onMouseLeave={() => setOpenMenu(null)}
                 >
                   <button
+                    type="button"
+                    aria-expanded={openMenu === item.label}
+                    aria-haspopup="true"
+                    onClick={() =>
+                      setOpenMenu(openMenu === item.label ? null : item.label)
+                    }
                     className={cn(
-                      "flex items-center gap-1 px-3 py-2 text-sm rounded-md transition-colors",
-                      megaOpen
+                      "flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors",
+                      openMenu === item.label
                         ? "text-text-primary"
                         : "text-text-secondary hover:text-text-primary"
                     )}
@@ -55,14 +61,14 @@ export function SiteHeader() {
                     <ChevronDown
                       className={cn(
                         "w-3.5 h-3.5 opacity-60 transition-transform duration-150",
-                        megaOpen && "rotate-180"
+                        openMenu === item.label && "rotate-180"
                       )}
                     />
                   </button>
-                  {megaOpen && (
+                  {openMenu === item.label && (
                     <MegaMenu
                       items={item.items ?? []}
-                      onClose={() => setMegaOpen(false)}
+                      onClose={() => setOpenMenu(null)}
                     />
                   )}
                 </div>
@@ -70,7 +76,7 @@ export function SiteHeader() {
                 <Link
                   key={item.label}
                   href={(item as { href: string }).href}
-                  className="px-3 py-2 text-sm text-text-secondary hover:text-text-primary transition-colors rounded-md"
+                  className="px-3 py-2 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors rounded-md"
                 >
                   {item.label}
                 </Link>
@@ -80,8 +86,8 @@ export function SiteHeader() {
 
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <AuroraButton href="/contact?intent=demo" size="sm" className="hidden md:inline-flex">
-              Book Demo
+            <AuroraButton href="/contact?intent=consultation" size="sm" className="hidden md:inline-flex">
+              Book a free consultation
             </AuroraButton>
             <button
               className="md:hidden p-2 text-text-secondary hover:text-text-primary"

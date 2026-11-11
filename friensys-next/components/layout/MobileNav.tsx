@@ -77,8 +77,8 @@ export function MobileNav({ open, onClose, nav }: MobileNavProps) {
         </div>
 
         <div className="p-4 border-t border-border-subtle">
-          <AuroraButton href="/contact?intent=demo" className="w-full justify-center">
-            Book Demo
+          <AuroraButton href="/contact?intent=consultation" className="w-full justify-center">
+            Book a free consultation
           </AuroraButton>
         </div>
       </nav>

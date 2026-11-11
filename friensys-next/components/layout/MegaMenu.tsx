@@ -7,7 +7,7 @@ interface MegaMenuProps {
 
 export function MegaMenu({ items, onClose }: MegaMenuProps) {
   return (
-    <div className="absolute top-full left-0 mt-2 w-[520px] rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated shadow-2xl p-3 grid grid-cols-2 gap-1">
+    <div className="absolute top-full left-0 pt-2 w-[540px]"><div className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated shadow-xl p-3 grid grid-cols-2 gap-1">
       {items.map((item) => (
         <Link
           key={item.href}
@@ -23,6 +23,6 @@ export function MegaMenu({ items, onClose }: MegaMenuProps) {
           </span>
         </Link>
       ))}
-    </div>
+    </div></div>
   );
 }
