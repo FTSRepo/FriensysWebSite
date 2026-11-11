@@ -12,7 +12,7 @@ const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Enter a valid email address"),
   phone: z.string().optional(),
-  schoolName: z.string().min(2, "School name is required"),
+  schoolName: z.string().min(2, "Organisation name is required"),
   intent: z.enum(["consultation", "ai", "software", "modernisation", "demo", "pricing", "support", "partnership", "other"]),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
@@ -45,7 +45,12 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
         phone: data.phone,
         school_name: data.schoolName,
         intent: data.intent,
-        message: data.message,
+        // legacy EmailJS template only renders location + message, so carry the new fields there too
+        location: data.schoolName,
+        message: `Enquiry: ${data.intent}
+Organisation: ${data.schoolName}
+
+${data.message}`,
       });
       setStatus("success");
       reset();
@@ -93,7 +98,7 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
             type="email"
             {...register("email")}
             className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
-            placeholder="principal@yourschool.in"
+            placeholder="you@company.com"
           />
           {errors.email && (
             <p className="mt-1 text-xs text-danger" role="alert">
@@ -106,13 +111,13 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="school" className="block text-sm font-medium text-text-primary mb-1.5">
-            School name *
+            Company / school name *
           </label>
           <input
             id="school"
             {...register("schoolName")}
             className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none"
-            placeholder="Delhi Public School"
+            placeholder="Your organisation"
           />
           {errors.schoolName && (
             <p className="mt-1 text-xs text-danger" role="alert">
@@ -164,7 +169,7 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
           {...register("message")}
           rows={4}
           className="w-full rounded-[var(--radius-md)] border border-border-strong bg-bg-overlay px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none resize-none"
-          placeholder="Tell us about your school — board, student count, what you need most."
+          placeholder="Tell us what you want to build or improve — the problem, your timeline, and any systems involved."
         />
         {errors.message && (
           <p className="mt-1 text-xs text-danger" role="alert">

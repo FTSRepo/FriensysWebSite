@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Friensys — Book a Demo",
+  title: "Contact Friensys — Book a Free Consultation",
   description:
     "Book a free 30-minute School ERP demo or get a pricing quote. We respond within 24 hours. Call, email, or fill the form.",
   path: "/contact",
