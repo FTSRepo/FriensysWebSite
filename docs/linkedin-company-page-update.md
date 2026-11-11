@@ -79,6 +79,7 @@ This is the website address (confirmed correct on 11 Nov).
 - Main: **AI that works inside your business**
 - Sub: **Agentic AI · Custom Software · Modernisation · Consulting | friensys.com**
 - Light background, indigo `#3B3BD6` accent — same as the website.
+- **Ready:** `docs/linkedin/company-cover-banner.png` (2256 × 382, 2× for sharpness). Source: `company-cover-banner.html` (render with headless Chrome at 1128×191, scale 2).
 
 ### Products tab
 
