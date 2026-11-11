@@ -1,7 +1,7 @@
 # LinkedIn Company Page — Changes to Match friensys.com
 
 Page: https://www.linkedin.com/company/friensysil (admin: /company/99313298/admin)
-Reviewed: 11 Nov 2026. Applied on LinkedIn 11 Nov: tagline, overview, phone, 20 specialties, button URL, headquarters address. Still to do by hand: cover banner, Products tab, posts, people.
+Reviewed: 11 Nov 2026. Applied on LinkedIn 11 Nov: tagline, overview, phone, 20 specialties, button URL, headquarters address. Cover banner uploaded 11 Nov. Still to do: Products tab, posts.
 
 ## What the page says today vs. the website
 
@@ -79,7 +79,7 @@ This is the website address (confirmed correct on 11 Nov).
 - Main: **AI that works inside your business**
 - Sub: **Agentic AI · Custom Software · Modernisation · Consulting | friensys.com**
 - Light background, indigo `#3B3BD6` accent — same as the website.
-- **Ready:** `docs/linkedin/company-cover-banner.png` (2256 × 382, 2× for sharpness). Source: `company-cover-banner.html` (render with headless Chrome at 1128×191, scale 2).
+- **Uploaded 11 Nov.** `docs/linkedin/company-cover-banner.png` (2256 × 382, 2× for sharpness). Source: `company-cover-banner.html` (render with headless Chrome at 1128×191, scale 2).
 
 ### Products tab
 
