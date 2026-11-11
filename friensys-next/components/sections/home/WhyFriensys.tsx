@@ -4,8 +4,8 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const reasons = [
   {
     icon: BadgeCheck,
-    title: "Founder-led, senior engineering",
-    body: "Led by a software architect with 20+ years of enterprise delivery. The people who scope your project are the people who build it.",
+    title: "Founder-led, with AI engineers in-house",
+    body: "Our CTO brings 20+ years of enterprise delivery and leads agentic and generative AI architecture personally; our own AI engineers build and run it. The people who scope your project are the people who build it.",
   },
   {
     icon: Boxes,

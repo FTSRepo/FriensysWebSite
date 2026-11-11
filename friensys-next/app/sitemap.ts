@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getProducts, getServices, getIndustries } from "@/lib/content";
+import { getProducts, getServices, getIndustries, getFeaturedCases } from "@/lib/content";
 import { posts } from "@/.velite";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://friensys.com";
@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const detailRoutes: MetadataRoute.Sitemap = [
     ...getServices().map((s) => `/services/${s.slug}`),
     ...getIndustries().map((i) => `/industries/${i.slug}`),
+    ...getFeaturedCases().map((c) => `/case-studies/${c.slug}`),
   ].map((path) => ({ url: `${BASE_URL}${path}`, changeFrequency: "monthly", priority: 0.9 }));
 
   const blogRoutes: MetadataRoute.Sitemap = posts

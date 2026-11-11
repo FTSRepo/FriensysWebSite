@@ -114,11 +114,22 @@ This document records, item by item, what the strategy PDF recommends, what was 
 3. **"25+ schools".** The PDF quotes the live site. You confirmed 300+ is the true figure, so the site says 300+.
 4. **Staffing as a top-level service.** The PDF lists staffing as its own line. It sits inside "Modernisation & Support" and the "Dedicated team" engagement model instead, so the site keeps four clear service lines.
 
+## Follow-up decisions (11 Nov, round 2)
+
+| Your answer | Website change |
+|---|---|
+| Showcase **Agentic AI architecting and development**, not tied to any product | New first service `/services/agentic-ai` (architecture & strategy, single/multi-agent systems, tool use & MCP, memory/RAG, guardrails & human-in-the-loop, evaluation & cost control, agents inside SaaS products, team enablement). New **agentic reference architecture** section (channels → orchestration → tools & knowledge → models, with guardrails across every layer) on the home page and the agentic service page. Agentic AI is first in the Services menu and footer. |
+| School ERP already has AI-enabled attendance and grade-card generation | `/ai`: those two features now show a **Live** badge ("AI-Enabled Attendance", "AI Grade Card Generation"); the rest stay "Coming soon". Product AI table updated. Resolves the old Q1. |
+| Two founders: Nidhi Priya (Administration & HR), Vikram Kumar (CTO & co-founder) | `content/team.json` has both; cards on home and `/about` ("Meet the founders"); About story names both; schema.org `Organization.founder` lists both. Resolves the old Q2 except photos. |
+| Use Unique Educational Institute, VK Enterprises and School ERP as case studies | Three case studies with their own pages under `/case-studies/…`, shown on the home page, at the top of `/case-studies`, and on the matching industry pages (Education: Unique + School ERP; Retail and Finance/Logistics/Manufacturing: VK). Resolves the old Q5. |
+| Founders are AI/ML, agentic and GenAI experts; AI engineers in-house | "Why Friensys" and About now say so; forecasting and anomaly detection stay as deliverables. Resolves the old Q6. |
+
+**How the case studies were written.** They use only facts you gave or that the legacy site already states: Unique is a UG/PG institute in Dwarka, New Delhi, and its published testimonial credits Friensys with improving exams and reporting; VK Enterprises is a textile manufacturer and retailer that runs on our loyalty programme; School ERP has been in production since 2017 with 300+ institutions, 12 states and 40+ modules. **No numbers were invented.** Unique and VK show qualitative outcomes only. Add measured results (for example "result processing time cut from X days to Y") to `content/case-studies.json` when you have them; the page shows a stats row automatically when a `stats` list is present.
+
 ## Open questions for you
 
-- **Q1.** The `/ai` page (unchanged section) labels the school admin-AI features "Coming soon", but you told me the AI Suite features (fee-default prediction etc.) are live. Which is right? If they're live, the "Coming soon" badges should change to "Live".
-- **Q2.** The founder's full name, photo and LinkedIn URL for `content/team.json`. Add other leaders there too and they appear automatically.
-- **Q3.** The legacy site (`src/`) still lists "Unlimited PTO" and other careers perks, and the placeholder testimonials the PDF flags. It stays live until the new site replaces it — fix or retire it.
+- **Q1.** Which product did Unique Educational Institute use? The case study links it to **College ERP** (it runs UG/PG courses, and its testimonial mentions exams and reporting). Correct it if it was School ERP or something else.
+- **Q2.** Founder photos and LinkedIn URLs: add `photo` and `linkedin` to each entry in `content/team.json`. Initials show until then.
+- **Q3.** The legacy site (`src/`) still lists "Unlimited PTO" and other careers perks, and the placeholder testimonials the PDF flags. It stays live until the new site replaces it, so fix or retire it.
 - **Q4.** Update the LinkedIn page and the PDF to +91 96433 14016.
-- **Q5.** Permission and real numbers for a Unique Educational Institute, VK Enterprise or VK Fashion case study.
-- **Q6.** Is an ML engineer on the team or on contract yet? If not, consider softening "demand forecasting" and "anomaly detection" from deliverables to "on request".
+- **Q5.** VK Enterprises' city, if you'd like it shown (it currently says "India").

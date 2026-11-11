@@ -29,12 +29,14 @@ const features = [
   },
   {
     icon: Bell,
-    title: "Smart Attendance Alerts",
+    live: true,
+    title: "AI-Enabled Attendance",
     body: "Detect anomalous absence streaks and flag students at risk — before they cross the threshold that triggers board notifications.",
   },
   {
     icon: FileText,
-    title: "AI Report Card Narratives",
+    live: true,
+    title: "AI Grade Card Generation",
     body: "Auto-draft personalised performance summaries from grade data. Teachers review and sign off — no blank page.",
   },
   {
@@ -73,7 +75,7 @@ const principles = [
 ];
 
 const productAi = [
-  { product: "School ERP + Mobile App", today: "Admissions, fees, exams, attendance, homework and parent communication in one platform.", next: "AI report-card remarks; fee-default early warning; parent query assistant." },
+  { product: "School ERP + Mobile App", today: "Admissions, fees, exams, homework and parent communication — with AI-enabled attendance and AI grade-card generation live.", next: "Fee-default early warning; parent query assistant." },
   { product: "Education CRM", today: "Admission leads from JustDial, Sulekha, Shiksha, CollegeDunia and your website.", next: "ML lead scoring; AI counsellor follow-up drafts." },
   { product: "Escalation System", today: "Multi-level ticket routing with SLA tracking.", next: "AI ticket classification, priority prediction, suggested replies." },
   { product: "Customer Loyalty", today: "Points, tiers, coupons and campaigns with analytics.", next: "Churn prediction; personalised offers from purchase behaviour." },
@@ -195,16 +197,22 @@ export default function AIPage() {
             For schools
           </p>
           <h2 className="mb-12 text-center text-3xl font-bold text-text-primary">
-            Admin-AI for School ERP: eight capabilities in development
+            Admin-AI in School ERP: live today and coming next
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map(({ icon: Icon, title, body }) => (
+            {features.map((f) => { const { icon: Icon, title, body } = f; return (
               <div
                 key={title}
                 className="relative rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-6"
               >
-                <span className="absolute right-4 top-4 rounded-full bg-bg-overlay px-2 py-0.5 text-[10px] font-medium text-text-muted">
-                  Coming soon
+                <span
+                  className={
+                    "live" in f && f.live
+                      ? "absolute right-4 top-4 rounded-full bg-accent-lime/10 px-2 py-0.5 text-[10px] font-semibold text-accent-lime"
+                      : "absolute right-4 top-4 rounded-full bg-bg-overlay px-2 py-0.5 text-[10px] font-medium text-text-muted"
+                  }
+                >
+                  {"live" in f && f.live ? "Live" : "Coming soon"}
                 </span>
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] bg-bg-overlay text-accent-primary">
                   <Icon className="h-5 w-5" />
@@ -212,7 +220,7 @@ export default function AIPage() {
                 <h3 className="mb-2 font-semibold text-text-primary">{title}</h3>
                 <p className="text-sm leading-relaxed text-text-secondary">{body}</p>
               </div>
-            ))}
+            ); })}
           </div>
         </div>
       </section>

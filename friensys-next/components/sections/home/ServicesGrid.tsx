@@ -12,16 +12,16 @@ export function ServicesGrid() {
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Services"
-          title="Four ways we work with you"
+          title="Five ways we work with you"
           subtitle="Start with one. Most clients add the others as they grow."
           align="left"
         />
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {services.map((s) => (
+          {services.map((s, i) => (
             <Link
               key={s.slug}
               href={`/services/${s.slug}`}
-              className="group rounded-[var(--radius-xl)] border border-border-subtle bg-bg-base p-7 transition-all hover:border-accent-primary/40 hover:shadow-md"
+              className={`${i === 0 ? "md:col-span-2 " : ""}group rounded-[var(--radius-xl)] border border-border-subtle bg-bg-base p-7 transition-all hover:border-accent-primary/40 hover:shadow-md`}
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-md)] bg-accent-primary/10 text-accent-primary">

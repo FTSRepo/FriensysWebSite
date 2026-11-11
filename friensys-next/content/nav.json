@@ -3,7 +3,8 @@
     {
       "label": "Services",
       "items": [
-        { "label": "AI & ML Solutions", "href": "/services/ai-solutions", "description": "AI agents, document AI, RAG, predictive analytics" },
+        { "label": "Agentic AI", "href": "/services/agentic-ai", "description": "Architecture and development of AI agents" },
+        { "label": "AI & ML Solutions", "href": "/services/ai-solutions", "description": "Assistants, document AI, RAG, predictive analytics" },
         { "label": "Custom Software & MVP", "href": "/services/custom-software", "description": "Web, mobile and SaaS products built from scratch" },
         { "label": "Modernisation & Support", "href": "/services/modernisation-support", "description": "Legacy upgrades, cloud, AMC and dedicated teams" },
         { "label": "Technology Consulting", "href": "/services/consulting", "description": "CTO-as-a-service, AI audits, architecture reviews" },
@@ -38,6 +39,7 @@
   ],
   "footer": {
     "Services": [
+      { "label": "Agentic AI", "href": "/services/agentic-ai" },
       { "label": "AI & ML Solutions", "href": "/services/ai-solutions" },
       { "label": "Custom Software & MVP", "href": "/services/custom-software" },
       { "label": "Modernisation & Support", "href": "/services/modernisation-support" },

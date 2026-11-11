@@ -119,8 +119,9 @@ import {
 import { readFileSync } from "node:fs";
 
 describe("repositioning content", () => {
-  it("has the four service lines", () => {
+  it("has the five service lines, agentic AI first", () => {
     expect(getServices().map((s) => s.slug)).toEqual([
+      "agentic-ai",
       "ai-solutions",
       "custom-software",
       "modernisation-support",
@@ -174,5 +175,31 @@ describe("repositioning content", () => {
     for (const f of ["stats", "products", "faqs", "case-studies"]) {
       expect(readFileSync(`content/${f}.json`, "utf8")).not.toContain("500+");
     }
+  });
+});
+
+import { getFeaturedCases, getFeaturedCase } from "@/lib/content";
+
+describe("featured case studies", () => {
+  it("has the three agreed case studies", () => {
+    expect(getFeaturedCases().map((c) => c.slug)).toEqual([
+      "unique-educational-institute",
+      "vk-enterprises-loyalty",
+      "friensys-school-erp",
+    ]);
+  });
+
+  it("filters by industry and links only to real products and industries", () => {
+    expect(getFeaturedCases("retail").map((c) => c.slug)).toEqual(["vk-enterprises-loyalty"]);
+    const industrySlugs = getIndustries().map((i) => i.slug);
+    for (const c of getFeaturedCases()) {
+      for (const p of c.products) expect(getProduct(p), `${c.slug} -> ${p}`).toBeDefined();
+      for (const i of c.industries) expect(industrySlugs).toContain(i);
+    }
+    expect(getFeaturedCase("__no__")).toBeUndefined();
+  });
+
+  it("lists both co-founders", () => {
+    expect(getTeam().map((m) => m.name)).toEqual(["Vikram Kumar", "Nidhi Priya"]);
   });
 });

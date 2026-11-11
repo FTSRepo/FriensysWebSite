@@ -25,5 +25,11 @@ export default async function IndustryPage({ params }: Props) {
   const { slug } = await params;
   const industry = getIndustry(slug);
   if (!industry) notFound();
-  return <DetailPage page={industry} section={{ label: "Industries", href: "/industries" }} />;
+  return (
+    <DetailPage
+      page={industry}
+      section={{ label: "Industries", href: "/industries" }}
+      caseIndustry={industry.slug}
+    />
+  );
 }

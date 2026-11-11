@@ -1,4 +1,5 @@
 import { site } from "./site";
+import teamJson from "@/content/team.json";
 
 export function buildOrganizationSchema() {
   return {
@@ -23,6 +24,7 @@ export function buildOrganizationSchema() {
     },
     sameAs: [site.social.linkedin].filter(Boolean),
     foundingDate: "2017",
+    founder: teamJson.team.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role })),
     areaServed: "IN",
   };
 }

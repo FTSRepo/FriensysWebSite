@@ -12,11 +12,13 @@ import { WhyFriensys } from "@/components/sections/home/WhyFriensys";
 import { Leadership } from "@/components/sections/home/Leadership";
 import { Testimonials } from "@/components/sections/home/Testimonials";
 import { CTASection } from "@/components/sections/shared/CTASection";
+import { AgenticShowcase } from "@/components/sections/home/AgenticShowcase";
+import { CaseStudies } from "@/components/sections/home/CaseStudies";
 
 export const metadata: Metadata = buildMetadata({
   title: "AI-First Software Development & Consulting Partner",
   description:
-    "Friensys builds AI agents, custom software and MVPs, modernises existing systems and runs its own products used by 300+ institutions. For startups, SMEs and mid-size businesses — led by engineers with 20+ years of experience.",
+    "Friensys architects and builds agentic AI, custom software and MVPs, modernises existing systems and runs its own products used by 300+ institutions. For startups, SMEs and mid-size businesses — led by founders with 20+ years of experience.",
   path: "/",
 });
 
@@ -27,11 +29,13 @@ export default function HomePage() {
       <Hero />
       <WhoWeHelp />
       <ServicesGrid />
+      <AgenticShowcase />
       <HowWeWork />
       <IndustriesGrid />
       <ProductBento />
       <TrustStrip />
       <WhyFriensys />
+      <CaseStudies />
       <Leadership />
       <Testimonials />
       <CTASection />

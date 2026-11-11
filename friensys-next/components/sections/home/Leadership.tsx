@@ -2,7 +2,7 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getTeam } from "@/lib/content";
 
-export function Leadership({ title = "Founder-led, with 20+ years of enterprise delivery" }: { title?: string }) {
+export function Leadership({ title = "Founder-led: AI and enterprise experience at the top" }: { title?: string }) {
   const team = getTeam();
   if (team.length === 0) return null;
 
@@ -35,7 +35,8 @@ export function Leadership({ title = "Founder-led, with 20+ years of enterprise 
               <div>
                 <h3 className="text-xl font-semibold text-text-primary">{m.name}</h3>
                 <p className="text-sm font-medium text-accent-primary">
-                  {m.role} · {m.years}
+                  {m.role}
+                  {m.years && ` · ${m.years}`}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-text-secondary">{m.bio}</p>
                 <ul className="mt-4 flex flex-wrap gap-2">

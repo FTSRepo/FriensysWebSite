@@ -1,11 +1,30 @@
 {
   "team": [
     {
-      "name": "Vikram",
-      "role": "Founder & Software Architect",
+      "name": "Vikram Kumar",
+      "role": "Co-founder & CTO",
       "years": "20+ years",
-      "bio": "Over 20 years in software, Vikram has delivered enterprise systems including web applications for Microsoft India and Redington (Dubai). He leads product strategy and architecture for Friensys platforms and designs our AI solutions — LLM agents, document intelligence, RAG assistants and predictive analytics.",
-      "skills": ["LLM integration (OpenAI, Claude, Llama)", "Python / FastAPI", ".NET", "React", "PostgreSQL", "AWS / Azure"]
+      "bio": "Vikram leads technology at Friensys. Over 20+ years in software he has delivered enterprise systems, including web applications for Microsoft India and Redington (Dubai). Today he architects agentic and generative AI solutions — multi-agent systems, LLM integration, document intelligence and RAG — and guides companies from first AI use case to production.",
+      "skills": [
+        "Agentic AI architecture",
+        "Generative AI & LLMs",
+        "AI/ML",
+        "Software architecture",
+        "Python / FastAPI",
+        ".NET",
+        "AWS / Azure"
+      ]
+    },
+    {
+      "name": "Nidhi Priya",
+      "role": "Co-founder, Administration & HR",
+      "bio": "Nidhi leads administration, HR and people operations at Friensys — building and supporting the engineering and AI team that delivers for our clients, and keeping engagements running smoothly from contract to delivery.",
+      "skills": [
+        "Administration",
+        "HR & people operations",
+        "Team building",
+        "Client operations"
+      ]
     }
   ]
 }

@@ -12,6 +12,7 @@ import { DynIcon } from "@/components/ui/DynIcon";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { HowWeWork } from "@/components/sections/home/HowWeWork";
 import { CTASection } from "@/components/sections/shared/CTASection";
+import { CaseStudies } from "@/components/sections/home/CaseStudies";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { buildBreadcrumbSchema } from "@/lib/schema";
@@ -20,9 +21,13 @@ import { getProduct, type DetailPage as DetailPageData } from "@/lib/content";
 interface DetailPageProps {
   page: DetailPageData;
   section: { label: string; href: string };
+  /** Rendered after "What we deliver" (e.g. the agentic architecture showcase). */
+  extra?: React.ReactNode;
+  /** Industry slug whose case studies to show. */
+  caseIndustry?: string;
 }
 
-export function DetailPage({ page, section }: DetailPageProps) {
+export function DetailPage({ page, section, extra, caseIndustry }: DetailPageProps) {
   const products = page.relatedProducts
     .map((slug) => getProduct(slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
@@ -122,6 +127,10 @@ export function DetailPage({ page, section }: DetailPageProps) {
           </ul>
         </div>
       </section>
+
+      {extra}
+
+      {caseIndustry && <CaseStudies industry={caseIndustry} title={`${page.name} work in production`} />}
 
       <HowWeWork />
 

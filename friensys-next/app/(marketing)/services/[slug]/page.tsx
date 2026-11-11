@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getServices, getService } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { DetailPage } from "@/components/sections/detail/DetailPage";
+import { AgenticShowcase } from "@/components/sections/home/AgenticShowcase";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -25,5 +26,11 @@ export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
-  return <DetailPage page={service} section={{ label: "Services", href: "/services" }} />;
+  return (
+    <DetailPage
+      page={service}
+      section={{ label: "Services", href: "/services" }}
+      extra={service.slug === "agentic-ai" ? <AgenticShowcase showLink={false} /> : undefined}
+    />
+  );
 }

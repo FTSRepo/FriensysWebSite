@@ -3,7 +3,7 @@ import {
   CalendarClock, Gift, Store, Users, CheckCircle,
   Sparkles, Wallet, Brain, Code2, RefreshCw, Compass,
   ShoppingBag, HeartPulse, Factory, Gauge, Search,
-  FlaskConical, Rocket, Repeat,
+  FlaskConical, Rocket, Repeat, Workflow,
   LucideProps,
 } from "lucide-react";
 import type { ComponentType } from "react";
@@ -13,7 +13,7 @@ const iconMap: Record<string, ComponentType<LucideProps>> = {
   CalendarClock, Gift, Store, Users, CheckCircle,
   Sparkles, Wallet, Brain, Code2, RefreshCw, Compass,
   ShoppingBag, HeartPulse, Factory, Gauge, Search,
-  FlaskConical, Rocket, Repeat,
+  FlaskConical, Rocket, Repeat, Workflow,
 };
 
 interface DynIconProps extends LucideProps {

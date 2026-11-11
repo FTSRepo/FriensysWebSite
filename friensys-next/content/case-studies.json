@@ -7,9 +7,18 @@
       "title": "From 3 hours to 30 seconds: how DPS automated daily fee reconciliation",
       "summary": "Daily collection reports across 1,400 students used to take 3 hours of clerical work. After Friensys, the principal sees them at her desk by 9:30 AM, end of day.",
       "stats": [
-        { "label": "Time saved per day", "value": "2h 30m" },
-        { "label": "Fee defaults resolved", "value": "32%" },
-        { "label": "Manual entries", "value": "0" }
+        {
+          "label": "Time saved per day",
+          "value": "2h 30m"
+        },
+        {
+          "label": "Fee defaults resolved",
+          "value": "32%"
+        },
+        {
+          "label": "Manual entries",
+          "value": "0"
+        }
       ],
       "logo": "/logos/delhi-public.png"
     },
@@ -20,9 +29,18 @@
       "title": "1,800 parents, one app: how Genius Public cut office calls by 70%",
       "summary": "Parents had been calling the front desk for every attendance and fee query. After rolling out the Friensys School App, daily call volume fell from ~120 to ~35.",
       "stats": [
-        { "label": "Active parent users", "value": "1,800+" },
-        { "label": "Office calls/day", "value": "120 → 35" },
-        { "label": "Parent NPS", "value": "+48" }
+        {
+          "label": "Active parent users",
+          "value": "1,800+"
+        },
+        {
+          "label": "Office calls/day",
+          "value": "120 → 35"
+        },
+        {
+          "label": "Parent NPS",
+          "value": "+48"
+        }
       ],
       "logo": "/logos/genius-public.png"
     },
@@ -33,11 +51,149 @@
       "title": "Why a CBSE residential school evaluated 5 vendors and chose modular",
       "summary": "Adhyayan needed hostel + transport on day one but didn't want a full ERP rewrite. With Friensys's modular pricing, they bought what they needed and added later.",
       "stats": [
-        { "label": "Modules at launch", "value": "6" },
-        { "label": "Modules today", "value": "18" },
-        { "label": "Implementation time", "value": "11 days" }
+        {
+          "label": "Modules at launch",
+          "value": "6"
+        },
+        {
+          "label": "Modules today",
+          "value": "18"
+        },
+        {
+          "label": "Implementation time",
+          "value": "11 days"
+        }
       ],
       "logo": "/logos/adhyayan-residential.png"
+    }
+  ],
+  "featured": [
+    {
+      "slug": "unique-educational-institute",
+      "client": "Unique Educational Institute",
+      "industry": "Higher education",
+      "industries": [
+        "education"
+      ],
+      "location": "Dwarka, New Delhi",
+      "logo": "/logos/unique.png",
+      "title": "Exams and reporting, automated for a graduate and postgraduate institute",
+      "summary": "Unique Educational Institute runs a range of graduate and postgraduate courses in Dwarka, New Delhi. Friensys digitised its academic administration so exams, results and reports no longer depend on manual registers and spreadsheets.",
+      "services": [
+        "Custom software",
+        "Implementation & support"
+      ],
+      "products": [
+        "college-erp"
+      ],
+      "challenge": [
+        "Several UG and PG programmes, each with its own exam pattern and reporting needs",
+        "Marks, results and reports compiled by hand, which was slow and error-prone at every exam cycle",
+        "Management had no single, up-to-date view of academic performance"
+      ],
+      "solution": [
+        "Configured the Friensys ERP for the institute's course and examination structure",
+        "Digital marks entry, automatic result processing and report generation",
+        "Role-based access for administrators, faculty and management",
+        "Implementation, data migration, staff training and ongoing support"
+      ],
+      "outcomes": [
+        "Exam and reporting cycles run on one system instead of registers and spreadsheets",
+        "Results and reports generated automatically from the marks entered",
+        "Management sees academic data in one place, when they need it"
+      ],
+      "quote": "Friensys has made school management effortless, improving exams and reporting at Unique Educational Institute. We recommend Friensys for any institution looking for smooth automation and real results.",
+      "quoteBy": "Unique Educational Institute"
+    },
+    {
+      "slug": "vk-enterprises-loyalty",
+      "client": "VK Enterprises",
+      "industry": "Textile manufacturing & retail",
+      "industries": [
+        "retail",
+        "finance-logistics-manufacturing"
+      ],
+      "location": "India",
+      "logo": "/logos/vk-logo.jpg",
+      "title": "A customer loyalty programme for a textile manufacturer and retailer",
+      "summary": "VK Enterprises manufactures and retails textiles. Friensys built and runs the loyalty programme that rewards its customers and gives the business a direct line to them.",
+      "services": [
+        "Custom software",
+        "Modernisation & support"
+      ],
+      "products": [
+        "customer-loyalty"
+      ],
+      "challenge": [
+        "No structured way to reward repeat customers across its retail business",
+        "Customer purchase history scattered, so promotions went to everyone rather than the right people",
+        "Needed a programme simple enough for store staff and customers to use from day one"
+      ],
+      "solution": [
+        "Deployed the Friensys Customer Loyalty platform, configured for VK's business",
+        "Points, tiers, coupons and campaigns, with web and mobile access for customers",
+        "Analytics on customers, redemptions and campaign performance",
+        "Ongoing support and enhancements as the programme grows"
+      ],
+      "outcomes": [
+        "One loyalty programme for customers, with points, tiers and coupons",
+        "Campaigns targeted using real purchase and redemption data",
+        "A customer database the business owns, ready for AI-driven offers and churn prediction"
+      ],
+      "quote": "VK Enterprise utilizes Friensys solutions to streamline operations, improve team collaboration, and enhance client communication — driving greater productivity and business efficiency.",
+      "quoteBy": "VK Enterprises"
+    },
+    {
+      "slug": "friensys-school-erp",
+      "client": "Friensys School ERP",
+      "industry": "K-12 education (our own product)",
+      "industries": [
+        "education"
+      ],
+      "location": "India, since 2017",
+      "logo": "/brand/friensys-logo.png",
+      "title": "Building and running a K-12 ERP for 300+ institutions since 2017",
+      "summary": "School ERP is our own product. We designed it, built it and have run it in production since 2017 — today it handles admissions, fees, exams, attendance and parent communication for 300+ institutions across 12 states, with AI already working inside it.",
+      "services": [
+        "Product engineering",
+        "AI & ML",
+        "Support at scale"
+      ],
+      "products": [
+        "school-erp",
+        "school-app",
+        "education-crm"
+      ],
+      "challenge": [
+        "Indian K-12 schools ran on registers, spreadsheets and disconnected tools",
+        "Every board (CBSE, ICSE, state boards) and every school does things slightly differently",
+        "Administrators lose hours to attendance, report cards and fee follow-ups"
+      ],
+      "solution": [
+        "A modular platform of 40+ modules, from admissions to graduation",
+        "Parent, student and teacher mobile app and an admissions CRM",
+        "AI-enabled attendance and automatic grade-card generation, live in production",
+        "Cloud hosting, DPDPA-aligned data handling, and support for every customer"
+      ],
+      "outcomes": [
+        "In continuous production since 2017",
+        "Used by 300+ institutions across 12 states",
+        "AI features running for real users — the same engineering we bring to client projects"
+      ],
+      "stats": [
+        {
+          "label": "In production since",
+          "value": "2017"
+        },
+        {
+          "label": "Institutions",
+          "value": "300+"
+        },
+        {
+          "label": "ERP modules",
+          "value": "40+"
+        }
+      ]
     }
   ]
 }

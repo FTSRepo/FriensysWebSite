@@ -69,6 +69,25 @@ const caseStudySchema = z.object({
 
 const faqSchema = z.object({ q: z.string(), a: z.string() });
 
+const featuredCaseSchema = z.object({
+  slug: z.string(),
+  client: z.string(),
+  industry: z.string(),
+  industries: z.array(z.string()),
+  location: z.string(),
+  logo: z.string(),
+  title: z.string(),
+  summary: z.string(),
+  services: z.array(z.string()),
+  products: z.array(z.string()),
+  challenge: z.array(z.string()),
+  solution: z.array(z.string()),
+  outcomes: z.array(z.string()),
+  stats: z.array(z.object({ label: z.string(), value: z.string() })).optional(),
+  quote: z.string().optional(),
+  quoteBy: z.string().optional(),
+});
+
 const detailPageSchema = z.object({
   slug: z.string(),
   name: z.string(),
@@ -86,7 +105,7 @@ const detailPageSchema = z.object({
 const teamMemberSchema = z.object({
   name: z.string(),
   role: z.string(),
-  years: z.string(),
+  years: z.string().optional(),
   bio: z.string(),
   skills: z.array(z.string()),
   photo: z.string().optional(),
@@ -114,9 +133,11 @@ const aiFeatures = z
   })
   .parse(aiFeaturesJson);
 const modules = z.object({ groups: z.array(moduleGroupSchema) }).parse(modulesJson).groups;
-const caseStudies = z
-  .object({ studies: z.array(caseStudySchema) })
-  .parse(caseStudiesJson).studies;
+const caseStudyData = z
+  .object({ studies: z.array(caseStudySchema), featured: z.array(featuredCaseSchema) })
+  .parse(caseStudiesJson);
+const caseStudies = caseStudyData.studies;
+const featuredCases = caseStudyData.featured;
 const faqs = z.record(z.string(), z.array(faqSchema)).parse(faqsJson);
 const services = z.object({ services: z.array(detailPageSchema) }).parse(servicesJson).services;
 const industries = z
@@ -180,6 +201,14 @@ export function getEngagements() {
   return engagements;
 }
 
+export function getFeaturedCases(industry?: string) {
+  return industry ? featuredCases.filter((c) => c.industries.includes(industry)) : featuredCases;
+}
+export function getFeaturedCase(slug: string) {
+  return featuredCases.find((c) => c.slug === slug);
+}
+
+export type FeaturedCase = (typeof featuredCases)[number];
 export type DetailPage = (typeof services)[number];
 export type TeamMember = (typeof team)[number];
 export type Product = (typeof products)[number];

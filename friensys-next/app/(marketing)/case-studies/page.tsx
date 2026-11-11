@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { getSchools, getCaseStudies } from "@/lib/content";
+import { getSchools, getCaseStudies, getFeaturedCases } from "@/lib/content";
+import { FeaturedCaseCard } from "@/components/marketing/FeaturedCaseCard";
 import { buildMetadata } from "@/lib/seo";
 import { CTASection } from "@/components/sections/shared/CTASection";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -15,6 +16,7 @@ export const metadata = buildMetadata({
 export default function CaseStudiesPage() {
   const schools = getSchools();
   const caseStudies = getCaseStudies();
+  const featured = getFeaturedCases();
 
   return (
     <>
@@ -38,6 +40,14 @@ export default function CaseStudiesPage() {
             300+ institutions run Friensys software every day — from 200-student schools to
             3,000-student campuses — alongside the retail and manufacturing businesses on our other platforms.
           </p>
+        </div>
+      </section>
+
+      <section className="pb-20">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8">
+          {featured.map((s) => (
+            <FeaturedCaseCard key={s.slug} study={s} />
+          ))}
         </div>
       </section>
 
@@ -68,7 +78,7 @@ export default function CaseStudiesPage() {
         <section className="py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="mb-12 text-center text-3xl font-bold text-text-primary">
-              Results our customers share
+              More results from schools on Friensys
             </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {caseStudies.map((cs) => (
