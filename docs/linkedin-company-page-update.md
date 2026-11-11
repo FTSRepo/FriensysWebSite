@@ -87,7 +87,7 @@ This is the website address (confirmed correct on 11 Nov).
 - **Published:** School Management Software (= School ERP).
 - **In LinkedIn review** (publish each once approved: Admin > Products > Manage > Publish): Educational CRM, Friensys College ERP, Friensys School App, Friensys Customer Loyalty, Friensys Escalation Management.
 - **Not added:** Marketplace, OD-SAS (no matching LinkedIn software category).
-- New products use `docs/linkedin/friensys-logo-square.png` logo; the two older listings still have the old logo.
+- New products picked up the current company logo automatically; the two older listings still have the old logo (`docs/linkedin/friensys-logo-square.png` is ready to upload there).
 
 Add each as a LinkedIn Product, linking to its page on the website:
 
