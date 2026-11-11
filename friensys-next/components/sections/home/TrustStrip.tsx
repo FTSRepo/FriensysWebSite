@@ -8,7 +8,7 @@ export function TrustStrip() {
   return (
     <section className="border-y border-border-subtle bg-bg-elevated py-10 overflow-hidden">
       <p className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-text-muted">
-        Trusted by 500+ schools across India
+        300+ institutions run Friensys software
       </p>
       <div className="group relative flex">
         <div
@@ -21,7 +21,7 @@ export function TrustStrip() {
           {logos.map((school, i) => (
             <div
               key={`${school.logo}-${i}`}
-              className="flex h-10 w-28 shrink-0 items-center justify-center rounded-lg bg-white/90 px-3 py-1.5 opacity-90 transition hover:opacity-100"
+              className="flex h-10 w-28 shrink-0 items-center justify-center rounded-lg bg-white border border-border-subtle px-3 py-1.5 opacity-90 transition hover:opacity-100"
             >
               <Image
                 src={school.logo}

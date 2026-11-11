@@ -28,12 +28,12 @@ export function Testimonials() {
   const testimonials = getTestimonials();
 
   return (
-    <section className="py-24 bg-bg-base">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <section className="py-24">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          label="Testimonials"
-          title="Principals who made the switch"
-          align="center"
+          label="Client voices"
+          title="What the people running on our software say"
+          align="left"
         />
 
         <motion.div
@@ -56,7 +56,7 @@ export function Testimonials() {
                     alt={t.author}
                     width={32}
                     height={32}
-                    className="h-8 w-8 rounded-full bg-white/90 object-contain p-0.5"
+                    className="h-8 w-8 rounded-full bg-white border border-border-subtle object-contain p-0.5"
                   />
                   <div>
                     <p className="text-sm font-medium text-text-primary">{t.author}</p>

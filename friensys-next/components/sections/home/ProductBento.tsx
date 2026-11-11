@@ -12,46 +12,54 @@ const featured = [
   {
     slug: "school-erp",
     name: "School ERP",
-    tagline: "The complete school management system",
+    tagline: "Admissions, fees, exams and parent communication for 300+ institutions",
     screenshot: "/screenshots/school-erp-dashboard.png",
-    badge: null,
+    badge: "live" as const,
     large: true,
   },
   {
-    slug: "ai-suite",
-    name: "AI Suite",
-    tagline: "Predictive insights for smarter decisions",
-    screenshot: "/screenshots/ai-suite-dashboard.png",
-    badge: "new" as const,
-    large: false,
-  },
-  {
-    slug: "fees-management",
-    name: "Fees & Finance",
-    tagline: "Automate collections, eliminate defaults",
-    screenshot: "/screenshots/fees-management-dashboard.png",
+    slug: "education-crm",
+    name: "Education CRM",
+    tagline: "Admission leads from every source, followed up in time",
+    screenshot: "/screenshots/education-crm.png",
     badge: null,
     large: false,
   },
   {
-    slug: "school-app",
-    name: "School App",
-    tagline: "Your school in every parent's pocket",
-    screenshot: "/screenshots/school-app.png",
-    badge: "live" as const,
+    slug: "customer-loyalty",
+    name: "Customer Loyalty",
+    tagline: "Points, tiers, coupons and campaigns for retail",
+    screenshot: "/screenshots/customer-loyalty.png",
+    badge: null,
+    large: false,
+  },
+  {
+    slug: "marketplace",
+    name: "Procurement Marketplace",
+    tagline: "Sourcing of bought-out parts for manufacturers",
+    screenshot: "/screenshots/marketplace.png",
+    badge: null,
+    large: false,
+  },
+  {
+    slug: "escalation",
+    name: "Escalation System",
+    tagline: "Ticket routing with SLA tracking",
+    screenshot: "/screenshots/escalation.png",
+    badge: null,
     large: false,
   },
 ];
 
 export function ProductBento() {
   return (
-    <section className="py-24 bg-bg-elevated">
+    <section className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          label="Our Products"
-          title="Every tool your school needs, beautifully connected"
-          subtitle="Mix and match modules. They all share one database, one login, one support line."
-          align="center"
+          label="Our products"
+          title="We don't just build for clients — we run our own software at scale"
+          subtitle="Ready-to-deploy platforms you can start with today, then extend with custom features and AI."
+          align="left"
         />
 
         <motion.div
@@ -77,10 +85,9 @@ export function ProductBento() {
                       sizes={p.large ? "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 66vw" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"}
                       className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-bg-overlay/80 to-transparent" />
-                    {p.badge && (
+                                        {p.badge && (
                       <div className="absolute right-3 top-3">
-                        <Badge variant={p.badge}>{p.badge === "new" ? "New" : "Live"}</Badge>
+                        <Badge variant={p.badge}>Live</Badge>
                       </div>
                     )}
                   </div>
@@ -94,7 +101,7 @@ export function ProductBento() {
           ))}
         </motion.div>
 
-        <div className="mt-8 text-center">
+        <div className="mt-8">
           <Link
             href="/products"
             className="text-sm font-medium text-accent-primary hover:underline"

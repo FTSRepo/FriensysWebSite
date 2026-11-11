@@ -27,6 +27,37 @@ export function buildOrganizationSchema() {
   };
 }
 
+export function buildProfessionalServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: site.legalName,
+    url: site.url,
+    description: site.description,
+    telephone: site.contact.phone,
+    email: site.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.address.street,
+      addressLocality: site.address.locality,
+      addressRegion: site.address.region,
+      postalCode: site.address.postal,
+      addressCountry: site.address.country,
+    },
+    areaServed: "IN",
+    knowsAbout: [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Generative AI",
+      "Custom Software Development",
+      "MVP Development",
+      "Legacy Modernisation",
+      "Cloud Migration",
+      "IT Consulting",
+    ],
+  };
+}
+
 export function buildWebSiteSchema() {
   return {
     "@context": "https://schema.org",

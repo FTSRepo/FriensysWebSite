@@ -2,7 +2,7 @@ import { JsonLd } from "./JsonLd";
 import {
   buildOrganizationSchema,
   buildWebSiteSchema,
-  buildSoftwareApplicationSchema,
+  buildProfessionalServiceSchema,
 } from "@/lib/schema";
 
 export function HomeSchemas() {
@@ -10,7 +10,7 @@ export function HomeSchemas() {
     <>
       <JsonLd data={buildOrganizationSchema()} />
       <JsonLd data={buildWebSiteSchema()} />
-      <JsonLd data={buildSoftwareApplicationSchema()} />
+      <JsonLd data={buildProfessionalServiceSchema()} />
     </>
   );
 }

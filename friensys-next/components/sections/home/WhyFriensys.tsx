@@ -1,77 +1,45 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { BadgeCheck, Boxes, LineChart, ShieldCheck } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { BentoCard } from "@/components/ui/BentoCard";
-import { fadeUp, stagger } from "@/lib/motion";
 
 const reasons = [
   {
-    icon: "🇮🇳",
-    title: "Built for Indian schools",
-    body: "CBSE, ICSE, state boards. DPDPA-compliant data residency in India. GST-ready fee receipts. Aadhaar-linked student IDs.",
-    span: "col-span-2",
+    icon: BadgeCheck,
+    title: "Founder-led, senior engineering",
+    body: "Led by a software architect with 20+ years of enterprise delivery. The people who scope your project are the people who build it.",
   },
   {
-    icon: "🤖",
-    title: "AI-first, not AI-washed",
-    body: "Attendance anomaly alerts, fee default prediction, and auto-generated progress narratives — live today, not on a roadmap.",
-    span: "col-span-1",
+    icon: Boxes,
+    title: "We run our own products",
+    body: "Our ERP, CRM, loyalty, helpdesk and procurement platforms are used by real institutions and businesses every day. We know what production means.",
   },
   {
-    icon: "⚡",
-    title: "Same-day onboarding",
-    body: "Import your existing student data via CSV or Google Sheets. Go live in hours, not months.",
-    span: "col-span-1",
+    icon: LineChart,
+    title: "AI measured against a KPI",
+    body: "AI pilots have a fixed scope and a business number to move — admissions, collections, hours saved. We scale only what works.",
   },
   {
-    icon: "🔒",
-    title: "Enterprise security",
-    body: "ISO 27001-aligned controls, end-to-end encryption, granular RBAC, and a 99.9% uptime SLA backed by AWS.",
-    span: "col-span-2",
-  },
-  {
-    icon: "💸",
-    title: "Transparent pricing",
-    body: "Per-student annual billing. No hidden modules, no per-seat surprises. Switch plans as you grow.",
-    span: "col-span-1",
-  },
-  {
-    icon: "🤝",
-    title: "Dedicated success manager",
-    body: "Every school gets a named CSM for onboarding, training, and ongoing support — not a ticket queue.",
-    span: "col-span-1",
+    icon: ShieldCheck,
+    title: "Secure by design",
+    body: "Your data stays yours. Human review on money and customer-facing decisions, DPDPA-aligned handling of personal data, code and IP handed over to you.",
   },
 ];
 
 export function WhyFriensys() {
   return (
-    <section className="py-24 bg-bg-base">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          label="Why Friensys"
-          title="Purpose-built for the way Indian schools actually work"
-          subtitle="Not a generic ERP bolted onto education. Every feature exists because a school principal asked for it."
-          align="center"
-        />
-
-        <motion.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
-          className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3"
-        >
-          {reasons.map((r) => (
-            <motion.div key={r.title} variants={fadeUp} className={r.span}>
-              <BentoCard className="h-full p-6">
-                <span className="text-3xl">{r.icon}</span>
-                <h3 className="mt-4 text-base font-semibold text-text-primary">{r.title}</h3>
-                <p className="mt-2 text-sm text-text-secondary leading-relaxed">{r.body}</p>
-              </BentoCard>
-            </motion.div>
+    <section className="border-y border-border-subtle bg-bg-elevated py-24">
+      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        <SectionHeading label="Why Friensys" title="A safe pair of hands for ambitious work" align="left" />
+        <div className="mt-12 grid gap-x-10 gap-y-10 sm:grid-cols-2">
+          {reasons.map(({ icon: Icon, title, body }) => (
+            <div key={title} className="flex gap-4">
+              <Icon className="mt-1 h-6 w-6 shrink-0 text-accent-primary" aria-hidden="true" />
+              <div>
+                <h3 className="text-lg font-semibold text-text-primary">{title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-text-secondary">{body}</p>
+              </div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
