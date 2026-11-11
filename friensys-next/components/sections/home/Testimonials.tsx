@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { BentoCard } from "@/components/ui/BentoCard";
 import { fadeUp, stagger } from "@/lib/motion";
@@ -50,18 +49,9 @@ export function Testimonials() {
                 <blockquote className="mt-4 text-sm text-text-secondary leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <div className="mt-6 flex items-center gap-3">
-                    <Image
-                    src={t.schoolLogo}
-                    alt={t.author}
-                    width={32}
-                    height={32}
-                    className="h-8 w-8 rounded-full bg-white border border-border-subtle object-contain p-0.5"
-                  />
-                  <div>
-                    <p className="text-sm font-medium text-text-primary">{t.author}</p>
-                    <p className="text-xs text-text-muted">{t.city}</p>
-                  </div>
+                <div className="mt-6">
+                  <p className="text-sm font-medium text-text-primary">{t.author}</p>
+                  <p className="text-xs text-text-muted">{t.city}</p>
                 </div>
               </BentoCard>
             </motion.div>
