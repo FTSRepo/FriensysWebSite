@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { AuroraButton } from "@/components/ui/AuroraButton";
-import { GradientMesh } from "@/components/ui/GradientMesh";
 import { fadeUp, stagger } from "@/lib/motion";
+import { site } from "@/lib/site";
 
 interface CTASectionProps {
   title?: string;
@@ -15,18 +15,16 @@ interface CTASectionProps {
 }
 
 export function CTASection({
-  title = "Ready to transform your school?",
-  subtitle = "Join 500+ schools already running on Friensys. Book a free 30-minute demo — no commitment, no credit card.",
-  primaryLabel = "Book a free demo",
-  primaryHref = "/contact",
-  secondaryLabel = "View pricing",
-  secondaryHref = "/pricing",
+  title = "Have a process, document pile or dataset slowing your team down?",
+  subtitle = "Book a free 30-minute consultation. We'll find where software and AI can help — and tell you honestly where they can't.",
+  primaryLabel = "Book a free consultation",
+  primaryHref = "/contact?intent=consultation",
+  secondaryLabel = `Call ${site.contact.phone}`,
+  secondaryHref = `tel:${site.contact.phone.replace(/\s/g, "")}`,
 }: CTASectionProps) {
   return (
-    <section className="relative overflow-hidden py-24 bg-bg-elevated">
-      <GradientMesh className="absolute inset-0 h-full w-full" intensity={0.04} />
-
-      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+    <section className="bg-bg-dark py-24">
+      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -35,13 +33,13 @@ export function CTASection({
         >
           <motion.h2
             variants={fadeUp}
-            className="text-3xl font-bold text-text-primary sm:text-4xl lg:text-5xl"
+            className="text-3xl font-bold text-white sm:text-4xl"
           >
             {title}
           </motion.h2>
           <motion.p
             variants={fadeUp}
-            className="mt-4 text-lg text-text-secondary leading-relaxed"
+            className="mt-4 text-lg leading-relaxed text-slate-300"
           >
             {subtitle}
           </motion.p>
@@ -52,9 +50,12 @@ export function CTASection({
             <AuroraButton href={primaryHref} variant="primary" size="lg">
               {primaryLabel}
             </AuroraButton>
-            <AuroraButton href={secondaryHref} variant="outline" size="lg">
+            <a
+              href={secondaryHref}
+              className="inline-flex items-center justify-center rounded-[var(--radius-md)] border border-slate-600 px-7 py-3.5 text-lg font-medium text-white transition-colors hover:border-white"
+            >
               {secondaryLabel}
-            </AuroraButton>
+            </a>
           </motion.div>
         </motion.div>
       </div>

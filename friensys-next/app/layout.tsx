@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-IN" data-theme="dark" suppressHydrationWarning>
+    <html lang="en-IN">
       <body
         className={`${geist.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >

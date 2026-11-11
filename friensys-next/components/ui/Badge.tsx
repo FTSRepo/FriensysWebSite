@@ -7,7 +7,7 @@ const variants: Record<BadgeVariant, string> = {
   live:    "border-accent-lime/25 bg-accent-lime/10 text-accent-lime",
   roadmap: "border-accent-amber/25 bg-accent-amber/10 text-accent-amber",
   dpdpa:   "border-accent-cyan/25 bg-accent-cyan/10 text-accent-cyan",
-  iso:     "border-accent-primary/25 bg-accent-primary/10 text-accent-glow",
+  iso:     "border-accent-primary/25 bg-accent-primary/10 text-accent-primary",
   aws:     "border-border-subtle bg-bg-overlay text-text-secondary",
   new:     "border-accent-primary/25 bg-accent-primary/10 text-accent-primary",
   default: "border-border-subtle bg-bg-overlay text-text-secondary",

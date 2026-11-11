@@ -13,7 +13,7 @@ export function SectionHeading({ label, title, subtitle, align = "center", class
   return (
     <div className={cn("flex flex-col gap-3", align === "center" && "items-center text-center", className)}>
       {label && (
-        <span className="inline-flex rounded-full border border-accent-primary/20 bg-accent-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-glow">
+        <span className="inline-flex rounded-full border border-accent-primary/20 bg-accent-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-accent-primary">
           {label}
         </span>
       )}
