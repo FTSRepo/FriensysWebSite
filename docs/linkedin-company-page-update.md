@@ -1,7 +1,7 @@
 # LinkedIn Company Page — Changes to Match friensys.com
 
 Page: https://www.linkedin.com/company/friensysil (admin: /company/99313298/admin)
-Reviewed: 11 Nov 2026, as a member would see it. Nothing was changed on LinkedIn.
+Reviewed: 11 Nov 2026. Applied on LinkedIn 11 Nov: tagline, overview, phone, 20 specialties, button URL, headquarters address. Still to do by hand: cover banner, Products tab, posts, people.
 
 ## What the page says today vs. the website
 
