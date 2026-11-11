@@ -21,15 +21,14 @@ export function TrustStrip() {
           {logos.map((school, i) => (
             <div
               key={`${school.logo}-${i}`}
-              className="flex h-10 w-28 shrink-0 items-center justify-center rounded-lg bg-white border border-border-subtle px-3 py-1.5 opacity-90 transition hover:opacity-100"
+              className="flex shrink-0 items-center justify-center rounded-lg bg-white border border-border-subtle p-2 opacity-90 transition hover:opacity-100"
             >
               <Image
                 src={school.logo}
                 alt={school.name}
-                width={112}
-                height={40}
-                style={{ width: "auto", height: "auto" }}
-                className="max-h-full max-w-full object-contain"
+                width={80}
+                height={80}
+                className="h-20 w-auto object-contain"
               />
             </div>
           ))}
