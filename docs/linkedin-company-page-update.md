@@ -31,7 +31,7 @@ Reviewed: 11 Nov 2026, as a member would see it. Nothing was changed on LinkedIn
 Agentic AI & custom software for startups, SMEs & mid-size businesses | AI that works inside your business
 ```
 
-### Overview (1,551 / 2,000 characters)
+### Overview (1,608 / 2,000 characters)
 
 ```
 Friensys Info Labs is an AI-first software and consulting partner. We design, build and run AI-powered software for startups, SMEs and growing mid-size businesses — led by founders with 20+ years of enterprise technology experience. We have been building and deploying products since 2017.
