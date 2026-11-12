@@ -76,7 +76,7 @@ function Header() {
             <div className="hidden md:flex items-center gap-2">
               <MdLocationOn />
               <span>
-                J-804, Sector -1 Techzone-IV, Greater Noida West, UP-201305,
+                Greater Noida West, UP-201305
               </span>
             </div>
           </div>

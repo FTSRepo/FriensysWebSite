@@ -7,7 +7,6 @@ export const site = {
   ogImage: "/og/default.png",
   legalName: "Friensys Info Labs",
   address: {
-    street: "J-804, Sector-1, Techzone-IV",
     locality: "Greater Noida West",
     region: "Uttar Pradesh",
     postal: "201305",

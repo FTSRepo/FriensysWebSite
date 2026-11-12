@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { X } from "lucide-react";
 import type { getNav } from "@/lib/content";
@@ -23,7 +24,8 @@ export function MobileNav({ open, onClose, nav }: MobileNavProps) {
 
   if (!open) return null;
 
-  return (
+  // Portal to <body>: the header's backdrop-filter would otherwise trap these fixed elements inside the 64px header box.
+  return createPortal(
     <>
       <div
         className="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm"
@@ -82,6 +84,7 @@ export function MobileNav({ open, onClose, nav }: MobileNavProps) {
           </AuroraButton>
         </div>
       </nav>
-    </>
+    </>,
+    document.body
   );
 }

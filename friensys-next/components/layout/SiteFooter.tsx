@@ -102,7 +102,7 @@ export function SiteFooter() {
                   </a>
                 </li>
                 <li className="text-xs text-text-muted leading-snug">
-                  {site.address.street}, {site.address.locality},{" "}
+                  {site.address.locality},{" "}
                   {site.address.region} {site.address.postal}
                 </li>
               </ul>

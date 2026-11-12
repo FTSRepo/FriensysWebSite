@@ -16,7 +16,6 @@ export function buildOrganizationSchema() {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: site.address.street,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
       postalCode: site.address.postal,
@@ -40,7 +39,6 @@ export function buildProfessionalServiceSchema() {
     email: site.contact.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: site.address.street,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
       postalCode: site.address.postal,
@@ -159,7 +157,6 @@ export function buildLocalBusinessSchema() {
     email: site.contact.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: site.address.street,
       addressLocality: site.address.locality,
       addressRegion: site.address.region,
       postalCode: site.address.postal,

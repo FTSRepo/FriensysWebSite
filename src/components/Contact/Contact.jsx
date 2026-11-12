@@ -92,11 +92,7 @@ function Contact() {
             <div className="flex items-start gap-3 text-gray-700">
               <FaMapMarkerAlt className="mt-1 text-green-600" />
               <span>
-                J-804, Sector -1
-                <br />
-                Techzone-IV, Greater
-                <br />
-                Noida West, UP-201305,
+                Greater Noida West, UP-201305
               </span>
             </div>
 
