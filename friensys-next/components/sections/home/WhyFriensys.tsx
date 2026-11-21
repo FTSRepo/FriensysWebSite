@@ -10,7 +10,7 @@ const reasons = [
   {
     icon: Boxes,
     title: "We run our own products",
-    body: "Our ERP, CRM, loyalty, helpdesk and procurement platforms are used by real institutions and businesses every day. We know what production means.",
+    body: "Our ERP, CRM, loyalty and helpdesk platforms are used by real institutions and businesses every day. We know what production means.",
   },
   {
     icon: LineChart,

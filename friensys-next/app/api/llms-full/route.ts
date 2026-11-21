@@ -16,19 +16,19 @@ export function GET() {
 
 ## About Friensys
 
-Friensys Info Labs is an AI-first software and consulting partner based in Greater Noida, India. We build AI agents, document AI, knowledge assistants and predictive analytics; develop custom software and MVPs; modernise and support existing systems; and provide technology consulting. Clients are startups, SMEs and mid-size businesses.
+Friensys Info Labs is an agentic AI, generative AI and custom software development company based in Greater Noida, India. We build AI agents, document AI, knowledge assistants and predictive analytics; develop custom software and MVPs; modernise and support existing systems; and provide technology consulting. Clients are startups, SMEs and mid-size businesses.
 
 Building and deploying products since 2017, incorporated in 2022, and led by founders with 20+ years of enterprise technology experience. Our own products are used by 100+ institutions, ranging from 200 to 3,000+ students.
 
 ## Services
 
-${services.map((s) => `### ${s.name}\nURL: https://friensys.com/services/${s.slug}\n${s.short}\nDeliverables: ${s.deliverables.map((d) => d.title).join(", ")}\n`).join("\n")}
+${services.map((s) => `### ${s.h1 ?? s.name}\nURL: https://friensys.com/services/${s.slug}\n${s.short}\nDeliverables: ${s.deliverables.map((d) => d.title).join(", ")}\n${s.useCases ? `Use cases: ${s.useCases.map((u) => u.title).join(", ")}\n` : ""}`).join("\n")}
 
 ## Industries
 
 ${industries.map((i) => `- [${i.name}](https://friensys.com/industries/${i.slug}): ${i.short}`).join("\n")}
 
-## Products
+## Our platforms (built and run by Friensys)
 
 ${products
   .map(

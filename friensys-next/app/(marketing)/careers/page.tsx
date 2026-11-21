@@ -7,7 +7,7 @@ import { Code2, BarChart3, Headphones, Megaphone } from "lucide-react";
 export const metadata = buildMetadata({
   title: "Careers — Join the Friensys Team",
   description:
-    "We're building the ERP platform for Indian schools. Join a small, focused team working on real problems for real schools.",
+    "Join Friensys in Greater Noida: build agentic AI, LLM features and custom software for startups and SMEs, alongside platforms used by 100+ organisations.",
   path: "/careers",
 });
 
@@ -55,11 +55,12 @@ export default function CareersPage() {
       <section className="py-20 md:py-28 text-center">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
-            Work on problems that matter to schools
+            Build AI agents and software that run in production
           </h1>
           <p className="text-lg text-text-secondary">
-            Small team. Real product. Schools that depend on what we build. If that sounds like
-            your kind of work, we&apos;d like to hear from you.
+            Small, senior team. AI agents, LLM features and custom software for startups and SMEs,
+            plus platforms that 100+ organisations run on every day. If that sounds like your kind
+            of work, we&apos;d like to hear from you.
           </p>
         </div>
       </section>

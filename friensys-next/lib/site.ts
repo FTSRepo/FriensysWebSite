@@ -2,7 +2,7 @@ export const site = {
   name: "Friensys",
   tagline: "AI that works inside your business.",
   description:
-    "Friensys Info Labs is an AI-first software and consulting partner. We build AI agents, custom software and MVPs, modernise existing systems and run our own products used by 100+ institutions — led by engineers with 20+ years of enterprise technology experience.",
+    "Friensys builds agentic AI, generative AI and custom software for startups and SMEs in India, from MVP to production. Founder-led, 20+ years' experience.",
   url: "https://friensys.com",
   ogImage: "/og/default.png",
   legalName: "Friensys Info Labs",
@@ -23,6 +23,13 @@ export const site = {
     twitter: "https://x.com/friensys",
     github: "",
     instagram: "",
+  },
+  /** Review/listing profiles. Paste each URL once the profile is live; it is added to Organization sameAs. */
+  profiles: {
+    clutch: "",
+    goodfirms: "",
+    designrush: "",
+    googleBusiness: "",
   },
   partners: {
     digitechnomads: "https://digitechnomads.com/school-erp-crm-solutions/",

@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "About Friensys Info Labs — Building Software Since 2017",
   description:
-    "Friensys Info Labs is a founder-led software and AI company from Greater Noida. We have been building and deploying products since 2017 (incorporated in 2022) — custom software and our own products used by 100+ institutions — led by engineers with 20+ years of enterprise experience.",
+    "Friensys Info Labs is a founder-led AI and software engineering company in Greater Noida, building production software since 2017 for 100+ organisations.",
   path: "/about",
 });
 
@@ -24,7 +24,7 @@ const timeline = [
   { year: "2022", event: "Company incorporated as Friensys Info Labs. Transport GPS integration + Fee Gateway (online payments) launched." },
   { year: "2023", event: "200 schools. OD-SAS device test monitoring and Customer Loyalty platform released." },
   { year: "2024", event: "100+ schools. Education CRM + admin-AI roadmap announced." },
-  { year: "2025", event: "DPDPA compliance posture hardened. Procurement marketplace for manufacturers launched." },
+  { year: "2025", event: "DPDPA compliance posture hardened." },
 ];
 
 export default function AboutPage() {
@@ -36,6 +36,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <SectionHeading
+              as="h1"
               label="About"
               title="Software and AI that businesses depend on. Building in Greater Noida since 2017."
               subtitle="We're Friensys Info Labs — a founder-led team that builds custom software and AI for startups, SMEs and mid-size businesses, and runs its own products used by 100+ institutions."
@@ -57,7 +58,7 @@ export default function AboutPage() {
                 Friensys was co-founded by Vikram Kumar, our CTO — a software architect with 20+ years of enterprise delivery, including web applications for Microsoft India and Redington (Dubai) — and Nidhi Priya, who leads digital marketing and operations. Together they set out to bring that standard of engineering to institutions and growing businesses.
               </p>
               <p className="mt-4 text-text-secondary leading-relaxed">
-                We started with schools: the first version of our ERP ran a single school in Greater Noida. Today our products run admissions, fees and operations for 100+ institutions across multiple states — alongside loyalty, helpdesk, procurement and test-monitoring platforms for retail and manufacturing businesses.
+                We started with schools: the first version of our ERP ran a single school in Greater Noida. Today our products run admissions, fees and operations for 100+ institutions — alongside loyalty, helpdesk and test-monitoring platforms for retail and manufacturing businesses.
               </p>
               <p className="mt-4 text-text-secondary leading-relaxed">
                 Running our own products in production is what makes us a safer partner for yours. Today we build custom software, MVPs and AI solutions — agents, document AI, knowledge assistants and predictive analytics — and we modernise and support the systems businesses already rely on. Our founders lead agentic and generative AI work personally, with AI engineers in-house to build and run it.
@@ -71,7 +72,7 @@ export default function AboutPage() {
                 <li><strong className="text-text-primary">Custom software & MVPs</strong> — web, mobile and SaaS products built from scratch.</li>
                 <li><strong className="text-text-primary">Modernisation & support</strong> — legacy upgrades, cloud, AMC and dedicated teams.</li>
                 <li><strong className="text-text-primary">Technology consulting</strong> — CTO-as-a-service and AI opportunity audits.</li>
-                <li><strong className="text-text-primary">Our own products</strong> — School ERP, Education CRM, Loyalty, Escalation, Procurement Marketplace, OD-SAS.</li>
+                <li><strong className="text-text-primary">Our own products</strong> — School ERP, Education CRM, Loyalty, Escalation, OD-SAS.</li>
               </ul>
             </div>
           </div>

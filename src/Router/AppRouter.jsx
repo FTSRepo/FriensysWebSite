@@ -15,7 +15,6 @@ import SchoolApp from "../components/Product/SchoolApp/SchoolApp";
 import Escalation from "../components/Product/EscalationManagement/EscalationManagement";
 import ODSAS from "../components/Product/ODSAS/ODSAS";
 import CustomerLoyalty from "../components/Product/CustomerLoyalty/CustomerLoyalty";
-import Marketplace from "../components/Product/Marketplace/Marketplace";
 import CollegeManagement from "../components/Product/CollegeERP/CollegeManagement";
 
 // Services Page Import
@@ -110,10 +109,6 @@ const router = createBrowserRouter([
           {
             path: "customerLoyalty",
             element: <CustomerLoyalty />,
-          },
-          {
-            path: "marketplace",
-            element: <Marketplace />,
           },
           {
             path: "collegeErp",

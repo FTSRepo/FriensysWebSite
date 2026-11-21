@@ -16,7 +16,6 @@ import {
   FaExclamationCircle,
   FaDatabase,
   FaGift,
-  FaStore,
   FaChalkboardTeacher,
   FaCode,
   FaCloud,
@@ -41,7 +40,6 @@ const products = [
   },
   { name: "OD-SAS", icon: <FaDatabase />, key: "odsas" },
   { name: "Customer Loyalty", icon: <FaGift />, key: "loyalty" },
-  { name: "Marketplace", icon: <FaStore />, key: "marketplace" },
   { name: "CRM - Edu Mgmt", icon: <FaChalkboardTeacher />, key: "crm" },
 ];
 
@@ -65,10 +63,6 @@ const dashboardMockData = {
   loyalty: {
     title: "Customer Loyalty Dashboard",
     image: WebsiteImages.LoyaltyDashboard,
-  },
-  marketplace: {
-    title: "Marketplace Overview",
-    image: WebsiteImages.MarketplaceDashboard,
   },
   crm: {
     title: "CRM - Educational Management",

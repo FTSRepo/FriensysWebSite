@@ -12,6 +12,10 @@ const posts = defineCollection({
       updated: s.isodate().optional(),
       author: s.string().default("Friensys"),
       tags: s.array(s.string()).default([]),
+      // Blog section, e.g. "Agentic AI", "Generative AI", "Custom Software", "Education"
+      category: s.string().default("Engineering"),
+      // Service slug the end-of-article CTA links to, e.g. "agentic-ai"
+      service: s.string().optional(),
       cover: s.string().optional(),
       ogImage: s.string().optional(),
       published: s.boolean().default(true),

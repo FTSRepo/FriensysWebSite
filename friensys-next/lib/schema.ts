@@ -21,7 +21,13 @@ export function buildOrganizationSchema() {
       postalCode: site.address.postal,
       addressCountry: site.address.country,
     },
-    sameAs: [site.social.linkedin].filter(Boolean),
+    sameAs: [
+      site.social.linkedin,
+      site.profiles.clutch,
+      site.profiles.goodfirms,
+      site.profiles.designrush,
+      site.profiles.googleBusiness,
+    ].filter(Boolean),
     foundingDate: "2022",
     founder: teamJson.team.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role })),
     areaServed: "IN",
@@ -54,6 +60,22 @@ export function buildProfessionalServiceSchema() {
       "Legacy Modernisation",
       "Cloud Migration",
       "IT Consulting",
+    ],
+  };
+}
+
+export function buildServiceSchema(args: { name: string; description: string; url: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: args.name,
+    serviceType: args.name,
+    description: args.description,
+    url: `${site.url}${args.url}`,
+    provider: { "@type": "Organization", name: site.legalName, url: site.url },
+    areaServed: [
+      { "@type": "Country", name: "India" },
+      { "@type": "Place", name: "Worldwide" },
     ],
   };
 }

@@ -9,7 +9,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 export const metadata: Metadata = buildMetadata({
   title: "Contact Friensys — Book a Free Consultation",
   description:
-    "Book a free 30-minute School ERP demo or get a pricing quote. We respond within 24 hours. Call, email, or fill the form.",
+    "Book a free 30-minute consultation on agentic AI, generative AI, custom software or an MVP. We reply within 24 hours on business days.",
   path: "/contact",
 });
 
@@ -28,7 +28,7 @@ export default function ContactPage() {
                 Talk to Friensys.
               </h1>
               <p className="mt-4 text-lg text-text-secondary">
-                Book a demo, get a quote, or just ask a question. We respond within 24 hours on business days.
+                Tell us about the AI agent, product or system you have in mind, or ask for a product demo. We respond within 24 hours on business days.
               </p>
               <div className="mt-10 space-y-5">
                 {[

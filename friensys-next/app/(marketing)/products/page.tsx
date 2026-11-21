@@ -8,7 +8,7 @@ import { buildBreadcrumbSchema } from "@/lib/schema";
 export const metadata = buildMetadata({
   title: "Products — Ready-to-Deploy Platforms",
   description:
-    "Friensys products: School ERP, Education CRM, School App, College ERP, Customer Loyalty, Escalation System, Procurement Marketplace and OD-SAS. Start with proven software, then add AI where it pays off.",
+    "Platforms Friensys built and runs in production: School ERP, Education CRM, Customer Loyalty, Escalation and OD-SAS.",
   path: "/products",
 });
 

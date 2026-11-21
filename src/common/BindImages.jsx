@@ -43,9 +43,7 @@ import EducationalCRMReception from "../assets/websiteImage/educationalCRMRecept
 import EducationalCRMAdmissionCordinator from "../assets/websiteImage/educationalCRMAdmissionCordinator.png";
 import EducationalCRMCounsellor from "../assets/websiteImage/educationalCRMCounsellor.png";
 import DashboardImage from "../assets/websiteImage/dashboardImage.png";
-import MarketplaceBusinessModel from "../assets/websiteImage/MarketplaceBusinessModel.png";
 import EscalationDashboardImage from "../assets/websiteImage/EscalationDashboardImage.png";
-import MarketplaceDashboard from "../assets/websiteImage/MarketplaceDashboard.png";
 import ServicePage from "../assets/websiteImage/ServicePage.png";
 import ConsultingPage from "../assets/websiteImage/ConsultingPage.png";
 import ProductSchoolErp from "../assets/websiteImage/ProductSchoolErp.png";
@@ -94,9 +92,7 @@ export const WebsiteImages = {
   DashboardImage,
   LoyaltyWebsite,
   LoyaltyMobile,
-  MarketplaceBusinessModel,
   EscalationDashboardImage,
-  MarketplaceDashboard,
   ServicePage,
   ConsultingPage,
   ProductSchoolErp,

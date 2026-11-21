@@ -1,4 +1,5 @@
-import { getProducts, getServices, getIndustries } from "@/lib/content";
+import { getProducts, getServices, getIndustries, getFeaturedCases } from "@/lib/content";
+import { posts } from "@/.velite";
 
 export const dynamic = "force-static";
 
@@ -6,11 +7,21 @@ export function GET() {
   const products = getProducts();
   const services = getServices();
   const industries = getIndustries();
+  const cases = getFeaturedCases();
+  const insights = posts.filter((p) => p.published && p.category !== "Education");
 
   const body = `# Friensys
 
-> AI-first software and consulting partner for startups, SMEs and mid-size businesses: AI & ML solutions, custom software and MVPs, modernisation and support, technology consulting — plus our own products used by 100+ institutions.
+> Agentic AI, generative AI and custom software development company in India. We design, build and run AI agents, RAG and document AI systems, and MVPs and SaaS products for startups, SMEs and mid-size businesses.
 
+## Services
+
+${services.map((s) => `- [${s.h1 ?? s.name}](https://friensys.com/services/${s.slug}): ${s.short}`).join("\n")}
+
+## Case studies
+
+${cases.map((c) => `- [${c.title}](https://friensys.com/case-studies/${c.slug}): ${c.summary}`).join("\n")}
+${insights.length ? `\n## Insights\n\n${insights.map((p) => `- [${p.title}](https://friensys.com${p.url}): ${p.description}`).join("\n")}\n` : ""}
 ## Company
 
 - Building products since: 2017
@@ -20,28 +31,25 @@ export function GET() {
 - Products used by: 100+ institutions
 - Tech: Cloud-hosted, mobile-first, accessible on any device
 
-## Services
-
-${services.map((s) => `- [${s.name}](https://friensys.com/services/${s.slug}): ${s.short}`).join("\n")}
-
 ## Industries
 
 ${industries.map((i) => `- [${i.name}](https://friensys.com/industries/${i.slug}): ${i.short}`).join("\n")}
 
-## Products
+## Our platforms (built and run by Friensys)
 
 ${products.map((p) => `- [${p.name}](https://friensys.com/products/${p.slug}): ${p.tagline}`).join("\n")}
 
 ## Key Pages
 
 - [Home](https://friensys.com/)
-- [School ERP](https://friensys.com/school-erp)
+- [Services](https://friensys.com/services)
 - [Case studies](https://friensys.com/case-studies)
+- [AI & software engineering insights](https://friensys.com/blog)
 - [Our AI approach](https://friensys.com/ai)
+- [School ERP](https://friensys.com/school-erp)
 - [About](https://friensys.com/about)
 - [Contact](https://friensys.com/contact)
 - [Security](https://friensys.com/security)
-- [Blog](https://friensys.com/blog)
 - [Full content index](https://friensys.com/api/llms-full)
 
 ## Contact

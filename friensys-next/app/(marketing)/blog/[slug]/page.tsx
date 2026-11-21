@@ -6,6 +6,7 @@ import { buildMetadata } from "@/lib/seo";
 import { buildArticleSchema, buildBreadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AuroraButton } from "@/components/ui/AuroraButton";
+import { getService } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -31,11 +32,11 @@ export default async function BlogPostPage({ params }: Props) {
   const post = posts.find((p) => p.slug === slug && p.published);
   if (!post) notFound();
 
-  const publishDate = new Date(post.date).toLocaleDateString("en-IN", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const fmt = (d: string) =>
+    new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
+  const publishDate = fmt(post.date);
+  // End-of-article CTA: the related service page, else the education industry page.
+  const service = post.service ? getService(post.service) : undefined;
 
   return (
     <>
@@ -45,6 +46,7 @@ export default async function BlogPostPage({ params }: Props) {
           description: post.description,
           url: `/blog/${post.slug}`,
           datePublished: post.date,
+          dateModified: post.updated,
           author: post.author,
           image: post.ogImage,
         })}
@@ -78,6 +80,14 @@ export default async function BlogPostPage({ params }: Props) {
               <span>{post.author}</span>
               <span>·</span>
               <time dateTime={post.date}>{publishDate}</time>
+              {post.updated && (
+                <>
+                  <span>·</span>
+                  <span>
+                    Last updated <time dateTime={post.updated}>{fmt(post.updated)}</time>
+                  </span>
+                </>
+              )}
             </div>
           </header>
 
@@ -86,11 +96,33 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           <div className="mt-16 rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-8 text-center">
-            <p className="mb-4 font-semibold text-text-primary">Ready to see Friensys in action?</p>
-            <p className="mb-6 text-sm text-text-secondary">
-              Book a personalised demo for your school — no sales pressure, just a look at the platform.
-            </p>
-            <AuroraButton href="/contact?intent=demo">Request a demo</AuroraButton>
+            {service ? (
+              <>
+                <p className="mb-4 font-semibold text-text-primary">Planning something similar?</p>
+                <p className="mb-6 text-sm text-text-secondary">{service.short}</p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  <AuroraButton href={`/services/${service.slug}`}>
+                    {service.h1 ?? service.name}
+                  </AuroraButton>
+                  <AuroraButton href={`/contact?intent=${service.slug}`} variant="outline">
+                    Book a free consultation
+                  </AuroraButton>
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="mb-4 font-semibold text-text-primary">Running a school or college?</p>
+                <p className="mb-6 text-sm text-text-secondary">
+                  See how we build software and AI for education, or book a demo of the platform.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  <AuroraButton href="/industries/education">Software for education</AuroraButton>
+                  <AuroraButton href="/contact?intent=demo" variant="outline">
+                    Request a demo
+                  </AuroraButton>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </article>

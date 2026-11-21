@@ -13,8 +13,8 @@ export default function NotFound() {
       </p>
       <div className="flex flex-wrap gap-3">
         <AuroraButton href="/">Go home</AuroraButton>
-        <AuroraButton href="/school-erp" variant="outline">
-          See School ERP
+        <AuroraButton href="/services" variant="outline">
+          See our services
         </AuroraButton>
       </div>
     </div>

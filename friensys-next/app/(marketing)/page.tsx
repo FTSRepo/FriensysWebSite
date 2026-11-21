@@ -16,9 +16,9 @@ import { AgenticShowcase } from "@/components/sections/home/AgenticShowcase";
 import { CaseStudies } from "@/components/sections/home/CaseStudies";
 
 export const metadata: Metadata = buildMetadata({
-  title: "AI-First Software Development & Consulting Partner",
+  title: "AI & Custom Software Development Company in India",
   description:
-    "Friensys architects and builds agentic AI, custom software and MVPs, modernises existing systems and runs its own products used by 100+ institutions. For startups, SMEs and mid-size businesses — led by founders with 20+ years of experience.",
+    "Agentic AI, generative AI and custom software development company in India. We build AI agents and MVPs that run in production. Book a free consultation.",
   path: "/",
 });
 

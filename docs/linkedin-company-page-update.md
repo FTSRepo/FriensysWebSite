@@ -44,7 +44,7 @@ WHAT WE DO
 • Technology consulting — AI Opportunity Audits, CTO-as-a-service and architecture reviews.
 
 OUR OWN PRODUCTS
-School ERP (used by 100+ institutions), Education CRM, School App, College ERP, Customer Loyalty, Escalation System, Procurement Marketplace and OD-SAS device test monitoring.
+School ERP (used by 100+ institutions), Education CRM, School App, College ERP, Customer Loyalty, Escalation System and OD-SAS device test monitoring.
 
 INDUSTRIES
 Education · Retail & e-commerce · Healthcare · Finance, logistics & manufacturing
@@ -86,7 +86,7 @@ This is the website address (confirmed correct on 11 Nov).
 **Status 11 Nov:**
 - **Published:** School Management Software (= School ERP).
 - **In LinkedIn review** (publish each once approved: Admin > Products > Manage > Publish): Educational CRM, Friensys College ERP, Friensys School App, Friensys Customer Loyalty, Friensys Escalation Management.
-- **Not added:** Marketplace, OD-SAS (no matching LinkedIn software category).
+- **Not added:** OD-SAS (no matching LinkedIn software category).
 - **Logo (11 Nov):** new Friensys logo (`docs/brand/friensys-linkedin-logo-300.png`) uploaded to the company page and all six product listings.
 
 Add each as a LinkedIn Product, linking to its page on the website:
@@ -99,7 +99,6 @@ Add each as a LinkedIn Product, linking to its page on the website:
 | College ERP (Institute Management System) | https://friensys.com/products/college-erp |
 | Customer Loyalty | https://friensys.com/products/customer-loyalty |
 | Escalation System | https://friensys.com/products/escalation |
-| Procurement Marketplace | https://friensys.com/products/marketplace |
 | OD-SAS | https://friensys.com/products/odsas |
 
 ## People

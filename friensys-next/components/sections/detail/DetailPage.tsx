@@ -16,7 +16,7 @@ import { CaseStudies } from "@/components/sections/home/CaseStudies";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { buildBreadcrumbSchema } from "@/lib/schema";
-import { getProduct, type DetailPage as DetailPageData } from "@/lib/content";
+import { getProduct, getStats, type DetailPage as DetailPageData } from "@/lib/content";
 
 interface DetailPageProps {
   page: DetailPageData;
@@ -25,13 +25,16 @@ interface DetailPageProps {
   extra?: React.ReactNode;
   /** Industry slug whose case studies to show. */
   caseIndustry?: string;
+  /** Named experts block (E-E-A-T), rendered before the FAQ. */
+  experts?: React.ReactNode;
 }
 
-export function DetailPage({ page, section, extra, caseIndustry }: DetailPageProps) {
+export function DetailPage({ page, section, extra, caseIndustry, experts }: DetailPageProps) {
   const products = page.relatedProducts
     .map((slug) => getProduct(slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
   const path = `${section.href}/${page.slug}`;
+  const stats = getStats();
 
   return (
     <>
@@ -57,9 +60,20 @@ export function DetailPage({ page, section, extra, caseIndustry }: DetailPagePro
           <div className="mt-8 flex h-12 w-12 items-center justify-center rounded-[var(--radius-md)] bg-accent-primary/10 text-accent-primary">
             <DynIcon name={page.icon} className="h-6 w-6" aria-hidden="true" />
           </div>
-          <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight text-text-primary sm:text-5xl">
-            {page.hero.title}
-          </h1>
+          {page.h1 ? (
+            <>
+              <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight text-text-primary sm:text-5xl">
+                {page.h1}
+              </h1>
+              <p className="mt-4 max-w-3xl text-2xl font-semibold leading-snug text-text-secondary">
+                {page.hero.title}
+              </p>
+            </>
+          ) : (
+            <h1 className="mt-6 max-w-3xl text-4xl font-bold leading-tight text-text-primary sm:text-5xl">
+              {page.hero.title}
+            </h1>
+          )}
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-text-secondary">
             {page.hero.promise}
           </p>
@@ -128,6 +142,25 @@ export function DetailPage({ page, section, extra, caseIndustry }: DetailPagePro
         </div>
       </section>
 
+      {page.useCases && page.useCases.length > 0 && (
+        <section className="py-20">
+          <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
+            <SectionHeading label="Use cases" title="What we build with it" align="left" />
+            <div className="mt-10 grid gap-5 sm:grid-cols-2">
+              {page.useCases.map((u) => (
+                <div
+                  key={u.title}
+                  className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-elevated p-6 shadow-sm"
+                >
+                  <h3 className="font-semibold text-text-primary">{u.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-text-secondary">{u.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {extra}
 
       {caseIndustry && <CaseStudies industry={caseIndustry} title={`${page.name} work in production`} />}
@@ -139,11 +172,22 @@ export function DetailPage({ page, section, extra, caseIndustry }: DetailPagePro
         <section className="border-t border-border-subtle bg-bg-elevated py-20">
           <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <SectionHeading
-              label="Proven foundations"
-              title="Start from software that already runs"
-              subtitle="Our own products, ready to deploy and extend."
+              label="Proof"
+              title="AI and software we built and run"
+              subtitle="Our own platforms, in production every day. The same team designs, builds and supports your project."
               align="left"
             />
+            <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {[stats.schools, stats.modules, stats.reports, stats.years].map((s) => (
+                <div key={s.label} className="rounded-[var(--radius-lg)] border border-border-subtle bg-bg-base p-4">
+                  <dt className="text-xs text-text-muted">{s.label}</dt>
+                  <dd className="mt-1 text-2xl font-bold text-text-primary">
+                    {s.value.toLocaleString("en-IN")}
+                    {s.format === "plus" ? "+" : s.format === "percent" ? "%" : ""}
+                  </dd>
+                </div>
+              ))}
+            </dl>
             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {products.map((p) => (
                 <Link
@@ -164,7 +208,7 @@ export function DetailPage({ page, section, extra, caseIndustry }: DetailPagePro
                     <h3 className="font-semibold text-text-primary">{p.name}</h3>
                     <p className="mt-1 text-sm text-text-secondary">{p.tagline}</p>
                     <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent-primary">
-                      View product <ArrowRight className="h-4 w-4" />
+                      See the platform <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>
                 </Link>
@@ -173,6 +217,8 @@ export function DetailPage({ page, section, extra, caseIndustry }: DetailPagePro
           </div>
         </section>
       )}
+
+      {experts}
 
       {/* FAQ */}
       <section className="py-20">

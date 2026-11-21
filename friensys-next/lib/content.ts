@@ -91,12 +91,17 @@ const featuredCaseSchema = z.object({
 const detailPageSchema = z.object({
   slug: z.string(),
   name: z.string(),
+  /** <title> text before " | Friensys"; falls back to name. */
+  seoTitle: z.string().optional(),
+  /** Keyword-led H1; hero.title then shows as the sub-heading. */
+  h1: z.string().optional(),
   short: z.string(),
   icon: z.string(),
   proof: z.string().optional(),
   hero: z.object({ title: z.string(), promise: z.string() }),
   problems: z.array(z.string()),
   deliverables: z.array(z.object({ title: z.string(), body: z.string() })),
+  useCases: z.array(z.object({ title: z.string(), body: z.string() })).optional(),
   tech: z.array(z.string()),
   relatedProducts: z.array(z.string()),
   faqs: z.array(faqSchema),

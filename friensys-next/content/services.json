@@ -3,6 +3,8 @@
     {
       "slug": "agentic-ai",
       "name": "Agentic AI Architecture & Development",
+      "seoTitle": "Agentic AI Development Company in India",
+      "h1": "Agentic AI Development Services",
       "short": "We architect and build AI agents that plan, use your tools and complete multi-step work — safely, measurably, in production.",
       "icon": "Workflow",
       "hero": {
@@ -50,6 +52,28 @@
           "body": "Architecture reviews, pairing and playbooks so your own engineers can build the next agent."
         }
       ],
+      "useCases": [
+        {
+          "title": "AI agent for invoice processing",
+          "body": "Reads invoices and POs from email, matches them against orders in your ERP, flags mismatches and queues clean ones for one-click approval."
+        },
+        {
+          "title": "Enquiry triage and follow-up agent",
+          "body": "Classifies inbound leads from web, email and WhatsApp, enriches them from your CRM, drafts the reply and books the follow-up."
+        },
+        {
+          "title": "Research and reporting agent",
+          "body": "Pulls data from several internal systems, compiles the weekly report and explains what changed, with links to every source."
+        },
+        {
+          "title": "Support resolution agent",
+          "body": "Looks up orders, tickets and policies, resolves routine cases end to end and escalates the rest to a person with full context."
+        },
+        {
+          "title": "Multi-agent operations workflow",
+          "body": "A supervisor agent coordinating specialist agents for intake, checks and updates, with human approval on every money or customer action."
+        }
+      ],
       "tech": [
         "Claude Agent SDK",
         "OpenAI Agents SDK",
@@ -65,8 +89,7 @@
         "Azure"
       ],
       "relatedProducts": [
-        "school-erp",
-        "education-crm",
+        "ai-suite",
         "escalation"
       ],
       "faqs": [
@@ -95,6 +118,8 @@
     {
       "slug": "ai-solutions",
       "name": "AI & ML Solutions",
+      "seoTitle": "AI & ML Development Services: RAG, Document AI",
+      "h1": "AI & Generative AI Development Services",
       "short": "AI agents, document AI, RAG assistants and predictive analytics that work inside the software you already run.",
       "icon": "Brain",
       "hero": {
@@ -133,6 +158,24 @@
           "body": "Smart dashboards your managers can question in plain English."
         }
       ],
+      "useCases": [
+        {
+          "title": "RAG assistant for internal SOPs",
+          "body": "Staff ask questions of policies, manuals and SOPs in plain language and get answers that cite the exact document and section."
+        },
+        {
+          "title": "Document AI for invoices and contracts",
+          "body": "Extract fields from invoices, POs, KYC forms and contracts, validate them against your records and route exceptions for review."
+        },
+        {
+          "title": "LLM features inside your product",
+          "body": "Summaries, smart search, drafting and classification added to your existing software, with cost per request tracked from day one."
+        },
+        {
+          "title": "Predictive analytics on your own data",
+          "body": "Lead scoring, demand forecasting and churn or dues prediction trained on your history and surfaced where your team already works."
+        }
+      ],
       "tech": [
         "OpenAI",
         "Anthropic Claude",
@@ -146,8 +189,8 @@
       ],
       "relatedProducts": [
         "ai-suite",
-        "education-crm",
-        "escalation"
+        "odsas",
+        "education-crm"
       ],
       "faqs": [
         {
@@ -167,6 +210,8 @@
     {
       "slug": "custom-software",
       "name": "Custom Software & MVP",
+      "seoTitle": "Custom Software & MVP Development Company",
+      "h1": "Custom Software & MVP Development",
       "short": "Web, mobile and SaaS products built from scratch — from first MVP to a platform that scales.",
       "icon": "Code2",
       "hero": {
@@ -205,6 +250,24 @@
           "body": "Designers, full-stack and AI engineers who stay with your product after launch."
         }
       ],
+      "useCases": [
+        {
+          "title": "Startup MVP",
+          "body": "The smallest product that proves your idea with real users: web or mobile, authentication, payments and analytics, built to production standards."
+        },
+        {
+          "title": "SaaS platform",
+          "body": "Multi-tenant architecture, subscription billing, roles and an admin console, designed to grow from the first customer to thousands."
+        },
+        {
+          "title": "Internal operations software",
+          "body": "Custom ERP, CRM or workflow tools shaped around how your team actually works, replacing spreadsheets and disconnected tools."
+        },
+        {
+          "title": "AI-enabled product",
+          "body": "A product where LLM features, search and analytics are part of the data model from the start rather than added later."
+        }
+      ],
       "tech": [
         "React",
         "Next.js",
@@ -219,7 +282,6 @@
       ],
       "relatedProducts": [
         "school-erp",
-        "school-app",
         "customer-loyalty"
       ],
       "faqs": [
@@ -240,6 +302,8 @@
     {
       "slug": "modernisation-support",
       "name": "Modernisation & Support",
+      "seoTitle": "Legacy Software Modernisation & AMC Services",
+      "h1": "Legacy Application Modernisation & Support",
       "short": "Take over, upgrade and run existing systems: legacy migration, cloud, AMC and dedicated engineering teams.",
       "icon": "RefreshCw",
       "hero": {
@@ -278,6 +342,24 @@
           "body": "Implementation, data migration, training and support for customers of our own products."
         }
       ],
+      "useCases": [
+        {
+          "title": "Vendor takeover",
+          "body": "Audit, document and stabilise software another vendor built, then take over support with agreed response times."
+        },
+        {
+          "title": "Legacy to cloud migration",
+          "body": "Move an on-premise or ageing application to AWS or Azure incrementally, running old and new in parallel until cut-over."
+        },
+        {
+          "title": "Annual maintenance contract (AMC)",
+          "body": "Patches, backups, monitoring and small enhancements under a predictable yearly contract."
+        },
+        {
+          "title": "Adding AI to an existing system",
+          "body": "Document AI, assistants or analytics added to software you already run, without a rewrite."
+        }
+      ],
       "tech": [
         ".NET",
         "Node.js",
@@ -313,6 +395,8 @@
     {
       "slug": "consulting",
       "name": "Technology Consulting",
+      "seoTitle": "CTO as a Service & AI Consulting in India",
+      "h1": "Fractional CTO & AI Consulting",
       "short": "CTO-as-a-service, architecture reviews, AI readiness and digital transformation roadmaps.",
       "icon": "Compass",
       "hero": {
@@ -349,6 +433,24 @@
         {
           "title": "Vendor & RFP support",
           "body": "Requirement writing and independent evaluation of vendor proposals."
+        }
+      ],
+      "useCases": [
+        {
+          "title": "AI readiness assessment",
+          "body": "Which processes are worth automating with AI, what data each needs, the expected impact and cost, written up as a report you keep."
+        },
+        {
+          "title": "Fractional CTO for a startup",
+          "body": "A part-time technology leader for architecture, hiring, vendor choice and roadmap until you hire full-time."
+        },
+        {
+          "title": "Architecture and code review",
+          "body": "An independent review of security, scalability and cloud cost before a funding round, a launch or a vendor change."
+        },
+        {
+          "title": "Vendor and RFP evaluation",
+          "body": "Requirements written down and vendor proposals compared on scope, risk and price."
         }
       ],
       "tech": [

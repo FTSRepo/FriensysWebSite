@@ -161,25 +161,6 @@
       }
     },
     {
-      "slug": "marketplace",
-      "name": "Marketplace",
-      "tagline": "Procurement of bought-out parts, simplified.",
-      "summary": "A procurement marketplace that helps manufacturers source bought-out parts, compare supplier quotes and manage purchase workflows in one place.",
-      "hero": "/screenshots/marketplace.jpg",
-      "icon": "Factory",
-      "features": [
-        "Supplier catalogue",
-        "Quote requests & comparison",
-        "Purchase order workflow",
-        "Vendor onboarding",
-        "Procurement reports"
-      ],
-      "primaryCta": {
-        "label": "Talk to us",
-        "href": "/contact?intent=marketplace"
-      }
-    },
-    {
       "slug": "education-crm",
       "name": "Education CRM",
       "tagline": "Capture every admission lead.",

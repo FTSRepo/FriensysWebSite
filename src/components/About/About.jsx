@@ -31,7 +31,7 @@ const timelineData = [
   {
     year: "2021",
     title: "User Adoption",
-    description: "Adopted by 25+ schools across multiple states.",
+    description: "Adopted by 25+ schools.",
   },
   {
     year: "2023",

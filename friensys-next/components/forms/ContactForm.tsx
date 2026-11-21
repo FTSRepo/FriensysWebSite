@@ -3,10 +3,11 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AuroraButton } from "@/components/ui/AuroraButton";
 import { sendContactEmail } from "@/lib/emailjs";
 import { site } from "@/lib/site";
+import { event } from "@/lib/analytics";
 
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -19,22 +20,42 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
+/** Service-page slugs arrive as /contact?intent=<slug>; map them onto the form's options. */
+const INTENT_FROM_URL: Record<string, FormData["intent"]> = {
+  "agentic-ai": "ai",
+  "ai-solutions": "ai",
+  "custom-software": "software",
+  "modernisation-support": "modernisation",
+  consulting: "consultation",
+};
+
 interface ContactFormProps {
   defaultIntent?: FormData["intent"];
 }
 
-export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
+export function ContactForm({ defaultIntent = "consultation" }: ContactFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  // Raw ?intent= value, kept for lead attribution (static export: read on the client).
+  const [source, setSource] = useState("");
 
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: { intent: defaultIntent },
   });
+
+  useEffect(() => {
+    const raw = new URLSearchParams(window.location.search).get("intent") ?? "";
+    if (!raw) return;
+    setSource(raw);
+    const mapped = INTENT_FROM_URL[raw] ?? schema.shape.intent.safeParse(raw).data;
+    if (mapped) setValue("intent", mapped);
+  }, [setValue]);
 
   async function onSubmit(data: FormData) {
     setStatus("sending");
@@ -47,11 +68,12 @@ export function ContactForm({ defaultIntent = "demo" }: ContactFormProps) {
         intent: data.intent,
         // legacy EmailJS template only renders location + message, so carry the new fields there too
         location: data.schoolName,
-        message: `Enquiry: ${data.intent}
+        message: `Enquiry: ${data.intent}${source ? ` (from: ${source})` : ""}
 Organisation: ${data.schoolName}
 
 ${data.message}`,
       });
+      event("generate_lead", { form: "contact", intent: data.intent, source: source || "direct" });
       setStatus("success");
       reset();
     } catch {

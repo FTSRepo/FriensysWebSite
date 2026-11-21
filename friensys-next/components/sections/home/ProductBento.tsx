@@ -34,14 +34,6 @@ const featured = [
     large: false,
   },
   {
-    slug: "marketplace",
-    name: "Procurement Marketplace",
-    tagline: "Sourcing of bought-out parts for manufacturers",
-    screenshot: "/screenshots/marketplace.jpg",
-    badge: null,
-    large: false,
-  },
-  {
     slug: "escalation",
     name: "Escalation System",
     tagline: "Ticket routing with SLA tracking",

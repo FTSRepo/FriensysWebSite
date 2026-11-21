@@ -7,9 +7,11 @@ interface SectionHeadingProps {
   subtitle?: ReactNode;
   align?: "left" | "center";
   className?: string;
+  /** Use "h1" when the heading is the page's main title. */
+  as?: "h1" | "h2";
 }
 
-export function SectionHeading({ label, title, subtitle, align = "center", className }: SectionHeadingProps) {
+export function SectionHeading({ label, title, subtitle, align = "center", className, as: Tag = "h2" }: SectionHeadingProps) {
   return (
     <div className={cn("flex flex-col gap-3", align === "center" && "items-center text-center", className)}>
       {label && (
@@ -17,9 +19,9 @@ export function SectionHeading({ label, title, subtitle, align = "center", class
           {label}
         </span>
       )}
-      <h2 className="max-w-3xl text-3xl font-bold leading-tight text-text-primary sm:text-4xl lg:text-5xl">
+      <Tag className="max-w-3xl text-3xl font-bold leading-tight text-text-primary sm:text-4xl lg:text-5xl">
         {title}
-      </h2>
+      </Tag>
       {subtitle && (
         <p className="max-w-2xl text-base leading-relaxed text-text-secondary sm:text-lg">
           {subtitle}

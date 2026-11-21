@@ -214,11 +214,6 @@ function Header() {
                           desc: "Boost retention with personalized reward programs and analytics.",
                         },
                         {
-                          to: "/product/marketplace",
-                          label: "Marketplace",
-                          desc: "A unified digital marketplace for educational tools and services.",
-                        },
-                        {
                           to: "/product/collegeErp",
                           label: "Education CRM",
                           desc: "Advanced CRM tailored for college admissions and student lifecycle.",
@@ -398,7 +393,6 @@ function Header() {
                       to: "/product/customerLoyalty",
                       label: "Customer Loyalty",
                     },
-                    { to: "/product/marketplace", label: "Marketplace" },
                     {
                       to: "/product/collegeErp",
                       label: "Educational CRM ",

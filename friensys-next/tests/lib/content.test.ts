@@ -166,9 +166,9 @@ describe("repositioning content", () => {
     expect(getEngagements().map((e) => e.name)).toContain("AI Opportunity Audit");
   });
 
-  it("OD-SAS and Marketplace describe the real manufacturing products", () => {
+  it("OD-SAS describes the real manufacturing product", () => {
     expect(getProduct("odsas")?.summary.toLowerCase()).toContain("test");
-    expect(getProduct("marketplace")?.summary.toLowerCase()).toContain("procurement");
+    expect(getProduct("marketplace")).toBeUndefined();
   });
 
   it("never claims 500+ schools in content", () => {

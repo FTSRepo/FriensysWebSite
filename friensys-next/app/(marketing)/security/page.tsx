@@ -62,6 +62,7 @@ export default function SecurityPage() {
       <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            as="h1"
             label="Security"
             title="Your school's data. Hosted in India. Compliant by design."
             subtitle="We treat student data with the same care a principal would — locked down, audited, and never shared without consent."

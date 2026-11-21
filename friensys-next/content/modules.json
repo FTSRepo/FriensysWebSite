@@ -22,7 +22,7 @@
     },
     {
       "name": "Engagement",
-      "modules": ["Parent App", "News & Events", "Photo Gallery", "Loyalty", "Marketplace"]
+      "modules": ["Parent App", "News & Events", "Photo Gallery", "Loyalty"]
     },
     {
       "name": "Insights",

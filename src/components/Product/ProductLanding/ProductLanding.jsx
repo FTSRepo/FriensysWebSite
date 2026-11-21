@@ -45,14 +45,6 @@ const products = [
     link: "/product/customerLoyalty",
   },
   {
-    name: "Marketplace",
-    subtitle: "Marketplace",
-    description:
-      "A unified digital marketplace for educational tools and services. Bring together educational vendors, content providers, and institutions into a unified ecosystem where services and tools can be discovered and acquired seamlessly.",
-    image: WebsiteImages.MarketplaceDashboard,
-    link: "/product/marketplace",
-  },
-  {
     name: "Education CRM",
     subtitle: "Education CRM",
     description:

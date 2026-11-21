@@ -79,7 +79,6 @@ const productAi = [
   { product: "Education CRM", today: "Admission leads from JustDial, Sulekha, Shiksha, CollegeDunia and your website.", next: "ML lead scoring; AI counsellor follow-up drafts." },
   { product: "Escalation System", today: "Multi-level ticket routing with SLA tracking.", next: "AI ticket classification, priority prediction, suggested replies." },
   { product: "Customer Loyalty", today: "Points, tiers, coupons and campaigns with analytics.", next: "Churn prediction; personalised offers from purchase behaviour." },
-  { product: "Procurement Marketplace", today: "Procurement of bought-out parts for manufacturers.", next: "AI quote comparison; PO and invoice extraction; demand forecasting." },
   { product: "OD-SAS", today: "Monitoring of device behaviour under controlled environmental test conditions.", next: "Anomaly detection on test runs; automated test-report summaries." },
 ];
 

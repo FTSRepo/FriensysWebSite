@@ -5,9 +5,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { buildBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Blog — Friensys School Management Insights",
+  title: "AI & Software Engineering Insights",
   description:
-    "Practical guides on school ERP implementation, fees automation, DPDPA compliance, and AI for school administrators.",
+    "Practical guides on agentic AI, generative AI, custom software and MVP development from the Friensys engineering team, plus our education archive.",
   path: "/blog",
 });
 
@@ -15,6 +15,10 @@ export default function BlogPage() {
   const sorted = [...posts]
     .filter((p) => p.published)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  // AI and software first; the school archive sits last under "Education".
+  const categories = [...new Set(sorted.map((p) => p.category))].sort(
+    (a, b) => Number(a === "Education") - Number(b === "Education"),
+  );
 
   return (
     <>
@@ -29,18 +33,25 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h1 className="mb-4 text-4xl font-bold text-text-primary md:text-5xl">
-              School management insights
+              AI &amp; software engineering insights
             </h1>
             <p className="mx-auto max-w-xl text-lg text-text-secondary">
-              Practical guides for school administrators — no vendor fluff.
+              How we design, build and run AI agents and custom software in production.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {sorted.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
+          {categories.map((category) => (
+            <div key={category} className="mb-16 last:mb-0">
+              <h2 className="mb-6 text-2xl font-bold text-text-primary">{category}</h2>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {sorted
+                  .filter((p) => p.category === category)
+                  .map((post) => (
+                    <BlogCard key={post.slug} post={post} />
+                  ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </>

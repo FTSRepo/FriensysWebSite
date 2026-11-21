@@ -18,11 +18,11 @@
         { "label": "Education", "href": "/industries/education", "description": "Schools, colleges and coaching institutes" },
         { "label": "Retail & E-commerce", "href": "/industries/retail", "description": "Retailers, distributors and D2C brands" },
         { "label": "Healthcare", "href": "/industries/healthcare", "description": "Clinics, hospitals and health-tech" },
-        { "label": "Finance, Logistics & Manufacturing", "href": "/industries/finance-logistics-manufacturing", "description": "Procurement, document AI, test data" }
+        { "label": "Finance, Logistics & Manufacturing", "href": "/industries/finance-logistics-manufacturing", "description": "Document AI, test data, forecasting" }
       ]
     },
     {
-      "label": "Products",
+      "label": "Our Platforms",
       "items": [
         { "label": "School ERP", "href": "/school-erp", "description": "Admissions to graduation for K-12" },
         { "label": "Education CRM", "href": "/products/education-crm", "description": "Admission lead capture and follow-up" },
@@ -30,11 +30,11 @@
         { "label": "College ERP", "href": "/products/college-erp", "description": "Higher-ed academics, hostel and alumni" },
         { "label": "Customer Loyalty", "href": "/products/customer-loyalty", "description": "Points, tiers, coupons and campaigns" },
         { "label": "Escalation System", "href": "/products/escalation", "description": "Ticket routing with SLA tracking" },
-        { "label": "Marketplace", "href": "/products/marketplace", "description": "Procurement of bought-out parts" },
         { "label": "OD-SAS", "href": "/products/odsas", "description": "Device test monitoring" }
       ]
     },
     { "label": "Case studies", "href": "/case-studies" },
+    { "label": "Insights", "href": "/blog" },
     { "label": "About", "href": "/about" }
   ],
   "footer": {
@@ -52,7 +52,7 @@
       { "label": "Healthcare", "href": "/industries/healthcare" },
       { "label": "Finance, Logistics & Mfg", "href": "/industries/finance-logistics-manufacturing" }
     ],
-    "Products": [
+    "Our Platforms": [
       { "label": "School ERP", "href": "/school-erp" },
       { "label": "Education CRM", "href": "/products/education-crm" },
       { "label": "Customer Loyalty", "href": "/products/customer-loyalty" },
@@ -62,7 +62,7 @@
       { "label": "About", "href": "/about" },
       { "label": "Case studies", "href": "/case-studies" },
       { "label": "Careers", "href": "/careers" },
-      { "label": "Blog", "href": "/blog" },
+      { "label": "Insights", "href": "/blog" },
       { "label": "Contact", "href": "/contact" }
     ],
     "Legal": [

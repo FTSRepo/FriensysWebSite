@@ -52,7 +52,7 @@
         { "title": "Custom retail operations", "body": "Order, inventory, distributor and field-sales apps built around your process." }
       ],
       "tech": ["Next.js", "React Native", "Node.js", "PostgreSQL", "Redis", "AWS"],
-      "relatedProducts": ["customer-loyalty", "marketplace"],
+      "relatedProducts": ["customer-loyalty"],
       "faqs": [
         { "q": "Can the loyalty platform work with our existing POS?", "a": "Usually yes, through an integration we scope during the first call." },
         { "q": "Do we need a lot of data for forecasting?", "a": "Twelve months of order history is a good start. The AI Opportunity Audit tells you whether your data is ready." }
@@ -89,9 +89,9 @@
     {
       "slug": "finance-logistics-manufacturing",
       "name": "Finance, Logistics & Manufacturing",
-      "short": "Procurement, document AI, test-data monitoring and operations software for industrial and financial businesses.",
+      "short": "Document AI, test-data monitoring and operations software for industrial and financial businesses.",
       "icon": "Factory",
-      "proof": "We built a procurement marketplace for bought-out parts and OD-SAS, a test-monitoring system for devices under controlled environmental conditions.",
+      "proof": "We built OD-SAS, a test-monitoring system for devices under controlled environmental conditions.",
       "hero": {
         "title": "Less paperwork. Earlier warnings. Better-timed buying.",
         "promise": "Where AI actually helps an industrial or financial SME isn't robots — it's paperwork and data. We automate POs, invoices and quotes, watch test and operations data for problems, and forecast what you'll need."
@@ -103,13 +103,12 @@
         "Parts bought too early, or too late"
       ],
       "deliverables": [
-        { "title": "Procurement platform", "body": "Sourcing of bought-out parts, supplier quotes and purchase workflows in one place." },
         { "title": "PO, invoice & quote AI", "body": "Read POs, quotations and invoices and flag mismatches in price, quantity or terms before payment." },
         { "title": "Test & quality monitoring", "body": "Capture device and test-run data, and spot unusual patterns early so engineers investigate before a batch fails." },
         { "title": "Demand & inventory forecasting", "body": "Forecasts from your own order history so you buy parts when you need them." }
       ],
       "tech": ["Python / FastAPI", ".NET", "SQL Server", "PostgreSQL", "IoT data pipelines", "Azure", "AWS"],
-      "relatedProducts": ["marketplace", "odsas"],
+      "relatedProducts": ["odsas"],
       "faqs": [
         { "q": "We use Tally / an existing ERP. Can you work with it?", "a": "Yes. Document AI and forecasting sit beside your current system and exchange data with it." },
         { "q": "Can you connect to our test equipment?", "a": "OD-SAS already captures device behaviour under controlled environmental test conditions; we scope integrations for other equipment case by case." }

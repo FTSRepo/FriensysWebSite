@@ -34,7 +34,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-0.5 flex-1">
+          <nav className="hidden lg:flex items-center gap-0.5 flex-1">
             {nav.header.map((item) =>
               "items" in item ? (
                 <div
@@ -86,11 +86,11 @@ export function SiteHeader() {
 
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <AuroraButton href="/contact?intent=consultation" size="sm" className="hidden md:inline-flex">
+            <AuroraButton href="/contact?intent=consultation" size="sm" className="hidden lg:inline-flex">
               Book a free consultation
             </AuroraButton>
             <button
-              className="md:hidden p-2 text-text-secondary hover:text-text-primary"
+              className="lg:hidden p-2 text-text-secondary hover:text-text-primary"
               onClick={() => setMobileOpen(true)}
               aria-label="Open navigation"
             >

@@ -4,6 +4,9 @@ import { getServices, getService } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import { DetailPage } from "@/components/sections/detail/DetailPage";
 import { AgenticShowcase } from "@/components/sections/home/AgenticShowcase";
+import { Leadership } from "@/components/sections/home/Leadership";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { buildServiceSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -16,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getService(slug);
   if (!service) return {};
   return buildMetadata({
-    title: service.name,
+    title: service.seoTitle ?? service.name,
     description: service.short,
     path: `/services/${slug}`,
   });
@@ -27,10 +30,20 @@ export default async function ServicePage({ params }: Props) {
   const service = getService(slug);
   if (!service) notFound();
   return (
-    <DetailPage
-      page={service}
-      section={{ label: "Services", href: "/services" }}
-      extra={service.slug === "agentic-ai" ? <AgenticShowcase showLink={false} /> : undefined}
-    />
+    <>
+      <JsonLd
+        data={buildServiceSchema({
+          name: service.h1 ?? service.name,
+          description: service.short,
+          url: `/services/${slug}`,
+        })}
+      />
+      <DetailPage
+        page={service}
+        section={{ label: "Services", href: "/services" }}
+        extra={service.slug === "agentic-ai" ? <AgenticShowcase showLink={false} /> : undefined}
+        experts={<Leadership title="Who leads this work" />}
+      />
+    </>
   );
 }

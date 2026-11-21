@@ -14,7 +14,7 @@ const flow = [
 
 export function Hero() {
   const stats = getStats();
-  const proof = ["leadership", "years", "schools", "states"]
+  const proof = ["leadership", "years", "schools", "reports"]
     .map((k) => stats[k])
     .filter(Boolean);
 
