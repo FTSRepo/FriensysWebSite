@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const industry = getIndustry(slug);
   if (!industry) return {};
   return buildMetadata({
-    title: `Software & AI for ${industry.name}`,
-    description: industry.short,
+    title: industry.seoTitle ?? `Software & AI for ${industry.name}`,
+    description: industry.seoDescription ?? industry.short,
     path: `/industries/${slug}`,
   });
 }

@@ -18,6 +18,10 @@ const productSchema = z.object({
   name: z.string(),
   tagline: z.string(),
   summary: z.string(),
+  /** <title> text before " | Friensys"; falls back to name. */
+  seoTitle: z.string().optional(),
+  /** Meta description (aim 140-155 chars); falls back to summary. */
+  seoDescription: z.string().optional(),
   hero: z.string(),
   icon: z.string(),
   features: z.array(z.string()),
@@ -78,6 +82,8 @@ const featuredCaseSchema = z.object({
   logo: z.string(),
   title: z.string(),
   summary: z.string(),
+  /** Meta description (aim 140-155 chars); falls back to summary. */
+  seoDescription: z.string().optional(),
   services: z.array(z.string()),
   products: z.array(z.string()),
   challenge: z.array(z.string()),
@@ -96,6 +102,8 @@ const detailPageSchema = z.object({
   /** Keyword-led H1; hero.title then shows as the sub-heading. */
   h1: z.string().optional(),
   short: z.string(),
+  /** Meta description (aim 140-155 chars); falls back to short. */
+  seoDescription: z.string().optional(),
   icon: z.string(),
   proof: z.string().optional(),
   hero: z.object({ title: z.string(), promise: z.string() }),

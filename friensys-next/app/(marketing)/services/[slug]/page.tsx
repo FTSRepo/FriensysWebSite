@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   return buildMetadata({
     title: service.seoTitle ?? service.name,
-    description: service.short,
+    description: service.seoDescription ?? service.short,
     path: `/services/${slug}`,
   });
 }
@@ -34,7 +34,7 @@ export default async function ServicePage({ params }: Props) {
       <JsonLd
         data={buildServiceSchema({
           name: service.h1 ?? service.name,
-          description: service.short,
+          description: service.seoDescription ?? service.short,
           url: `/services/${slug}`,
         })}
       />

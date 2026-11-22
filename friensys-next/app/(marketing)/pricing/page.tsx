@@ -6,7 +6,7 @@ import { CTASection } from "@/components/sections/shared/CTASection";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pricing — School ERP",
+  title: "School ERP Pricing & Plans",
   description:
     "Friensys School ERP pricing depends on student count and modules selected. We share a tailored quote within 48 hours. Modular — pay for what you need.",
   path: "/pricing",

@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = getProduct(slug);
   if (!product) return {};
   return buildMetadata({
-    title: `${product.name} — Friensys`,
-    description: product.summary,
+    title: product.seoTitle ?? product.name,
+    description: product.seoDescription ?? product.summary,
     path: `/products/${slug}`,
   });
 }

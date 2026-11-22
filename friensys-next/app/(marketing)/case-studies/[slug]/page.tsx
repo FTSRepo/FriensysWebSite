@@ -20,8 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const study = getFeaturedCase(slug);
   if (!study) return {};
   return buildMetadata({
-    title: `${study.client} — Case Study`,
-    description: study.summary,
+    title: `${study.client} Case Study`,
+    description: study.seoDescription ?? study.summary,
     path: `/case-studies/${slug}`,
   });
 }

@@ -4,6 +4,7 @@
       "slug": "education",
       "name": "Education",
       "short": "School ERP, admissions CRM, parent apps and AI for administrators.",
+      "seoDescription": "School ERP, admission CRM, parent apps and AI tools for schools, colleges and coaching institutes in India. Running in 100+ institutions since 2017.",
       "icon": "GraduationCap",
       "proof": "100+ institutions run Friensys software every day.",
       "hero": {
@@ -33,6 +34,7 @@
       "slug": "retail",
       "name": "Retail & E-commerce",
       "short": "Loyalty, storefronts, inventory and demand insight for retailers, distributors and D2C brands.",
+      "seoDescription": "Software and AI for retailers, distributors and D2C brands: loyalty programmes, storefronts, inventory and demand forecasting that bring customers back.",
       "icon": "ShoppingBag",
       "proof": "Our Customer Loyalty platform runs points, tiers, coupons and campaigns for retail businesses.",
       "hero": {
@@ -62,6 +64,7 @@
       "slug": "healthcare",
       "name": "Healthcare",
       "short": "Clinic and hospital software, patient apps and AI assistants that respect patient privacy.",
+      "seoDescription": "Healthcare software development for clinics and hospitals: patient apps, practice management and AI assistants built with patient privacy in mind.",
       "icon": "HeartPulse",
       "hero": {
         "title": "Software that gives clinicians time back",
@@ -90,6 +93,7 @@
       "slug": "finance-logistics-manufacturing",
       "name": "Finance, Logistics & Manufacturing",
       "short": "Document AI, test-data monitoring and operations software for industrial and financial businesses.",
+      "seoDescription": "Document AI, test-data monitoring and operations software for finance, logistics and manufacturing firms. Less paperwork, earlier warnings, better buying.",
       "icon": "Factory",
       "proof": "We built OD-SAS, a test-monitoring system for devices under controlled environmental conditions.",
       "hero": {

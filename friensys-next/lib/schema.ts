@@ -28,7 +28,7 @@ export function buildOrganizationSchema() {
       site.profiles.designrush,
       site.profiles.googleBusiness,
     ].filter(Boolean),
-    foundingDate: "2022",
+    foundingDate: "2017",
     founder: teamJson.team.map((m) => ({ "@type": "Person", name: m.name, jobTitle: m.role })),
     areaServed: "IN",
   };
@@ -85,39 +85,33 @@ export function buildWebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: site.name,
-    url: site.url,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: { "@type": "EntryPoint", urlTemplate: `${site.url}/blog?q={search_term_string}` },
-      "query-input": "required name=search_term_string",
-    },
-  };
-}
-
-export function buildSoftwareApplicationSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Friensys School ERP",
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web, Android, iOS",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "INR", description: "Contact for pricing" },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.7", reviewCount: "86" },
+    alternateName: site.legalName,
     url: site.url,
   };
 }
 
+const abs = (path?: string) => (path && path.startsWith("/") ? `${site.url}${path}` : path);
+
+/** No public price, so no Offer: an Offer without a price is a Search Console error. */
 export function buildProductSchema(args: { name: string; description: string; url: string; image?: string }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "SoftwareApplication",
     name: args.name,
     description: args.description,
     url: `${site.url}${args.url}`,
-    image: args.image,
-    brand: { "@type": "Brand", name: site.name },
-    offers: { "@type": "Offer", availability: "https://schema.org/InStock", priceCurrency: "INR" },
+    image: abs(args.image),
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web, Android, iOS",
+    publisher: { "@type": "Organization", name: site.legalName, url: site.url },
   };
+}
+
+/** Team members become a Person with their LinkedIn; anything else is credited to the company. */
+function buildAuthor(name?: string) {
+  const member = teamJson.team.find((m) => m.name === name);
+  if (member) return { "@type": "Person", name: member.name, jobTitle: member.role, url: member.linkedin };
+  return { "@type": "Organization", name: site.legalName, url: site.url };
 }
 
 export function buildArticleSchema(args: {
@@ -137,9 +131,9 @@ export function buildArticleSchema(args: {
     url: `${site.url}${args.url}`,
     datePublished: args.datePublished,
     dateModified: args.dateModified ?? args.datePublished,
-    author: { "@type": "Person", name: args.author ?? "Friensys" },
+    author: buildAuthor(args.author),
     publisher: { "@type": "Organization", name: site.name, logo: `${site.url}/brand/friensys-logo.png` },
-    image: args.image,
+    image: abs(args.image ?? "/og-default.png"),
     mainEntityOfPage: { "@type": "WebPage", "@id": `${site.url}${args.url}` },
   };
 }

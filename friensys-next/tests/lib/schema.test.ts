@@ -83,14 +83,16 @@ describe("buildOrganizationSchema", () => {
 });
 
 describe("buildProductSchema", () => {
-  it("builds product with brand", () => {
+  it("builds a SoftwareApplication with absolute image and no priceless Offer", () => {
     const schema = buildProductSchema({
       name: "Fees Module",
       description: "Automate fees",
       url: "/products/fees",
+      image: "/screenshots/fees.jpg",
     });
-    expect(schema["@type"]).toBe("Product");
-    expect(schema.brand).toMatchObject({ "@type": "Brand", name: site.name });
+    expect(schema["@type"]).toBe("SoftwareApplication");
+    expect(schema.image).toBe(`${site.url}/screenshots/fees.jpg`);
+    expect(schema).not.toHaveProperty("offers");
     expect(schema.url).toBe(`${site.url}/products/fees`);
   });
 });
