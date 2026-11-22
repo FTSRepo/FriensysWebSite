@@ -181,7 +181,7 @@ The newest post is from May 2025. All 5 posts are about education, while the hom
 
 3. Aim for 1 new case study a month. You have 100+ schools, so pick ones with measurable results.
 
-### 9. Put keywords in the industry H1s
+### 9. Put keywords in the industry H1s — DONE (commit 81ce719)
 
 The industry H1s are good marketing lines, but they don't contain the keyword (for example "Software that gives clinicians time back"). `detailPageSchema` already supports `h1` and `seoTitle`. In `content/industries.json` add:
 
@@ -196,7 +196,7 @@ The current `hero.title` then shows as the sub-heading. Do the same for retail (
 
 ## Priority 3 — performance and sharing
 
-### 10. Reduce homepage image weight (~2.5 MB today)
+### 10. Reduce homepage image weight — DONE (commit 81ce719; ~2.5 MB -> ~0.5 MB). Still to do: measure on PageSpeed (step 4)
 
 The homepage loads 65 `<img>` tags, mostly client-logo PNGs at 15–25 KB each, and each logo appears twice (the marquee).
 
