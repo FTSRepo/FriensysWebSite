@@ -21,11 +21,12 @@ export function TrustStrip() {
           {logos.map((school, i) => (
             <div
               key={`${school.logo}-${i}`}
+              aria-hidden={i >= schools.length || undefined}
               className="flex shrink-0 items-center justify-center rounded-lg bg-white border border-border-subtle p-2 opacity-90 transition hover:opacity-100"
             >
               <Image
                 src={school.logo}
-                alt={school.name}
+                alt={i >= schools.length ? "" : school.name}
                 width={80}
                 height={80}
                 className="h-20 w-auto object-contain"

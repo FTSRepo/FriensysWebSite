@@ -20,7 +20,7 @@
           "value": "0"
         }
       ],
-      "logo": "/logos/delhi-public.png"
+      "logo": "/logos/delhi-public.webp"
     },
     {
       "slug": "genius-parent-app-adoption",
@@ -42,7 +42,7 @@
           "value": "+48"
         }
       ],
-      "logo": "/logos/genius-public.png"
+      "logo": "/logos/genius-public.webp"
     },
     {
       "slug": "adhyayan-modular-rollout",
@@ -64,7 +64,7 @@
           "value": "11 days"
         }
       ],
-      "logo": "/logos/adhyayan-residential.png"
+      "logo": "/logos/adhyayan-residential.webp"
     }
   ],
   "featured": [
@@ -76,7 +76,7 @@
         "education"
       ],
       "location": "Dwarka, New Delhi",
-      "logo": "/logos/unique.png",
+      "logo": "/logos/unique.webp",
       "title": "Exams and reporting, automated for a graduate and postgraduate institute",
       "summary": "Unique Educational Institute runs a range of graduate and postgraduate courses in Dwarka, New Delhi. Friensys digitised its academic administration so exams, results and reports no longer depend on manual registers and spreadsheets.",
       "seoDescription": "How Friensys digitised exams, results and reporting for Unique Educational Institute, Dwarka, replacing manual registers and spreadsheets.",
@@ -115,7 +115,7 @@
         "finance-logistics-manufacturing"
       ],
       "location": "Kanpur, Uttar Pradesh",
-      "logo": "/logos/vk-logo.jpg",
+      "logo": "/logos/vk-logo.webp",
       "title": "A customer loyalty programme for a textile manufacturer and retailer",
       "summary": "VK Enterprises manufactures and retails textiles. Friensys built and runs the loyalty programme that rewards its customers and gives the business a direct line to them.",
       "seoDescription": "How Friensys built and runs the customer loyalty programme for VK Enterprises, a textile manufacturer and retailer, giving it a direct line to customers.",

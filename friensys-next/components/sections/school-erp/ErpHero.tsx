@@ -34,7 +34,7 @@ export function ErpHero() {
             </div>
           </div>
           <BrowserFrame
-            src="/screenshots/school-erp.jpg"
+            src="/screenshots/school-erp.webp"
             alt="Friensys School ERP dashboard showing fee collection overview"
           />
         </div>

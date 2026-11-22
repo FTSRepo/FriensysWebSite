@@ -7,7 +7,7 @@
       "summary": "End-to-end school management — admissions, fees, attendance, exams, report cards, parent communication. 40+ modules, 100+ schools live.",
       "seoTitle": "School ERP Software for Indian Schools",
       "seoDescription": "School ERP software with 40+ modules: admissions, fees, attendance, exams, report cards and parent app. Live in 100+ CBSE, ICSE and State Board schools.",
-      "hero": "/screenshots/school-erp.jpg",
+      "hero": "/screenshots/school-erp.webp",
       "icon": "GraduationCap",
       "features": [
         "Admissions",
@@ -31,7 +31,7 @@
       "summary": "AI that acts, not just reports — attendance anomaly alerts, fee-default prediction, and auto-generated progress narratives. Live today, reviewed by your staff before anything ships.",
       "seoTitle": "AI Suite for Schools: Predictive Alerts & Reports",
       "seoDescription": "AI for school administrators: attendance anomaly alerts, fee-default prediction and auto-written progress reports, reviewed by your staff before sending.",
-      "hero": "/screenshots/ai-suite-dashboard.png",
+      "hero": "/screenshots/ai-suite-dashboard.webp",
       "icon": "Sparkles",
       "features": [
         "Attendance anomaly alerts",
@@ -53,7 +53,7 @@
       "summary": "Online fee collection over UPI, cards, and net banking with auto-reminders, GST-ready receipts, and AI default prediction. Daily collection reports ready before you sit down.",
       "seoTitle": "School Fee Management Software with UPI & Reminders",
       "seoDescription": "Collect school fees online over UPI, cards and net banking. Automatic reminders, GST-ready receipts, default prediction and daily collection reports.",
-      "hero": "/screenshots/fees-management-dashboard.png",
+      "hero": "/screenshots/fees-management-dashboard.webp",
       "icon": "Wallet",
       "features": [
         "UPI / card / net-banking",
@@ -75,7 +75,7 @@
       "summary": "Department-level academic planning, credit-based grading, hostel + transport, alumni — designed for colleges and institutions.",
       "seoTitle": "College ERP Software for Higher Education",
       "seoDescription": "College ERP for departments, credit-based grading, timetables, hostel, transport and alumni. Built for colleges and higher-education institutes in India.",
-      "hero": "/screenshots/college-erp.png",
+      "hero": "/screenshots/college-erp.webp",
       "icon": "School",
       "features": [
         "Academic Departments",
@@ -97,7 +97,7 @@
       "summary": "Branded white-label mobile app for parents and students. Notices, fee payments, attendance, homework, report cards — under your school's name.",
       "seoTitle": "White-Label School App for Parents & Students",
       "seoDescription": "Branded school app for parents and students: notices, fee payment, attendance, homework and report cards, published under your school's own name.",
-      "hero": "/screenshots/school-app.jpg",
+      "hero": "/screenshots/school-app.webp",
       "icon": "Smartphone",
       "features": [
         "White-label branding",
@@ -119,7 +119,7 @@
       "summary": "Route, track, and resolve parent + staff escalations with SLA timers, ownership, and audit trail. Built for schools that take service seriously.",
       "seoTitle": "Complaint & Escalation Management Software for Schools",
       "seoDescription": "Track and resolve parent and staff complaints with SLA timers, clear ownership and a full audit trail. Escalation management software built for schools.",
-      "hero": "/screenshots/escalation.png",
+      "hero": "/screenshots/escalation.webp",
       "icon": "AlertTriangle",
       "features": [
         "SLA timers",
@@ -141,7 +141,7 @@
       "summary": "OD-SAS monitors device and system behaviour during environmental testing — temperature tracking and xenon-arc sunlight simulation — so engineering teams get reliable, repeatable test data.",
       "seoTitle": "OD-SAS: Environmental Test Monitoring Software",
       "seoDescription": "OD-SAS monitors devices during environmental testing, tracking temperature and xenon-arc sunlight simulation so engineering teams get repeatable data.",
-      "hero": "/screenshots/odsas.png",
+      "hero": "/screenshots/odsas.webp",
       "icon": "Gauge",
       "features": [
         "Temperature tracking",
@@ -162,7 +162,7 @@
       "summary": "A loyalty engine for schools — referral tracking, sibling discounts, alumni perks. Improves enrollment + retention.",
       "seoTitle": "Customer Loyalty & Referral Programme Software",
       "seoDescription": "Loyalty and referral software: track referrals, reward repeat customers and run sibling or alumni perks. Improves retention for schools and retailers.",
-      "hero": "/screenshots/customer-loyalty.png",
+      "hero": "/screenshots/customer-loyalty.webp",
       "icon": "Gift",
       "features": [
         "Referral tracking",
@@ -183,7 +183,7 @@
       "summary": "Lead capture from website + walk-in + ads, nurture sequences, counsellor assignment, conversion analytics — built for school admissions teams.",
       "seoTitle": "Admission CRM Software for Schools & Colleges",
       "seoDescription": "Admission CRM that captures leads from your website, walk-ins and ads, assigns counsellors, runs follow-ups and shows conversion analytics for every intake.",
-      "hero": "/screenshots/education-crm.png",
+      "hero": "/screenshots/education-crm.webp",
       "icon": "Users",
       "features": [
         "Lead capture",

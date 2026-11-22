@@ -17,7 +17,7 @@ export function FeesSpotlight() {
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <BrowserFrame
-            src="/screenshots/collection-report.png"
+            src="/screenshots/collection-report.webp"
             alt="Daily fee collection report in Friensys"
           />
           <div>
